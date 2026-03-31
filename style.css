@@ -901,7 +901,7 @@ footer {
 .hero-subtitle-strong {
   font-style: normal;
   color: var(--navy-deep);
-  max-width: 16ch;
+  max-width: 100%;
 }
 .hero-support {
   max-width: 34rem;
