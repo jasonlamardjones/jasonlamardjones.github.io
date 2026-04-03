@@ -391,3 +391,23 @@ footer { margin-top: 80px; background: var(--navy-deep); color: rgba(255,255,255
   max-width: none !important;
   width: 100%;
 }
+
+
+/* v10 community mobile/layout fixes */
+.community-thumb {
+  margin-bottom: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.community-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .community-stack-mobile {
+    grid-template-columns: 1fr !important;
+  }
+}
