@@ -384,3 +384,13 @@ footer { margin-top: 80px; background: var(--navy-deep); color: rgba(255,255,255
   background: transparent;
   border: none;
 }
+.project-thumb.flyer-frame {
+  background: #111 !important;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.project-thumb.flyer-frame img {
+  object-fit: contain !important;
+  background: #111;
+}
