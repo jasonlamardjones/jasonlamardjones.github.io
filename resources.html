@@ -8,457 +8,140 @@
   <style>
     :root {
       --bg: #0c111d;
-      --bg-soft: #111827;
+      --bg-2: #121a2b;
       --panel: #ffffff;
-      --panel-soft: #f7f4ed;
+      --paper: #f7f3ea;
+      --paper-2: #fffaf0;
       --ink: #14213d;
       --muted: #5b6473;
       --gold: #c9973b;
       --gold-deep: #9f7127;
       --blue: #12355b;
       --blue-soft: #e8eef7;
-      --green: #1f6f5b;
+      --teal: #1f6f5b;
+      --teal-soft: #e7f5ef;
+      --rose-soft: #fff4f4;
       --line: #e3ded4;
-      --shadow: 0 18px 50px rgba(12, 17, 29, 0.16);
-      --radius: 20px;
+      --shadow: 0 18px 50px rgba(12, 17, 29, 0.14);
+      --radius: 22px;
       --max: 1160px;
     }
-
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--ink);
-      background: #f4efe7;
-      line-height: 1.55;
-    }
-
-    a { color: inherit; }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 0;
-      background: #fff;
-      color: var(--ink);
-      padding: 0.75rem 1rem;
-      z-index: 999;
-      border-radius: 0 0 10px 0;
-    }
-
-    .skip-link:focus { left: 0; }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(12, 17, 29, 0.88);
-      color: #fff;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .nav {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0.85rem 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 0.12rem;
-      text-decoration: none;
-      min-width: 0;
-    }
-
-    .brand strong {
-      font-size: 0.96rem;
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      font-size: 0.76rem;
-      color: rgba(255,255,255,0.72);
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.86);
-      text-decoration: none;
-      font-size: 0.88rem;
-      padding: 0.55rem 0.75rem;
-      border-radius: 999px;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-      background: rgba(255,255,255,0.1);
-      outline: none;
-    }
-
-    .nav-links .button-link {
-      color: #111827;
-      background: var(--gold);
-      font-weight: 700;
-    }
-
-    .hero {
-      color: #fff;
-      background:
-        radial-gradient(circle at 18% 18%, rgba(201,151,59,0.24), transparent 34%),
-        radial-gradient(circle at 80% 22%, rgba(46,95,153,0.25), transparent 32%),
-        linear-gradient(135deg, #0c111d 0%, #14213d 48%, #0d1628 100%);
-      padding: 5.2rem 1.1rem 4rem;
-    }
-
-    .hero-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      color: #ffe0a3;
-      font-weight: 800;
-      font-size: 0.84rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.25rem, 7vw, 5.2rem);
-      line-height: 0.94;
-      letter-spacing: -0.06em;
-      margin: 0 0 1.25rem;
-      max-width: 850px;
-    }
-
-    .hero p {
-      font-size: clamp(1.02rem, 2.4vw, 1.24rem);
-      color: rgba(255,255,255,0.82);
-      max-width: 760px;
-      margin: 0 0 1.35rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.6rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      min-height: 44px;
-      padding: 0.82rem 1.05rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-    }
-
-    .btn:hover, .btn:focus { transform: translateY(-1px); outline: none; }
-    .btn-primary { background: var(--gold); color: #111827; box-shadow: 0 10px 26px rgba(201,151,59,.25); }
-    .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.22); }
-    .btn-plain { background: #fff; color: var(--ink); border-color: var(--line); }
-
-    .hero-card {
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 28px;
-      padding: 1.25rem;
-      box-shadow: 0 26px 70px rgba(0,0,0,0.25);
-    }
-
-    .hero-card h2 {
-      margin: 0 0 0.7rem;
-      font-size: 1.2rem;
-      color: #fff;
-    }
-
-    .hero-card ol {
-      margin: 0;
-      padding-left: 1.3rem;
-      color: rgba(255,255,255,0.82);
-    }
-
-    .hero-card li { margin: 0.55rem 0; }
-
-    .notice {
-      max-width: var(--max);
-      margin: -1.5rem auto 0;
-      padding: 0 1.1rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .notice-inner {
-      background: #fff8e7;
-      border: 1px solid #ead59c;
-      color: #5b420e;
-      border-radius: 18px;
-      padding: 1rem 1.15rem;
-      box-shadow: var(--shadow);
-      font-size: 0.95rem;
-    }
-
-    main { padding: 2.8rem 1.1rem 4rem; }
-
-    .section {
-      max-width: var(--max);
-      margin: 0 auto 2.3rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .section h2 {
-      font-size: clamp(1.55rem, 4vw, 2.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin: 0;
-    }
-
-    .section-intro {
-      margin: 0.45rem 0 0;
-      color: var(--muted);
-      max-width: 780px;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin: 1rem 0 0;
-    }
-
-    .pill-row a,
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0.55rem 0.72rem;
-      border-radius: 999px;
-      background: #fff;
-      border: 1px solid var(--line);
-      color: var(--ink);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.86rem;
-    }
-
-    .panel {
-      background: #fff;
-      border: 1px solid rgba(20,33,61,0.08);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      box-shadow: var(--shadow);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .resource-card {
-      background: #fff;
-      border: 1px solid rgba(20,33,61,0.1);
-      border-radius: 22px;
-      padding: 1.15rem;
-      box-shadow: 0 12px 34px rgba(12,17,29,0.08);
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-    }
-
-    .resource-card h3 {
-      margin: 0.2rem 0 0.45rem;
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      font-size: 1.18rem;
-    }
-
-    .resource-card p {
-      margin: 0 0 0.75rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .meta {
-      display: grid;
-      gap: 0.45rem;
-      margin: 0.2rem 0 0.95rem;
-      color: #3e4756;
-      font-size: 0.88rem;
-    }
-
-    .meta div {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 0.5rem;
-      border-top: 1px solid #eee7dc;
-      padding-top: 0.45rem;
-    }
-
-    .meta b { color: var(--ink); }
-
-    .card-actions {
-      margin-top: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-    }
-
-    .mini-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
-      padding: 0.55rem 0.75rem;
-      border-radius: 999px;
-      background: var(--blue);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 0.86rem;
-    }
-
-    .mini-btn.light {
-      color: var(--ink);
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-    }
-
-    .tag.official { background: var(--blue-soft); border-color: #cbd8ec; color: #12355b; }
-    .tag.local { background: #e7f5ef; border-color: #c6e7da; color: #175843; }
-    .tag.global { background: #f7edd7; border-color: #e4ca8b; color: #6c4a08; }
-    .tag.needs { background: #fff4f4; border-color: #f0c7c7; color: #8a2929; }
-
-    .category-card {
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 1rem;
-    }
-
-    .category-card h3 { margin: 0 0 0.35rem; }
-    .category-card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
-
-    .callout {
-      background: linear-gradient(135deg, #14213d, #213b61);
-      color: #fff;
-      border-radius: 24px;
-      padding: 1.35rem;
-      box-shadow: var(--shadow);
-    }
-
-    .callout h2 { color: #fff; }
-    .callout p { color: rgba(255,255,255,0.82); }
-
-    .footer {
-      background: #0c111d;
-      color: rgba(255,255,255,0.78);
-      padding: 2rem 1.1rem;
-    }
-
-    .footer-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: grid;
-      gap: 0.8rem;
-    }
-
-    .footer a { color: #ffe0a3; }
-
-    .last-updated {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.65rem;
-    }
-
-    @media (max-width: 920px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .grid, .grid.two { grid-template-columns: 1fr; }
-      .section-header { display: block; }
-      .nav { align-items: flex-start; }
-      .nav-links { gap: 0.35rem; }
-      .nav-links a { padding: 0.45rem 0.55rem; }
-    }
-
-    @media (max-width: 620px) {
-      .hero { padding-top: 3.8rem; }
-      .nav { flex-direction: column; }
-      .brand strong { white-space: normal; }
-      .brand span { white-space: normal; }
-      .hero-actions .btn, .pill-row a { width: 100%; }
-      .meta div { grid-template-columns: 1fr; gap: 0.1rem; }
-      .resource-card { border-radius: 18px; }
-    }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; }
+    a { color:inherit; }
+    .skip-link { position:absolute; left:-999px; top:0; background:#fff; color:var(--ink); padding:.75rem 1rem; z-index:999; border-radius:0 0 10px 0; }
+    .skip-link:focus { left:0; }
+    .topbar { position:sticky; top:0; z-index:50; backdrop-filter:blur(16px); background:rgba(12,17,29,.92); color:#fff; border-bottom:1px solid rgba(255,255,255,.1); }
+    .nav { max-width:var(--max); margin:0 auto; padding:.85rem 1.1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { display:flex; flex-direction:column; gap:.12rem; text-decoration:none; min-width:0; }
+    .brand strong { font-size:.96rem; letter-spacing:.02em; white-space:nowrap; }
+    .brand span { font-size:.76rem; color:rgba(255,255,255,.72); white-space:nowrap; }
+    .nav-links { display:flex; align-items:center; gap:.55rem; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-links a { color:rgba(255,255,255,.86); text-decoration:none; font-size:.86rem; padding:.5rem .68rem; border-radius:999px; }
+    .nav-links a:hover,.nav-links a:focus { background:rgba(255,255,255,.1); outline:none; }
+    .nav-links .button-link { color:#111827; background:var(--gold); font-weight:800; }
+    .hero { color:#fff; background: radial-gradient(circle at 18% 18%, rgba(201,151,59,.24), transparent 34%), radial-gradient(circle at 80% 22%, rgba(46,95,153,.25), transparent 32%), linear-gradient(135deg,#0c111d 0%,#14213d 48%,#0d1628 100%); padding:5rem 1.1rem 3.6rem; }
+    .hero-inner { max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); gap:2rem; align-items:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:.45rem; color:#ffe0a3; font-weight:900; font-size:.82rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:1rem; }
+    .hero h1 { font-size:clamp(2.15rem,7vw,5rem); line-height:.96; letter-spacing:-.06em; margin:0 0 1.2rem; max-width:850px; }
+    .hero p { font-size:clamp(1rem,2.4vw,1.2rem); color:rgba(255,255,255,.82); max-width:760px; margin:0 0 1.2rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.5rem; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:44px; padding:.82rem 1.05rem; border-radius:999px; text-decoration:none; font-weight:850; border:1px solid transparent; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; }
+    .btn:hover,.btn:focus { transform:translateY(-1px); outline:none; }
+    .btn-primary { background:var(--gold); color:#111827; box-shadow:0 10px 26px rgba(201,151,59,.25); }
+    .btn-secondary { background:rgba(255,255,255,.1); color:#fff; border-color:rgba(255,255,255,.22); }
+    .hero-card { background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.15); border-radius:28px; padding:1.25rem; box-shadow:0 26px 70px rgba(0,0,0,.25); }
+    .hero-card h2 { margin:0 0 .7rem; font-size:1.2rem; color:#fff; }
+    .hero-card ol { margin:0; padding-left:1.3rem; color:rgba(255,255,255,.82); }
+    .hero-card li { margin:.55rem 0; }
+    .translate-strip { background:#08101f; color:#fff; border-bottom:1px solid rgba(255,255,255,.1); padding:.65rem 1.1rem; }
+    .translate-inner { max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:.55rem; align-items:center; justify-content:space-between; font-size:.88rem; }
+    .translate-links { display:flex; flex-wrap:wrap; gap:.45rem; }
+    .translate-links a { color:#ffe0a3; text-decoration:none; border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:.32rem .55rem; }
+    .notice { max-width:var(--max); margin:-1.35rem auto 0; padding:0 1.1rem; position:relative; z-index:2; }
+    .notice-inner { background:#fff8e7; border:1px solid #ead59c; color:#5b420e; border-radius:18px; padding:1rem 1.15rem; box-shadow:var(--shadow); font-size:.95rem; }
+    main { padding:2.7rem 1.1rem 4rem; }
+    .section { max-width:var(--max); margin:0 auto 2.25rem; }
+    .section-header { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+    .section h2 { font-size:clamp(1.55rem,4vw,2.5rem); line-height:1.05; letter-spacing:-.04em; margin:0; }
+    .section-intro { margin:.45rem 0 0; color:var(--muted); max-width:820px; }
+    .panel { background:#fff; border:1px solid rgba(20,33,61,.08); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow); }
+    .pill-row { display:flex; flex-wrap:wrap; gap:.55rem; margin:1rem 0 0; }
+    .pill-row a,.tag { display:inline-flex; align-items:center; min-height:36px; padding:.52rem .72rem; border-radius:999px; background:#fff; border:1px solid var(--line); color:var(--ink); text-decoration:none; font-weight:800; font-size:.84rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .resource-card { background:#fff; border:1px solid rgba(20,33,61,.1); border-radius:22px; padding:1.15rem; box-shadow:0 12px 34px rgba(12,17,29,.08); display:flex; flex-direction:column; min-height:100%; position:relative; overflow:hidden; }
+    .resource-card h3 { margin:.2rem 0 .45rem; line-height:1.12; letter-spacing:-.02em; font-size:1.18rem; }
+    .resource-card p { margin:0 0 .75rem; color:var(--muted); font-size:.95rem; }
+    .meta { display:grid; gap:.45rem; margin:.2rem 0 .95rem; color:#3e4756; font-size:.88rem; }
+    .meta div { display:grid; grid-template-columns:105px 1fr; gap:.5rem; border-top:1px solid #eee7dc; padding-top:.45rem; }
+    .meta b { color:var(--ink); }
+    .card-actions { margin-top:auto; display:flex; flex-wrap:wrap; gap:.55rem; }
+    .mini-btn { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:.55rem .75rem; border-radius:999px; background:var(--blue); color:#fff; text-decoration:none; font-weight:850; font-size:.86rem; }
+    .mini-btn.light { color:var(--ink); background:var(--paper); border:1px solid var(--line); }
+    .tag.official { background:var(--blue-soft); border-color:#cbd8ec; color:#12355b; }
+    .tag.local { background:var(--teal-soft); border-color:#c6e7da; color:#175843; }
+    .tag.global { background:#f7edd7; border-color:#e4ca8b; color:#6c4a08; }
+    .tag.active { background:#e9f8ee; border-color:#bce2c6; color:#14552b; }
+    .tag.verify { background:#fff4f4; border-color:#f0c7c7; color:#8a2929; }
+    .tag.soon { background:#eeeeee; border-color:#d7d7d7; color:#666; }
+    .category-card { background:var(--paper-2); border:1px solid var(--line); border-radius:18px; padding:1rem; }
+    .category-card h3 { margin:0 0 .35rem; }
+    .category-card p { margin:0; color:var(--muted); font-size:.94rem; }
+    .coming-soon { opacity:.58; filter:grayscale(.35); }
+    .coming-stamp { position:absolute; right:1rem; top:1rem; transform:rotate(7deg); border:2px solid #777; color:#555; background:rgba(255,255,255,.88); border-radius:8px; padding:.2rem .45rem; font-weight:900; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; }
+    .status-note { background:#f1f5fb; border:1px solid #d8e3f3; color:#12355b; border-radius:16px; padding:.85rem 1rem; margin-top:1rem; font-size:.95rem; }
+    .callout { background:linear-gradient(135deg,#14213d,#213b61); color:#fff; border-radius:24px; padding:1.35rem; box-shadow:var(--shadow); }
+    .callout h2 { color:#fff; }
+    .callout p { color:rgba(255,255,255,.82); }
+    .footer { background:#0c111d; color:rgba(255,255,255,.78); padding:2rem 1.1rem; }
+    .footer-inner { max-width:var(--max); margin:0 auto; display:grid; gap:.8rem; }
+    .footer a { color:#ffe0a3; }
+    .last-updated { color:var(--muted); font-size:.9rem; margin-top:.65rem; }
+    @media (max-width:920px) { .hero-inner{grid-template-columns:1fr;} .grid,.grid.two{grid-template-columns:1fr;} .section-header{display:block;} .nav{align-items:flex-start;} .nav-links{gap:.35rem;} .nav-links a{padding:.45rem .55rem;} }
+    @media (max-width:620px) { .hero{padding-top:3.6rem;} .nav{flex-direction:column;} .brand strong,.brand span{white-space:normal;} .hero-actions .btn,.pill-row a{width:100%;} .meta div{grid-template-columns:1fr; gap:.1rem;} .resource-card{border-radius:18px;} .translate-inner{display:block;} .translate-links{margin-top:.5rem;} }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="topbar" aria-label="Site header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="../">
+      <a class="brand" href="index.html">
         <strong>Jason L. Jones</strong>
-        <span>Opportunity Hub · Independent Resource Page</span>
+        <span>Opportunity Hub - Independent Resource Page</span>
       </a>
       <div class="nav-links">
+        <a href="index.html">Home</a>
         <a href="#start">Start Here</a>
-        <a href="#current">Courses</a>
+        <a href="#current">Open Now</a>
+        <a href="#teaching">English Teaching</a>
         <a href="#cabo-verde">Cabo Verde</a>
-        <a href="#global">Global</a>
         <a class="button-link" href="#updates">Get Updates</a>
       </div>
     </nav>
   </header>
 
+  <div class="translate-strip" aria-label="Translation options">
+    <div class="translate-inner">
+      <span><strong>Need translation?</strong> Use these quick Google Translate links, or use your browser's translate option.</span>
+      <div class="translate-links">
+        <a href="https://translate.google.com/translate?sl=en&tl=pt&u=https://jasonlamard.com/resources.html" target="_blank" rel="noopener">Português</a>
+        <a href="https://translate.google.com/translate?sl=en&tl=uk&u=https://jasonlamard.com/resources.html" target="_blank" rel="noopener">Українська</a>
+        <a href="https://translate.google.com/translate?sl=en&tl=ru&u=https://jasonlamard.com/resources.html" target="_blank" rel="noopener">Русский</a>
+      </div>
+    </div>
+  </div>
+
   <section class="hero">
     <div class="hero-inner">
       <div>
-        <div class="eyebrow">Opportunity Hub · Cabo Verde + Global</div>
+        <div class="eyebrow">Opportunity Hub - Cabo Verde + Global</div>
         <h1>Free Learning & Career Resources</h1>
         <p>A simple place to find English-learning resources, free online courses, study information, digital-skills tools, tourism/hospitality training, and career-development opportunities useful for students, workers, teachers, and community members in Cabo Verde and beyond.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#start">Start with one resource</a>
-          <a class="btn btn-secondary" href="#updates">Request updates</a>
+          <a class="btn btn-primary" href="#current">See courses open now</a>
+          <a class="btn btn-secondary" href="#start">Choose a category</a>
         </div>
       </div>
       <aside class="hero-card" aria-label="How to use this page">
@@ -476,7 +159,7 @@
 
   <div class="notice" role="note" aria-label="Independent resource disclaimer">
     <div class="notice-inner">
-      <strong>Important:</strong> This resource page is independently curated. It is not an official U.S. Embassy or American Spaces page unless a specific event or resource is clearly identified as official and approved. Always check the official source for current eligibility, deadlines, and instructions.
+      <strong>Important:</strong> This page is independently curated and is not officially sponsored by any of the organizations listed. Official resources are marked where known. Always check the official source for current eligibility, deadlines, enrollment steps, and requirements.
     </div>
   </div>
 
@@ -489,199 +172,195 @@
         </div>
       </div>
       <div class="pill-row" aria-label="Resource categories">
-        <a href="#current">Current Free Courses</a>
+        <a href="#current">Open Now</a>
         <a href="#tourism">Tourism & Hospitality</a>
+        <a href="#teaching">English Teaching</a>
         <a href="#english">English Learning</a>
         <a href="#digital">Digital Skills / AI</a>
         <a href="#career">Career Development</a>
         <a href="#study">Study in the U.S.</a>
         <a href="#global">Global Opportunities</a>
-        <a href="#updates">Get Updates</a>
+        <a href="#soon">Coming Soon</a>
       </div>
+      <div class="status-note"><strong>Status guide:</strong> "Open now" means this resource appears active or currently useful. "Verify date" means the official page should be checked before promoting widely. "Coming soon" means the section is planned but not ready as a full resource list yet.</div>
     </section>
 
     <section id="current" class="section">
       <div class="section-header">
         <div>
-          <h2>Current Free Courses / Trainings</h2>
-          <p class="section-intro">These are useful starting points. Confirm deadlines and requirements on the official source before registering.</p>
+          <h2>Open Now / Currently Useful</h2>
+          <p class="section-intro">These are the clearest starting points right now. Course dates can change, so confirm everything on the official OPEN MOOC page before registering or promoting.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="resource-card" id="tourism-course">
+          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag global">Global</span></div>
+          <h3>English for Tourism Professionals</h3>
+          <p>Self-paced OPEN MOOC for non-native English speakers who are tourism professionals or students in the tourism industry.</p>
+          <div class="meta">
+            <div><b>Best for</b><span>Tourism workers, students, tour guides, hospitality staff</span></div>
+            <div><b>Course dates</b><span>Apr. 6 - Jun. 29, 2026</span></div>
+            <div><b>Enroll by</b><span>Jun. 22, 2026</span></div>
+            <div><b>Workload</b><span>Approx. 3-5 hours per module; 5 modules</span></div>
+            <div><b>Start step</b><span>Open the official MOOC page, select this course, then use the Enroll Now link.</span></div>
+          </div>
+          <div class="card-actions">
+            <a class="mini-btn" href="https://openenglishcommunity.org/page/english-for-tourism-professionals-etp" target="_blank" rel="noopener">Course info</a>
+            <a class="mini-btn light" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag global">Global</span></div>
+          <h3>English for Business and Entrepreneurship</h3>
+          <p>Self-paced OPEN MOOC for non-native English speakers interested in business vocabulary, entrepreneurship, business planning, and professional communication.</p>
+          <div class="meta">
+            <div><b>Best for</b><span>Entrepreneurs, students, job seekers, business learners</span></div>
+            <div><b>Course dates</b><span>Apr. 6 - Jun. 29, 2026</span></div>
+            <div><b>Enroll by</b><span>Jun. 22, 2026</span></div>
+            <div><b>Cost</b><span>Free</span></div>
+            <div><b>Start step</b><span>Open the official page and choose the Enroll Now link under this course.</span></div>
+          </div>
+          <div class="card-actions">
+            <a class="mini-btn" href="https://openenglishcommunity.org/page/english-for-business-and-entrepreneurship-ebe" target="_blank" rel="noopener">Course info</a>
+            <a class="mini-btn light" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag global">Global</span></div>
+          <h3>English for Career Development</h3>
+          <p>Self-paced OPEN MOOC focused on English for job searches, resumes/CVs, interviews, professional communication, and career planning.</p>
+          <div class="meta">
+            <div><b>Best for</b><span>Students, job seekers, early-career professionals</span></div>
+            <div><b>Course dates</b><span>Apr. 6 - Jun. 29, 2026</span></div>
+            <div><b>Enroll by</b><span>Jun. 22, 2026</span></div>
+            <div><b>Cost</b><span>Free</span></div>
+            <div><b>Start step</b><span>Open the official MOOC page and use the course's Enroll Now link.</span></div>
+          </div>
+          <div class="card-actions">
+            <a class="mini-btn" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="teaching" class="section panel">
+      <div class="section-header">
+        <div>
+          <h2>English Teaching</h2>
+          <p class="section-intro">OPEN and American English resources for teachers, tutors, facilitators, and people supporting English clubs or conversation groups.</p>
         </div>
       </div>
       <div class="grid">
         <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div>
-          <h3>American English MOOCs / OPEN MOOCs</h3>
-          <p>Free online courses for English teachers, students, and professionals. Some courses may offer a digital badge/e-certificate when official completion requirements are met.</p>
+          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span></div>
+          <h3>Teaching English to Young Learners</h3>
+          <p>OPEN MOOC for educators working with young English learners. Useful for teachers, tutors, and facilitators.</p>
           <div class="meta">
-            <div><b>Best for</b><span>English learners, teachers, professionals</span></div>
-            <div><b>Cost</b><span>Free</span></div>
-            <div><b>Status</b><span>Check official page for open courses</span></div>
-            <div><b>Start step</b><span>Open the official page and choose one realistic course.</span></div>
+            <div><b>Best for</b><span>English teachers, tutors, youth facilitators</span></div>
+            <div><b>Course dates</b><span>Apr. 13 - Jul. 6, 2026</span></div>
+            <div><b>Enroll by</b><span>Jun. 29, 2026</span></div>
+            <div><b>Start step</b><span>Open the course info or official MOOC page and enroll.</span></div>
           </div>
-          <div class="card-actions"><a class="mini-btn" href="https://americanenglish.state.gov/OPEN-MOOCs" target="_blank" rel="noopener">Open official page</a></div>
+          <div class="card-actions"><a class="mini-btn" href="https://openenglishcommunity.org/page/teaching-english-to-young-learners-teyl" target="_blank" rel="noopener">Course info</a><a class="mini-btn light" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a></div>
+        </article>
+
+        <article class="resource-card">
+          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag verify">Verify date</span></div>
+          <h3>Using Educational Technology in the English Language Classroom</h3>
+          <p>OPEN MOOC focused on practical education technology for English-language teaching and learning environments.</p>
+          <div class="meta">
+            <div><b>Best for</b><span>English teachers, tutors, education volunteers</span></div>
+            <div><b>Course dates</b><span>Apr. 27 - Jun. 1, 2026</span></div>
+            <div><b>Enroll by</b><span>May 25, 2026</span></div>
+            <div><b>Start step</b><span>Open the official MOOC page and use the Enroll Now link if still available.</span></div>
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Check official MOOC page</a></div>
         </article>
 
         <article class="resource-card">
           <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div>
-          <h3>American English Resources</h3>
-          <p>English-learning and teaching resources from the U.S. Department of State, including materials for learners, teachers, culture topics, vocabulary, listening, and classroom use.</p>
+          <h3>American English Teaching Resources</h3>
+          <p>Free teaching resources, classroom materials, webinars, and professional-development materials for English teachers and facilitators.</p>
           <div class="meta">
-            <div><b>Best for</b><span>English learners, teachers, clubs</span></div>
-            <div><b>Cost</b><span>Free</span></div>
+            <div><b>Best for</b><span>Teachers, conversation club facilitators, tutors</span></div>
             <div><b>Status</b><span>Ongoing resource library</span></div>
-            <div><b>Start step</b><span>Browse by category and save one useful resource.</span></div>
+            <div><b>Start step</b><span>Browse by topic and save one useful resource for your next session.</span></div>
           </div>
           <div class="card-actions"><a class="mini-btn" href="https://americanenglish.state.gov/resources" target="_blank" rel="noopener">Browse resources</a></div>
         </article>
-
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag local">Cabo Verde</span><span class="tag needs">Verify deadline</span></div>
-          <h3>Skodji Digital</h3>
-          <p>Cabo Verde digital-skills initiative focused on digital and business skills, employability, entrepreneurship, and access to new professional opportunities.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Cabo Verde youth, digital learners, job seekers</span></div>
-            <div><b>Cost</b><span>Check official source</span></div>
-            <div><b>Status</b><span>Check current edition / application window</span></div>
-            <div><b>Start step</b><span>Open the official platform and review current application details.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://www.skodjidigital.cv/" target="_blank" rel="noopener">Visit Skodji Digital</a></div>
-        </article>
       </div>
     </section>
 
-    <section id="tourism" class="section panel">
-      <div class="section-header">
-        <div>
-          <h2>Tourism & Hospitality</h2>
-          <p class="section-intro">Resources for restaurants, hotels, tour guides, customer-facing workers, tourism students, and small businesses that want to strengthen English communication, service skills, and professional confidence.</p>
-        </div>
-      </div>
+    <section id="tourism" class="section">
+      <div class="section-header"><div><h2>Tourism & Hospitality</h2><p class="section-intro">Resources for restaurants, hotels, tour guides, customer-facing workers, tourism students, and small businesses that want to strengthen English communication, service skills, and professional confidence.</p></div></div>
       <div class="grid">
-        <div class="category-card"><h3>English for tourism</h3><p>Vocabulary, role-play, greetings, directions, customer questions, and service scenarios.</p></div>
-        <div class="category-card"><h3>Customer communication</h3><p>Professional WhatsApp/email messages, polite problem-solving, and guest support.</p></div>
-        <div class="category-card"><h3>Small-business visibility</h3><p>Canva basics, menu/flyer design, Google profile basics, and clear service descriptions.</p></div>
+        <div class="category-card"><h3>Start with English for Tourism Professionals</h3><p>Best current fit for hospitality workers, tour guides, restaurant staff, and tourism students. Use the course card above to open the official course information.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Customer communication</h3><p>Professional WhatsApp/email messages, polite problem-solving, and guest support resources will be added here.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Small-business visibility</h3><p>Canva basics, menu/flyer design, Google profile basics, and clear service descriptions will be added later.</p></div>
       </div>
     </section>
 
-    <section id="career" class="section">
-      <div class="section-header">
-        <div>
-          <h2>Career + Professional Development</h2>
-          <p class="section-intro">Resources for students, workers, job seekers, interns, volunteers, and early-career professionals who want to improve communication, CVs, interviews, LinkedIn, workplace skills, and opportunity readiness.</p>
-        </div>
-      </div>
+    <section id="career" class="section panel">
+      <div class="section-header"><div><h2>Career + Professional Development</h2><p class="section-intro">Resources for students, workers, job seekers, interns, volunteers, and early-career professionals who want to improve communication, CVs, interviews, LinkedIn, workplace skills, and opportunity readiness.</p></div></div>
       <div class="grid">
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag local">Cabo Verde</span><span class="tag needs">Public listing</span></div>
-          <h3>Pró Empresa</h3>
-          <p>Cabo Verde entrepreneurship and business-support resource. Useful to explore for business development, entrepreneurship support, and related opportunities.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Entrepreneurs, small businesses, business learners</span></div>
-            <div><b>Status</b><span>Public resource listing</span></div>
-            <div><b>Start step</b><span>Open the official site and review current services/contact options.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://proe.proempresa.cv/" target="_blank" rel="noopener">Visit Pró Empresa</a></div>
-        </article>
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag local">São Vicente / Barlavento</span><span class="tag needs">Public listing</span></div>
-          <h3>Câmara de Comércio de Barlavento</h3>
-          <p>Business association serving Barlavento islands, including training, events, entrepreneurship support, business services, and professional networking.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Businesses, entrepreneurs, professionals</span></div>
-            <div><b>Status</b><span>Public resource listing</span></div>
-            <div><b>Start step</b><span>Open the public site and review current trainings/events.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://www.camara.cv/" target="_blank" rel="noopener">Visit CCB</a></div>
-        </article>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span></div><h3>English for Career Development</h3><p>Use this course for job-search vocabulary, professional communication, resumes/CVs, interviews, and career planning.</p><div class="card-actions"><a class="mini-btn" href="#current">View course card</a></div></article>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag local">Cabo Verde</span><span class="tag verify">Public listing</span></div><h3>Pró Empresa</h3><p>Cabo Verde entrepreneurship and business-support resource. Useful to explore for business development, entrepreneurship support, and related opportunities.</p><div class="meta"><div><b>Best for</b><span>Entrepreneurs, small businesses, business learners</span></div><div><b>Status</b><span>Public resource listing</span></div><div><b>Start step</b><span>Open the official site and review current services/contact options.</span></div></div><div class="card-actions"><a class="mini-btn" href="https://proempresa.cv" target="_blank" rel="noopener">Visit Pró Empresa</a></div></article>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag local">São Vicente / Barlavento</span><span class="tag verify">Public listing</span></div><h3>Câmara de Comércio de Barlavento</h3><p>Business association serving Barlavento islands, including training, events, entrepreneurship support, business services, and professional networking.</p><div class="card-actions"><a class="mini-btn" href="https://www.camara.cv/" target="_blank" rel="noopener">Visit CCB</a></div></article>
       </div>
     </section>
 
-    <section id="digital" class="section panel">
-      <div class="section-header">
-        <div>
-          <h2>Digital Skills / AI</h2>
-          <p class="section-intro">Beginner-friendly digital-skills and responsible AI resources for students, interns, professionals, volunteers, and small businesses.</p>
-        </div>
-      </div>
+    <section id="digital" class="section">
+      <div class="section-header"><div><h2>Digital Skills / AI</h2><p class="section-intro">Beginner-friendly digital-skills and responsible AI resources for students, interns, professionals, volunteers, and small businesses.</p></div></div>
       <div class="grid">
-        <div class="category-card"><h3>Digital basics</h3><p>Google Docs/Sheets, email, online forms, files, folders, and practical productivity tools.</p></div>
-        <div class="category-card"><h3>Canva + communication</h3><p>Simple flyers, menus, social posts, event graphics, QR flyers, and professional presentations.</p></div>
-        <div class="category-card"><h3>Responsible AI</h3><p>Use AI to summarize, practice English, plan study, draft ideas, and learn — with caution and integrity.</p></div>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag local">Cabo Verde</span><span class="tag verify">Verify current window</span></div><h3>Skodji Digital</h3><p>Cabo Verde digital-skills initiative focused on digital and business skills, employability, entrepreneurship, and access to new professional opportunities.</p><div class="card-actions"><a class="mini-btn" href="https://www.skodjidigital.cv/" target="_blank" rel="noopener">Visit Skodji Digital</a></div></article>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Canva + communication</h3><p>Simple flyers, menus, social posts, event graphics, QR flyers, and professional presentations.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Responsible AI</h3><p>Use AI to summarize, practice English, plan study, draft ideas, and learn with caution and integrity.</p></div>
       </div>
     </section>
 
-    <section id="english" class="section">
-      <div class="section-header">
-        <div>
-          <h2>English Learning</h2>
-          <p class="section-intro">English-learning resources for self-study, conversation practice, pronunciation, vocabulary, American culture, workplace communication, and English clubs.</p>
-        </div>
-      </div>
+    <section id="english" class="section panel">
+      <div class="section-header"><div><h2>English Learning</h2><p class="section-intro">English-learning resources for self-study, conversation practice, pronunciation, vocabulary, American culture, workplace communication, and English clubs.</p></div></div>
       <div class="grid">
-        <div class="category-card"><h3>Speaking practice</h3><p>Conversation prompts, role-plays, introductions, interviews, customer service, and presentations.</p></div>
-        <div class="category-card"><h3>Listening + pronunciation</h3><p>Short audio/video resources, repetition practice, and pronunciation support.</p></div>
-        <div class="category-card"><h3>English for work/study</h3><p>Workplace vocabulary, professional communication, study vocabulary, and online course readiness.</p></div>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div><h3>American English Resources</h3><p>English-learning and teaching resources from the U.S. Department of State, including materials for learners, teachers, culture topics, vocabulary, listening, and classroom use.</p><div class="card-actions"><a class="mini-btn" href="https://americanenglish.state.gov/resources" target="_blank" rel="noopener">Browse resources</a></div></article>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Speaking practice</h3><p>Conversation prompts, role-plays, introductions, interviews, customer service, and presentations.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Listening + pronunciation</h3><p>Short audio/video resources, repetition practice, and pronunciation support.</p></div>
       </div>
     </section>
 
-    <section id="study" class="section panel">
-      <div class="section-header">
-        <div>
-          <h2>Study in the U.S. / EducationUSA</h2>
-          <p class="section-intro">For students interested in studying in the United States, use official EducationUSA resources and advising channels. This page only points you toward official starting points; it does not provide admissions, scholarship, or visa advice.</p>
-        </div>
-      </div>
+    <section id="study" class="section">
+      <div class="section-header"><div><h2>Study in the U.S. / EducationUSA</h2><p class="section-intro">For students interested in studying in the United States, use official EducationUSA resources and advising channels. This page only points you toward official starting points; it does not provide admissions, scholarship, or visa advice.</p></div></div>
       <div class="grid two">
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag local">Cabo Verde</span></div>
-          <h3>EducationUSA Cabo Verde</h3>
-          <p>Official advising resource for students interested in accredited U.S. higher education institutions.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Students, parents, educators</span></div>
-            <div><b>Status</b><span>Appointment-based services</span></div>
-            <div><b>Start step</b><span>Open the official page and review advising options.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://educationusa.state.gov/centers/educationusa-cabo-verde" target="_blank" rel="noopener">Visit EducationUSA CV</a></div>
-        </article>
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div>
-          <h3>Exchange Programs for Non-U.S. Citizens</h3>
-          <p>Official U.S. Department of State exchange program finder for opportunities that may be open by country, audience, and application type.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Students, teachers, professionals, youth leaders</span></div>
-            <div><b>Status</b><span>Varies by program and country</span></div>
-            <div><b>Start step</b><span>Search by country, participant type, and application status.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://exchanges.state.gov/non-us/find-programs" target="_blank" rel="noopener">Search programs</a></div>
-        </article>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag local">Cabo Verde</span></div><h3>EducationUSA Cabo Verde</h3><p>Official advising resource for students interested in accredited U.S. higher education institutions.</p><div class="card-actions"><a class="mini-btn" href="https://educationusa.state.gov/centers/educationusa-cabo-verde" target="_blank" rel="noopener">Visit EducationUSA CV</a></div></article>
+        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div><h3>Exchange Programs for Non-U.S. Citizens</h3><p>Official U.S. Department of State exchange program finder for opportunities that may be open by country, audience, and application type.</p><div class="card-actions"><a class="mini-btn" href="https://exchanges.state.gov/non-us/find-programs" target="_blank" rel="noopener">Search programs</a></div></article>
       </div>
     </section>
 
-    <section id="cabo-verde" class="section">
-      <div class="section-header">
-        <div>
-          <h2>Cabo Verde Resources</h2>
-          <p class="section-intro">Resources, programs, organizations, and opportunities that may be useful for students, young adults, English learners, job seekers, entrepreneurs, and community members in Cabo Verde.</p>
-        </div>
-      </div>
+    <section id="cabo-verde" class="section panel">
+      <div class="section-header"><div><h2>Cabo Verde Resources</h2><p class="section-intro">Resources, programs, organizations, and opportunities that may be useful for students, young adults, English learners, job seekers, entrepreneurs, and community members in Cabo Verde.</p></div></div>
       <div class="grid">
-        <div class="category-card"><h3>English + American Spaces</h3><p>Approved American Spaces-related events and official resources can be listed here when confirmed.</p></div>
+        <div class="category-card"><h3>Approved American Spaces-related updates</h3><p>Approved American Spaces-related events and official resources can be listed here when confirmed.</p></div>
         <div class="category-card"><h3>Digital skills + innovation</h3><p>Skodji Digital, Tech Park-related opportunities, digital training, and beginner-friendly tools.</p></div>
         <div class="category-card"><h3>Entrepreneurship + business</h3><p>Public resource leads such as Pró Empresa, Chamber of Commerce, and local business-support programs.</p></div>
       </div>
     </section>
 
-    <section id="global" class="section panel">
-      <div class="section-header">
-        <div>
-          <h2>Global Opportunities</h2>
-          <p class="section-intro">These resources may be useful from many countries, including Cabo Verde, Ukraine, the United States, the Netherlands, and elsewhere. Always check whether the resource is available in your country and whether deadlines or eligibility rules apply.</p>
-        </div>
-      </div>
+    <section id="global" class="section">
+      <div class="section-header"><div><h2>Global Opportunities</h2><p class="section-intro">These resources may be useful from many countries, including Cabo Verde, Ukraine, the United States, the Netherlands, and elsewhere. Always check whether the resource is available in your country and whether deadlines or eligibility rules apply.</p></div></div>
       <div class="grid">
-        <div class="category-card"><h3>Free online courses</h3><p>MOOCs, open learning platforms, certificate options, and self-paced training.</p></div>
-        <div class="category-card"><h3>English learning</h3><p>Self-study, speaking practice, American English resources, and workplace communication.</p></div>
-        <div class="category-card"><h3>Career readiness</h3><p>CV/resume, LinkedIn, interviews, professional writing, and remote-work basics.</p></div>
+        <div class="category-card"><h3>OPEN MOOCs</h3><p>English and professional-development MOOCs open to participants internationally.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Other free online courses</h3><p>Curated resources from global platforms will be added after verification.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Country resource notes</h3><p>Ukraine, Netherlands, United States, and other country notes will be added carefully over time.</p></div>
+      </div>
+    </section>
+
+    <section id="soon" class="section panel">
+      <div class="section-header"><div><h2>Coming Soon / Under Development</h2><p class="section-intro">These sections are planned but not yet complete. They are shown so visitors understand the page is growing.</p></div></div>
+      <div class="grid">
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Local Resource Map</h3><p>Carefully verified local organizations, programs, and public resources in Cabo Verde.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>WhatsApp update channels</h3><p>Low-noise update channels for Cabo Verde and global learning opportunities.</p></div>
+        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Workshop calendar</h3><p>Local workshops and practical sessions, listed only after dates and approval are clear.</p></div>
       </div>
     </section>
 
@@ -689,16 +368,16 @@
       <h2>Get Updates / Ask for Help</h2>
       <p>Want occasional updates about free learning opportunities, English resources, digital-skills tools, tourism/hospitality training, career resources, or local workshops? Use one of the options below to request updates, suggest a resource, or ask for help finding a starting point.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:jasonlmjones@gmail.com?subject=Learning%20and%20Opportunity%20Updates%20Request&body=Hi%20Jason%2C%0A%0AI%20would%20like%20occasional%20updates%20about%3A%0A%0A-%20English%20learning%0A-%20Tourism%20%2F%20hospitality%0A-%20Digital%20skills%20%2F%20AI%0A-%20Career%20development%0A-%20Study%20in%20the%20U.S.%0A-%20Entrepreneurship%0A-%20Local%20workshops%0A-%20Global%20online%20opportunities%0A%0AName%3A%0ARole%3A%0AOrganization%2Fschool%2Fbusiness%3A%0APreferred%20contact%3A%0A">Request Updates</a>
+        <a class="btn btn-primary" href="mailto:jasonlmjones@gmail.com?subject=Learning%20and%20Opportunity%20Updates%20Request">Request Updates</a>
         <a class="btn btn-secondary" href="mailto:jasonlmjones@gmail.com?subject=Resource%20Suggestion%20for%20Opportunity%20Hub">Suggest a Resource</a>
         <a class="btn btn-secondary" href="mailto:jasonlmjones@gmail.com?subject=Help%20Finding%20a%20Resource">Ask for Help</a>
       </div>
-      <p style="font-size:0.92rem; margin-top:1rem;">Please do not submit sensitive personal information. This is only for learning-resource updates, resource suggestions, and basic follow-up.</p>
+      <p style="font-size:.92rem; margin-top:1rem;">Please do not submit sensitive personal information. This is only for learning-resource updates, resource suggestions, and basic follow-up.</p>
     </section>
 
     <section class="section panel" aria-label="Full disclaimer">
       <h2>Disclaimer</h2>
-      <p>This resource page is independently curated to help students, workers, and community members find useful learning, English, study, digital-skills, and career-development opportunities. It is not an official U.S. Embassy or American Spaces page unless a specific event or resource is clearly identified as official and approved. Always check the official program website for final eligibility, deadlines, and application instructions.</p>
+      <p>This resource page is independently curated to help students, workers, and community members find useful learning, English, study, digital-skills, and career-development opportunities. It is not officially sponsored by any of the organizations listed. Official resources are marked where known, and external links go to the source organization for final eligibility, deadlines, enrollment steps, and requirements.</p>
       <p class="last-updated">Last updated: May 2026 · Contact: <a href="mailto:jasonlmjones@gmail.com">jasonlmjones@gmail.com</a></p>
     </section>
   </main>
@@ -707,7 +386,7 @@
     <div class="footer-inner">
       <strong>Opportunity Hub</strong>
       <span>Independent resource page curated by Jason L. Jones. Built to help people find practical next steps in learning, English, career, digital skills, and opportunity access.</span>
-      <span><a href="../">Return to JasonLamard.com</a> · <a href="mailto:jasonlmjones@gmail.com">Contact</a></span>
+      <span><a href="index.html">Return to JasonLamard.com</a> · <a href="mailto:jasonlmjones@gmail.com">Contact</a></span>
     </div>
   </footer>
 </body>
