@@ -1,393 +1,496 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Learning & Career Resources | Opportunity Hub</title>
-  <meta name="description" content="Free and low-cost English, tourism, digital-skills, career, study, and learning resources for Cabo Verde and beyond." />
+  <title>Learning & Career Resource Hub | Jason L. Jones</title>
+  <meta name="description" content="Independently curated learning, career, digital-skills, English, entrepreneurship, and opportunity resources for Cabo Verde, universal online learners, and global communities." />
   <style>
     :root {
-      --bg: #0c111d;
-      --bg-2: #121a2b;
-      --panel: #ffffff;
-      --paper: #f7f3ea;
-      --paper-2: #fffaf0;
-      --ink: #14213d;
-      --muted: #5b6473;
-      --gold: #c9973b;
-      --gold-deep: #9f7127;
-      --blue: #12355b;
-      --blue-soft: #e8eef7;
-      --teal: #1f6f5b;
-      --teal-soft: #e7f5ef;
-      --rose-soft: #fff4f4;
-      --line: #e3ded4;
-      --shadow: 0 18px 50px rgba(12, 17, 29, 0.14);
-      --radius: 22px;
-      --max: 1160px;
+      --navy:#0C111D;
+      --navy-2:#121A2B;
+      --ink:#172033;
+      --muted:#5C667A;
+      --line:#E7E1D6;
+      --ivory:#F7F3EA;
+      --paper:#FFFDF8;
+      --gold:#C9973B;
+      --gold-2:#E9D7A8;
+      --teal:#1F6F5B;
+      --teal-2:#D9EFE8;
+      --blue:#365A8C;
+      --danger:#9A4E22;
+      --shadow: 0 18px 45px rgba(12,17,29,.10);
+      --radius:22px;
+      --radius-sm:14px;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; }
-    a { color:inherit; }
-    .skip-link { position:absolute; left:-999px; top:0; background:#fff; color:var(--ink); padding:.75rem 1rem; z-index:999; border-radius:0 0 10px 0; }
-    .skip-link:focus { left:0; }
-    .topbar { position:sticky; top:0; z-index:50; backdrop-filter:blur(16px); background:rgba(12,17,29,.92); color:#fff; border-bottom:1px solid rgba(255,255,255,.1); }
-    .nav { max-width:var(--max); margin:0 auto; padding:.85rem 1.1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-    .brand { display:flex; flex-direction:column; gap:.12rem; text-decoration:none; min-width:0; }
-    .brand strong { font-size:.96rem; letter-spacing:.02em; white-space:nowrap; }
-    .brand span { font-size:.76rem; color:rgba(255,255,255,.72); white-space:nowrap; }
-    .nav-links { display:flex; align-items:center; gap:.55rem; flex-wrap:wrap; justify-content:flex-end; }
-    .nav-links a { color:rgba(255,255,255,.86); text-decoration:none; font-size:.86rem; padding:.5rem .68rem; border-radius:999px; }
-    .nav-links a:hover,.nav-links a:focus { background:rgba(255,255,255,.1); outline:none; }
-    .nav-links .button-link { color:#111827; background:var(--gold); font-weight:800; }
-    .hero { color:#fff; background: radial-gradient(circle at 18% 18%, rgba(201,151,59,.24), transparent 34%), radial-gradient(circle at 80% 22%, rgba(46,95,153,.25), transparent 32%), linear-gradient(135deg,#0c111d 0%,#14213d 48%,#0d1628 100%); padding:5rem 1.1rem 3.6rem; }
-    .hero-inner { max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); gap:2rem; align-items:center; }
-    .eyebrow { display:inline-flex; align-items:center; gap:.45rem; color:#ffe0a3; font-weight:900; font-size:.82rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:1rem; }
-    .hero h1 { font-size:clamp(2.15rem,7vw,5rem); line-height:.96; letter-spacing:-.06em; margin:0 0 1.2rem; max-width:850px; }
-    .hero p { font-size:clamp(1rem,2.4vw,1.2rem); color:rgba(255,255,255,.82); max-width:760px; margin:0 0 1.2rem; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.5rem; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:44px; padding:.82rem 1.05rem; border-radius:999px; text-decoration:none; font-weight:850; border:1px solid transparent; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; }
-    .btn:hover,.btn:focus { transform:translateY(-1px); outline:none; }
-    .btn-primary { background:var(--gold); color:#111827; box-shadow:0 10px 26px rgba(201,151,59,.25); }
-    .btn-secondary { background:rgba(255,255,255,.1); color:#fff; border-color:rgba(255,255,255,.22); }
-    .hero-card { background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.15); border-radius:28px; padding:1.25rem; box-shadow:0 26px 70px rgba(0,0,0,.25); }
-    .hero-card h2 { margin:0 0 .7rem; font-size:1.2rem; color:#fff; }
-    .hero-card ol { margin:0; padding-left:1.3rem; color:rgba(255,255,255,.82); }
-    .hero-card li { margin:.55rem 0; }
-    .translate-strip { background:#08101f; color:#fff; border-bottom:1px solid rgba(255,255,255,.1); padding:.65rem 1.1rem; }
-    .translate-inner { max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:.55rem; align-items:center; justify-content:space-between; font-size:.88rem; }
-    .translate-links { display:flex; flex-wrap:wrap; gap:.45rem; }
-    .translate-links a { color:#ffe0a3; text-decoration:none; border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:.32rem .55rem; }
-    .notice { max-width:var(--max); margin:-1.35rem auto 0; padding:0 1.1rem; position:relative; z-index:2; }
-    .notice-inner { background:#fff8e7; border:1px solid #ead59c; color:#5b420e; border-radius:18px; padding:1rem 1.15rem; box-shadow:var(--shadow); font-size:.95rem; }
-    main { padding:2.7rem 1.1rem 4rem; }
-    .section { max-width:var(--max); margin:0 auto 2.25rem; }
-    .section-header { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
-    .section h2 { font-size:clamp(1.55rem,4vw,2.5rem); line-height:1.05; letter-spacing:-.04em; margin:0; }
-    .section-intro { margin:.45rem 0 0; color:var(--muted); max-width:820px; }
-    .panel { background:#fff; border:1px solid rgba(20,33,61,.08); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow); }
-    .pill-row { display:flex; flex-wrap:wrap; gap:.55rem; margin:1rem 0 0; }
-    .pill-row a,.tag { display:inline-flex; align-items:center; min-height:36px; padding:.52rem .72rem; border-radius:999px; background:#fff; border:1px solid var(--line); color:var(--ink); text-decoration:none; font-weight:800; font-size:.84rem; }
-    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
-    .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
-    .resource-card { background:#fff; border:1px solid rgba(20,33,61,.1); border-radius:22px; padding:1.15rem; box-shadow:0 12px 34px rgba(12,17,29,.08); display:flex; flex-direction:column; min-height:100%; position:relative; overflow:hidden; }
-    .resource-card h3 { margin:.2rem 0 .45rem; line-height:1.12; letter-spacing:-.02em; font-size:1.18rem; }
-    .resource-card p { margin:0 0 .75rem; color:var(--muted); font-size:.95rem; }
-    .meta { display:grid; gap:.45rem; margin:.2rem 0 .95rem; color:#3e4756; font-size:.88rem; }
-    .meta div { display:grid; grid-template-columns:105px 1fr; gap:.5rem; border-top:1px solid #eee7dc; padding-top:.45rem; }
-    .meta b { color:var(--ink); }
-    .card-actions { margin-top:auto; display:flex; flex-wrap:wrap; gap:.55rem; }
-    .mini-btn { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:.55rem .75rem; border-radius:999px; background:var(--blue); color:#fff; text-decoration:none; font-weight:850; font-size:.86rem; }
-    .mini-btn.light { color:var(--ink); background:var(--paper); border:1px solid var(--line); }
-    .tag.official { background:var(--blue-soft); border-color:#cbd8ec; color:#12355b; }
-    .tag.local { background:var(--teal-soft); border-color:#c6e7da; color:#175843; }
-    .tag.global { background:#f7edd7; border-color:#e4ca8b; color:#6c4a08; }
-    .tag.active { background:#e9f8ee; border-color:#bce2c6; color:#14552b; }
-    .tag.verify { background:#fff4f4; border-color:#f0c7c7; color:#8a2929; }
-    .tag.soon { background:#eeeeee; border-color:#d7d7d7; color:#666; }
-    .category-card { background:var(--paper-2); border:1px solid var(--line); border-radius:18px; padding:1rem; }
-    .category-card h3 { margin:0 0 .35rem; }
-    .category-card p { margin:0; color:var(--muted); font-size:.94rem; }
-    .coming-soon { opacity:.58; filter:grayscale(.35); }
-    .coming-stamp { position:absolute; right:1rem; top:1rem; transform:rotate(7deg); border:2px solid #777; color:#555; background:rgba(255,255,255,.88); border-radius:8px; padding:.2rem .45rem; font-weight:900; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; }
-    .status-note { background:#f1f5fb; border:1px solid #d8e3f3; color:#12355b; border-radius:16px; padding:.85rem 1rem; margin-top:1rem; font-size:.95rem; }
-    .callout { background:linear-gradient(135deg,#14213d,#213b61); color:#fff; border-radius:24px; padding:1.35rem; box-shadow:var(--shadow); }
-    .callout h2 { color:#fff; }
-    .callout p { color:rgba(255,255,255,.82); }
-    .footer { background:#0c111d; color:rgba(255,255,255,.78); padding:2rem 1.1rem; }
-    .footer-inner { max-width:var(--max); margin:0 auto; display:grid; gap:.8rem; }
-    .footer a { color:#ffe0a3; }
-    .last-updated { color:var(--muted); font-size:.9rem; margin-top:.65rem; }
-    @media (max-width:920px) { .hero-inner{grid-template-columns:1fr;} .grid,.grid.two{grid-template-columns:1fr;} .section-header{display:block;} .nav{align-items:flex-start;} .nav-links{gap:.35rem;} .nav-links a{padding:.45rem .55rem;} }
-    @media (max-width:620px) { .hero{padding-top:3.6rem;} .nav{flex-direction:column;} .brand strong,.brand span{white-space:normal;} .hero-actions .btn,.pill-row a{width:100%;} .meta div{grid-template-columns:1fr; gap:.1rem;} .resource-card{border-radius:18px;} .translate-inner{display:block;} .translate-links{margin-top:.5rem;} }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,var(--ivory) 0%,#fff 52%,#F8FAFC 100%);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:var(--teal);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .topbar{
+      position:sticky;top:0;z-index:40;
+      background:rgba(255,253,248,.92);
+      border-bottom:1px solid rgba(231,225,214,.9);
+      backdrop-filter:saturate(1.2) blur(14px);
+    }
+    .top-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+    .mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--teal));display:grid;place-items:center;color:#fff;font-weight:900}
+    .nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .nav a,.lang button{font-size:.92rem;color:var(--ink);font-weight:700;padding:8px 10px;border-radius:999px;border:0;background:transparent;cursor:pointer}
+    .nav a:hover,.lang button:hover{background:#F0E8D9;text-decoration:none}
+    .lang{display:flex;gap:4px;border-left:1px solid var(--line);padding-left:10px}
+    .lang button.active{background:var(--navy);color:white}
+    .hero{
+      position:relative;overflow:hidden;
+      color:white;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(201,151,59,.28),transparent 30%),
+        radial-gradient(circle at 86% 20%,rgba(31,111,91,.34),transparent 30%),
+        linear-gradient(135deg,#0C111D 0%,#16233A 58%,#103D36 100%);
+    }
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(180deg,rgba(0,0,0,.6),transparent 85%);}
+    .hero-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:64px 18px 52px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);padding:8px 12px;border-radius:999px;font-weight:800;font-size:.86rem;color:#F8E7B8}
+    h1{font-size:clamp(2.05rem,5vw,4.4rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0 16px}
+    .lead{font-size:clamp(1.05rem,2.6vw,1.28rem);max-width:740px;color:#ECF4F2;margin:0 0 24px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:999px;padding:12px 17px;font-weight:850;cursor:pointer;text-decoration:none;white-space:nowrap}
+    .btn.primary{background:var(--gold);color:#111827}
+    .btn.primary:hover{background:#D9AE55;text-decoration:none}
+    .btn.secondary{background:rgba(255,255,255,.12);color:white;border-color:rgba(255,255,255,.26)}
+    .btn.secondary:hover{background:rgba(255,255,255,.18);text-decoration:none}
+    .hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:24px;box-shadow:0 18px 50px rgba(0,0,0,.18);backdrop-filter:blur(12px)}
+    .hero-card h2{margin:0 0 12px;font-size:1.2rem;color:#fff}
+    .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .metric{padding:14px;border-radius:16px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.12)}
+    .metric strong{font-size:1.45rem;display:block;color:#fff}
+    .metric span{font-size:.82rem;color:#D8E6E2}
+    main{max-width:1180px;margin:0 auto;padding:28px 18px 70px}
+    .notice{background:#FFF9EA;border:1px solid #F0DEAE;border-left:5px solid var(--gold);border-radius:18px;padding:16px 18px;margin:20px 0;color:#3D3422}
+    .notice strong{color:#1E293B}
+    .section{margin:34px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .section h2{font-size:clamp(1.45rem,3vw,2.2rem);letter-spacing:-.035em;margin:0;color:var(--navy)}
+    .section p.sub{margin:7px 0 0;color:var(--muted);max-width:760px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .finder{padding:24px}
+    .finder-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .field{grid-column:span 4}
+    .field.wide{grid-column:span 8}
+    .field.full{grid-column:1/-1}
+    label{display:block;font-size:.83rem;text-transform:uppercase;letter-spacing:.07em;font-weight:900;color:var(--navy);margin:0 0 7px}
+    select,input[type="search"]{width:100%;border:1px solid #D6DCE7;border-radius:14px;background:#fff;padding:12px 13px;font-size:1rem;color:var(--ink);outline:none}
+    select:focus,input[type="search"]:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(31,111,91,.12)}
+    .checkgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .chip-check{display:flex;gap:8px;align-items:center;border:1px solid #D8DEE9;background:#fff;border-radius:999px;padding:9px 10px;font-weight:700;color:#253044;font-size:.92rem}
+    .chip-check input{accent-color:var(--teal)}
+    .finder-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn.dark{background:var(--navy);color:white}
+    .btn.light{background:#fff;color:var(--ink);border-color:#D6DCE7}
+    .result-count{font-size:.96rem;color:var(--muted);font-weight:800;margin:14px 0 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:#fff;border:1px solid #E3E8EF;border-radius:20px;padding:18px;box-shadow:0 10px 28px rgba(15,23,42,.06);display:flex;flex-direction:column;min-height:255px;position:relative;overflow:hidden}
+    .card.featured{border-color:#E6C36A;box-shadow:0 16px 38px rgba(201,151,59,.12)}
+    .card.verify{border-color:#F1D1A4;background:#FFFDF8}
+    .card.watch{opacity:.94;background:#FCFCFD}
+    .card h3{font-size:1.05rem;margin:9px 0 5px;letter-spacing:-.01em;color:var(--navy)}
+    .provider{font-size:.86rem;color:var(--muted);font-weight:700;margin-bottom:8px}
+    .desc{font-size:.93rem;color:#344054;margin:0 0 13px;flex:1}
+    .meta{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 12px}
+    .pill{font-size:.75rem;border-radius:999px;padding:5px 8px;font-weight:850;background:#EEF2F7;color:#344054;border:1px solid #E3E8EF}
+    .pill.gold{background:#FFF4D6;color:#6B4F0A;border-color:#F0D584}
+    .pill.teal{background:var(--teal-2);color:#135545;border-color:#B9DDD3}
+    .pill.warn{background:#FFF4EA;color:#87481C;border-color:#F0CCAA}
+    .pill.blue{background:#EAF1FF;color:#234C80;border-color:#C7D8F5}
+    .card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+    .card a.open{display:inline-flex;justify-content:center;align-items:center;background:var(--navy);color:white;border-radius:999px;padding:10px 12px;font-weight:850;font-size:.9rem}
+    .card a.open:hover{background:#1C2943;text-decoration:none}
+    .card details{margin-top:10px}
+    .card summary{font-weight:800;font-size:.86rem;color:var(--teal);cursor:pointer}
+    .small{font-size:.86rem;color:var(--muted)}
+    .groups{display:grid;gap:18px}
+    .group{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.84)}
+    .group-title{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#F9F5EA;border-bottom:1px solid var(--line);padding:15px 18px}
+    .group-title h3{margin:0;color:var(--navy);font-size:1.08rem}
+    .mini-count{font-weight:900;color:var(--teal);font-size:.85rem}
+    .group-body{padding:16px}
+    .compact-list{display:grid;gap:10px}
+    .compact-item{display:grid;grid-template-columns:1.2fr .8fr auto;gap:12px;align-items:center;background:#fff;border:1px solid #E7EAF0;border-radius:15px;padding:12px}
+    .compact-item strong{color:var(--navy)}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+    .tab{border:1px solid #D6DCE7;background:#fff;border-radius:999px;padding:9px 12px;cursor:pointer;font-weight:850;color:#344054}
+    .tab.active{background:var(--navy);color:#fff}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .info-card{padding:20px}
+    .info-card h3{margin:0 0 8px;color:var(--navy)}
+    .footer{background:var(--navy);color:#DDE7EA;padding:34px 18px;margin-top:40px}
+    .footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .footer h2{color:white;margin:0 0 8px}
+    .hide{display:none!important}
+    [data-lang="pt"] .en-only{display:none!important}
+    [data-lang="en"] .pt-only{display:none!important}
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:1fr;padding-top:44px}
+      .cards{grid-template-columns:1fr 1fr}
+      .field,.field.wide{grid-column:1/-1}
+      .checkgrid{grid-template-columns:1fr 1fr}
+      .compact-item{grid-template-columns:1fr}
+      .two-col,.footer-inner{grid-template-columns:1fr}
+    }
+    @media (max-width:620px){
+      .top-inner{align-items:flex-start;flex-direction:column}
+      .nav{justify-content:flex-start}
+      .cards{grid-template-columns:1fr}
+      .metric-grid{grid-template-columns:1fr 1fr}
+      .checkgrid{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+      main{padding-left:14px;padding-right:14px}
+      .finder{padding:18px}
+    }
   </style>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="topbar" aria-label="Site header">
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="index.html">
-        <strong>Jason L. Jones</strong>
-        <span>Opportunity Hub - Independent Resource Page</span>
-      </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#start">Start Here</a>
-        <a href="#current">Open Now</a>
-        <a href="#teaching">English Teaching</a>
-        <a href="#cabo-verde">Cabo Verde</a>
-        <a class="button-link" href="#updates">Get Updates</a>
-      </div>
-    </nav>
-  </header>
-
-  <div class="translate-strip" aria-label="Translation options">
-    <div class="translate-inner">
-      <span><strong>Need translation?</strong> Use these quick Google Translate links, or use your browser's translate option.</span>
-      <div class="translate-links">
-        <a href="https://translate.google.com/translate?sl=en&tl=pt&u=https://jasonlamard.com/resources.html" target="_blank" rel="noopener">Português</a>
-        <a href="https://translate.google.com/translate?sl=en&tl=uk&u=https://jasonlamard.com/resources.html" target="_blank" rel="noopener">Українська</a>
-        <a href="https://translate.google.com/translate?sl=en&tl=ru&u=https://jasonlamard.com/resources.html" target="_blank" rel="noopener">Русский</a>
-      </div>
+<body data-lang="en">
+  <div class="topbar">
+    <div class="top-inner">
+      <div class="brand"><div class="mark">JL</div><span>Learning & Career Resource Hub</span></div>
+      <nav class="nav" aria-label="Resource Hub navigation">
+        <a href="#finder"><span class="en-only">Find resources</span><span class="pt-only">Encontrar recursos</span></a>
+        <a href="#featured"><span class="en-only">Featured</span><span class="pt-only">Destaques</span></a>
+        <a href="#directory"><span class="en-only">Directory</span><span class="pt-only">Diretório</span></a>
+        <a href="#get-involved"><span class="en-only">Get involved</span><span class="pt-only">Participar</span></a>
+        <div class="lang" aria-label="Language options">
+          <button type="button" class="active" data-set-lang="en">English</button>
+          <button type="button" data-set-lang="pt">Português</button>
+        </div>
+      </nav>
     </div>
   </div>
 
-  <section class="hero">
+  <header class="hero">
     <div class="hero-inner">
       <div>
-        <div class="eyebrow">Opportunity Hub - Cabo Verde + Global</div>
-        <h1>Free Learning & Career Resources</h1>
-        <p>A simple place to find English-learning resources, free online courses, study information, digital-skills tools, tourism/hospitality training, and career-development opportunities useful for students, workers, teachers, and community members in Cabo Verde and beyond.</p>
+        <div class="eyebrow"><span class="en-only">Independent resource guide</span><span class="pt-only">Guia independente de recursos</span></div>
+        <h1><span class="en-only">Learning, career, digital-skills, and opportunity resources.</span><span class="pt-only">Recursos de aprendizagem, carreira, competências digitais e oportunidades.</span></h1>
+        <p class="lead en-only">A curated starting point for Cabo Verde, universal online learning, and selected global opportunities — built to help students, workers, teachers, entrepreneurs, and community members find practical next steps.</p>
+        <p class="lead pt-only">Um ponto de partida curado para Cabo Verde, aprendizagem online universal e algumas oportunidades globais — criado para ajudar estudantes, trabalhadores, professores, empreendedores e membros da comunidade a encontrar próximos passos práticos.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#current">See courses open now</a>
-          <a class="btn btn-secondary" href="#start">Choose a category</a>
+          <a class="btn primary" href="#finder"><span class="en-only">Find my resources</span><span class="pt-only">Encontrar recursos</span></a>
+          <a class="btn secondary" href="#directory"><span class="en-only">Browse full directory</span><span class="pt-only">Ver diretório completo</span></a>
+          <a class="btn secondary" href="https://translate.google.com/translate?sl=auto&amp;tl=pt&amp;u=https%3A%2F%2Fjasonlamard.com%2Fresources.html" target="_blank" rel="noopener"><span class="en-only">Google Translate page</span><span class="pt-only">Traduzir página</span></a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="How to use this page">
-        <h2>Start with one next step</h2>
-        <ol>
-          <li>Choose one category.</li>
-          <li>Pick one resource.</li>
-          <li>Check the deadline and time commitment.</li>
-          <li>Open the official link.</li>
-          <li>Save the next step or ask for help if you get stuck.</li>
-        </ol>
+      <aside class="hero-card" aria-label="Resource hub snapshot">
+        <h2><span class="en-only">V3 working directory</span><span class="pt-only">Diretório V3 em desenvolvimento</span></h2>
+        <p class="small" style="color:#DDE7EA;margin:0"><span class="en-only">This version includes a larger inventory but still labels items that need date, price, certificate, or eligibility verification.</span><span class="pt-only">Esta versão inclui um inventário maior, mas identifica itens que ainda precisam de confirmação sobre datas, preços, certificados ou elegibilidade.</span></p>
+        <div class="metric-grid">
+          <div class="metric"><strong>60</strong><span class="en-only">resources loaded</span><span class="pt-only">recursos carregados</span></div>
+          <div class="metric"><strong>21</strong><span class="en-only">featured starts</span><span class="pt-only">destaques</span></div>
+          <div class="metric"><strong>28</strong><span>Cabo Verde</span></div>
+          <div class="metric"><strong>28</strong><span class="en-only">universal online</span><span class="pt-only">online universal</span></div>
+        </div>
       </aside>
     </div>
-  </section>
+  </header>
 
-  <div class="notice" role="note" aria-label="Independent resource disclaimer">
-    <div class="notice-inner">
-      <strong>Important:</strong> This page is independently curated and is not officially sponsored by any of the organizations listed. Official resources are marked where known. Always check the official source for current eligibility, deadlines, enrollment steps, and requirements.
+  <main>
+    <div class="notice">
+      <strong><span class="en-only">Important:</span><span class="pt-only">Importante:</span></strong>
+      <span class="en-only"> This resource page is independently curated and is not officially sponsored, endorsed, or maintained by any listed organization unless clearly stated. Listings are informational only. Always check the official provider’s website for current eligibility, deadlines, costs, certificates, and instructions.</span>
+      <span class="pt-only"> Esta página de recursos é curada de forma independente e não é oficialmente patrocinada, endossada ou mantida por nenhuma organização listada, salvo indicação clara. As listagens são apenas informativas. Verifique sempre o site oficial do fornecedor para confirmar elegibilidade, prazos, custos, certificados e instruções.</span>
     </div>
-  </div>
 
-  <main id="main">
-    <section id="start" class="section panel">
-      <div class="section-header">
+    <section id="finder" class="section">
+      <div class="section-head">
         <div>
-          <h2>Start Here</h2>
-          <p class="section-intro">Start with one need. Choose one resource. Take one next step.</p>
+          <h2><span class="en-only">Find My Resources</span><span class="pt-only">Encontrar Recursos</span></h2>
+          <p class="sub en-only">Use the quick filters below. Nothing here is submitted or stored; it only changes what you see on this page.</p>
+          <p class="sub pt-only">Use os filtros rápidos abaixo. Nada aqui é enviado ou armazenado; apenas muda os resultados nesta página.</p>
         </div>
       </div>
-      <div class="pill-row" aria-label="Resource categories">
-        <a href="#current">Open Now</a>
-        <a href="#tourism">Tourism & Hospitality</a>
-        <a href="#teaching">English Teaching</a>
-        <a href="#english">English Learning</a>
-        <a href="#digital">Digital Skills / AI</a>
-        <a href="#career">Career Development</a>
-        <a href="#study">Study in the U.S.</a>
-        <a href="#global">Global Opportunities</a>
-        <a href="#soon">Coming Soon</a>
+      <div class="panel finder">
+        <div class="finder-grid">
+          <div class="field">
+            <label for="q"><span class="en-only">Search</span><span class="pt-only">Pesquisar</span></label>
+            <input id="q" type="search" placeholder="AI, tourism, English, entrepreneurship…" />
+          </div>
+          <div class="field">
+            <label for="region"><span class="en-only">Community served</span><span class="pt-only">Comunidade servida</span></label>
+            <select id="region">
+              <option value="">All / Todos</option>
+              <option value="Africa">Africa</option><option value="Cabo Verde">Cabo Verde</option><option value="Universal">Universal</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="category"><span class="en-only">Topic</span><span class="pt-only">Tema</span></label>
+            <select id="category">
+              <option value="">All topics</option>
+              <option value="Business / Entrepreneurship">Business / Entrepreneurship</option><option value="Career Development / Job Readiness">Career Development / Job Readiness</option><option value="Climate / Sustainability / Blue Economy">Climate / Sustainability / Blue Economy</option><option value="Digital Skills / AI / Tech">Digital Skills / AI / Tech</option><option value="English Learning">English Learning</option><option value="English Teaching">English Teaching</option><option value="Local Paid Options — Verify Details">Local Paid Options — Verify Details</option><option value="Study Abroad / EducationUSA">Study Abroad / EducationUSA</option><option value="Tourism / Hospitality">Tourism / Hospitality</option><option value="Women / Youth / Leadership">Women / Youth / Leadership</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="role"><span class="en-only">I am a…</span><span class="pt-only">Eu sou…</span></label>
+            <select id="role">
+              <option value="">Any role</option>
+              <option>Student</option>
+              <option>Teacher</option>
+              <option>Employee</option>
+              <option>Manager</option>
+              <option>Entrepreneur</option>
+              <option>Job seeker</option>
+              <option>Community leader</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cost"><span class="en-only">Cost</span><span class="pt-only">Custo</span></label>
+            <select id="cost">
+              <option value="">All</option>
+              <option>Free</option>
+              <option>Paid / varies</option>
+              <option>Varies / verify</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="availability"><span class="en-only">Availability</span><span class="pt-only">Disponibilidade</span></label>
+            <select id="availability">
+              <option value="">All</option>
+              <option value="ongoing">Ongoing</option>
+              <option value="cohort">Cohort / application-based</option>
+              <option value="watchlist">Watchlist / verify</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label><span class="en-only">Popular pathways</span><span class="pt-only">Percursos populares</span></label>
+            <div class="checkgrid" id="pathways">
+              <label class="chip-check"><input type="checkbox" value="Digital Skills / AI / Tech"> Digital / AI</label>
+              <label class="chip-check"><input type="checkbox" value="Business / Entrepreneurship"> Business</label>
+              <label class="chip-check"><input type="checkbox" value="Career Development / Job Readiness"> Career</label>
+              <label class="chip-check"><input type="checkbox" value="Tourism / Hospitality"> Tourism</label>
+              <label class="chip-check"><input type="checkbox" value="English Learning"> English Learning</label>
+              <label class="chip-check"><input type="checkbox" value="English Teaching"> English Teaching</label>
+              <label class="chip-check"><input type="checkbox" value="Women / Youth / Leadership"> Leadership</label>
+              <label class="chip-check"><input type="checkbox" value="Climate / Sustainability / Blue Economy"> Climate</label>
+            </div>
+          </div>
+        </div>
+        <div class="finder-actions">
+          <button class="btn dark" id="apply" type="button"><span class="en-only">Show matched resources</span><span class="pt-only">Mostrar recursos</span></button>
+          <button class="btn light" id="reset" type="button"><span class="en-only">Reset filters</span><span class="pt-only">Limpar filtros</span></button>
+        </div>
+        <div class="result-count" id="resultCount"></div>
       </div>
-      <div class="status-note"><strong>Status guide:</strong> "Open now" means this resource appears active or currently useful. "Verify date" means the official page should be checked before promoting widely. "Coming soon" means the section is planned but not ready as a full resource list yet.</div>
     </section>
 
-    <section id="current" class="section">
-      <div class="section-header">
+    <section id="results" class="section">
+      <div class="section-head">
         <div>
-          <h2>Open Now / Currently Useful</h2>
-          <p class="section-intro">These are the clearest starting points right now. Course dates can change, so confirm everything on the official OPEN MOOC page before registering or promoting.</p>
+          <h2><span class="en-only">Recommended Results</span><span class="pt-only">Resultados Recomendados</span></h2>
+          <p class="sub en-only">Results are grouped first by community served, then by category. Featured resources appear first inside each group.</p>
+          <p class="sub pt-only">Os resultados são agrupados primeiro por comunidade servida e depois por categoria. Os recursos em destaque aparecem primeiro em cada grupo.</p>
         </div>
       </div>
-      <div class="grid">
-        <article class="resource-card" id="tourism-course">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag global">Global</span></div>
-          <h3>English for Tourism Professionals</h3>
-          <p>Self-paced OPEN MOOC for non-native English speakers who are tourism professionals or students in the tourism industry.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Tourism workers, students, tour guides, hospitality staff</span></div>
-            <div><b>Course dates</b><span>Apr. 6 - Jun. 29, 2026</span></div>
-            <div><b>Enroll by</b><span>Jun. 22, 2026</span></div>
-            <div><b>Workload</b><span>Approx. 3-5 hours per module; 5 modules</span></div>
-            <div><b>Start step</b><span>Open the official MOOC page, select this course, then use the Enroll Now link.</span></div>
-          </div>
-          <div class="card-actions">
-            <a class="mini-btn" href="https://openenglishcommunity.org/page/english-for-tourism-professionals-etp" target="_blank" rel="noopener">Course info</a>
-            <a class="mini-btn light" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a>
-          </div>
-        </article>
-
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag global">Global</span></div>
-          <h3>English for Business and Entrepreneurship</h3>
-          <p>Self-paced OPEN MOOC for non-native English speakers interested in business vocabulary, entrepreneurship, business planning, and professional communication.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Entrepreneurs, students, job seekers, business learners</span></div>
-            <div><b>Course dates</b><span>Apr. 6 - Jun. 29, 2026</span></div>
-            <div><b>Enroll by</b><span>Jun. 22, 2026</span></div>
-            <div><b>Cost</b><span>Free</span></div>
-            <div><b>Start step</b><span>Open the official page and choose the Enroll Now link under this course.</span></div>
-          </div>
-          <div class="card-actions">
-            <a class="mini-btn" href="https://openenglishcommunity.org/page/english-for-business-and-entrepreneurship-ebe" target="_blank" rel="noopener">Course info</a>
-            <a class="mini-btn light" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a>
-          </div>
-        </article>
-
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag global">Global</span></div>
-          <h3>English for Career Development</h3>
-          <p>Self-paced OPEN MOOC focused on English for job searches, resumes/CVs, interviews, professional communication, and career planning.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Students, job seekers, early-career professionals</span></div>
-            <div><b>Course dates</b><span>Apr. 6 - Jun. 29, 2026</span></div>
-            <div><b>Enroll by</b><span>Jun. 22, 2026</span></div>
-            <div><b>Cost</b><span>Free</span></div>
-            <div><b>Start step</b><span>Open the official MOOC page and use the course's Enroll Now link.</span></div>
-          </div>
-          <div class="card-actions">
-            <a class="mini-btn" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a>
-          </div>
-        </article>
-      </div>
+      <div id="resultsGroups" class="groups"></div>
     </section>
 
-    <section id="teaching" class="section panel">
-      <div class="section-header">
+    <section id="featured" class="section">
+      <div class="section-head">
         <div>
-          <h2>English Teaching</h2>
-          <p class="section-intro">OPEN and American English resources for teachers, tutors, facilitators, and people supporting English clubs or conversation groups.</p>
+          <h2><span class="en-only">Featured Starting Points</span><span class="pt-only">Pontos de Partida em Destaque</span></h2>
+          <p class="sub en-only">High-value resources to explore first. These are not endorsements; they are practical starting points with strong relevance.</p>
+          <p class="sub pt-only">Recursos de alto valor para explorar primeiro. Não são endossos; são pontos de partida práticos e relevantes.</p>
         </div>
       </div>
-      <div class="grid">
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span></div>
-          <h3>Teaching English to Young Learners</h3>
-          <p>OPEN MOOC for educators working with young English learners. Useful for teachers, tutors, and facilitators.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>English teachers, tutors, youth facilitators</span></div>
-            <div><b>Course dates</b><span>Apr. 13 - Jul. 6, 2026</span></div>
-            <div><b>Enroll by</b><span>Jun. 29, 2026</span></div>
-            <div><b>Start step</b><span>Open the course info or official MOOC page and enroll.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://openenglishcommunity.org/page/teaching-english-to-young-learners-teyl" target="_blank" rel="noopener">Course info</a><a class="mini-btn light" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Enroll via MOOC page</a></div>
-        </article>
+      <div class="cards" id="featuredCards"></div>
+    </section>
 
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span><span class="tag verify">Verify date</span></div>
-          <h3>Using Educational Technology in the English Language Classroom</h3>
-          <p>OPEN MOOC focused on practical education technology for English-language teaching and learning environments.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>English teachers, tutors, education volunteers</span></div>
-            <div><b>Course dates</b><span>Apr. 27 - Jun. 1, 2026</span></div>
-            <div><b>Enroll by</b><span>May 25, 2026</span></div>
-            <div><b>Start step</b><span>Open the official MOOC page and use the Enroll Now link if still available.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://openenglishcommunity.org/page/massive-open-online-courses-moocs" target="_blank" rel="noopener">Check official MOOC page</a></div>
-        </article>
+    <section id="directory" class="section">
+      <div class="section-head">
+        <div>
+          <h2><span class="en-only">Browse the Full Directory</span><span class="pt-only">Ver Diretório Completo</span></h2>
+          <p class="sub en-only">Use the tabs to browse the larger inventory without relying on filters.</p>
+          <p class="sub pt-only">Use as abas para consultar o inventário maior sem depender dos filtros.</p>
+        </div>
+      </div>
+      <div class="tabs" id="dirTabs"></div>
+      <div id="directoryGroups" class="groups"></div>
+    </section>
 
-        <article class="resource-card">
-          <div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div>
-          <h3>American English Teaching Resources</h3>
-          <p>Free teaching resources, classroom materials, webinars, and professional-development materials for English teachers and facilitators.</p>
-          <div class="meta">
-            <div><b>Best for</b><span>Teachers, conversation club facilitators, tutors</span></div>
-            <div><b>Status</b><span>Ongoing resource library</span></div>
-            <div><b>Start step</b><span>Browse by topic and save one useful resource for your next session.</span></div>
-          </div>
-          <div class="card-actions"><a class="mini-btn" href="https://americanenglish.state.gov/resources" target="_blank" rel="noopener">Browse resources</a></div>
-        </article>
+    <section id="coming" class="section">
+      <div class="two-col">
+        <div class="panel info-card">
+          <h3><span class="en-only">Coming soon</span><span class="pt-only">Em breve</span></h3>
+          <p class="small en-only">More verified resources, direct course cards with dates, QR flyer pathways, Portuguese pathway pages, and optional update channels.</p>
+          <p class="small pt-only">Mais recursos verificados, cartões de cursos com datas, percursos por QR code, páginas em português e canais opcionais de atualização.</p>
+        </div>
+        <div class="panel info-card">
+          <h3><span class="en-only">Status labels</span><span class="pt-only">Etiquetas de estado</span></h3>
+          <p class="small en-only"><strong>Featured</strong> = strong starting point. <strong>Public Directory</strong> = useful listing. <strong>Verify Details</strong> = contact provider first. <strong>Watchlist</strong> = promising but needs current eligibility/date check.</p>
+          <p class="small pt-only"><strong>Destaque</strong> = bom ponto de partida. <strong>Diretório</strong> = listagem útil. <strong>Verificar</strong> = contactar o fornecedor primeiro. <strong>Lista de observação</strong> = promissor, mas precisa de confirmação atual.</p>
+        </div>
       </div>
     </section>
 
-    <section id="tourism" class="section">
-      <div class="section-header"><div><h2>Tourism & Hospitality</h2><p class="section-intro">Resources for restaurants, hotels, tour guides, customer-facing workers, tourism students, and small businesses that want to strengthen English communication, service skills, and professional confidence.</p></div></div>
-      <div class="grid">
-        <div class="category-card"><h3>Start with English for Tourism Professionals</h3><p>Best current fit for hospitality workers, tour guides, restaurant staff, and tourism students. Use the course card above to open the official course information.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Customer communication</h3><p>Professional WhatsApp/email messages, polite problem-solving, and guest support resources will be added here.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Small-business visibility</h3><p>Canva basics, menu/flyer design, Google profile basics, and clear service descriptions will be added later.</p></div>
+    <section id="get-involved" class="section">
+      <div class="panel info-card">
+        <h2><span class="en-only">Get Updates / Get Involved</span><span class="pt-only">Receber Atualizações / Participar</span></h2>
+        <p class="sub en-only">Want to suggest a resource, offer time or expertise, share a training opportunity, or discuss support through an appropriate channel?</p>
+        <p class="sub pt-only">Quer sugerir um recurso, oferecer tempo ou conhecimento, partilhar uma formação ou discutir apoio por um canal apropriado?</p>
+        <div class="hero-actions" style="margin-top:16px">
+          <a class="btn primary" href="mailto:jasonlmjones@gmail.com?subject=Resource%20Hub%20Suggestion%20or%20Support"><span class="en-only">Email a suggestion</span><span class="pt-only">Enviar sugestão</span></a>
+          <a class="btn light" href="#finder"><span class="en-only">Find resources first</span><span class="pt-only">Encontrar recursos primeiro</span></a>
+        </div>
       </div>
-    </section>
-
-    <section id="career" class="section panel">
-      <div class="section-header"><div><h2>Career + Professional Development</h2><p class="section-intro">Resources for students, workers, job seekers, interns, volunteers, and early-career professionals who want to improve communication, CVs, interviews, LinkedIn, workplace skills, and opportunity readiness.</p></div></div>
-      <div class="grid">
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag active">Open now</span></div><h3>English for Career Development</h3><p>Use this course for job-search vocabulary, professional communication, resumes/CVs, interviews, and career planning.</p><div class="card-actions"><a class="mini-btn" href="#current">View course card</a></div></article>
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag local">Cabo Verde</span><span class="tag verify">Public listing</span></div><h3>Pró Empresa</h3><p>Cabo Verde entrepreneurship and business-support resource. Useful to explore for business development, entrepreneurship support, and related opportunities.</p><div class="meta"><div><b>Best for</b><span>Entrepreneurs, small businesses, business learners</span></div><div><b>Status</b><span>Public resource listing</span></div><div><b>Start step</b><span>Open the official site and review current services/contact options.</span></div></div><div class="card-actions"><a class="mini-btn" href="https://proempresa.cv" target="_blank" rel="noopener">Visit Pró Empresa</a></div></article>
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag local">São Vicente / Barlavento</span><span class="tag verify">Public listing</span></div><h3>Câmara de Comércio de Barlavento</h3><p>Business association serving Barlavento islands, including training, events, entrepreneurship support, business services, and professional networking.</p><div class="card-actions"><a class="mini-btn" href="https://www.camara.cv/" target="_blank" rel="noopener">Visit CCB</a></div></article>
-      </div>
-    </section>
-
-    <section id="digital" class="section">
-      <div class="section-header"><div><h2>Digital Skills / AI</h2><p class="section-intro">Beginner-friendly digital-skills and responsible AI resources for students, interns, professionals, volunteers, and small businesses.</p></div></div>
-      <div class="grid">
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag local">Cabo Verde</span><span class="tag verify">Verify current window</span></div><h3>Skodji Digital</h3><p>Cabo Verde digital-skills initiative focused on digital and business skills, employability, entrepreneurship, and access to new professional opportunities.</p><div class="card-actions"><a class="mini-btn" href="https://www.skodjidigital.cv/" target="_blank" rel="noopener">Visit Skodji Digital</a></div></article>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Canva + communication</h3><p>Simple flyers, menus, social posts, event graphics, QR flyers, and professional presentations.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Responsible AI</h3><p>Use AI to summarize, practice English, plan study, draft ideas, and learn with caution and integrity.</p></div>
-      </div>
-    </section>
-
-    <section id="english" class="section panel">
-      <div class="section-header"><div><h2>English Learning</h2><p class="section-intro">English-learning resources for self-study, conversation practice, pronunciation, vocabulary, American culture, workplace communication, and English clubs.</p></div></div>
-      <div class="grid">
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div><h3>American English Resources</h3><p>English-learning and teaching resources from the U.S. Department of State, including materials for learners, teachers, culture topics, vocabulary, listening, and classroom use.</p><div class="card-actions"><a class="mini-btn" href="https://americanenglish.state.gov/resources" target="_blank" rel="noopener">Browse resources</a></div></article>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Speaking practice</h3><p>Conversation prompts, role-plays, introductions, interviews, customer service, and presentations.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Listening + pronunciation</h3><p>Short audio/video resources, repetition practice, and pronunciation support.</p></div>
-      </div>
-    </section>
-
-    <section id="study" class="section">
-      <div class="section-header"><div><h2>Study in the U.S. / EducationUSA</h2><p class="section-intro">For students interested in studying in the United States, use official EducationUSA resources and advising channels. This page only points you toward official starting points; it does not provide admissions, scholarship, or visa advice.</p></div></div>
-      <div class="grid two">
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag local">Cabo Verde</span></div><h3>EducationUSA Cabo Verde</h3><p>Official advising resource for students interested in accredited U.S. higher education institutions.</p><div class="card-actions"><a class="mini-btn" href="https://educationusa.state.gov/centers/educationusa-cabo-verde" target="_blank" rel="noopener">Visit EducationUSA CV</a></div></article>
-        <article class="resource-card"><div class="pill-row" style="margin-top:0"><span class="tag official">Official U.S. resource</span><span class="tag global">Global</span></div><h3>Exchange Programs for Non-U.S. Citizens</h3><p>Official U.S. Department of State exchange program finder for opportunities that may be open by country, audience, and application type.</p><div class="card-actions"><a class="mini-btn" href="https://exchanges.state.gov/non-us/find-programs" target="_blank" rel="noopener">Search programs</a></div></article>
-      </div>
-    </section>
-
-    <section id="cabo-verde" class="section panel">
-      <div class="section-header"><div><h2>Cabo Verde Resources</h2><p class="section-intro">Resources, programs, organizations, and opportunities that may be useful for students, young adults, English learners, job seekers, entrepreneurs, and community members in Cabo Verde.</p></div></div>
-      <div class="grid">
-        <div class="category-card"><h3>Approved American Spaces-related updates</h3><p>Approved American Spaces-related events and official resources can be listed here when confirmed.</p></div>
-        <div class="category-card"><h3>Digital skills + innovation</h3><p>Skodji Digital, Tech Park-related opportunities, digital training, and beginner-friendly tools.</p></div>
-        <div class="category-card"><h3>Entrepreneurship + business</h3><p>Public resource leads such as Pró Empresa, Chamber of Commerce, and local business-support programs.</p></div>
-      </div>
-    </section>
-
-    <section id="global" class="section">
-      <div class="section-header"><div><h2>Global Opportunities</h2><p class="section-intro">These resources may be useful from many countries, including Cabo Verde, Ukraine, the United States, the Netherlands, and elsewhere. Always check whether the resource is available in your country and whether deadlines or eligibility rules apply.</p></div></div>
-      <div class="grid">
-        <div class="category-card"><h3>OPEN MOOCs</h3><p>English and professional-development MOOCs open to participants internationally.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Other free online courses</h3><p>Curated resources from global platforms will be added after verification.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Country resource notes</h3><p>Ukraine, Netherlands, United States, and other country notes will be added carefully over time.</p></div>
-      </div>
-    </section>
-
-    <section id="soon" class="section panel">
-      <div class="section-header"><div><h2>Coming Soon / Under Development</h2><p class="section-intro">These sections are planned but not yet complete. They are shown so visitors understand the page is growing.</p></div></div>
-      <div class="grid">
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Local Resource Map</h3><p>Carefully verified local organizations, programs, and public resources in Cabo Verde.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>WhatsApp update channels</h3><p>Low-noise update channels for Cabo Verde and global learning opportunities.</p></div>
-        <div class="category-card coming-soon"><span class="coming-stamp">Coming soon</span><h3>Workshop calendar</h3><p>Local workshops and practical sessions, listed only after dates and approval are clear.</p></div>
-      </div>
-    </section>
-
-    <section id="updates" class="section callout">
-      <h2>Get Updates / Ask for Help</h2>
-      <p>Want occasional updates about free learning opportunities, English resources, digital-skills tools, tourism/hospitality training, career resources, or local workshops? Use one of the options below to request updates, suggest a resource, or ask for help finding a starting point.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:jasonlmjones@gmail.com?subject=Learning%20and%20Opportunity%20Updates%20Request">Request Updates</a>
-        <a class="btn btn-secondary" href="mailto:jasonlmjones@gmail.com?subject=Resource%20Suggestion%20for%20Opportunity%20Hub">Suggest a Resource</a>
-        <a class="btn btn-secondary" href="mailto:jasonlmjones@gmail.com?subject=Help%20Finding%20a%20Resource">Ask for Help</a>
-      </div>
-      <p style="font-size:.92rem; margin-top:1rem;">Please do not submit sensitive personal information. This is only for learning-resource updates, resource suggestions, and basic follow-up.</p>
-    </section>
-
-    <section class="section panel" aria-label="Full disclaimer">
-      <h2>Disclaimer</h2>
-      <p>This resource page is independently curated to help students, workers, and community members find useful learning, English, study, digital-skills, and career-development opportunities. It is not officially sponsored by any of the organizations listed. Official resources are marked where known, and external links go to the source organization for final eligibility, deadlines, enrollment steps, and requirements.</p>
-      <p class="last-updated">Last updated: May 2026 · Contact: <a href="mailto:jasonlmjones@gmail.com">jasonlmjones@gmail.com</a></p>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <strong>Opportunity Hub</strong>
-      <span>Independent resource page curated by Jason L. Jones. Built to help people find practical next steps in learning, English, career, digital skills, and opportunity access.</span>
-      <span><a href="index.html">Return to JasonLamard.com</a> · <a href="mailto:jasonlmjones@gmail.com">Contact</a></span>
+      <div>
+        <h2>Learning & Career Resource Hub</h2>
+        <p class="small" style="color:#DDE7EA"><span class="en-only">Independently curated by Jason L. Jones as part of a broader community-development and opportunity-access platform.</span><span class="pt-only">Curado de forma independente por Jason L. Jones como parte de uma plataforma mais ampla de desenvolvimento comunitário e acesso a oportunidades.</span></p>
+      </div>
+      <div>
+        <p class="small" style="color:#DDE7EA"><span class="en-only">Last local inventory update: 2026-05-07. Always verify details with official providers before registering or sharing publicly.</span><span class="pt-only">Última atualização local do inventário: 2026-05-07. Confirme sempre os detalhes com os fornecedores oficiais antes de se inscrever ou divulgar publicamente.</span></p>
+      </div>
     </div>
   </footer>
+
+<script>
+const RESOURCES = [{"id": "1", "name": "Skodji Digital", "provider": "Government of Cabo Verde / Digital Cabo Verde", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Remote work", "Gig economy", "Entrepreneurship"], "communityServed": ["Cabo Verde", "Diaspora"], "primaryRegion": "Cabo Verde", "audience": ["Youth", "job seekers", "career switchers", "aspiring freelancers"], "languages": ["Portuguese"], "cost": "Free / funded program", "costType": "Free", "format": "Online + local support sites", "availability": "Current / cohort-based", "statusLabel": "Open / monitor cohort", "certificate": "Likely program completion credential; verify", "bestFor": "Young Cabo Verdeans seeking digital work pathways", "shortDescription": "National digital training program focused on digital/business skills, employability, remote work, gig economy, and digital micro-businesses.", "startStep": "Check current application/campaign status and eligibility on official site.", "officialLink": "https://www.skodjidigital.cv/", "sourceUrl": "https://www.skodjidigital.cv/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Strong Cabo Verde priority; applications/cycles may change.", "importance": 3}, {"id": "2", "name": "Kodê Verde", "provider": "Government of Cabo Verde / Digital ecosystem", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Youth digital literacy", "employability", "entrepreneurship"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Youth", "students", "early digital learners"], "languages": ["Portuguese"], "cost": "Free", "costType": "Free", "format": "Training program", "availability": "Watchlist / verify current phase", "statusLabel": "Needs date verification", "certificate": "Verify", "bestFor": "Young people needing digital-literacy entry point", "shortDescription": "Digital training/capacitation program intended to increase digital literacy, employability, and entrepreneurship capacity for Cabo Verdean youth.", "startStep": "Verify whether current editions are open; list as program lead until dates are known.", "officialLink": "https://www.digital.cv/kodeverde", "sourceUrl": "https://www.mf.gov.cv/web/mf/-/governo-apresenta-programa-kode-verde-para-capacita%C3%A7%C3%A3o-dos-jovens-no-digital", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "May be older/phase-based; verify active intake before featuring.", "importance": 2}, {"id": "3", "name": "Cabo Verde Digital Portal", "provider": "Digital Cabo Verde", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Startups", "funding", "diaspora", "training", "entrepreneurship"], "communityServed": ["Cabo Verde", "Diaspora"], "primaryRegion": "Cabo Verde", "audience": ["Entrepreneurs", "startup founders", "digital workers", "students"], "languages": ["English", "Portuguese (site mix)"], "cost": "Free access / program costs vary", "costType": "Free", "format": "Portal / ecosystem directory", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Varies by program", "bestFor": "Anyone exploring Cabo Verde's digital-business ecosystem", "shortDescription": "Gateway to resources, programs, funding, startup support, and digital-economy initiatives in Cabo Verde.", "startStep": "Use as a top-level portal; send users to specific programs when possible.", "officialLink": "https://www.digital.cv/", "sourceUrl": "https://www.digital.cv/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Important hub; not itself a course.", "importance": 3}, {"id": "4", "name": "BOOST.CV", "provider": "Government of Cabo Verde / ProEmpresa / Cabo Verde Digital / World Bank", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Startup acceleration", "mentorship", "digital business", "diaspora"], "communityServed": ["Cabo Verde", "Diaspora"], "primaryRegion": "Cabo Verde", "audience": ["Founders", "mentors", "startups", "digital businesses"], "languages": ["English", "Portuguese (site mix)"], "cost": "Free / program-based; verify", "costType": "Free", "format": "Online platform + cohort accelerator", "availability": "Cohort-based / platform access", "statusLabel": "Open / monitor cohort", "certificate": "Program completion / verify", "bestFor": "Tech-enabled startups and diaspora entrepreneurs", "shortDescription": "National platform for tech-enabled startups and digital businesses with mentorship, accelerator support, and founder/mentor matching.", "startStep": "Join platform or monitor next application round.", "officialLink": "https://www.boost.cv/", "sourceUrl": "https://www.boost.cv/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Useful for diaspora bridge and startup pathway.", "importance": 3}, {"id": "5", "name": "NOSiAkademia", "provider": "NOSi", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Professional internships", "certification", "pre-incubation"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["ICT graduates", "young professionals", "companies"], "languages": ["Portuguese", "English page available"], "cost": "Free / program-based", "costType": "Free", "format": "Internship + training + certification pathway", "availability": "Current / cohort-based", "statusLabel": "Open / monitor cohort", "certificate": "Certifications via partners; verify by path", "bestFor": "Recent graduates and young tech professionals", "shortDescription": "Program for technical, personal, and professional competencies, internships, certification, JumpStart, and TICSEED pre-incubator.", "startStep": "Check open calls and eligibility before sharing widely.", "officialLink": "https://akademia.nosi.cv/", "sourceUrl": "https://akademia.nosi.cv/sobre-o-programa", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Excellent local digital-skills/employability resource.", "importance": 3}, {"id": "6", "name": "NOSiAkademia Professional Internship", "provider": "NOSiAkademia", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Tech internship", "first job", "employability"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["ICT graduates", "young professionals"], "languages": ["Portuguese", "English page available"], "cost": "Free / program-based", "costType": "Free", "format": "Internship", "availability": "Cohort-based", "statusLabel": "Open / monitor cohort", "certificate": "Program credential / verify", "bestFor": "Tech graduates seeking first experience", "shortDescription": "Professional internship pathway connected to NOSiAkademia training and career launch.", "startStep": "Review current edital before listing as open.", "officialLink": "https://akademia.nosi.cv/en/inicio", "sourceUrl": "https://akademia.nosi.cv/en/inicio", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "High", "notes": "Keep separate if user filters for internships.", "importance": 2}, {"id": "7", "name": "NOSiAkademia JumpStart", "provider": "NOSiAkademia", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["R&D", "company innovation", "tech talent"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Companies", "tech interns", "mentors"], "languages": ["Portuguese"], "cost": "Program-based; verify", "costType": "Varies / verify", "format": "Company project + internship support", "availability": "Cohort-based", "statusLabel": "Public directory", "certificate": "Verify", "bestFor": "Companies with R&D/digital innovation projects", "shortDescription": "Connects companies with dedicated interns for R&D projects, mentorship, and specialized technical support.", "startStep": "Businesses should review eligibility and application forms.", "officialLink": "https://akademia.nosi.cv/jump-start", "sourceUrl": "https://akademia.nosi.cv/jump-start", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good for managers/businesses, not primary for individual learners.", "importance": 2}, {"id": "8", "name": "TechPark CV", "provider": "TechPark CV / Cabo Verde Digital Archipelago Technology Park", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Innovation", "incubation", "entrepreneurship", "training"], "communityServed": ["Cabo Verde", "São Vicente", "Praia"], "primaryRegion": "Cabo Verde", "audience": ["Startups", "digital businesses", "students", "companies"], "languages": ["Portuguese", "English info varies"], "cost": "Varies", "costType": "Varies / verify", "format": "Physical hubs + programs/events", "availability": "Ongoing / event-based", "statusLabel": "Public directory", "certificate": "Varies", "bestFor": "Startups and digital ecosystem actors", "shortDescription": "Technology park with Praia and Mindelo hubs; includes incubation, business, training/qualification, and conference infrastructure.", "startStep": "Monitor for events, incubation, and training opportunities.", "officialLink": "https://techpark.cv/", "sourceUrl": "https://www.unesco.org/creativity/en/policy-monitoring-platform/cape-verde-digital-archipelago-technology-park-techparkcvsa", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Official site may require further verification; UNESCO/AfDB sources support profile.", "importance": 2}, {"id": "9", "name": "Pró Empresa", "provider": "Pró Empresa", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["MSME support", "financing", "technical assistance", "business programs"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Entrepreneurs", "MSMEs", "managers", "students with business ideas"], "languages": ["Portuguese"], "cost": "Varies / public programs", "costType": "Varies / verify", "format": "Institutional support + programs", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Not a course certificate; varies by program", "bestFor": "Entrepreneurs and small businesses", "shortDescription": "Public institute promoting competitiveness, entrepreneurship, and MSMEs through technical/financial assistance and programs.", "startStep": "Start with official program page; check specific program requirements.", "officialLink": "https://proempresa.cv/", "sourceUrl": "https://proempresa.cv/index.php/pro-empresa-3", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Correct link: https://proempresa.cv/", "importance": 3}, {"id": "10", "name": "StartUp Jovem 100% Garantia", "provider": "Pró Empresa / Government of Cabo Verde", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Youth entrepreneurship", "women entrepreneurship", "financing"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Youth entrepreneurs", "women entrepreneurs"], "languages": ["Portuguese"], "cost": "Finance/support program; verify", "costType": "Varies / verify", "format": "Application-based program", "availability": "Cohort/application-based", "statusLabel": "Verify date", "certificate": "Not a training credential", "bestFor": "Young/women founders with innovative projects", "shortDescription": "Government measure supporting innovative business projects for eligible youth and women; eligibility includes age/nationality/qualification requirements.", "startStep": "Verify whether applications are open before sharing as active.", "officialLink": "https://proempresa.cv/index.php/promocao-empresarial-3/startup-jovem-100-garantia", "sourceUrl": "https://proempresa.cv/index.php/promocao-empresarial-3/startup-jovem-100-garantia", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Not a course; list under financing/entrepreneurship support.", "importance": 2}, {"id": "11", "name": "IEFP Cabo Verde", "provider": "Instituto do Emprego e Formação Profissional", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Professional training", "jobs", "internships", "e-learning"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Job seekers", "students", "workers", "employers"], "languages": ["Portuguese"], "cost": "Often free / varies", "costType": "Free", "format": "Local centers + e-learning + job/internship portal", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Varies by course/program", "bestFor": "Anyone seeking employment, training, or internships", "shortDescription": "National public institution for employment, employability, professional training, and entrepreneurship services.", "startStep": "Check current course/job/internship postings.", "officialLink": "https://iefp.gov.cv/", "sourceUrl": "https://iefp.gov.cv/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "High priority for local public resource map.", "importance": 3}, {"id": "12", "name": "IEFP E-learning Platform", "provider": "IEFP Cabo Verde", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Professional training", "online learning"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Job seekers", "workers", "students"], "languages": ["Portuguese"], "cost": "Often free / varies", "costType": "Free", "format": "E-learning", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Varies", "bestFor": "Learners needing online professional training", "shortDescription": "IEFP describes its e-learning environment as a virtual training environment for distance courses.", "startStep": "Access via IEFP platforms section; verify current course catalog.", "officialLink": "https://iefp.gov.cv/", "sourceUrl": "https://iefp.gov.cv/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Create separate link if direct e-learning URL is confirmed.", "importance": 2}, {"id": "13", "name": "IEFP PEPE Platform", "provider": "IEFP Cabo Verde", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Labor intermediation", "youth insertion"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Youth job seekers", "employers"], "languages": ["Portuguese"], "cost": "Free public service", "costType": "Free", "format": "Online platform", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "N/A", "bestFor": "Young people seeking insertion into labor market", "shortDescription": "Online platform supporting labor intermediation and youth insertion into the job market.", "startStep": "Access through IEFP platforms section.", "officialLink": "https://iefp.gov.cv/", "sourceUrl": "https://iefp.gov.cv/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Useful for job-readiness pathway, not a training course.", "importance": 2}, {"id": "14", "name": "Câmara de Comércio de Barlavento", "provider": "CCB", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Professional training", "business services", "incubation", "events"], "communityServed": ["Cabo Verde", "Barlavento", "São Vicente"], "primaryRegion": "Cabo Verde", "audience": ["Entrepreneurs", "managers", "small businesses", "professionals"], "languages": ["Portuguese"], "cost": "Often paid / varies", "costType": "Paid / varies", "format": "In-person/online training + business services", "availability": "Ongoing / event-based", "statusLabel": "Public directory", "certificate": "Varies by training", "bestFor": "Business owners, managers, entrepreneurs in Barlavento", "shortDescription": "Business chamber offering professional training, licensing support, incubation, events, internationalization and other business services.", "startStep": "Check current CCB formation/events pages.", "officialLink": "https://www.camara.cv/", "sourceUrl": "https://www.camara.cv/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Strong São Vicente local business resource.", "importance": 3}, {"id": "15", "name": "IMSV — Incubadora Multisetorial de São Vicente", "provider": "Câmara de Comércio de Barlavento / Pró Empresa", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Incubation", "startup support", "São Vicente"], "communityServed": ["Cabo Verde", "São Vicente", "Barlavento"], "primaryRegion": "Cabo Verde", "audience": ["Young entrepreneurs", "companies", "associations"], "languages": ["Portuguese"], "cost": "Costs/coverage vary by plan; verify", "costType": "Varies / verify", "format": "Incubation resident/non-resident/virtual", "availability": "Application-based", "statusLabel": "Public directory", "certificate": "Varies", "bestFor": "São Vicente business ideas/projects", "shortDescription": "Incubator that selects business ideas for resident and non-resident incubation, supporting project structuring, business plans, and formalization.", "startStep": "Review current edital/regulation before listing as active.", "officialLink": "https://www.camara.cv/imsv/", "sourceUrl": "https://www.camara.cv/imsv/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good local entrepreneur pathway.", "importance": 2}, {"id": "16", "name": "CCB Professional Training", "provider": "Câmara de Comércio de Barlavento", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Management", "leadership", "AI", "business tools"], "communityServed": ["Cabo Verde", "Barlavento"], "primaryRegion": "Cabo Verde", "audience": ["Managers", "professionals", "entrepreneurs"], "languages": ["Portuguese"], "cost": "Often paid / varies", "costType": "Paid / varies", "format": "Workshops / courses; online or in-person", "availability": "Event-based", "statusLabel": "Public directory", "certificate": "Varies", "bestFor": "Managers and professionals seeking applied business training", "shortDescription": "CCB regularly lists training such as project management, leadership, AI awareness, and business operations.", "startStep": "Monitor formation posts and events.", "officialLink": "https://www.camara.cv/", "sourceUrl": "https://www.camara.cv/proximas-formacoes-na-ccb/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Could populate as individual course cards when current dates are verified.", "importance": 2}, {"id": "17", "name": "AMEPCV", "provider": "Associação das Mulheres Empresárias e Profissionais de Cabo Verde", "primaryCategory": "Women / Youth / Leadership", "secondaryCategories": ["Mentoring", "training", "networking", "entrepreneurship"], "communityServed": ["Cabo Verde", "São Vicente"], "primaryRegion": "Cabo Verde", "audience": ["Women entrepreneurs", "professional women", "young women"], "languages": ["Portuguese"], "cost": "Membership/activities vary", "costType": "Varies / verify", "format": "Association + mentorship + events", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Varies", "bestFor": "Women entrepreneurs/professionals", "shortDescription": "Network supporting women entrepreneurs and professionals through mentoring, formation, events, networking, and economic empowerment.", "startStep": "Contact/monitor events; include as resource not course.", "officialLink": "https://amepcv.org/", "sourceUrl": "https://amepcv.org/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Local relevance; not primarily a course listing.", "importance": 2}, {"id": "18", "name": "Casa do Empreendedor", "provider": "Pró-Garante / Pró-Empresa / Pró-Capital ecosystem", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["MSME technical assistance", "financing", "business formalization"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Entrepreneurs", "MSMEs"], "languages": ["Portuguese"], "cost": "Varies", "costType": "Varies / verify", "format": "One-stop shop / technical-financial support", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "N/A", "bestFor": "MSMEs needing support/finance navigation", "shortDescription": "One-stop shop coordinating technical and financial assistance to MSMEs, including constitution, projects, licensing, taxes, incentives, and related services.", "startStep": "Use as support/navigation resource; verify service locations.", "officialLink": "https://www.progarante.cv/pt/casa-do-empreendedor", "sourceUrl": "https://www.progarante.cv/pt/casa-do-empreendedor", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Careful: support/finance, not a training course.", "importance": 2}, {"id": "19", "name": "Linha Especial de Microcrédito", "provider": "Pró-Garante", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Microfinance", "small business support"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Micro-entrepreneurs", "low-income entrepreneurs"], "languages": ["Portuguese"], "cost": "Credit/loan product", "costType": "Paid / varies", "format": "Finance support", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "N/A", "bestFor": "Micro-entrepreneurs needing finance", "shortDescription": "Finance product for micro-entrepreneurs; should be framed carefully as credit, not free training.", "startStep": "Verify terms and eligibility before promoting.", "officialLink": "https://www.progarante.cv/", "sourceUrl": "https://www.progarante.cv/", "lastChecked": "2026-05-07", "publishStatus": "Watchlist", "verificationPriority": "Medium", "notes": "Not a training; only include if finance support section exists.", "importance": 0}, {"id": "20", "name": "EducationUSA Cabo Verde", "provider": "EducationUSA / U.S. Department of State", "primaryCategory": "Study Abroad / EducationUSA", "secondaryCategories": ["U.S. study", "advising", "scholarships"], "communityServed": ["Cabo Verde"], "primaryRegion": "Cabo Verde", "audience": ["Students", "parents", "educators"], "languages": ["English", "Portuguese support likely"], "cost": "Free advising", "costType": "Free", "format": "Advising by appointment; presentations; online/phone/email", "availability": "Ongoing", "statusLabel": "Official resource", "certificate": "N/A", "bestFor": "Students considering accredited U.S. higher education", "shortDescription": "Official advising center providing accurate, comprehensive, current guidance on accredited U.S. higher education, admissions, financing, visas, and preparation.", "startStep": "Use official EducationUSA center page; avoid giving unofficial admissions advice.", "officialLink": "https://educationusa.state.gov/centers/educationusa-cabo-verde", "sourceUrl": "https://educationusa.state.gov/centers/educationusa-cabo-verde", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Official U.S. study info; safe if marked as official resource.", "importance": 3}, {"id": "21", "name": "Myrtle Atividades Educativas", "provider": "Myrtle Atividades Educativas", "primaryCategory": "Local Paid Options — Verify Details", "secondaryCategories": ["English learning", "tutoring", "workplace English", "computer training"], "communityServed": ["Cabo Verde", "São Vicente", "Mindelo"], "primaryRegion": "Cabo Verde", "audience": ["Students", "families", "workers", "organizations"], "languages": ["English", "French", "Chinese", "Portuguese", "Kriol"], "cost": "Paid — verify directly", "costType": "Paid / varies", "format": "In-person + online + workplace training", "availability": "Ongoing / verify enrollment", "statusLabel": "Public Listing — Verify Details", "certificate": "Evaluation tests; certificates unclear", "bestFor": "Structured language/tutoring/workplace learning", "shortDescription": "Private education center offering language training, after-school tutoring, workplace English, online classes, translation/interpreting, and computer training.", "startStep": "Contact provider for current price, schedule, age range, certificate, and placement test.", "officialLink": "https://myrtleducativas.com/", "sourceUrl": "https://myrtleducativas.com/courses-and-programs/", "lastChecked": "2026-05-07", "publishStatus": "Public Listing — Verify Details", "verificationPriority": "Medium", "notes": "Include cautiously as local option, not endorsement.", "importance": 1}, {"id": "22", "name": "Alliance Française de Mindelo", "provider": "Alliance Française de Mindelo", "primaryCategory": "Local Paid Options — Verify Details", "secondaryCategories": ["French", "certification", "cultural resources"], "communityServed": ["Cabo Verde", "São Vicente", "Mindelo"], "primaryRegion": "Cabo Verde", "audience": ["French learners", "students", "professionals", "companies"], "languages": ["French", "Portuguese", "possibly English support"], "cost": "Paid — verify directly", "costType": "Paid / varies", "format": "Group/individual courses; intensive; FOS/company training", "availability": "Ongoing sessions", "statusLabel": "Public Listing — Verify Details", "certificate": "DELF/DALF/TCF pathway", "bestFor": "Anyone needing French, especially recognized certification", "shortDescription": "French language/cultural institution in central Mindelo offering group/individual courses and recognized French certification pathways.", "startStep": "Contact for pricing and next session dates.", "officialLink": "https://www.afmindelo.org/", "sourceUrl": "https://www.afmindelo.org/cours.php?ll=pt", "lastChecked": "2026-05-07", "publishStatus": "Public Listing — Verify Details", "verificationPriority": "Medium", "notes": "Good to include for French/certification, not English pathway.", "importance": 1}, {"id": "23", "name": "StartCV Serviços Linguísticos", "provider": "StartCV Serviços Linguísticos", "primaryCategory": "Local Paid Options — Verify Details", "secondaryCategories": ["English", "French", "Kriol", "other languages", "translation"], "communityServed": ["Cabo Verde", "São Vicente", "Mindelo"], "primaryRegion": "Cabo Verde", "audience": ["Students", "workers", "visitors", "language learners"], "languages": ["English", "French", "Dutch", "German", "Kriol", "Portuguese", "verify others"], "cost": "Paid — verify directly", "costType": "Paid / varies", "format": "Small group / online / in-person; verify", "availability": "Social-post based / verify", "statusLabel": "Needs Verification", "certificate": "Certificate unclear", "bestFor": "Flexible/practical multilingual classes", "shortDescription": "Active-looking language/translation provider; public aggregator sources mention language classes and translation/assistance in multiple languages.", "startStep": "Contact provider directly; verify current operations, exact languages, pricing, schedule, and certificates.", "officialLink": "https://www.findglocal.com/CV/Mindelo/114327480017566/Startcv-servi%C3%A7os-linguisticos", "sourceUrl": "https://www.findglocal.com/CV/Mindelo/114327480017566/Startcv-servi%C3%A7os-linguisticos", "lastChecked": "2026-05-07", "publishStatus": "Public Listing — Verify Details", "verificationPriority": "Medium", "notes": "Source is aggregator; direct social/source confirmation needed.", "importance": 1}, {"id": "24", "name": "Interschooltural Cabo Verde", "provider": "Interschooltural Cabo Verde", "primaryCategory": "Local Paid Options — Verify Details", "secondaryCategories": ["English club", "intercultural activities", "youth learning"], "communityServed": ["Cabo Verde", "São Vicente", "Mindelo"], "primaryRegion": "Cabo Verde", "audience": ["Youth", "students", "English learners"], "languages": ["English", "Portuguese/Kriolu support likely"], "cost": "Paid/free varies — verify", "costType": "Paid / varies", "format": "Clubs / summer school / activities", "availability": "Social-post based / verify", "statusLabel": "Needs Verification", "certificate": "Possible event certificates; verify", "bestFor": "Informal confidence-building and intercultural learning", "shortDescription": "Potential English/intercultural activity provider in Mindelo; public details need direct verification.", "startStep": "Verify current programs, location, age groups, pricing, and certificate claims before publishing prominently.", "officialLink": "", "sourceUrl": "", "lastChecked": "2026-05-07", "publishStatus": "Watchlist", "verificationPriority": "High", "notes": "Do not feature until direct source is confirmed.", "importance": 0}, {"id": "25", "name": "UniPiaget Centro de Línguas", "provider": "UniPiaget Cabo Verde", "primaryCategory": "Local Paid Options — Verify Details", "secondaryCategories": ["Spanish", "English professional training", "university language activities"], "communityServed": ["Cabo Verde", "São Vicente", "Mindelo"], "primaryRegion": "Cabo Verde", "audience": ["Students", "adults", "university community"], "languages": ["Spanish", "English", "Portuguese"], "cost": "Varies — verify", "costType": "Varies / verify", "format": "University-linked courses/clubs", "availability": "Verify", "statusLabel": "Needs Verification", "certificate": "Verify", "bestFor": "Students/adults seeking university-linked language activities", "shortDescription": "Adjacent language center/resource; not clearly a standalone private language school from current evidence.", "startStep": "Contact UniPiaget Mindelo for current offerings before public listing.", "officialLink": "", "sourceUrl": "", "lastChecked": "2026-05-07", "publishStatus": "Watchlist", "verificationPriority": "High", "notes": "Use as lead, not public recommendation yet.", "importance": 0}, {"id": "26", "name": "OPEN MOOCs", "provider": "Online Professional English Network / American English", "primaryCategory": "English Teaching", "secondaryCategories": ["English for careers", "business", "tourism", "media literacy", "teacher development"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["English teachers", "students", "professionals"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Online self-paced MOOCs on Canvas Network", "availability": "Current / varies by course", "statusLabel": "Official resource", "certificate": "Digital badge + e-certificate if 70%+", "bestFor": "English teachers, students, and professionals", "shortDescription": "Free MOOCs hosted on Canvas Network, including English for Media Literacy, Business/Entrepreneurship, TESOL Methodology, and others.", "startStep": "Check currently open courses and enroll via official OPEN page.", "officialLink": "https://americanenglish.state.gov/OPEN-MOOCs", "sourceUrl": "https://americanenglish.state.gov/OPEN-MOOCs", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Create individual cards for current courses when dates are verified.", "importance": 3}, {"id": "27", "name": "English for Tourism Professionals", "provider": "OPEN / American English", "primaryCategory": "Tourism / Hospitality", "secondaryCategories": ["English for tourism", "customer service", "workplace communication"], "communityServed": ["Universal", "Cabo Verde-relevant"], "primaryRegion": "Cabo Verde", "audience": ["Tourism workers", "hospitality staff", "tourism students"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Online MOOC", "availability": "Course-window based", "statusLabel": "Verify date", "certificate": "Digital badge/e-certificate if requirements met", "bestFor": "Tourism/hospitality staff and students", "shortDescription": "OPEN-style English course useful for tourism/hospitality communication; date/enrollment window should be verified on current MOOC listing.", "startStep": "Check official OPEN currently open courses page and Canvas listing.", "officialLink": "https://americanenglish.state.gov/OPEN-MOOCs", "sourceUrl": "https://americanenglish.state.gov/OPEN-MOOCs", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "High flyer relevance; avoid posting exact dates until verified.", "importance": 3}, {"id": "28", "name": "English for Business and Entrepreneurship", "provider": "OPEN / American English", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["English", "business communication", "entrepreneurship"], "communityServed": ["Universal", "Cabo Verde-relevant"], "primaryRegion": "Cabo Verde", "audience": ["Entrepreneurs", "students", "professionals"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Online MOOC", "availability": "Course-window based", "statusLabel": "Verify date", "certificate": "Digital badge/e-certificate if requirements met", "bestFor": "Entrepreneurs and business students wanting English practice", "shortDescription": "OPEN MOOC title listed by American English; useful bridge between English and entrepreneurship.", "startStep": "Check current course page for dates/enrollment.", "officialLink": "https://americanenglish.state.gov/OPEN-MOOCs", "sourceUrl": "https://americanenglish.state.gov/OPEN-MOOCs", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Good cross-category resource.", "importance": 3}, {"id": "29", "name": "English for Career Development", "provider": "University of Pennsylvania / U.S. Department of State funded course on Coursera", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["English", "job search", "interviews", "professional communication"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Job seekers", "students", "professionals"], "languages": ["English", "subtitles/translation availability varies"], "cost": "Audit/free option possible; certificate may require payment/financial aid", "costType": "Free", "format": "Online course", "availability": "Ongoing / Coursera schedule", "statusLabel": "Public directory", "certificate": "Shareable certificate if paid/eligible; free audit no certificate", "bestFor": "Non-native English speakers seeking global career skills", "shortDescription": "Course on job search, applications, interviews, and career communication for non-native English speakers; funded by U.S. Department of State program per Coursera page.", "startStep": "Instruct users how to choose free audit/full course no certificate where available.", "officialLink": "https://www.coursera.org/learn/careerdevelopment", "sourceUrl": "https://www.coursera.org/learn/careerdevelopment", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Clearly state certificate/cost differences to avoid confusion.", "importance": 2}, {"id": "30", "name": "American English Learning Materials", "provider": "American English / U.S. Department of State", "primaryCategory": "English Learning", "secondaryCategories": ["Self-study", "teacher materials", "culture", "games", "books", "audio"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["English learners", "teachers", "facilitators"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Resource library", "availability": "Ongoing", "statusLabel": "Official resource", "certificate": "No single certificate", "bestFor": "English learners and teachers", "shortDescription": "Large collection of free English-learning and teaching resources, including learning materials and classroom resources.", "startStep": "Start with learner materials or teacher materials sections.", "officialLink": "https://americanenglish.state.gov/", "sourceUrl": "https://americanenglish.state.gov/OPEN-MOOCs", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "High", "notes": "Safe official resource; needs user-friendly curation.", "importance": 2}, {"id": "31", "name": "USA Learns", "provider": "USA Learns", "primaryCategory": "English Learning", "secondaryCategories": ["English", "job skills", "citizenship", "adult education"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Adult English learners", "job seekers"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "No formal certificate highlighted", "bestFor": "Adult English learners, especially beginners/intermediate", "shortDescription": "Free online English courses covering speaking, listening, vocabulary, pronunciation, reading, writing, grammar, and job skills.", "startStep": "Create account and choose English or job skills path.", "officialLink": "https://www.usalearns.org/", "sourceUrl": "https://www.usalearns.org/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "High", "notes": "Useful for beginner/intermediate learners; U.S.-context examples.", "importance": 2}, {"id": "32", "name": "HP LIFE", "provider": "HP Foundation", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["AI", "business", "digital skills", "marketing", "finance", "operations"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "entrepreneurs", "small businesses", "workers", "educators"], "languages": ["English", "Portuguese", "others"], "cost": "Free", "costType": "Free", "format": "Online self-paced courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Free certificate of completion", "bestFor": "Entrepreneurs, small businesses, students, job seekers", "shortDescription": "Free business and digital skills training program with 30+ courses in 8 languages and certificates of completion.", "startStep": "Sign up and choose a short course by topic/language.", "officialLink": "https://www.life-global.org/en", "sourceUrl": "https://www.life-global.org/en", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Top universal resource; strong Portuguese option.", "importance": 3}, {"id": "33", "name": "Cisco Networking Academy", "provider": "Cisco", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Cybersecurity", "networking", "Python", "data analytics", "IT careers"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "job seekers", "tech beginners", "educators"], "languages": ["English", "some multilingual options"], "cost": "Free self-paced options", "costType": "Free", "format": "Online courses + career paths", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Digital badges/certificates vary by course", "bestFor": "Learners exploring tech careers", "shortDescription": "Free self-paced online courses and career paths in networking, cybersecurity, programming, data analytics and related skills.", "startStep": "Start with Introduction to Cybersecurity, Networking Basics, or Python Essentials 1.", "officialLink": "https://www.cisco.com/site/us/en/learn/training-certifications/training/netacad/index.html", "sourceUrl": "https://www.cisco.com/site/us/en/learn/training-certifications/training/netacad/index.html", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Strong future-of-work resource.", "importance": 3}, {"id": "34", "name": "IBM SkillsBuild", "provider": "IBM", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["AI", "cybersecurity", "data", "IT", "web development", "workplace skills"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["High school students", "college students", "adult learners", "educators"], "languages": ["English", "some multilingual options"], "cost": "Free", "costType": "Free", "format": "Online learning paths", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Digital credentials / badges", "bestFor": "Students and adults preparing for entry-level tech/workplace roles", "shortDescription": "Free job-skills platform with courses, credentials, and pathways across tech and workplace skills.", "startStep": "Choose learner type and start an AI, cybersecurity, data, or workforce-readiness path.", "officialLink": "https://skillsbuild.org/", "sourceUrl": "https://skillsbuild.org/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Strong AI/cybersecurity/career pathway.", "importance": 3}, {"id": "35", "name": "Microsoft Learn", "provider": "Microsoft", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Microsoft tools", "AI", "cloud", "data", "security", "productivity"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "professionals", "IT learners", "workers"], "languages": ["Portuguese", "English", "many languages"], "cost": "Free training; certification exams may cost", "costType": "Free", "format": "Online modules/paths; virtual events", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Microsoft Learn achievements; certifications separate", "bestFor": "Learners using Microsoft tools or pursuing tech roles", "shortDescription": "Free practical Microsoft training resources and certification pathways across role-based skills.", "startStep": "Start with beginner paths in AI/productivity/cloud or Portuguese page.", "officialLink": "https://www.microsoft.com/pt-pt/microsoft-learn", "sourceUrl": "https://www.microsoft.com/pt-pt/microsoft-learn", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Use official Portuguese page for Cabo Verde accessibility.", "importance": 3}, {"id": "36", "name": "Google Applied Digital Skills", "provider": "Google for Education", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Practical digital projects", "resumes", "spreadsheets", "presentations"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "teachers", "adult learners", "community workshops"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Video-based project lessons", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "No primary certificate; project outputs", "bestFor": "Beginners needing practical digital confidence", "shortDescription": "Free digital skills curriculum where learners create useful projects like resumes, planning sheets, and presentations.", "startStep": "Use for workshops: select one lesson and help learners complete a real artifact.", "officialLink": "https://applieddigitalskills.withgoogle.com/", "sourceUrl": "https://support.google.com/googleforeducation/answer/9799929?hl=en", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Excellent workshop/lab model.", "importance": 3}, {"id": "37", "name": "Google Cloud Skills Boost — Introduction to Generative AI", "provider": "Google Cloud", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["AI literacy", "generative AI", "cloud basics"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["General learners", "students", "professionals"], "languages": ["English", "Portuguese (Brazil)", "Portuguese (Portugal page may route)"], "cost": "Course materials free; labs/credits may vary", "costType": "Free", "format": "Microlearning online course", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Completion badge if required items completed", "bestFor": "Anyone needing basic AI literacy", "shortDescription": "Introductory 45-minute course explaining generative AI, use cases, and differences from traditional machine learning.", "startStep": "Start with Portuguese or English version; verify if badge requires any paid lab credits.", "officialLink": "https://www.cloudskillsboost.google/course_templates/536?locale=pt_BR", "sourceUrl": "https://www.cloudskillsboost.google/course_templates/536?locale=pt_BR", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Great AI-stressed labor market entry resource.", "importance": 3}, {"id": "38", "name": "Google Skillshop", "provider": "Google", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Google Ads", "Analytics", "Business Profile", "marketing", "Google tools"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Small businesses", "marketers", "freelancers", "tourism businesses"], "languages": ["English", "Portuguese availability varies by topic"], "cost": "Free courses; certifications vary/free foundational", "costType": "Free", "format": "Online self-paced", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Google certifications for selected tracks", "bestFor": "Small businesses and tourism marketing learners", "shortDescription": "Free on-demand training by Google product experts for Google Ads and other professional tools.", "startStep": "Start with Business Profile/Google Ads/Analytics learning paths as relevant.", "officialLink": "https://skillshop.withgoogle.com/", "sourceUrl": "https://support.google.com/google-ads/answer/7539883?hl=en-419", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good for businesses but may be too marketing-specific for first cards.", "importance": 2}, {"id": "39", "name": "HubSpot Academy", "provider": "HubSpot", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Digital marketing", "sales", "CRM", "customer service", "content", "SEO"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Entrepreneurs", "freelancers", "marketers", "students", "sales/customer service staff"], "languages": ["English", "some courses in other languages"], "cost": "Free", "costType": "Free", "format": "Online courses/certifications", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Free certifications / badges", "bestFor": "Small businesses, freelancers, marketers, customer-service learners", "shortDescription": "100% free online training with courses and certifications in marketing, sales, service, CRM, content, and SEO.", "startStep": "Start with Digital Marketing, Social Media, Inbound, or Customer Service courses.", "officialLink": "https://academy.hubspot.com/", "sourceUrl": "https://academy.hubspot.com/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Strong for tourism/small-business marketing.", "importance": 3}, {"id": "40", "name": "Meta Blueprint / Meta for Business Learning", "provider": "Meta", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Facebook", "Instagram", "ads", "social media marketing"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Small businesses", "marketers", "creators", "tourism businesses"], "languages": ["English", "multiple languages vary"], "cost": "Free courses; certification exams may cost", "costType": "Free", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certifications may require paid exam", "bestFor": "Social media managers and businesses using Facebook/Instagram", "shortDescription": "Meta training ecosystem for Facebook/Instagram marketing and business tools.", "startStep": "Verify current course/certification costs before listing certificate claims.", "officialLink": "https://www.facebookblueprint.com/", "sourceUrl": "https://www.facebookblueprint.com/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Useful but verify language/cost details.", "importance": 2}, {"id": "41", "name": "Canva Free + Design School", "provider": "Canva", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Design", "presentations", "social posts", "flyers", "visual communication"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "teachers", "small businesses", "community organizers"], "languages": ["100+ interface languages", "course language varies"], "cost": "Free + premium options", "costType": "Free", "format": "Online tool + tutorials/courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Canva course certificates unclear/varies", "bestFor": "People needing visual communication, social media, presentations, flyers", "shortDescription": "Free design platform and tutorials/courses to create visual content without advanced design experience.", "startStep": "Start with free Canva account and Design School/tutorials.", "officialLink": "https://www.canva.com/free/", "sourceUrl": "https://www.canva.com/free/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Important practical tool, but certificates not the core value.", "importance": 2}, {"id": "42", "name": "freeCodeCamp", "provider": "freeCodeCamp", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Web development", "JavaScript", "Python", "databases", "data analysis"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Aspiring developers", "self-paced learners"], "languages": ["English primarily"], "cost": "Free", "costType": "Free", "format": "Interactive coding curriculum", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Free developer certifications", "bestFor": "Serious learners pursuing coding/web/software skills", "shortDescription": "Free, self-paced programming and computer science curriculum with interactive lessons and projects leading to certifications.", "startStep": "Start with Responsive Web Design or JavaScript basics.", "officialLink": "https://www.freecodecamp.org/", "sourceUrl": "https://github.com/freeCodeCamp/freeCodeCamp", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "High", "notes": "Good but requires persistence and English/digital confidence.", "importance": 2}, {"id": "43", "name": "Saylor Academy", "provider": "Saylor Academy", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Business", "computer science", "ESL", "professional development"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Independent learners", "professionals", "students"], "languages": ["English"], "cost": "Free; college credit options may vary", "costType": "Free", "format": "Self-paced online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Free certificates of completion; some credit options", "bestFor": "Structured independent learners wanting college/professional courses", "shortDescription": "Nonprofit offering 150+ self-paced college/professional courses free of cost, with digital certificates of completion.", "startStep": "Choose a subject or specialization; complete certificate final exam requirements.", "officialLink": "https://www.saylor.org/", "sourceUrl": "https://www.saylor.org/about", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "High", "notes": "Could be too academic for some learners; good for motivated users.", "importance": 2}, {"id": "44", "name": "OpenLearn", "provider": "The Open University", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Business", "digital skills", "education", "study skills", "wellbeing"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "adults", "professionals", "teachers"], "languages": ["English"], "cost": "Free", "costType": "Free", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Free statement of participation; some digital badges", "bestFor": "Broad learners wanting accessible UK-style open courses", "shortDescription": "Open University’s free learning platform with nearly 1,000 free courses; many provide statements of participation and some digital badges.", "startStep": "Choose short/badged courses; create account for certificate/statement.", "officialLink": "https://www.open.edu/openlearn/free-courses", "sourceUrl": "https://www.open.edu/openlearn/about-openlearn/frequently-asked-questions-on-openlearn", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "High", "notes": "Strong credible universal resource.", "importance": 2}, {"id": "45", "name": "Khan Academy", "provider": "Khan Academy", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Math", "science", "computing", "finance", "foundations"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "self-learners", "teachers"], "languages": ["English", "Portuguese and other language availability varies"], "cost": "Free", "costType": "Free", "format": "Online lessons/practice", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "No primary professional certificate", "bestFor": "Students needing foundational support", "shortDescription": "Free learning platform useful for math, science, grammar, computing basics, finance and academic confidence.", "startStep": "Start with math/finance/computing foundations as needed.", "officialLink": "https://www.khanacademy.org/", "sourceUrl": "https://www.khanacademy.org/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good support resource; not career credential-focused.", "importance": 2}, {"id": "46", "name": "Fundação Bradesco Escola Virtual", "provider": "Fundação Bradesco", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Portuguese-language IT", "AI", "business", "productivity", "professional development"], "communityServed": ["Universal", "Portuguese-speaking"], "primaryRegion": "Universal", "audience": ["Portuguese-speaking learners", "students", "workers"], "languages": ["Portuguese"], "cost": "Free", "costType": "Free", "format": "100% online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificate after required assessment threshold", "bestFor": "Portuguese speakers needing free certificates", "shortDescription": "Portuguese-language free online course platform with IT, programming, AI, business, productivity and professional development courses.", "startStep": "Register and choose courses in Escola Virtual.", "officialLink": "https://www.ev.org.br/", "sourceUrl": "https://fundacao.bradesco/como-atuamos/escola-virtual", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Very strong Portuguese resource; may be Brazil-focused but accessible online.", "importance": 3}, {"id": "47", "name": "NAU — Quero Ser Digital", "provider": "NAU / Academia Portugal Digital", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Digital literacy", "workplace digital basics", "safe/ethical use"], "communityServed": ["Universal", "Portuguese-speaking"], "primaryRegion": "Universal", "audience": ["Portuguese-speaking beginners", "workers", "small businesses"], "languages": ["Portuguese"], "cost": "Free", "costType": "Free", "format": "Self-paced online course", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificate of participation", "bestFor": "Beginners needing digital confidence in Portuguese", "shortDescription": "2-hour Portuguese course introducing digital skills, digital importance for citizens/businesses, safety and ethics.", "startStep": "Enroll on NAU and complete quizzes for certificate.", "officialLink": "https://www.nau.edu.pt/pt/curso/quero-ser-digital/", "sourceUrl": "https://www.nau.edu.pt/pt/curso/quero-ser-digital/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "High", "notes": "Excellent easy starter course.", "importance": 3}, {"id": "48", "name": "NAU — Mestres do Digital 1.1", "provider": "NAU", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Identity", "online safety", "digital public services"], "communityServed": ["Universal", "Portuguese-speaking"], "primaryRegion": "Universal", "audience": ["Portuguese-speaking digital beginners/intermediate"], "languages": ["Portuguese"], "cost": "Free", "costType": "Free", "format": "Self-paced online course", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Verify on course page", "bestFor": "Learners needing online safety basics", "shortDescription": "6-hour Portuguese course on digital identity, online safety, digital public services, and protection from phishing/malware.", "startStep": "Enroll on NAU and complete course.", "officialLink": "https://www.nau.edu.pt/pt/curso/os-primeiros-passos-na-identidade-digital-e-na-seguranca-online/", "sourceUrl": "https://www.nau.edu.pt/pt/curso/os-primeiros-passos-na-identidade-digital-e-na-seguranca-online/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Portugal public-service references may need framing for Cabo Verde.", "importance": 2}, {"id": "49", "name": "NAU — Ferramentas de Comunicação Digital", "provider": "NAU", "primaryCategory": "Digital Skills / AI / Tech", "secondaryCategories": ["Content strategy", "digital communication", "online tools", "metrics"], "communityServed": ["Universal", "Portuguese-speaking"], "primaryRegion": "Universal", "audience": ["Students", "small businesses", "communicators", "tourism marketers"], "languages": ["Portuguese"], "cost": "Free / verify", "costType": "Free", "format": "Self-paced online course", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Verify on course page", "bestFor": "Learners building digital communication skills", "shortDescription": "Portuguese course on digital communication tools, content strategy, curation, production, distribution, and metrics.", "startStep": "Enroll on NAU and complete course.", "officialLink": "https://www.nau.edu.pt/pt/curso/ferramentas-de-comunicacao-digital/", "sourceUrl": "https://www.nau.edu.pt/pt/curso/ferramentas-de-comunicacao-digital/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good for marketing/social media pathway.", "importance": 2}, {"id": "50", "name": "UN CC:Learn — Introductory e-Course on Climate Change", "provider": "UN CC:Learn / UNITAR ecosystem", "primaryCategory": "Climate / Sustainability / Blue Economy", "secondaryCategories": ["Climate literacy", "resilience", "SDGs"], "communityServed": ["Universal", "Cabo Verde-relevant"], "primaryRegion": "Cabo Verde", "audience": ["Students", "public sector", "NGOs", "community leaders", "tourism/environment actors"], "languages": ["English", "Portuguese", "French", "Spanish", "others"], "cost": "Free", "costType": "Free", "format": "Self-paced online course", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificate available if requirements met", "bestFor": "Cabo Verde learners needing climate/resilience literacy", "shortDescription": "Introductory climate change e-course useful for island resilience, sustainability, tourism, blue economy and civic leadership contexts.", "startStep": "Enroll via UN CC:Learn and complete modules/quizzes.", "officialLink": "https://unccelearn.org/", "sourceUrl": "https://unitar.org/about/news-stories/news/un-cclearn-e-course-now-available-portuguese", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Need direct course URL before featured placement.", "importance": 2}, {"id": "51", "name": "UNITAR Free and Open Courses", "provider": "UNITAR", "primaryCategory": "Climate / Sustainability / Blue Economy", "secondaryCategories": ["SDGs", "climate", "environment", "public policy", "development"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "public-sector staff", "NGO/community workers"], "languages": ["English", "some multilingual"], "cost": "Free", "costType": "Free", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Varies by course", "bestFor": "Development, climate, and public-sector learners", "shortDescription": "UNITAR catalog of free/open courses across development, environment, climate and related topics.", "startStep": "Browse free/open catalog and select language/topic.", "officialLink": "https://unitar.org/free-and-open-courses", "sourceUrl": "https://unitar.org/free-and-open-courses", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good advanced/official UN learning source.", "importance": 2}, {"id": "52", "name": "ITC SME Trade Academy", "provider": "International Trade Centre", "primaryCategory": "Business / Entrepreneurship", "secondaryCategories": ["Trade", "export", "e-commerce", "SMEs", "market access"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Entrepreneurs", "SMEs", "exporters", "business students"], "languages": ["English", "French", "Spanish", "others", "verify Portuguese"], "cost": "Free courses + some paid programs; verify", "costType": "Paid / varies", "format": "Online academy", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificates vary", "bestFor": "Entrepreneurs and businesses exploring trade/export", "shortDescription": "Online learning platform for SMEs, trade support institutions and entrepreneurs with courses on trade and export readiness.", "startStep": "Browse free courses; verify language/certificate/cost per course.", "officialLink": "https://learning.intracen.org/", "sourceUrl": "https://learning.intracen.org/local/itcacademy/page.php?id=59", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Strong for business/export pathway.", "importance": 2}, {"id": "53", "name": "FAO eLearning Academy", "provider": "FAO", "primaryCategory": "Climate / Sustainability / Blue Economy", "secondaryCategories": ["Food systems", "agriculture", "nutrition", "climate", "sustainability"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "NGOs", "agricultural/food actors", "policymakers"], "languages": ["Multilingual", "course-dependent"], "cost": "Free access", "costType": "Free", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Digital badge/certificate varies by course", "bestFor": "Learners in food, agriculture, climate and development", "shortDescription": "Free FAO e-learning courses on food systems, agriculture, climate, nutrition and sustainability topics.", "startStep": "Search course catalog by language/topic.", "officialLink": "https://elearning.fao.org/", "sourceUrl": "https://www.fao.org/fsnforum/index.php/resources/trainings-tools-and-databases/fao-elearning-academy", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Relevant to food security/climate; not core first page.", "importance": 2}, {"id": "54", "name": "YALI Network Online Courses", "provider": "YALI Network", "primaryCategory": "Women / Youth / Leadership", "secondaryCategories": ["Leadership", "entrepreneurship", "civic leadership", "public management"], "communityServed": ["Africa", "Universal online"], "primaryRegion": "Africa", "audience": ["Young African leaders", "students", "entrepreneurs", "volunteers"], "languages": ["English", "French", "Portuguese (course dependent)"], "cost": "Free", "costType": "Free", "format": "Self-paced online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificate/completion varies", "bestFor": "Youth leaders, entrepreneurs, community volunteers", "shortDescription": "Online courses in leadership, entrepreneurship, civic leadership and related topics associated with YALI Network.", "startStep": "Use course catalog; avoid confusing with RLC cohort programs.", "officialLink": "https://yali.state.gov/", "sourceUrl": "https://knowledgehub.iphce.org/acadp_listings/young-african-leaders-initiative/", "lastChecked": "2026-05-07", "publishStatus": "Featured", "verificationPriority": "Medium", "notes": "Need direct current course URL; good public card once URL confirmed.", "importance": 3}, {"id": "55", "name": "YALI Regional Leadership Centers", "provider": "YALI / Regional Centers", "primaryCategory": "Women / Youth / Leadership", "secondaryCategories": ["Competitive leadership", "entrepreneurship", "civic leadership", "public management"], "communityServed": ["Africa", "region-specific eligibility"], "primaryRegion": "Africa", "audience": ["Young leaders ages 18–35", "entrepreneurs", "civic/public leaders"], "languages": ["English/French/Portuguese varies by center"], "cost": "Often funded; verify", "costType": "Varies / verify", "format": "Application-based cohort; online/hybrid/in-person", "availability": "Application windows vary", "statusLabel": "Watchlist / verify eligibility", "certificate": "Program certificate", "bestFor": "Young leaders with demonstrated impact", "shortDescription": "Competitive regional leadership programs; eligibility, countries, tracks and application windows vary by center/cohort.", "startStep": "Do not feature until current Cabo Verde eligibility and application window are verified.", "officialLink": "https://yali.state.gov/rlc/", "sourceUrl": "https://www.yalieastafrica.org/Interface/About/Admissions.php", "lastChecked": "2026-05-07", "publishStatus": "Watchlist", "verificationPriority": "High", "notes": "Keep in database; display only under competitive opportunities with caution.", "importance": 0}, {"id": "56", "name": "LEAP Africa Learning", "provider": "LEAP Africa", "primaryCategory": "Women / Youth / Leadership", "secondaryCategories": ["Leadership", "SDGs", "communication", "civic development"], "communityServed": ["Africa", "Universal online"], "primaryRegion": "Africa", "audience": ["African youth", "students", "community leaders"], "languages": ["English"], "cost": "Free + paid courses", "costType": "Paid / varies", "format": "Online learning", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Varies", "bestFor": "Youth leaders and community-development learners", "shortDescription": "Africa-focused leadership learning platform with free courses in communication, SDGs and community/sustainable development.", "startStep": "Start with free courses collection.", "officialLink": "https://learn.leapafrica.org/collections/Free%20Courses", "sourceUrl": "https://learn.leapafrica.org/collections/Free%20Courses", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Good community-development/leadership resource.", "importance": 2}, {"id": "57", "name": "Baobab Platform", "provider": "Mastercard Foundation Baobab Platform", "primaryCategory": "Women / Youth / Leadership", "secondaryCategories": ["Mentorship", "opportunities", "courses", "networking"], "communityServed": ["Africa", "Mastercard Foundation community", "African-connected users"], "primaryRegion": "Africa", "audience": ["Young African leaders", "students", "alumni", "professionals"], "languages": ["English", "French availability"], "cost": "Free platform; eligibility/community varies", "costType": "Free", "format": "Online platform", "availability": "Ongoing", "statusLabel": "Public directory / verify access", "certificate": "Digital certificate after course completion requirements", "bestFor": "Young Africans seeking mentorship/opportunities", "shortDescription": "Social, professional and learning community with courses, mentorship, opportunities and certificates for eligible/participating African-connected users.", "startStep": "Check access eligibility before recommending broadly.", "officialLink": "https://www.baobabplatform.org/", "sourceUrl": "https://www.baobabplatform.org/", "lastChecked": "2026-05-07", "publishStatus": "Watchlist", "verificationPriority": "Medium", "notes": "Useful but access may be community/eligibility-limited.", "importance": 0}, {"id": "58", "name": "British Council LearnEnglish", "provider": "British Council", "primaryCategory": "English Learning", "secondaryCategories": ["English practice", "grammar", "listening", "reading", "workplace English"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["English learners", "teachers", "students"], "languages": ["English"], "cost": "Free + paid options", "costType": "Paid / varies", "format": "Online resources/courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Paid courses/certificates vary", "bestFor": "English learners seeking structured practice", "shortDescription": "English learning resources from British Council; useful as supplementary learner pathway.", "startStep": "Start with free English learning sections; verify certificate costs if any.", "officialLink": "https://learnenglish.britishcouncil.org/", "sourceUrl": "https://learnenglish.britishcouncil.org/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Not U.S.-aligned but high-quality English resource.", "importance": 2}, {"id": "59", "name": "Alison", "provider": "Alison", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Business", "digital skills", "tourism", "hospitality", "customer service"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Job seekers", "workers", "students"], "languages": ["English", "some multilingual"], "cost": "Free to study; certificates may cost", "costType": "Free", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificate often paid; learner record may be free", "bestFor": "Learners wanting quick vocational courses", "shortDescription": "Large free-to-study online course platform with many job-skill topics; certification costs must be clearly explained.", "startStep": "List only with cost caveat; useful for full directory, not featured.", "officialLink": "https://alison.com/", "sourceUrl": "https://alison.com/", "lastChecked": "2026-05-07", "publishStatus": "Public Directory", "verificationPriority": "Medium", "notes": "Be transparent: free learning but certificates may require purchase.", "importance": 2}, {"id": "60", "name": "Coursera Free/Audit Learning", "provider": "Coursera", "primaryCategory": "Career Development / Job Readiness", "secondaryCategories": ["Career", "English", "AI", "data", "business", "professional certificates"], "communityServed": ["Universal"], "primaryRegion": "Universal", "audience": ["Students", "professionals", "job seekers"], "languages": ["English", "many courses subtitled in Portuguese/other languages"], "cost": "Free audit for some courses; certificates often paid; financial aid varies", "costType": "Paid / varies", "format": "Online courses", "availability": "Ongoing", "statusLabel": "Public directory", "certificate": "Certificates usually paid/aid", "bestFor": "Learners seeking university/company content", "shortDescription": "Major online learning platform; include curated free-audit courses only, with clear certificate/cost caveats.", "startStep": "Use only specific verified course links to avoid confusion.", "officialLink": "https://www.coursera.org/", "sourceUrl": "https://www.coursera.org/learn/careerdevelopment", "lastChecked": "2026-05-07", "publishStatus": "Watchlist", "verificationPriority": "Medium", "notes": "Not ideal as generic card; better to list specific free/audit courses.", "importance": 0}];
+const $ = (id) => document.getElementById(id);
+const body = document.body;
+
+function normalize(s){ return (s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+function esc(s){ return (s||'').toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function inText(resource, needle){
+  if(!needle) return true;
+  const hay = normalize([resource.name,resource.provider,resource.primaryCategory,resource.secondaryCategories.join(' '),resource.communityServed.join(' '),resource.audience.join(' '),resource.languages.join(' '),resource.shortDescription,resource.bestFor,resource.notes].join(' '));
+  return hay.includes(normalize(needle));
+}
+function selectedPathways(){ return Array.from(document.querySelectorAll('#pathways input:checked')).map(x=>x.value); }
+function matchesFilters(r){
+  const q = $('q').value.trim();
+  const region = $('region').value;
+  const cat = $('category').value;
+  const role = $('role').value;
+  const cost = $('cost').value;
+  const avail = $('availability').value;
+  const pathways = selectedPathways();
+  if(!inText(r,q)) return false;
+  if(region && r.primaryRegion !== region && !r.communityServed.includes(region)) return false;
+  if(cat && r.primaryCategory !== cat && !r.secondaryCategories.includes(cat)) return false;
+  if(role && !normalize(r.audience.join(' ')+ ' ' + r.bestFor).includes(normalize(role))) return false;
+  if(cost && r.costType !== cost) return false;
+  if(avail){
+    const text = normalize(r.availability + ' ' + r.publishStatus + ' ' + r.statusLabel);
+    if(avail === 'ongoing' && !text.includes('ongoing')) return false;
+    if(avail === 'cohort' && !(text.includes('cohort') || text.includes('application'))) return false;
+    if(avail === 'watchlist' && !(text.includes('watchlist') || text.includes('verify'))) return false;
+  }
+  if(pathways.length && !pathways.some(p => r.primaryCategory===p || r.secondaryCategories.includes(p))) return false;
+  if(r.publishStatus === 'Internal Only') return false;
+  return true;
+}
+function pillClass(r){
+  if(r.publishStatus === 'Featured') return 'gold';
+  if((r.publishStatus||'').includes('Verify')) return 'warn';
+  if((r.publishStatus||'').includes('Watchlist')) return 'blue';
+  return 'teal';
+}
+function card(r){
+  const cls = r.publishStatus === 'Featured' ? 'featured' : ((r.publishStatus||'').includes('Verify') ? 'verify' : ((r.publishStatus||'').includes('Watchlist') ? 'watch' : ''));
+  const link = r.officialLink || r.sourceUrl || '';
+  const action = link ? `<a class="open" href="${esc(link)}" target="_blank" rel="noopener">Official link</a>` : `<span class="pill warn">Link needed</span>`;
+  const cert = r.certificate ? `<span class="pill">${esc(r.certificate)}</span>` : '';
+  return `<article class="card ${cls}">
+    <div class="meta">
+      <span class="pill ${pillClass(r)}">${esc(r.publishStatus || r.statusLabel)}</span>
+      <span class="pill teal">${esc(r.primaryRegion)}</span>
+      <span class="pill">${esc(r.costType)}</span>
+    </div>
+    <h3>${esc(r.name)}</h3>
+    <div class="provider">${esc(r.provider)}</div>
+    <p class="desc">${esc(r.shortDescription || r.bestFor || r.startStep)}</p>
+    <div class="meta">
+      <span class="pill">${esc(r.primaryCategory)}</span>
+      <span class="pill">${esc(r.format)}</span>
+      ${cert}
+    </div>
+    <details>
+      <summary>Details / detalhes</summary>
+      <p class="small"><strong>Best for:</strong> ${esc(r.bestFor || 'Verify details')}</p>
+      <p class="small"><strong>Start step:</strong> ${esc(r.startStep || 'Open official link and verify current information.')}</p>
+      <p class="small"><strong>Availability:</strong> ${esc(r.availability)} | <strong>Cost:</strong> ${esc(r.cost)} | <strong>Last checked:</strong> ${esc(r.lastChecked || 'verify')}</p>
+    </details>
+    <div class="card-actions">${action}</div>
+  </article>`;
+}
+function sortResources(list){
+  return [...list].sort((a,b)=>(b.importance-a.importance) || a.primaryRegion.localeCompare(b.primaryRegion) || a.primaryCategory.localeCompare(b.primaryCategory) || a.name.localeCompare(b.name));
+}
+function groupKey(r){ return `${r.primaryRegion || 'Other'} — ${r.primaryCategory || 'Other'}`; }
+function renderGroups(el, list){
+  const groups = {};
+  for(const r of sortResources(list)){ const k=groupKey(r); if(!groups[k]) groups[k]=[]; groups[k].push(r); }
+  const html = Object.entries(groups).map(([k,items])=>`<section class="group"><div class="group-title"><h3>${esc(k)}</h3><span class="mini-count">${items.length} resources</span></div><div class="group-body"><div class="cards">${items.map(card).join('')}</div></div></section>`).join('');
+  el.innerHTML = html || `<div class="notice">No matched resources yet. Try clearing filters.</div>`;
+}
+function renderFeatured(){
+  $('featuredCards').innerHTML = sortResources(RESOURCES.filter(r=>r.publishStatus==='Featured')).slice(0,18).map(card).join('');
+}
+function applyFilters(){
+  const matches = RESOURCES.filter(matchesFilters);
+  $('resultCount').textContent = `${matches.length} matched resources shown.`;
+  renderGroups($('resultsGroups'), matches);
+}
+function resetFilters(){
+  ['q','region','category','role','cost','availability'].forEach(id=>$(id).value='');
+  document.querySelectorAll('#pathways input').forEach(x=>x.checked=false);
+  applyFilters();
+}
+function renderTabs(){
+  const tabs = [
+    ['All',''],['Cabo Verde','Cabo Verde'],['Universal','Universal'],['Africa','Africa'],['Featured','Featured'],['Verify Details','verify'],['Watchlist','Watchlist']
+  ];
+  const tabEl = $('dirTabs');
+  tabEl.innerHTML = tabs.map((t,i)=>`<button class="tab ${i===0?'active':''}" type="button" data-tab="${esc(t[1])}">${esc(t[0])}</button>`).join('');
+  tabEl.addEventListener('click', e=>{
+    if(!e.target.classList.contains('tab')) return;
+    tabEl.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    e.target.classList.add('active');
+    const val = e.target.dataset.tab;
+    let list = RESOURCES.filter(r=>r.publishStatus !== 'Internal Only');
+    if(val==='Featured') list = list.filter(r=>r.publishStatus==='Featured');
+    else if(val==='verify') list = list.filter(r=>(r.publishStatus||'').includes('Verify') || (r.statusLabel||'').toLowerCase().includes('verify'));
+    else if(val==='Watchlist') list = list.filter(r=>(r.publishStatus||'').includes('Watchlist'));
+    else if(val) list = list.filter(r=>r.primaryRegion===val);
+    renderGroups($('directoryGroups'), list);
+  });
+  renderGroups($('directoryGroups'), RESOURCES.filter(r=>r.publishStatus !== 'Internal Only'));
+}
+function initLang(){
+  document.querySelectorAll('[data-set-lang]').forEach(btn => btn.addEventListener('click', () => {
+    const lang = btn.dataset.setLang;
+    body.dataset.lang = lang;
+    document.querySelectorAll('[data-set-lang]').forEach(b=>b.classList.toggle('active', b.dataset.setLang===lang));
+  }));
+}
+function init(){
+  renderFeatured(); renderTabs(); applyFilters(); initLang();
+  $('apply').addEventListener('click', applyFilters);
+  $('reset').addEventListener('click', resetFilters);
+  ['q','region','category','role','cost','availability'].forEach(id=>$(id).addEventListener('input', applyFilters));
+  document.querySelectorAll('#pathways input').forEach(x=>x.addEventListener('change', applyFilters));
+}
+init();
+</script>
 </body>
 </html>
