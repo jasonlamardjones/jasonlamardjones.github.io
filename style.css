@@ -1400,3 +1400,216 @@ footer { margin-top: 80px; background: var(--navy-deep); color: rgba(255,255,255
     padding: 5px 9px;
   }
 }
+
+
+
+/* =========================================================
+   Homepage V2.6 Touch + Button + Micro-Typography Fixes
+   ========================================================= */
+
+/* Keep decorative layers from catching taps. */
+.home-bg-orb,
+.section-divider,
+.portrait-note::before,
+.hero::before {
+  pointer-events: none;
+}
+
+/* Stronger primary hero CTA for horizontal/tablet view. */
+.home-hero .btn-primary {
+  background: linear-gradient(180deg, #fff8dc 0%, var(--gold-pale) 100%);
+  color: var(--navy-deep);
+  border: 1.5px solid rgba(181,146,42,.72);
+  box-shadow: 0 10px 24px rgba(0,0,0,.20), 0 0 0 1px rgba(255,255,255,.16) inset;
+}
+
+.home-hero .btn-primary:hover,
+.home-hero .btn-primary:focus-visible {
+  background: #fff;
+  color: var(--navy-deep);
+  box-shadow: 0 12px 28px rgba(0,0,0,.25), 0 0 0 1px rgba(255,255,255,.2) inset;
+}
+
+/* Make all buttons feel responsive on touch devices without requiring hover. */
+.btn,
+.nav-resource,
+.image-preview-button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(181,146,42,.18);
+}
+
+.btn:active,
+.nav-resource:active {
+  transform: translateY(1px);
+}
+
+/* Avoid iPad/Safari first-tap hover traps by disabling hover transformations on non-hover devices. */
+@media (hover: none) {
+  .framework-card:hover,
+  .initiative-card:hover,
+  .proof-card:hover,
+  .image-preview-button:hover img,
+  .image-preview-button:focus-visible img {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .btn:hover {
+    color: inherit;
+  }
+}
+
+/* More elegant current-positioning treatment: not basic pills, not awkward dot wrapping. */
+.position-role-list {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(154,116,23,.35);
+}
+
+.position-role-list span {
+  display: block;
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--navy-deep);
+  font-family: var(--serif);
+  font-size: clamp(1.24rem, 2vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+/* Mindelo caption: preserve phrase groups without forcing one unbroken line. */
+.pilot-image-card figcaption {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.caption-keep {
+  white-space: nowrap;
+}
+
+/* Current Field Context title: intentional line grouping. */
+.pilot-title-wide,
+.pilot-title-narrow {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .pilot-title-wide {
+    display: inline;
+  }
+}
+
+@media (max-width: 719px) {
+  .pilot-title-narrow {
+    display: inline;
+  }
+}
+
+/* Custom image lightbox: more reliable than dialog on iPad/Safari. */
+.site-lightbox[hidden] {
+  display: none !important;
+}
+
+.site-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.site-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 8, 16, .68);
+  backdrop-filter: blur(3px);
+}
+
+.site-lightbox-panel {
+  position: relative;
+  z-index: 1;
+  width: min(94vw, 980px);
+  max-height: 88vh;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(4, 8, 16, .92);
+  box-shadow: 0 20px 70px rgba(0,0,0,.45);
+}
+
+.site-lightbox-panel img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.site-lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.site-lightbox-close:hover,
+.site-lightbox-close:focus-visible {
+  background: rgba(255,255,255,.22);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* Keep legacy dialog hidden if browser cached old markup. */
+.image-lightbox {
+  display: none;
+}
+
+/* Mobile refinements. */
+@media (max-width: 720px) {
+  .position-role-list {
+    padding-left: 14px;
+  }
+
+  .position-role-list span {
+    white-space: normal;
+    font-size: 1.26rem;
+  }
+
+  .pilot-image-card figcaption {
+    font-size: .78rem;
+  }
+
+  .site-lightbox {
+    padding: 12px;
+  }
+
+  .site-lightbox-panel {
+    width: 94vw;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1180px) {
+  .position-role-list span {
+    font-size: 1.18rem;
+  }
+}

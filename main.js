@@ -36,44 +36,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const dialog = document.getElementById('imageLightbox');
-  if (!dialog) return;
+  const overlay = document.getElementById('siteImageLightbox');
+  if (!overlay) return;
 
-  const dialogImage = dialog.querySelector('img');
-  const closeButton = dialog.querySelector('.lightbox-close');
-  const buttons = document.querySelectorAll('[data-lightbox]');
+  const img = overlay.querySelector('img');
+  const panel = overlay.querySelector('.site-lightbox-panel');
 
-  const closeDialog = () => {
-    if (dialog.open) dialog.close();
-    dialogImage.removeAttribute('src');
-    dialogImage.removeAttribute('alt');
+  const openLightbox = (src, alt) => {
+    if (!src || !img) return;
+    img.src = src;
+    img.alt = alt || 'Image preview';
+    overlay.removeAttribute('hidden');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
   };
 
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const src = button.getAttribute('data-lightbox');
-      const alt = button.getAttribute('data-lightbox-alt') || button.querySelector('img')?.alt || 'Image preview';
-      if (!src || !dialogImage) return;
-      dialogImage.src = src;
-      dialogImage.alt = alt;
-      if (typeof dialog.showModal === 'function') {
-        dialog.showModal();
-      } else {
-        window.open(src, '_blank', 'noopener');
-      }
-    });
+  const closeLightbox = () => {
+    overlay.setAttribute('hidden', '');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    if (img) {
+      img.removeAttribute('src');
+      img.removeAttribute('alt');
+    }
+  };
+
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest('[data-lightbox]');
+    if (!trigger) return;
+    event.preventDefault();
+    event.stopPropagation();
+
+    const src = trigger.getAttribute('data-lightbox');
+    const alt = trigger.getAttribute('data-lightbox-alt') || trigger.querySelector('img')?.alt || 'Image preview';
+    openLightbox(src, alt);
   });
 
-  if (closeButton) closeButton.addEventListener('click', closeDialog);
+  overlay.addEventListener('click', (event) => {
+    if (event.target.hasAttribute('data-lightbox-close')) {
+      closeLightbox();
+    }
+  });
 
-  dialog.addEventListener('click', (event) => {
-    const rect = dialog.getBoundingClientRect();
-    const inside = (
-      event.clientX >= rect.left &&
-      event.clientX <= rect.right &&
-      event.clientY >= rect.top &&
-      event.clientY <= rect.bottom
-    );
-    if (!inside) closeDialog();
+  if (panel) {
+    panel.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !overlay.hasAttribute('hidden')) {
+      closeLightbox();
+    }
   });
 });
