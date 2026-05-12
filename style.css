@@ -967,3 +967,204 @@ footer { margin-top: 80px; background: var(--navy-deep); color: rgba(255,255,255
   }
 }
 
+
+
+
+/* =========================================================
+   Homepage V2.4 Responsive Typography + Proof Image Polish
+   ========================================================= */
+
+/* 1. Who I Am title: controlled phrase grouping without distorting the design. */
+.who-title-line {
+  display: inline;
+}
+
+@media (min-width: 721px) {
+  .who-line-a,
+  .who-line-b {
+    display: block;
+  }
+}
+
+/* 2. Current positioning: cleaner title stack instead of awkward dot wrapping. */
+.position-title-stack {
+  display: grid;
+  gap: 4px;
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(1.32rem, 2.1vw, 1.62rem);
+  line-height: 1.08;
+  color: var(--navy-deep);
+}
+
+.position-title-stack span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* 3. Remove the earlier no-break treatment that made the Expose card look odd. */
+.framework-card p span.no-break {
+  white-space: normal;
+}
+
+/* 4. Boundary note: make the two sentences feel intentional. */
+.boundary-sentence-break {
+  display: block;
+  margin-top: 4px;
+}
+
+.university-nowrap {
+  white-space: nowrap;
+}
+
+/* 5. Mindelo image caption: keep it to one line where the layout allows. */
+.pilot-image-card figcaption {
+  font-size: .76rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 6. Proof of Work heading: use the available width. */
+.proof-section .proof-heading {
+  max-width: 100%;
+}
+
+.proof-section .section-intro {
+  max-width: 1060px;
+}
+
+/* 7. Proof cards: consistent image structure and clickable preview button. */
+.image-preview-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.image-preview-button img {
+  transition: transform .22s ease, filter .22s ease;
+}
+
+.image-preview-button:hover img,
+.image-preview-button:focus-visible img {
+  transform: scale(1.025);
+  filter: brightness(1.03);
+}
+
+.proof-card-poster .image-preview-button {
+  background: #050608;
+  padding: 16px;
+}
+
+.proof-card-poster .image-preview-button img {
+  height: 150px;
+  object-fit: contain;
+  background: #050608;
+}
+
+.proof-card-poster {
+  background: var(--white);
+}
+
+.proof-card-poster h3 {
+  line-height: 1.08;
+}
+
+/* 8. Lightbox image preview. */
+.image-lightbox {
+  width: min(92vw, 980px);
+  max-height: 88vh;
+  padding: 18px;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(4, 8, 16, .92);
+  box-shadow: 0 20px 70px rgba(0,0,0,.45);
+}
+
+.image-lightbox::backdrop {
+  background: rgba(4, 8, 16, .58);
+  backdrop-filter: blur(3px);
+}
+
+.image-lightbox img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,.22);
+}
+
+/* 9. Tablet/mobile-specific adjustments. */
+@media (max-width: 1080px) {
+  .position-title-stack span {
+    white-space: normal;
+  }
+
+  .pilot-image-card figcaption {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
+@media (max-width: 720px) {
+  .who-line-a,
+  .who-line-b {
+    display: inline;
+  }
+
+  .position-title-stack {
+    font-size: 1.35rem;
+  }
+
+  .university-nowrap {
+    white-space: normal;
+  }
+
+  .pilot-image-card figcaption {
+    font-size: .76rem;
+  }
+
+  .proof-card-poster .image-preview-button img {
+    height: 180px;
+  }
+
+  .image-lightbox {
+    width: 94vw;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1180px) {
+  .profile-summary-card {
+    padding: 24px;
+  }
+
+  .position-title-stack {
+    font-size: 1.28rem;
+  }
+}
