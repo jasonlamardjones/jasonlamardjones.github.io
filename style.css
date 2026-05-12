@@ -809,3 +809,161 @@ footer { margin-top: 80px; background: var(--navy-deep); color: rgba(255,255,255
   }
 }
 
+
+
+
+/* =========================================================
+   Homepage V2.3 Copy + Visual Polish
+   - Keeps hero text readable across the blue/cream transition
+   - Makes "Learn More About the Vision" visible
+   - Updates text wrapping for titles/captions
+   - Converts Proof of Work into consistent image cards
+   ========================================================= */
+
+.home-v2 .home-hero {
+  background:
+    linear-gradient(135deg,
+      rgba(8,26,51,.98) 0%,
+      rgba(22,49,95,.96) 66%,
+      rgba(250,250,247,1) 66.2%,
+      rgba(250,250,247,1) 100%);
+}
+
+.home-hero-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 780px;
+}
+
+.home-kicker,
+.home-hero h1,
+.home-lede,
+.home-support {
+  text-shadow: 0 1px 2px rgba(0,0,0,.18);
+}
+
+.home-hero .btn-ghost {
+  background: rgba(245,237,214,.94);
+  color: var(--navy-deep);
+  border-color: rgba(245,237,214,.94);
+}
+
+.home-hero .btn-ghost:hover {
+  background: #fff;
+  color: var(--navy-deep);
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.home-section h2,
+.profile-summary-card h3,
+.framework-card h3,
+.initiative-card h3,
+.proof-card h3,
+.collaboration-card h2 {
+  text-wrap: balance;
+}
+
+.home-section-copy p,
+.proof-card p,
+.framework-card p,
+.initiative-card p,
+.boundary-note,
+.pilot-image-card figcaption {
+  text-wrap: pretty;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.proof-grid-enhanced {
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  gap: 18px;
+}
+
+.proof-grid-enhanced .proof-card-image {
+  min-height: 100%;
+  background: var(--white);
+}
+
+.proof-grid-enhanced .proof-card-image img {
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.proof-grid-enhanced .proof-card-image div {
+  padding: 18px 18px 20px;
+}
+
+.proof-grid-enhanced .proof-card-image h3 {
+  font-size: clamp(1.14rem, 2vw, 1.34rem);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.proof-grid-enhanced .proof-card-image p {
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.boundary-note {
+  line-height: 1.62;
+}
+
+/* If one of the referenced images is missing in the repo, the card remains readable. */
+.proof-card-image img[alt] {
+  background: var(--gold-pale);
+}
+
+/* Tablet and mobile refinements */
+@media (max-width: 1080px) {
+  .home-v2 .home-hero {
+    background:
+      linear-gradient(180deg,
+        var(--navy-deep) 0%,
+        var(--navy) 62%,
+        var(--cream) 62.2%,
+        var(--cream) 100%);
+  }
+
+  .home-hero-copy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-v2 .home-hero {
+    background:
+      linear-gradient(180deg,
+        var(--navy-deep) 0%,
+        var(--navy) 68%,
+        var(--cream) 68.2%,
+        var(--cream) 100%);
+  }
+
+  .home-hero .btn-ghost {
+    width: 100%;
+  }
+
+  .proof-grid-enhanced .proof-card-image img {
+    height: 190px;
+  }
+
+  .no-break {
+    white-space: normal;
+  }
+
+  .pilot-image-card figcaption .no-break {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 900px) {
+  .boundary-note {
+    font-size: .88rem;
+  }
+}
+
