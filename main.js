@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const img = overlay.querySelector('img');
   const panel = overlay.querySelector('.site-lightbox-panel');
 
+  // Safety: the overlay must never appear on page load.
+  overlay.setAttribute('hidden', '');
+  overlay.setAttribute('aria-hidden', 'true');
+
   const openLightbox = (src, alt) => {
     if (!src || !img) return;
     img.src = src;
@@ -64,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {
     const trigger = event.target.closest('[data-lightbox]');
     if (!trigger) return;
+
     event.preventDefault();
     event.stopPropagation();
 
