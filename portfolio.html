@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio — Jason La Mard Jones</title>
-  <meta name="description" content="Selected broadcasts, presentations, project concepts, and integrated project views from Jason La Mard Jones.">
-  <link rel="stylesheet" href="style.css">
+  <title>Portfolio — Jason L. Jones</title>
+  <meta name="description" content="Portfolio of opportunity systems, resource navigation, program design, community communication, and selected media work from Jason L. Jones.">
+  <link rel="stylesheet" href="style.css?v=3.0a">
 </head>
 <body>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand">Jason <span>La Mard</span> Jones</a>
-    <ul class="nav-links">
+    <a href="index.html" class="nav-brand">Jason <span>L.</span> Jones</a>
+    <ul class="nav-links" id="siteNav">
       <li><a href="index.html">Home</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="community.html">Community Work</a></li>
+      <li><a href="index.html#vision">Vision</a></li>
+      <li><a href="index.html#initiatives">Initiatives</a></li>
       <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="index.html#about">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></div>
+    <div class="nav-actions">
+      <a href="resources.html" class="nav-resource">Resource Hub</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 <div class="page">
@@ -26,15 +30,58 @@
     <div class="container split-header">
       <div>
         <span class="section-label">Work &amp; Projects</span>
-        <h1 style="font-size:clamp(2.1rem,5vw,3.4rem);">Initiatives, Media &amp; Selected Work</h1>
+        <h1 style="font-size:clamp(2.1rem,5vw,3.4rem);">Portfolio: Opportunity Systems, Program Design &amp; Community Communication</h1>
         <div class="section-divider"></div>
-        <p class="section-intro">A structured view of the work itself—current initiatives, selected historical projects, and media that demonstrate how I approach communication, program support, and community development.</p>
+        <p class="section-intro">Selected work showing how I identify needs, organize resources, design practical programs, support communication, and build opportunity-access pathways across community, education, veteran support, media, and international contexts.</p>
       </div>
       <div class="header-image-card reveal"><img src="portfolio-header.png" alt="Mindelo aerial graphic"></div>
     </div>
   </section>
 
   <section>
+    <div class="container">
+      <span class="section-label">Current Proof of Concept</span>
+      <h2>Opportunity access systems in development.</h2>
+      <div class="section-divider"></div>
+      <p class="section-intro full-width-intro">These current items are intentionally framed as early-stage proof of work. They show problem definition, contribution, tools built, ethical boundaries, and next iteration rather than overstated outcomes.</p>
+      <div class="case-study-grid" style="margin-top:28px;">
+        <article class="case-study-card reveal">
+          <div class="project-type">Current Work · Independent Resource Hub</div>
+          <h3>Independent Resource Hub: Opportunity Navigation for Cabo Verde</h3>
+          <dl class="case-study-list">
+            <dt>Context</dt><dd>Learning, career, English, digital-skills, and opportunity resources exist, but they are scattered, time-sensitive, and not always easy for students or young adults to act on.</dd>
+            <dt>Role</dt><dd>Designed and launched an independent, mobile-first Resource Hub to organize current opportunities, trusted learning platforms, English resources, digital-skills pathways, and practical next steps.</dd>
+            <dt>Tools built</dt><dd>Resource directory, category filters, saved-resource tools, verification language, QR-access planning, and launch QA workflow.</dd>
+            <dt>Boundary</dt><dd>Independently curated. Not an official American Spaces, U.S. Embassy, UniCV, Government of Cabo Verde, TechPark CV, Skodji Digital, or listed-provider platform unless clearly stated and approved.</dd>
+            <dt>Next iteration</dt><dd>Digital skills, AI literacy, opportunity verification, current learning opportunities, and outreach/QR launch support.</dd>
+          </dl>
+          <div class="project-buttons"><span class="tag">Resource Navigation</span><span class="tag">Digital Readiness</span><span class="tag">Opportunity Access</span></div>
+        </article>
+        <article class="case-study-card reveal">
+          <div class="project-type">Current Work · Mindelo / São Vicente</div>
+          <h3>Mindelo Opportunity Pathway</h3>
+          <dl class="case-study-list">
+            <dt>Need</dt><dd>Students and young adults need clearer entry points into English practice, digital readiness, learning resources, and career-facing next steps.</dd>
+            <dt>Contribution</dt><dd>Developing a practical pathway that connects listening, local resource mapping, workshop concepts, follow-up support, and independent resource navigation.</dd>
+            <dt>Evidence</dt><dd>Program concepts, resource-hub planning, outreach language, QR pathway thinking, and early field observation.</dd>
+          </dl>
+          <div class="project-buttons"><span class="tag">English + Digital Skills</span><span class="tag">Local Ecosystem Mapping</span></div>
+        </article>
+        <article class="case-study-card reveal">
+          <div class="project-type">Current Work · Volunteer Support</div>
+          <h3>American Spaces-Related Volunteer Support</h3>
+          <dl class="case-study-list">
+            <dt>Context</dt><dd>American Spaces-related programming can help students connect with English learning, U.S. cultural exchange, resource access, and professional-development opportunities when appropriately approved.</dd>
+            <dt>Contribution</dt><dd>Supported student engagement through English conversation, skills-based programming concepts, and resource-navigation planning in coordination with local leadership.</dd>
+            <dt>Boundary</dt><dd>Described only as volunteer support. No official representation, endorsement, or ownership is implied.</dd>
+          </dl>
+          <div class="project-buttons"><span class="tag">Program Design</span><span class="tag">Public-Diplomacy Sensitivity</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-warm">
     <div class="container">
       <span class="section-label">Selected Video Work</span>
       <h2>Broadcasts &amp; Presentations</h2>
@@ -68,27 +115,18 @@
     </div>
   </section>
 
-  <section class="bg-warm">
+  <section>
     <div class="container">
-      <span class="section-label">Current &amp; Selected Projects</span>
-      <h2>Integrated Project View</h2>
+      <span class="section-label">Additional Project Evidence</span>
+      <h2>Historical work that informs the current model.</h2>
       <div class="section-divider"></div>
-      <p class="section-intro">Project visuals are embedded directly into the relevant cards when available. Where formal photography is not yet accessible, cards remain text-led to keep the site clean and credible.</p>
+      <p class="section-intro">Earlier projects show the same through-line: resource connection, public communication, service navigation, event organization, and practical support for people moving through complex systems.</p>
       <div class="project-grid" style="margin-top:28px;">
-        <div class="project-card reveal">
-          <div class="project-thumb"><a href="american-spaces.jpg" class="lightbox-trigger"><img src="american-spaces.jpg" alt="American Spaces at UniCV"></a></div>
-          <div class="project-content">
-            <div class="project-type">Current Work · Cabo Verde</div>
-            <h3>American Spaces Support &amp; <span class="no-break">Pilot Programming</span></h3>
-            <p>Supporting student engagement through English communication practice and contributing to early-stage concepts for skills-based workshops, career development sessions, and community knowledge-sharing aligned with upcoming program priorities.</p>
-            <div class="project-buttons"><span class="tag">Education</span><span class="tag">Program Support</span><span class="tag">Community Engagement</span></div>
-          </div>
-        </div>
         <div class="project-card reveal">
           <div class="project-thumb"><a href="portfolio-header.png" class="lightbox-trigger"><img src="portfolio-header.png" alt="Mindelo services and collaboration"></a></div>
           <div class="project-content">
             <div class="project-type">Current Work · Cabo Verde</div>
-            <h3>Community Mapping &amp; <span class="no-break">Outreach Effort</span></h3>
+            <h3>Local Resource Mapping</h3>
             <p>Contributing to a bilingual outreach and needs-assessment effort designed to better understand local services, organizations, and collaboration opportunities in Mindelo and beyond.</p>
             <div class="project-buttons"><span class="tag">Research</span><span class="tag">Outreach</span><span class="tag">Needs Assessment</span></div>
           </div>
@@ -109,7 +147,7 @@
             <h3>Law Day 2014 Presentation</h3>
             <p>Developed a public-facing presentation connected to legal education and civic understanding as part of a U.S. court-related community outreach context.</p>
             <div class="project-buttons"><span class="tag">Presentation Design</span><span class="tag">Public Education</span><span class="tag">Legal Outreach</span></div>
-            <div style="margin-top:16px;"><a href="https://youtu.be/hSVpFTWqg_Q" target="_blank" class="btn btn-outline">View Presentation →</a></div>
+            <div style="margin-top:16px;"><a href="https://youtu.be/hSVpFTWqg_Q" target="_blank" rel="noopener" class="btn btn-outline">View Presentation →</a></div>
           </div>
         </div>
         <div class="project-card reveal">
@@ -134,26 +172,33 @@
     </div>
   </section>
 
-  <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
-    <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
-    <img class="lightbox-content" id="lightbox-img" alt="">
-  </div>
-
   <footer>
-    <div class="footer-inner">
-      <span class="footer-name">Jason La Mard Jones</span>
+    <div class="footer-inner footer-v2">
+      <div>
+        <span class="footer-name">Jason L. Jones</span>
+        <div class="footer-copy">Community Development Strategist | Resource Connector | Program Designer</div>
+        <div class="footer-disclaimer">Independent professional platform. Not an official American Spaces, U.S. Embassy, UniCV, Government of Cabo Verde, TechPark CV, Skodji Digital, or listed-provider website unless clearly stated and approved.</div>
+      </div>
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="community.html">Community</a></li>
+        <li><a href="index.html#vision">Vision</a></li>
+        <li><a href="index.html#initiatives">Initiatives</a></li>
+        <li><a href="resources.html">Resource Hub</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#about">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://linkedin.com/in/jasonlamardjones" target="_blank">LinkedIn</a></li>
+        <li><a href="https://linkedin.com/in/jasonlamardjones" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
-      <span class="footer-copy">Mindelo, Cabo Verde · U.S. Citizen</span>
     </div>
   </footer>
 </div>
-<script src="main.js"></script>
+<script src="main.js?v=3.0a"></script>
+  <div class="site-lightbox" id="siteImageLightbox" aria-hidden="true" hidden>
+    <div class="site-lightbox-backdrop" data-lightbox-close></div>
+    <div class="site-lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="site-lightbox-close" type="button" aria-label="Close image preview" data-lightbox-close></button>
+      <img src="" alt="">
+    </div>
+  </div>
 </body>
 </html>

@@ -32,17 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     revealables.forEach(el => el.classList.add('visible'));
   }
-});
 
-
-document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('siteImageLightbox');
   if (!overlay) return;
 
   const img = overlay.querySelector('img');
   const panel = overlay.querySelector('.site-lightbox-panel');
 
-  // Safety: the overlay must never appear on page load.
   overlay.setAttribute('hidden', '');
   overlay.setAttribute('aria-hidden', 'true');
 
@@ -66,14 +62,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   document.addEventListener('click', (event) => {
-    const trigger = event.target.closest('[data-lightbox]');
+    const dataTrigger = event.target.closest('[data-lightbox]');
+    const legacyTrigger = event.target.closest('a.lightbox-trigger');
+    const trigger = dataTrigger || legacyTrigger;
     if (!trigger) return;
+
+    const src = trigger.getAttribute('data-lightbox') || trigger.getAttribute('href');
+    const alt = trigger.getAttribute('data-lightbox-alt') || trigger.querySelector('img')?.alt || 'Image preview';
+    if (!src || src.startsWith('http')) return;
 
     event.preventDefault();
     event.stopPropagation();
-
-    const src = trigger.getAttribute('data-lightbox');
-    const alt = trigger.getAttribute('data-lightbox-alt') || trigger.querySelector('img')?.alt || 'Image preview';
     openLightbox(src, alt);
   });
 
