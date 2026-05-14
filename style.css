@@ -2290,3 +2290,69 @@ p, li, dd,
   font-size: 1.08em !important;
   line-height: 1 !important;
 }
+
+
+/* =========================================================
+   V3.0A.5 Micro final line-control patch
+   Scope only:
+   1) portfolio lead case-study title line breaks
+   2) homepage Resource Hub CTA centered line break on phones
+   ========================================================= */
+
+/* Keep the lead Resource Hub portfolio title to the requested two-line shape
+   on iPad portrait and iPhone/iPad landscape widths. */
+.case-study-card:first-child .case-title-stack {
+  max-width: none !important;
+}
+
+@media (min-width: 600px) {
+  .case-study-card:first-child .case-title-stack {
+    font-size: clamp(1.55rem, 3.1vw, 2.05rem) !important;
+    line-height: 1.16 !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-line {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-line + .case-title-line::before {
+    content: "" !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .case-study-card:first-child .case-title-stack .case-title-line {
+    display: block !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-line + .case-title-line::before {
+    content: "" !important;
+  }
+}
+
+/* Center the two-line Resource Hub CTA text on narrow phones. */
+.resource-feature .resource-cta-button {
+  text-align: center;
+  justify-content: center;
+}
+
+.resource-cta-stack {
+  display: inline;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .resource-feature .resource-cta-button {
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+  .resource-cta-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
