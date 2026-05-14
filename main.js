@@ -76,15 +76,27 @@ document.addEventListener('DOMContentLoaded', () => {
     openLightbox(src, alt);
   });
 
+  const closeTriggers = overlay.querySelectorAll('[data-lightbox-close]');
+  closeTriggers.forEach(closeTrigger => {
+    closeTrigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeLightbox();
+    });
+  });
+
   overlay.addEventListener('click', (event) => {
-    if (event.target.hasAttribute('data-lightbox-close')) {
+    if (event.target === overlay || event.target.closest('[data-lightbox-close]')) {
+      event.preventDefault();
       closeLightbox();
     }
   });
 
   if (panel) {
     panel.addEventListener('click', (event) => {
-      event.stopPropagation();
+      if (!event.target.closest('[data-lightbox-close]')) {
+        event.stopPropagation();
+      }
     });
   }
 
