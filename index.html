@@ -6,6 +6,10 @@
   <title>Jason L. Jones — Learning, Access & Community Development</title>
   <meta name="description" content="Jason L. Jones builds practical pathways to opportunity through learning, access, resource systems, and community development. Based in Mindelo, Cabo Verde.">
   <link rel="stylesheet" href="style.css?v=3.0a6">
+
+  <!-- RH-AN1: Privacy-light analytics. Create the site as jasonlamard.com in Plausible before publishing. -->
+  <script defer data-domain="jasonlamard.com" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};</script>
 </head>
 <body>
 <nav>
@@ -305,5 +309,23 @@
     </div>
   </div>
 
+
+<script>
+function trackHomeEvent(name,props){
+  const clean={};
+  Object.entries(props||{}).forEach(([k,v])=>{
+    if(v===undefined||v===null)return;
+    clean[String(k).slice(0,40)]=String(v).replace(/[\r\n\t]+/g,' ').trim().slice(0,180);
+  });
+  try{if(typeof window.plausible==='function')window.plausible(name,{props:clean});}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('a[href*="resources.html"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Resource Hub Clicked',{label:(a.textContent||'').trim(),page:location.pathname})));
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Contact Clicked',{type:'email',page:location.pathname})));
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Social Clicked',{type:'linkedin',page:location.pathname})));
+  document.querySelectorAll('a[href$="contact.html"],a[href*="contact.html"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Contact Clicked',{type:'contact_page',label:(a.textContent||'').trim(),page:location.pathname})));
+  document.querySelectorAll('a[href*="portfolio.html"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Portfolio Clicked',{label:(a.textContent||'').trim(),page:location.pathname})));
+});
+</script>
 </body>
 </html>
