@@ -2066,3 +2066,151 @@ p, li, dd,
   .contact-map-frame { height: 190px; }
 }
 
+
+
+/* =========================================================
+   V3.0A.3 Refinement Patch
+   - iPad landscape hero title overflow fix
+   - iPad portrait Mindelo caption line control
+   - Card label spacing/contrast refinement
+   - Experience metadata dot alignment
+   - Portfolio lead case-study title line control
+   ========================================================= */
+
+/* Prevent the long homepage title phrase from spilling into the portrait on iPad landscape. */
+@media (min-width: 821px) and (max-width: 1280px) {
+  .home-hero .keep-phrase {
+    white-space: normal;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.9rem, 4.65vw, 4.35rem);
+    max-width: 12.4ch;
+  }
+
+  .home-hero-copy {
+    max-width: 660px;
+  }
+
+  .home-hero-grid {
+    gap: 42px;
+  }
+
+  .portrait-card {
+    width: min(340px, 88vw);
+  }
+}
+
+/* Keep the Mindelo caption on one clean line on iPad/tablet widths where it fits. */
+@media (min-width: 721px) {
+  .pilot-image-card figcaption {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: .8rem;
+    line-height: 1.35;
+  }
+
+  .caption-line-one,
+  .caption-line-two {
+    display: inline !important;
+  }
+
+  .caption-line-one::after {
+    content: " ";
+  }
+}
+
+/* Give top card labels breathing room so they do not crowd the titles. */
+.card > .card-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 12px;
+  padding: 6px 13px;
+}
+
+.card > .card-tag + h3,
+.card > .card-tag + .card-role {
+  margin-top: 0;
+}
+
+/* Professional experience metadata: keep bullets attached to their location text. */
+.card-org .meta-location-break {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .32rem;
+  margin-left: .32rem;
+  margin-top: .08rem;
+}
+
+.card-org .meta-location-break .meta-dot {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.ministry-location-keep {
+  white-space: nowrap;
+}
+
+.ministry-location-keep .meta-dot {
+  margin: 0 .28rem;
+}
+
+/* Keep desktop/tablet metadata clean, but allow normal wrapping on narrow phones. */
+@media (max-width: 720px) {
+  .card-org .meta-location-break {
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+    margin-top: .15rem;
+  }
+
+  .ministry-location-keep {
+    white-space: nowrap;
+  }
+
+  .card-org {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .card-org {
+    font-size: .8rem;
+    line-height: 1.55;
+  }
+}
+
+/* Portfolio lead case study: deliberate title stack instead of awkward wrapping. */
+.case-title-stack span {
+  display: block;
+}
+
+.case-title-stack {
+  text-wrap: auto;
+}
+
+@media (min-width: 1081px) {
+  .case-study-card:first-child .case-title-stack {
+    font-size: 1.42rem;
+    line-height: 1.12;
+  }
+}
+
+@media (max-width: 720px) {
+  .case-title-stack span {
+    display: inline;
+  }
+
+  .case-title-stack span::after {
+    content: " ";
+  }
+
+  .case-title-stack span:last-child::after {
+    content: "";
+  }
+}
