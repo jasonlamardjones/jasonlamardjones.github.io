@@ -605,7 +605,6 @@ footer { margin-top: 80px; background: var(--navy-deep); color: rgba(255,255,255
 .profile-summary-topline,
 .framework-card span,
 .initiative-card span,
-.card-tag,
 .mock-badge {
   color: var(--gold-strong);
 }
@@ -1981,3 +1980,89 @@ p, li, dd,
 .site-lightbox-close::before {
   pointer-events: none;
 }
+
+/* =========================================================
+   V3.0A.2 Visual cleanup: tag contrast, metadata wrapping, contact map
+   ========================================================= */
+
+/* Colored pill labels must stay readable on dark green, purple, brown, and navy backgrounds. */
+.card-tag,
+.tl-header .card-tag {
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.15;
+  text-shadow: 0 1px 1px rgba(0,0,0,.18);
+}
+
+.card .card-tag,
+.project-buttons .tag.highlight {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Controlled metadata breaks for lines that were awkward on iPhone/iPad. */
+.meta-dot {
+  font-size: 1.08em;
+  line-height: 1;
+  vertical-align: .02em;
+}
+
+.meta-break {
+  display: block;
+  margin-top: .08rem;
+}
+
+.card-org .meta-break .meta-dot {
+  margin-right: .35rem;
+}
+
+/* Contact-page locator map: clickable preview without needing a local image asset. */
+.contact-map-link {
+  display: block;
+  margin-top: 18px;
+  color: var(--navy-deep);
+}
+
+.contact-map-frame {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 210px;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--warm);
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+
+.contact-map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.contact-map-caption {
+  display: inline-flex;
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: .66rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.contact-map-link:hover .contact-map-frame {
+  box-shadow: var(--shadow);
+  border-color: rgba(181,146,42,.55);
+}
+
+.contact-map-link:hover .contact-map-caption {
+  color: var(--navy-deep);
+}
+
+@media (max-width: 720px) {
+  .contact-map-frame { height: 190px; }
+}
+
