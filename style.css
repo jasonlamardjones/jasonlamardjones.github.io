@@ -2356,3 +2356,106 @@ p, li, dd,
     width: 100%;
   }
 }
+
+
+/* =========================================================
+   V3.0A.6 Strict final micro-fix
+   Scope only:
+   1) prevent the lead portfolio case title from overflowing in landscape
+      while keeping the requested line control on narrow views
+   2) center the homepage hero primary CTA text on phone portrait
+   ========================================================= */
+
+/* Reset the previous nowrap behavior that caused the lead portfolio title to escape its card. */
+.case-study-card:first-child .case-title-stack {
+  max-width: 100% !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+}
+
+.case-study-card:first-child .case-title-stack span {
+  white-space: normal !important;
+}
+
+.case-study-card:first-child .case-title-stack .case-title-prefix,
+.case-study-card:first-child .case-title-stack .case-title-hub,
+.case-study-card:first-child .case-title-stack .case-title-opportunity {
+  display: inline !important;
+}
+
+.case-study-card:first-child .case-title-stack .case-title-prefix::after,
+.case-study-card:first-child .case-title-stack .case-title-hub::after,
+.case-study-card:first-child .case-title-stack .case-title-opportunity::after {
+  content: "" !important;
+}
+
+/* Single-column portfolio views: use the clarified two-line title shape where there is room. */
+@media (min-width: 721px) and (max-width: 980px) {
+  .case-study-card:first-child .case-title-stack {
+    font-size: clamp(1.55rem, 3vw, 1.95rem) !important;
+    line-height: 1.18 !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-prefix,
+  .case-study-card:first-child .case-title-stack .case-title-hub {
+    display: inline !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-opportunity {
+    display: block !important;
+  }
+}
+
+/* Phone-width and phone-landscape-width views: keep Career Resource Hub with the first title group,
+   but allow it to fall to the next line instead of overflowing. */
+@media (max-width: 720px) {
+  .case-study-card:first-child .case-title-stack {
+    font-size: clamp(1.45rem, 6vw, 1.85rem) !important;
+    line-height: 1.16 !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-prefix,
+  .case-study-card:first-child .case-title-stack .case-title-hub {
+    display: inline !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-opportunity {
+    display: block !important;
+  }
+}
+
+/* Very narrow phones: force the hub phrase to its own line, matching the annotated phone view. */
+@media (max-width: 430px) {
+  .case-study-card:first-child .case-title-stack .case-title-prefix,
+  .case-study-card:first-child .case-title-stack .case-title-hub,
+  .case-study-card:first-child .case-title-stack .case-title-opportunity {
+    display: block !important;
+  }
+}
+
+/* Three-card/tablet landscape and desktop views: return to normal in-card wrapping so text never
+   runs under the neighboring card. */
+@media (min-width: 981px) {
+  .case-study-card:first-child .case-title-stack {
+    font-size: clamp(1.25rem, 1.8vw, 1.62rem) !important;
+    line-height: 1.18 !important;
+    max-width: 100% !important;
+  }
+
+  .case-study-card:first-child .case-title-stack .case-title-prefix,
+  .case-study-card:first-child .case-title-stack .case-title-hub,
+  .case-study-card:first-child .case-title-stack .case-title-opportunity {
+    display: inline !important;
+    white-space: normal !important;
+  }
+}
+
+/* Center the homepage hero primary CTA when it wraps on phone portrait. */
+@media (max-width: 720px) {
+  .home-hero .home-actions .btn-primary {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
