@@ -2214,3 +2214,79 @@ p, li, dd,
     content: "";
   }
 }
+
+
+/* =========================================================
+   V3.0A.4 Final visual fix
+   Scope only:
+   1) iPad landscape homepage title balance
+   2) portfolio lead case title balance in landscape/tablet widths
+   3) current-role metadata font/dot consistency
+   ========================================================= */
+
+/* Bring the homepage title back to a natural multi-line shape on iPad landscape
+   while still keeping the last phrase away from the portrait. */
+@media (min-width: 821px) and (max-width: 1280px) and (orientation: landscape) {
+  .home-hero h1 {
+    font-size: clamp(3.05rem, 4.35vw, 4.55rem);
+    line-height: 1.08;
+    max-width: 21.5ch;
+  }
+
+  .home-hero-copy {
+    max-width: 720px;
+  }
+
+  .home-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .82fr);
+    gap: 48px;
+  }
+
+  .portrait-card {
+    width: min(345px, 86vw);
+  }
+}
+
+/* Keep the portfolio lead title to two readable lines on wide/tablet landscape. */
+.case-title-stack .case-title-line {
+  display: inline;
+}
+
+.case-title-stack .case-title-line + .case-title-line::before {
+  content: " ";
+}
+
+@media (min-width: 721px) {
+  .case-title-stack .case-title-line {
+    display: block;
+  }
+
+  .case-title-stack .case-title-line + .case-title-line::before {
+    content: "";
+  }
+
+  .case-study-card:first-child .case-title-stack {
+    font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+    line-height: 1.15;
+    max-width: 24ch;
+  }
+}
+
+/* Match current-role metadata size/spacing to the other experience locations. */
+.current-role-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: .38rem;
+  row-gap: .08rem;
+}
+
+.current-role-meta span {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.current-role-meta .meta-inline-separator {
+  font-size: 1.08em !important;
+  line-height: 1 !important;
+}
