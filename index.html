@@ -7,12 +7,62 @@
   <meta name="description" content="Jason L. Jones builds practical pathways to opportunity through learning, access, resource systems, and community development. Based in Mindelo, Cabo Verde.">
   <link rel="stylesheet" href="style.css?v=3.0a6">
 
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-18CkiXkgdyMGVYCAeXkp7.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
+  <style id="index-hero-translation-hotfix">
+    /* Emergency translation/layout safeguard for the homepage hero.
+       Prevents translated headings from running into the portrait card. */
+    .home-hero-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr) !important;
+      column-gap: clamp(2rem, 5vw, 5rem) !important;
+      row-gap: 2rem !important;
+      align-items: center !important;
+    }
+    .home-hero-copy {
+      min-width: 0 !important;
+      max-width: 100% !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
+    .home-hero-copy h1 {
+      max-width: 12.5ch !important;
+      overflow-wrap: break-word !important;
+      word-break: normal !important;
+      hyphens: auto !important;
+      text-wrap: balance;
+    }
+    .home-hero-copy .keep-phrase {
+      white-space: normal !important;
+    }
+    .home-hero-media {
+      min-width: 0 !important;
+      width: min(100%, 430px) !important;
+      justify-self: end !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .portrait-card,
+    .portrait-card img {
+      max-width: 100% !important;
+    }
+    @media (max-width: 1180px) {
+      .home-hero-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .home-hero-copy h1 {
+        max-width: 15ch !important;
+      }
+      .home-hero-media {
+        justify-self: center !important;
+        width: min(100%, 460px) !important;
+      }
+    }
+    @media (max-width: 680px) {
+      .home-hero-copy h1 {
+        max-width: 100% !important;
+        overflow-wrap: anywhere !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
 <nav>
@@ -312,23 +362,5 @@
     </div>
   </div>
 
-
-<script>
-function trackHomeEvent(name,props){
-  const clean={};
-  Object.entries(props||{}).forEach(([k,v])=>{
-    if(v===undefined||v===null)return;
-    clean[String(k).slice(0,40)]=String(v).replace(/[\r\n\t]+/g,' ').trim().slice(0,180);
-  });
-  try{if(typeof window.plausible==='function')window.plausible(name,{props:clean});}catch(e){}
-}
-document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('a[href*="resources.html"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Resource Hub Clicked',{label:(a.textContent||'').trim(),page:location.pathname})));
-  document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Contact Clicked',{type:'email',page:location.pathname})));
-  document.querySelectorAll('a[href*="linkedin.com"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Social Clicked',{type:'linkedin',page:location.pathname})));
-  document.querySelectorAll('a[href$="contact.html"],a[href*="contact.html"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Contact Clicked',{type:'contact_page',label:(a.textContent||'').trim(),page:location.pathname})));
-  document.querySelectorAll('a[href*="portfolio.html"]').forEach(a=>a.addEventListener('click',()=>trackHomeEvent('Homepage Portfolio Clicked',{label:(a.textContent||'').trim(),page:location.pathname})));
-});
-</script>
 </body>
 </html>
