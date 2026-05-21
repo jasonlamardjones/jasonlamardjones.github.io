@@ -63,6 +63,59 @@
     }
   </style>
 
+
+<style id="jlj-fqa1-home-hero-regression-fix">
+/* JLJ-RH-FQA1: stabilize homepage hero at real iPhone landscape, iPad, desktop, and TV widths. */
+.home-hero, .home-hero * { -webkit-hyphens: none !important; hyphens: none !important; }
+.home-hero { overflow: hidden !important; }
+.home-hero .home-hero-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 460px) !important;
+  gap: clamp(34px, 5.5vw, 84px) !important;
+  align-items: center !important;
+}
+.home-hero-copy { min-width: 0 !important; max-width: 760px !important; }
+.home-hero h1 {
+  max-width: 760px !important;
+  min-width: 0 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance;
+  line-height: 1.04 !important;
+  letter-spacing: -0.045em !important;
+}
+.home-hero h1 .keep-phrase { display: inline !important; white-space: normal !important; }
+.home-hero-media {
+  position: relative !important;
+  justify-self: center !important;
+  align-self: center !important;
+  width: min(430px, 100%) !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+.portrait-card, .portrait-card img { max-width: 100% !important; }
+.home-actions { max-width: 960px !important; }
+@media (max-width: 1180px) {
+  .home-hero .home-hero-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 940px !important;
+    gap: clamp(24px, 4vw, 44px) !important;
+  }
+  .home-hero-copy { max-width: 860px !important; }
+  .home-hero h1 { max-width: 860px !important; }
+  .home-hero-media { width: min(430px, 72vw) !important; margin: 12px auto 0 !important; justify-self: center !important; }
+}
+@media (min-width: 1181px) {
+  .home-hero-copy { max-width: 720px !important; }
+  .home-hero-media { justify-self: end !important; }
+}
+@media (max-width: 760px) {
+  .home-hero h1 { line-height: 1.05 !important; letter-spacing: -0.035em !important; }
+  .home-actions { display: flex !important; flex-direction: column !important; align-items: stretch !important; }
+  .home-actions .btn { width: 100% !important; justify-content: center !important; }
+}
+</style>
+
 </head>
 <body>
 <nav>
