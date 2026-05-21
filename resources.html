@@ -36,6 +36,7 @@ html{scroll-padding-top:108px}body{overflow-x:hidden}.section[id],main [id]{scro
 @media(max-width:640px){.hero-legend{justify-content:flex-start;font-size:.84rem;margin-top:10px}.hero-legend span{padding:5px 8px}}
 
 
+
 /* RH-VNEXT5F soft-launch QA fix: stability, navigation, and mobile polish */
 .nav{flex-wrap:nowrap!important;overflow-x:auto;overflow-y:hidden;justify-content:flex-start;max-width:100%;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a,.nav button{flex:0 0 auto;white-space:nowrap;max-width:none}.top-inner{min-width:0}.section-head{align-items:flex-start;flex-wrap:wrap}.section-head .btn{flex:0 0 auto}.row{gap:10px 12px}.row .btn,.save-actions .btn{white-space:normal;text-align:center}.pathway-card,.provider,.resource{min-width:0}.pathway-card p,.resource p,.provider-body p{max-width:none;overflow-wrap:normal;word-break:normal;line-height:1.45}.softlaunch-loading{border:1px dashed var(--line);background:#fff;border-radius:16px;padding:14px;color:var(--muted)}.softlaunch-fallback-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.softlaunch-fallback-card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:14px}.softlaunch-fallback-card h3{margin:0 0 6px;font-size:1rem}.softlaunch-fallback-card p{margin:0 0 10px;color:var(--muted);font-size:.9rem}.saved-nav-count,.float-saved-count{display:inline-flex;align-items:center;justify-content:center;min-width:1.45em;height:1.45em;margin-left:4px;border-radius:999px;background:#b78d36;color:#fff;font-size:.78em;line-height:1}.saved-nav-count.is-nonzero,.float-saved-count.is-nonzero{background:#0f6b57}.save-count{font-variant-numeric:tabular-nums}@media(min-width:901px){.top-inner{align-items:center;flex-direction:row}.nav{justify-content:flex-end}}@media(max-width:900px){.top-inner{align-items:flex-start;flex-direction:column}.nav{width:100%;padding-bottom:7px}.softlaunch-fallback-grid{grid-template-columns:1fr 1fr}}@media(max-width:720px){.section-head{flex-direction:column}.section-head .btn{width:100%;justify-content:center}.softlaunch-fallback-grid{grid-template-columns:1fr}.float-nav{left:10px;right:10px;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);flex-direction:row;justify-content:center}.float-nav button{flex:1 1 0;min-width:0}.guide-float{bottom:calc(env(safe-area-inset-bottom,0px) + 86px)!important}}@media(max-width:420px){.float-nav button{padding:9px 8px;font-size:.88rem}.nav a,.nav button{font-size:.82rem;padding:7px 9px}}
 
@@ -61,12 +62,20 @@ html{scroll-padding-top:108px}body{overflow-x:hidden}.section[id],main [id]{scro
   .vnext .guide-float{bottom:calc(env(safe-area-inset-bottom,0px) + 84px)!important;right:14px!important}
 }
 
+
+
+/* RH-VNEXT5G: direct anchor routing and no floating question-mark guide button. */
+.guide-float{display:none!important}
+html{scroll-padding-top:calc(var(--sticky-offset, 96px) + 18px)!important}
+.section[id], main [id], #finder, #directory, #savedPanel, #current, #translation-help, #about-hub, #get-involved{scroll-margin-top:calc(var(--sticky-offset, 96px) + 18px)!important}
+@media(max-width:720px){html{scroll-padding-top:calc(var(--sticky-offset, 132px) + 16px)!important}.section[id], main [id], #finder, #directory, #savedPanel, #current, #translation-help, #about-hub, #get-involved{scroll-margin-top:calc(var(--sticky-offset, 132px) + 16px)!important}}
+
 </style><!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-18CkiXkgdyMGVYCAeXkp7.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();function trackHubEvent(n,p){try{if(typeof window.plausible==='function')window.plausible(n,{props:p||{}})}catch(e){}}</script>
 </head><body id="top"><header class="topbar"><div class="top-inner"><a aria-label="Learning &amp; Career Resource Hub home" class="vnext-brand" href="resources.html"><svg aria-hidden="true" class="brand-mark-inline" focusable="false" height="120" viewBox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg"><rect fill="#FFFDF8" height="120" rx="60" width="120"></rect><circle cx="60" cy="60" fill="none" r="51" stroke="#0E2B52" stroke-width="3"></circle><circle cx="60" cy="60" fill="none" opacity=".55" r="44" stroke="#B8933C" stroke-width="1.2"></circle><text fill="#0E2B52" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="3" text-anchor="middle" x="60" y="65">JLJ</text><path d="M36 80 C45 75 52 84 60 79 C68 74 75 84 85 78" fill="none" opacity=".85" stroke="#6DA9C9" stroke-linecap="round" stroke-width="2"></path><path d="M42 87 C51 83 58 90 68 85" fill="none" opacity=".5" stroke="#6DA9C9" stroke-linecap="round" stroke-width="1.5"></path></svg><span><span class="brand-lockup-title">Learning &amp; Career<br/>Resource Hub</span><span class="brand-lockup-byline">by Jason <span class="gold">L.</span> Jones</span></span></a><nav class="nav"><a class="active" data-nav="start" href="resources.html">Start here</a><a data-nav="current" href="#current">Current opportunities</a><a data-nav="guide" href="resources-directory.html?view=guide">30-second guide</a><a data-nav="find" href="resources-directory.html?view=find#finder">Find</a><a data-nav="directory" href="resources-directory.html?view=directory#directory">Directory</a><a data-nav="about" href="resources-about.html">About</a><a data-nav="saved" href="resources-directory.html?view=saved#savedPanel">Saved</a><a class="translate-nav" data-nav="translate" href="#translation-help">Translate</a></nav></div></header>
 <main>
-<section class="hero hero-centered"><div class="hero-copy"><p class="eyebrow">Open now · Start here · Find your path</p><h1>Welcome to the Learning &amp; Career Resource Hub</h1><p class="lead">A free guide to help you discover learning, career, language, digital-skills, and opportunity resources — then choose one practical next step.</p><div class="row"><a class="btn primary" href="resources-directory.html?view=guide">Start the 30-second guide →</a><a class="btn ghost" href="resources-directory.html?view=find#finder">Find resources</a><a class="btn ghost" href="#current">Current opportunities</a></div></div><figure class="hero-art hero-art-labeled"><img src="hub-hero-labeled.jpg" alt="Illustration of an Opportunity Hub with English labels for digital skills, study, English, career, entrepreneurship, the Opportunity Hub, and a guide message" loading="eager" decoding="async"/></figure><div class="hero-legend" aria-label="Resource hub pathways"><b>Pathways shown:</b><span>💻 Digital Skills</span><span>📚 Study</span><span>Aβ English</span><span>💼 Career</span><span>🌱 Entrepreneurship</span><span>🏛️ Opportunity Hub</span><span>🧭 I’m here to help you find your path.</span></div><div class="definition-card"><div class="definition-icon" aria-hidden="true">💡</div><p><b>Good first step:</b> choose one path, explore one resource, save one next step, then check the official provider page.</p></div></section>
+<section class="hero hero-centered"><div class="hero-copy"><p class="eyebrow">Open now · Start here · Find your path</p><h1>Welcome to the Learning &amp; Career Resource Hub</h1><p class="lead">A free guide to help you discover learning, career, language, digital-skills, and opportunity resources — then choose one practical next step.</p><div class="row"><a class="btn primary" href="resources-directory.html?view=guide">Start the 30-second guide →</a><a class="btn ghost" href="resources-directory.html?view=find#finder">Find resources</a><a class="btn ghost" href="#current">Current opportunities</a></div></div><figure class="hero-art hero-art-labeled"><img src="hub-hero-labeled.jpg" alt="Illustration of an Opportunity Hub with paths toward digital skills, study, English, career, entrepreneurship, and current opportunities" loading="eager" decoding="async"/></figure><div class="hero-legend" aria-label="Resource hub pathways"><b>Pathways shown:</b><span>💻 Digital Skills</span><span>📚 Study</span><span>Aβ English</span><span>💼 Career</span><span>🌱 Entrepreneurship</span><span>📅 Current opportunities</span></div><div class="definition-card"><div class="definition-icon" aria-hidden="true">💡</div><p><b>Good first step:</b> choose one path, explore one resource, save one next step, then check the official provider page.</p></div></section>
 <section class="section" id="what-is-hub"><div class="hub-section soft-panel"><div><p class="intro-line"><b>Before we begin, you might be wondering…</b></p><h2>What is a HUB?</h2><p class="hub-def"><span class="term">hub</span> /hʌb/ noun · the central or main part of something <i>(like a bike wheel)</i> where most activity, traffic, or attention is focused.</p><p>That is the idea here: one central place that helps you connect to different learning, language, digital-skills, career, study, and entrepreneurship paths.</p><div class="spoke-pills"><span>💬 Language</span><span>💻 Digital skills</span><span>📚 Study</span><span>💼 Career</span><span>🌱 Entrepreneurship</span><span>📅 Current opportunities</span></div></div><figure class="bike-visual"><img src="bike-hub-concept.png" alt="Bicycle wheel hub with spokes connecting to different resource paths" loading="eager" decoding="async"/></figure></div></section>
 <section class="section"><div class="panel warning"><p><b>Beta preview:</b> This hub is still being improved. Resources, categories, and guidance may change as people test it and share feedback. The goal is simple: help a first-time visitor understand what this hub is, choose one path, and take one useful next step.</p></div></section>
 <section class="section" id="how"><div class="panel"><h2>How to use this hub without feeling overwhelmed</h2><p>This hub is not a course by itself. It brings useful resources into one place so you can choose a realistic next step.</p><div class="path-strip"><span>1. Choose</span><b>→</b><span>2. Explore</span><b>→</b><span>3. Save</span><b>→</b><span>4. Open official page</span></div></div></section>
@@ -84,35 +93,28 @@ function renderCurrent(items){const el=document.getElementById('currentCards'); 
 fetch('resources-data.json').then(r=>r.json()).then(d=>renderCurrent(d.resources||[])).catch(()=>{document.getElementById('currentCards').innerHTML='<div class="resource-card"><h3>Open the full directory</h3><p>Current opportunities could not load in this preview. They should load on GitHub Pages.</p><a class="btn small ghost" href="resources-directory.html?view=find#finder">Open directory</a></div>'});
 
 (function(){
-  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  function setStickyOffset(){
+    const topbar=document.querySelector('.topbar');
+    if(topbar) document.documentElement.style.setProperty('--sticky-offset', Math.ceil(topbar.getBoundingClientRect().height)+'px');
+  }
   function samePageAnchor(a){
     const href=a.getAttribute('href')||'';
-    if(!href.startsWith('#')) return null;
-    const id=href.slice(1);
-    return id || null;
+    return href.startsWith('#') ? href.slice(1) : null;
   }
-  function scrollToHubId(id, updateHash){
-    const el=id==='top'?document.body:document.getElementById(id);
+  function scrollToHubId(id){
+    if(id==='top'){window.scrollTo({top:0,left:0,behavior:'smooth'});return true;}
+    const el=document.getElementById(id);
     if(!el) return false;
-    const topbar=document.querySelector('.topbar');
-    const offset=(topbar?topbar.getBoundingClientRect().height:86)+16;
-    const y=id==='top'?0:el.getBoundingClientRect().top+window.pageYOffset-offset;
-    window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
-    if(updateHash && id!=='top') history.pushState(null,'','#'+id);
+    el.scrollIntoView({behavior:'smooth',block:'start'});
     return true;
   }
+  document.addEventListener('DOMContentLoaded',setStickyOffset);
+  window.addEventListener('resize',setStickyOffset);
   document.addEventListener('click',function(e){
     const a=e.target.closest('a[href^="#"]');
     if(!a) return;
     const id=samePageAnchor(a);
-    if(id && scrollToHubId(id,true)) e.preventDefault();
-  });
-  window.addEventListener('load',function(){
-    if(location.hash){setTimeout(function(){scrollToHubId(location.hash.slice(1),false);},90);}
-    else {setTimeout(function(){window.scrollTo({top:0,left:0,behavior:'auto'});},40);}
-  });
-  window.addEventListener('pageshow',function(){
-    if(!location.hash) setTimeout(function(){window.scrollTo({top:0,left:0,behavior:'auto'});},20);
+    if(id==='top' && scrollToHubId('top')) e.preventDefault();
   });
 })();
 
