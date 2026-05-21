@@ -116,6 +116,19 @@
 }
 </style>
 
+<script id="jlj-analytics-qa-exclusion">
+(function(){
+  try{
+    var p=new URLSearchParams(window.location.search);
+    if(p.get('qa')==='1'||p.get('internal')==='1'||p.get('noanalytics')==='1'){
+      localStorage.plausible_ignore=true;
+    }
+  }catch(e){}
+})();
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-18CkiXkgdyMGVYCAeXkp7.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();</script>
 </head>
 <body>
 <nav>
@@ -131,6 +144,7 @@
     </ul>
     <div class="nav-actions">
       <a href="resources.html" class="nav-resource">Learning &amp; Career Resource Hub</a>
+      <button class="home-translate-btn" type="button" id="homeTranslateBtn" aria-haspopup="dialog">🌐 Translate</button>
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -407,6 +421,24 @@
 </div>
 <script src="main.js?v=3.0a3"></script>
 
+
+  <div class="home-translate-modal" id="homeTranslateModal" aria-hidden="true" hidden>
+    <div class="home-translate-card" role="dialog" aria-modal="true" aria-labelledby="homeTranslateTitle">
+      <div class="home-translate-head">
+        <h2 id="homeTranslateTitle"><span aria-hidden="true">ⓘ</span> Translate this page / Traduzir esta página</h2>
+        <button class="home-translate-close" type="button" id="homeTranslateClose" aria-label="Close translation help">×</button>
+      </div>
+      <div class="home-translate-grid">
+        <div class="home-translate-note"><strong>English</strong>Google Translate can help you read this site in another language. If Google shows a warning while browsing, tap OK and continue. For applications, registration, payments, or personal information, open the official provider page directly.</div>
+        <div class="home-translate-note"><strong>Português</strong>O Google Translate pode ajudar a ler este site noutra língua. Se o Google mostrar um aviso durante a navegação, toque em OK e continue. Para candidaturas, inscrições, pagamentos ou dados pessoais, abra diretamente a página oficial do fornecedor.</div>
+      </div>
+      <div class="home-translate-actions">
+        <button class="home-translate-primary" type="button" id="homeOpenTranslate">Open Google Translate / Abrir Google Translate</button>
+        <button class="home-translate-secondary" type="button" id="homeTranslateCancel">Continue without translating</button>
+      </div>
+    </div>
+  </div>
+
   <div class="site-lightbox" id="siteImageLightbox" aria-hidden="true" hidden>
     <div class="site-lightbox-backdrop" data-lightbox-close></div>
     <div class="site-lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
@@ -414,6 +446,27 @@
       <img src="" alt="">
     </div>
   </div>
+
+
+<script id="jlj-vnext5i-home-translate-script">
+(function(){
+  function originalUrl(){
+    try{return new URL(window.location.href).toString();}catch(e){return 'https://jasonlamard.com/';}
+  }
+  function googleTranslateUrl(){return 'https://translate.google.com/translate?sl=auto&tl=pt&u='+encodeURIComponent(originalUrl());}
+  function modal(){return document.getElementById('homeTranslateModal');}
+  function openModal(){var m=modal(); if(!m)return; m.hidden=false; m.classList.add('open'); m.setAttribute('aria-hidden','false');}
+  function closeModal(){var m=modal(); if(!m)return; m.classList.remove('open'); m.setAttribute('aria-hidden','true'); m.hidden=true;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.getElementById('homeTranslateBtn'); if(b)b.addEventListener('click',openModal);
+    var c=document.getElementById('homeTranslateClose'); if(c)c.addEventListener('click',closeModal);
+    var x=document.getElementById('homeTranslateCancel'); if(x)x.addEventListener('click',closeModal);
+    var o=document.getElementById('homeOpenTranslate'); if(o)o.addEventListener('click',function(){window.location.href=googleTranslateUrl();});
+    var m=modal(); if(m)m.addEventListener('click',function(e){if(e.target===m)closeModal();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  });
+})();
+</script>
 
 </body>
 </html>
