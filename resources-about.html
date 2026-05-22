@@ -371,6 +371,105 @@ body.resource-about-page #translateHelpModal,
   z-index:420!important;
 }
 
+
+
+/* JLJ-RH-VNEXT5M: About page layout + decorative lighthouse overlap hotfix.
+   Scope: resources-about.html only. Keeps Resource Hub design intact while fixing iPad landscape spacing. */
+@media (min-width:901px){
+  body.resource-about-page .vnext .about-grid.about-grid-balanced,
+  body.resource-about-page .about-grid.about-grid-balanced{
+    display:grid!important;
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    gap:18px!important;
+    align-items:start!important;
+  }
+  body.resource-about-page .about-grid-balanced .about-profile-card{
+    grid-column:span 4!important;
+    align-self:start!important;
+  }
+  body.resource-about-page .about-card--why{
+    grid-column:span 8!important;
+  }
+  body.resource-about-page .about-card--identity{
+    grid-column:span 4!important;
+  }
+  body.resource-about-page .about-card--boundaries{
+    grid-column:span 8!important;
+  }
+  body.resource-about-page .about-card--selection,
+  body.resource-about-page .about-card--privacy,
+  body.resource-about-page .about-card--help{
+    grid-column:1 / -1!important;
+    align-self:start!important;
+    min-height:0!important;
+    height:auto!important;
+  }
+  body.resource-about-page .about-card--selection .pathway-list{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    align-items:start!important;
+  }
+}
+@media (max-width:900px){
+  body.resource-about-page .about-grid.about-grid-balanced{
+    grid-template-columns:1fr!important;
+    align-items:start!important;
+  }
+  body.resource-about-page .about-grid-balanced .about-profile-card,
+  body.resource-about-page .about-card--why,
+  body.resource-about-page .about-card--identity,
+  body.resource-about-page .about-card--boundaries,
+  body.resource-about-page .about-card--selection,
+  body.resource-about-page .about-card--privacy,
+  body.resource-about-page .about-card--help{
+    grid-column:1 / -1!important;
+  }
+  body.resource-about-page .about-card--selection .pathway-list{
+    grid-template-columns:1fr!important;
+  }
+}
+body.resource-about-page .footer{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:18px 190px 76px 20px!important;
+}
+body.resource-about-page .footer p{
+  position:relative!important;
+  z-index:2!important;
+  margin:0!important;
+}
+body.resource-about-page .footer:after{
+  z-index:1!important;
+  right:22px!important;
+  bottom:14px!important;
+  width:155px!important;
+  height:52px!important;
+  opacity:.20!important;
+  pointer-events:none!important;
+}
+@media (max-width:1180px){
+  body.resource-about-page .footer{
+    padding:18px 20px 76px!important;
+  }
+  body.resource-about-page .footer:after{
+    right:20px!important;
+    bottom:14px!important;
+    width:145px!important;
+    height:48px!important;
+    opacity:.18!important;
+  }
+}
+@media (max-width:760px){
+  body.resource-about-page .footer{
+    padding:18px 20px!important;
+  }
+  body.resource-about-page .footer:after{
+    display:none!important;
+    content:none!important;
+  }
+}
+
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
