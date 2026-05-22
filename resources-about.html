@@ -470,6 +470,153 @@ body.resource-about-page .footer:after{
   }
 }
 
+
+/* RH-ABOUT-LAYOUT-FIX1: focused About-page layout correction.
+   Scope: resources-about.html only. Rebalances the middle About-card grid, removes isolated blank columns, and prevents decorative art from overlapping live text. */
+
+body.resource-about-page .vnext-trust-banner{
+  display:grid!important;
+  grid-template-columns:minmax(0,.94fr) minmax(320px,1.06fr)!important;
+  align-items:stretch!important;
+  background:#fff!important;
+}
+body.resource-about-page .vnext-lighthouse{
+  position:relative!important;
+  inset:auto!important;
+  width:auto!important;
+  min-height:150px!important;
+  height:auto!important;
+  opacity:1!important;
+  z-index:1!important;
+  background:#fffdf8 url('about-banner-art.jpg') center/cover no-repeat!important;
+}
+@media (max-width:1080px){
+  body.resource-about-page .vnext-trust-banner{
+    grid-template-columns:1fr!important;
+  }
+  body.resource-about-page .vnext-lighthouse{
+    min-height:96px!important;
+    opacity:.34!important;
+  }
+}
+@media (max-width:760px){
+  body.resource-about-page .vnext-lighthouse{
+    display:none!important;
+  }
+}
+body.resource-about-page .about-grid.about-grid-balanced{
+  overflow:visible!important;
+}
+body.resource-about-page .about-profile-card,
+body.resource-about-page .about-card{
+  overflow:visible!important;
+  max-height:none!important;
+  height:auto!important;
+  min-height:0!important;
+}
+body.resource-about-page .about-profile-card{
+  align-self:start!important;
+}
+
+body.vnext.resource-about-page .about-grid.about-grid-balanced > .photo-card.about-profile-card{
+  position:relative!important;
+  top:auto!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+body.resource-about-page .about-profile-card .photo-frame{
+  border-radius:50%!important;
+  overflow:hidden!important;
+  aspect-ratio:1/1!important;
+}
+body.resource-about-page .about-profile-card .photo-frame img{
+  border-radius:50%!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+@media (min-width:901px){
+  body.resource-about-page .about-grid.about-grid-balanced{
+    display:grid!important;
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    gap:18px!important;
+    align-items:start!important;
+    margin:26px 0!important;
+  }
+  body.resource-about-page .about-grid-balanced .about-profile-card{
+    grid-column:1 / span 4!important;
+    grid-row:1 / span 2!important;
+  }
+  body.resource-about-page .about-card--why{
+    grid-column:5 / -1!important;
+    grid-row:1!important;
+  }
+  body.resource-about-page .about-card--identity{
+    grid-column:5 / -1!important;
+    grid-row:2!important;
+  }
+  body.resource-about-page .about-card--boundaries{
+    grid-column:1 / -1!important;
+    grid-row:3!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  body.resource-about-page .about-card--boundaries .card-heading{
+    grid-column:1 / -1!important;
+  }
+  body.resource-about-page .about-card--selection{
+    grid-column:1 / -1!important;
+    grid-row:4!important;
+  }
+  body.resource-about-page .about-card--privacy{
+    grid-column:1 / -1!important;
+    grid-row:5!important;
+  }
+  body.resource-about-page .about-card--help{
+    grid-column:1 / -1!important;
+    grid-row:6!important;
+  }
+  body.resource-about-page .about-card--selection .pathway-list{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    align-items:start!important;
+  }
+}
+@media (max-width:900px){
+  body.resource-about-page .about-grid.about-grid-balanced{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:16px!important;
+    align-items:start!important;
+  }
+  body.resource-about-page .about-grid-balanced .about-profile-card,
+  body.resource-about-page .about-card--why,
+  body.resource-about-page .about-card--identity,
+  body.resource-about-page .about-card--boundaries,
+  body.resource-about-page .about-card--selection,
+  body.resource-about-page .about-card--privacy,
+  body.resource-about-page .about-card--help{
+    grid-column:1 / -1!important;
+    grid-row:auto!important;
+  }
+  body.resource-about-page .about-card--boundaries{
+    display:block!important;
+  }
+  body.resource-about-page .about-card--selection .pathway-list{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+  }
+}
+body.resource-about-page .footer{
+  padding:18px 20px!important;
+}
+body.resource-about-page .footer:after{
+  display:none!important;
+  content:none!important;
+}
+
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
