@@ -116,6 +116,25 @@
 }
 </style>
 
+<style id="jlj-rh-vnext5j-home-translate-modal-css">
+/* JLJ-RH-VNEXT5J: homepage translate modal only; does not alter hero structure. */
+.home-translate-modal[hidden]{display:none!important;}
+.home-translate-modal.open{position:fixed;inset:0;z-index:300;display:flex!important;align-items:center;justify-content:center;padding:18px;background:rgba(12,17,29,.66);}
+.home-translate-card{width:min(720px,calc(100vw - 28px));max-height:min(90vh,760px);overflow:auto;background:#fff;border:1px solid rgba(14,43,82,.12);border-radius:24px;box-shadow:0 25px 80px rgba(0,0,0,.34);padding:22px;color:#172033;}
+.home-translate-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;}
+.home-translate-head h2{margin:0;color:#0e2b52;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.25rem,3vw,1.7rem);line-height:1.15;}
+.home-translate-close{border:1px solid #dbe7ee;background:#fff;border-radius:999px;width:40px;height:40px;font-weight:900;cursor:pointer;font-size:1.25rem;line-height:1;}
+.home-translate-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.home-translate-note{border:1px solid #e7e1d6;border-radius:16px;background:#fffdf8;padding:12px;line-height:1.45;}
+.home-translate-note strong{display:block;color:#0e2b52;margin-bottom:4px;}
+.home-translate-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+.home-translate-primary,.home-translate-secondary{border-radius:999px;border:1px solid #dbe7ee;padding:11px 16px;font-weight:850;cursor:pointer;}
+.home-translate-primary{background:#0e4f95;color:#fff;border-color:#0e4f95;}
+.home-translate-secondary{background:#fff;color:#0e2b52;}
+.home-translate-btn.js-translate-trigger{cursor:pointer;}
+@media(max-width:680px){.home-translate-card{padding:18px;border-radius:20px}.home-translate-grid{grid-template-columns:1fr}.home-translate-actions button{width:100%;}}
+</style>
+
 <script id="jlj-analytics-qa-exclusion">
 (function(){
   try{
@@ -144,7 +163,7 @@
     </ul>
     <div class="nav-actions">
       <a href="resources.html" class="nav-resource">Learning &amp; Career Resource Hub</a>
-      <button class="home-translate-btn" type="button" id="homeTranslateBtn" aria-haspopup="dialog">🌐 Translate</button>
+      <button class="home-translate-btn js-translate-trigger" type="button" id="homeTranslateBtn" data-translate-trigger aria-haspopup="dialog">🌐 Translate</button>
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -468,5 +487,60 @@
 })();
 </script>
 
+
+<script id="jlj-rh-vnext5j-translate-reliability">
+(function(){
+  function originalUrl(){
+    try{
+      var current=new URL(window.location.href);
+      if(current.hostname.indexOf('translate.google.')>-1 && current.searchParams.get('u')) return current.searchParams.get('u');
+      if(current.hostname.endsWith('.translate.goog')){
+        var host=current.hostname.replace(/\.translate\.goog$/,'');
+        host=(host==='jasonlamard-com')?'jasonlamard.com':host.replace(/-/g,'.');
+        var clean=new URL('https://'+host+current.pathname);
+        current.searchParams.forEach(function(v,k){if(k.indexOf('_x_tr_')!==0) clean.searchParams.set(k,v);});
+        clean.hash=current.hash;
+        return clean.toString();
+      }
+      return current.toString();
+    }catch(e){return 'https://jasonlamard.com/';}
+  }
+  function googleTranslateUrl(lang){
+    var target=lang?('&tl='+encodeURIComponent(lang)):('&tl=pt');
+    return 'https://translate.google.com/translate?sl=auto'+target+'&u='+encodeURIComponent(originalUrl());
+  }
+  function modal(){return document.getElementById('translateHelpModal')||document.getElementById('homeTranslateModal');}
+  function openModal(){
+    var m=modal();
+    if(!m){window.location.href=googleTranslateUrl('pt');return;}
+    m.hidden=false;
+    m.classList.add('open');
+    m.setAttribute('aria-hidden','false');
+  }
+  function closeModal(){
+    var m=modal(); if(!m)return;
+    m.classList.remove('open');
+    m.setAttribute('aria-hidden','true');
+    if(m.id==='homeTranslateModal') m.hidden=true;
+  }
+  function openGoogle(btn){
+    var lang=(btn&&btn.getAttribute('data-google-translate'))||'pt';
+    try{if(typeof window.trackHubEvent==='function')window.trackHubEvent('Translate Clicked',{page:location.pathname,language:lang||'pt',source:'vnext5j_shared_handler'});}catch(e){}
+    window.location.href=googleTranslateUrl(lang||'pt');
+  }
+  document.addEventListener('click',function(e){
+    var openBtn=e.target.closest('[data-google-translate],#homeOpenTranslate');
+    if(openBtn){e.preventDefault();e.stopImmediatePropagation();openGoogle(openBtn);return;}
+    var trigger=e.target.closest('[data-translate-trigger],.js-translate-trigger,.translate-help-trigger,#homeTranslateBtn');
+    if(trigger){e.preventDefault();e.stopImmediatePropagation();openModal();return;}
+    var closer=e.target.closest('[data-translate-close],#homeTranslateClose,#homeTranslateCancel,#closeTranslateHelp,#doneTranslateHelp');
+    if(closer){e.preventDefault();e.stopImmediatePropagation();closeModal();return;}
+    var m=modal(); if(m && e.target===m){e.preventDefault();closeModal();}
+  },true);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  window.jljOpenTranslateHelp=openModal;
+  window.jljOpenGoogleTranslate=function(lang){window.location.href=googleTranslateUrl(lang||'pt');};
+})();
+</script>
 </body>
 </html>
