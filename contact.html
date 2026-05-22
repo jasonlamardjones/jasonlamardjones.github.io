@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Jason L. Jones</title>
   <meta name="description" content="Contact Jason L. Jones for opportunity access, resource navigation, workshop design, English + digital skills, local ecosystem mapping, and strategic communication collaboration.">
-  <link rel="stylesheet" href="style.css?v=3.0a3">
+  <link rel="stylesheet" href="style.css?v=3.0a7">
 </head>
 <body>
 <nav>
@@ -21,6 +21,7 @@
     </ul>
     <div class="nav-actions">
       <a href="resources.html" class="nav-resource">Learning &amp; Career Resource Hub</a>
+      <button class="home-translate-btn site-translate-btn js-translate-trigger" type="button" data-translate-trigger aria-haspopup="dialog" aria-controls="homeTranslateModal">🌐 Translate</button>
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -124,6 +125,23 @@
     </div>
   </footer>
 </div>
-<script src="main.js?v=3.0a3"></script>
+
+  <div class="home-translate-modal" id="homeTranslateModal" aria-hidden="true" hidden>
+    <div class="home-translate-card" role="dialog" aria-modal="true" aria-labelledby="homeTranslateTitle">
+      <div class="home-translate-head">
+        <h2 id="homeTranslateTitle"><span aria-hidden="true">ⓘ</span> Translate this page / Traduzir esta página</h2>
+        <button class="home-translate-close" type="button" id="homeTranslateClose" data-translate-close aria-label="Close translation help">×</button>
+      </div>
+      <div class="home-translate-grid">
+        <div class="home-translate-note"><strong>English</strong>Google Translate can help you read this site in another language. If Google shows a warning while browsing, tap OK and continue. For applications, registration, payments, or personal information, open the official provider page directly.</div>
+        <div class="home-translate-note"><strong>Português</strong>O Google Translate pode ajudar a ler este site noutra língua. Se o Google mostrar um aviso durante a navegação, toque em OK e continue. Para candidaturas, inscrições, pagamentos ou dados pessoais, abra diretamente a página oficial do fornecedor.</div>
+      </div>
+      <div class="home-translate-actions">
+        <button class="home-translate-primary" type="button" id="homeOpenTranslate" data-google-translate="pt">Open Google Translate / Abrir Google Translate</button>
+        <button class="home-translate-secondary" type="button" id="homeTranslateCancel" data-translate-close>Continue without translating</button>
+      </div>
+    </div>
+  </div>
+<script src="main.js?v=3.0a7"></script>
 </body>
 </html>

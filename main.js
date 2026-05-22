@@ -33,6 +33,77 @@ document.addEventListener('DOMContentLoaded', () => {
     revealables.forEach(el => el.classList.add('visible'));
   }
 
+
+
+  /* JLJ-VNEXT5L professional translate behavior. */
+  const translateModal = document.getElementById('homeTranslateModal');
+  const translateTriggers = document.querySelectorAll('[data-translate-trigger], .js-translate-trigger, #homeTranslateBtn');
+  const translateCloseTriggers = document.querySelectorAll('[data-translate-close], #homeTranslateClose, #homeTranslateCancel');
+  const translateOpenTriggers = document.querySelectorAll('[data-google-translate], #homeOpenTranslate');
+
+  const getPublicPageUrl = () => {
+    try {
+      const path = window.location.pathname || '/index.html';
+      const search = window.location.search || '';
+      return 'https://jasonlamard.com' + path + search;
+    } catch (error) {
+      return 'https://jasonlamard.com/';
+    }
+  };
+
+  const googleTranslateUrl = (lang = 'pt') => 'https://translate.google.com/translate?sl=auto&tl=' + encodeURIComponent(lang || 'pt') + '&u=' + encodeURIComponent(getPublicPageUrl());
+
+  const openTranslateModal = () => {
+    if (!translateModal) {
+      window.location.href = googleTranslateUrl('pt');
+      return;
+    }
+    translateModal.hidden = false;
+    translateModal.setAttribute('aria-hidden','false');
+    translateModal.classList.add('open');
+    const close = translateModal.querySelector('[data-translate-close], #homeTranslateClose');
+    if (close) close.focus({ preventScroll: true });
+  };
+
+  const closeTranslateModal = () => {
+    if (!translateModal) return;
+    translateModal.classList.remove('open');
+    translateModal.setAttribute('aria-hidden','true');
+    translateModal.hidden = true;
+  };
+
+  translateTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openTranslateModal();
+    });
+  });
+
+  translateCloseTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      closeTranslateModal();
+    });
+  });
+
+  translateOpenTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const lang = trigger.getAttribute('data-google-translate') || 'pt';
+      window.location.href = googleTranslateUrl(lang);
+    });
+  });
+
+  if (translateModal) {
+    translateModal.addEventListener('click', (event) => {
+      if (event.target === translateModal) closeTranslateModal();
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && translateModal && !translateModal.hidden) closeTranslateModal();
+  });
+
   const overlay = document.getElementById('siteImageLightbox');
   if (!overlay) return;
 

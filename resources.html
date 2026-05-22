@@ -88,6 +88,9 @@ html{scroll-padding-top:calc(var(--sticky-offset, 96px) + 18px)!important}
 .translation-help-panel .translation-actions{align-items:center;gap:9px 10px;}
 .translation-image-note{padding:10px 12px!important;margin:10px 0!important;overflow-wrap:break-word;}
 @media(max-width:640px){.modal{padding:18px;border-radius:20px;width:calc(100vw - 18px)}.modal-head{gap:8px}.translation-help-panel{padding-left:18px!important;padding-right:18px!important}.translation-help-panel .btn{width:100%;}.translate-cue{width:100%;border-radius:14px;}}
+
+/* JLJ-RH-VNEXT5L: keep Translation Instructions above active guide overlays. */
+#translateHelpModal{z-index:520!important;}#translateHelpModal.open{z-index:520!important;}#surveyModal.open{z-index:420!important;}
 </style><!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
 (function(){
