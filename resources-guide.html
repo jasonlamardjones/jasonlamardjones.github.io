@@ -32,8 +32,16 @@
       <a class="btn primary" href="resources.html">Go to Resource Hub Start</a>
       <a class="btn outline" href="resources-directory.html?view=guide">Open the 30-second guide</a>
       <a class="btn outline" href="resources-directory.html?view=find#finder">Find resources</a>
+      <button class="btn outline" type="button" data-google-translate="pt">🌐 Translate</button>
     </div>
     <p class="note">This compatibility page keeps older guide links from becoming dead ends. It does not redirect automatically, so you can choose the correct destination.</p>
   </main>
+<script>
+(function(){
+  function originalUrl(){return 'https://jasonlamard.com/resources-guide.html';}
+  function googleTranslateUrl(){return 'https://translate.google.com/translate?sl=auto&tl=pt&u='+encodeURIComponent(originalUrl());}
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-google-translate]'); if(b){e.preventDefault(); window.location.href=googleTranslateUrl();}});
+})();
+</script>
 </body>
 </html>
