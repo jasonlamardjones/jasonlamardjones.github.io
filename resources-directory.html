@@ -261,7 +261,10 @@ function resourceAnalyticsPropsById(id){
 
 let RESOURCES=[];
 let OPTS={categories:[],providers:[],promotionReadiness:[],languages:[],regions:[],roles:[]};
-const DATA_URL='resources-data.json';
+// RH-DATA-STABILITY1: keep the data URL version explicit so browsers can cache the JSON until the resource database changes.
+const DATA_VERSION='20260523';
+const DATA_URL=`resources-data.json?v=${DATA_VERSION}`;
+const DATA_FETCH_TIMEOUT_MS=10000;
 const STATIC_FALLBACK_HTML=`<div class="rh-vnext5k-static-fallback" data-static-fallback="true">
   <p><b>Resources are still loading.</b> If this section stays empty, try refreshing. You can still start with these useful providers below.</p>
   <div class="rh-vnext5k-fallback-grid">
@@ -293,14 +296,16 @@ const EMPTY_PATHWAYS_HTML=`<div class="rh-vnext5k-quick-paths" aria-label="Begin
   <button type="button" data-pathway-search="business finance accounting entrepreneurship" data-pathway-category="">Business / Finance<span>Business, finance, certification</span></button>
   <button type="button" data-pathway-search="language learning English French Dutch francês neerlandês holandês" data-pathway-category="">Languages<span>English, French, Dutch</span></button>
 </div>`;
-function showStaticFallback(label){const msg=STATIC_FALLBACK_HTML.replace('Resources are still loading.',label||'Resources are still loading.'); ['currentGroups','resultsGroups','directoryGroups'].forEach(id=>{const el=document.getElementById(id); if(el)el.innerHTML=msg;}); const rc=document.getElementById('resultCount'); if(rc)rc.textContent='Resources are still loading';}
+function showStaticFallback(label){const fallbackLabel=label||'Resources are still loading.'; const msg=STATIC_FALLBACK_HTML.replace('Resources are still loading.',fallbackLabel); ['currentGroups','resultsGroups','directoryGroups'].forEach(id=>{const el=document.getElementById(id); if(el)el.innerHTML=msg;}); const rc=document.getElementById('resultCount'); if(rc)rc.textContent=fallbackLabel;}
 function sanitizeResourceData(){RESOURCES.forEach(r=>{const url=(r.url||'').toString(); const p=norm([r.provider,r.program].join(' ')); if(url.includes('camara.cv')||p.includes('camara de comercio de barlavento')||p.includes('camara de comércio de barlavento')){if(url==='http://camara.cv'||url==='https://camara.cv'||url==='http://www.camara.cv'||url==='https://www.camara.cv')r.url='https://www.camara.cv/'; r.status=r.status||'Verify Details'; r.verificationNote=r.verificationNote||'Check official site'; r.bestFor=(r.bestFor||'')+' Business services, training, events, and entrepreneurship support. Confirm current offerings on the official CCB site.'; r.keywords=((r.keywords||'')+' business finance accounting entrepreneurship estágio internship formação training commerce chamber ccb').trim();}});}
 function getOriginalPageUrl(){try{const current=new URL(window.location.href); if(current.hostname.includes('translate.google.')&&current.searchParams.get('u'))return current.searchParams.get('u'); if(current.hostname.endsWith('.translate.goog')){let host=current.hostname.replace(/\.translate\.goog$/,''); if(host==='jasonlamard-com')host='jasonlamard.com'; else host=host.replace(/-/g,'.'); const clean=new URL('https://'+host+current.pathname); current.searchParams.forEach((v,k)=>{if(!k.startsWith('_x_tr_'))clean.searchParams.set(k,v);}); clean.hash=current.hash; return clean.toString();} return current.toString();}catch(e){return 'https://jasonlamard.com/resources.html';}}
 function googleTranslateUrl(lang){const target=(lang&&lang!=='auto')?'&tl='+encodeURIComponent(lang):''; return 'https://translate.google.com/translate?sl=auto'+target+'&u='+encodeURIComponent(getOriginalPageUrl());}
 function openGoogleTranslate(lang){trackHubEvent('Translate Clicked',{page:location.pathname,language:lang||'auto',source:sourceParam()});window.location.href=googleTranslateUrl(lang||'');}
 async function loadResourceData(){
+  const controller=new AbortController();
+  const timeoutId=setTimeout(()=>controller.abort(),DATA_FETCH_TIMEOUT_MS);
   try{
-    const response=await fetch(DATA_URL,{cache:'no-store'});
+    const response=await fetch(DATA_URL,{signal:controller.signal});
     if(!response.ok) throw new Error(`Unable to load ${DATA_URL}: ${response.status}`);
     const data=await response.json();
     RESOURCES=Array.isArray(data.resources)?data.resources:[];
@@ -309,9 +314,12 @@ async function loadResourceData(){
     if(!RESOURCES.length) throw new Error('Resource data loaded, but no resources were found.');
     return true;
   }catch(err){
+    const timedOut=err&&err.name==='AbortError';
     console.error('Resource Hub data load failed:',err);
-    showStaticFallback('Resource data could not load.');
+    showStaticFallback(timedOut?'Resource data took too long to load.':'Resource data could not load.');
     return false;
+  }finally{
+    clearTimeout(timeoutId);
   }
 }
 const $=id=>document.getElementById(id); const norm=s=>(s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); const uniq=a=>[...new Set(a.filter(Boolean))]; let activeTab='All';
