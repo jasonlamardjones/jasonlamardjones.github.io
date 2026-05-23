@@ -8,6 +8,30 @@
   <style>
     :root{--navy:#0e2b52;--gold:#b88d36;--line:#e0e9ee;--paper:#fffdf8;--muted:#5f6b7a}
     *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#fffdf8,#f6fbfd);color:#172033;line-height:1.55;min-height:100vh;display:grid;place-items:center;padding:22px}.card{width:min(720px,100%);background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 18px 45px rgba(14,43,82,.10);padding:28px}h1{font-family:Georgia,"Times New Roman",serif;color:var(--navy);font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0 0 12px}.kicker{font-weight:900;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 16px;font-weight:850;text-decoration:none}.primary{background:var(--navy);color:#fff}.outline{border:1px solid var(--line);color:var(--navy);background:#fff}.note{color:var(--muted);font-size:.95rem;margin-top:16px}
+
+
+    /* RH-JLJ-TRANSLATE-VISIBILITY1: compatibility-page translate visibility */
+    body{display:block!important;padding:0!important;}
+    .guide-topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.97);border-bottom:1px solid var(--line);box-shadow:0 8px 22px rgba(14,43,82,.05);backdrop-filter:blur(12px);}
+    .guide-top-inner{max-width:720px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .guide-brand{min-width:0;color:var(--navy);text-decoration:none;font-weight:900;letter-spacing:.08em;text-transform:uppercase;line-height:1.15;}
+    .guide-brand small{display:block;color:var(--muted);font-weight:700;letter-spacing:.03em;text-transform:none;margin-top:2px;}
+    .guide-translate{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:38px;padding:8px 12px;border:1px solid rgba(184,141,54,.35);border-radius:999px;background:#fffdf8;color:var(--navy);font:inherit;font-weight:900;line-height:1;white-space:nowrap;cursor:pointer;}
+    .guide-page-wrap{min-height:calc(100vh - 70px);display:grid;place-items:center;padding:22px;}
+    .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(12,17,29,.66);z-index:260;align-items:center;justify-content:center;padding:18px;}
+    .modal-backdrop.open{display:flex!important;}
+    .modal{width:min(760px,calc(100vw - 28px));max-height:min(90vh,760px);overflow:auto;background:#fff;border-radius:24px;box-shadow:0 25px 80px rgba(0,0,0,.35);padding:22px;}
+    .modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+    .modal h2{font-size:clamp(1.3rem,4vw,1.8rem);margin:0 0 4px;}
+    .translation-bilingual{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+    .translation-card{background:#fffdf8;border:1px solid #e7e1d6;border-radius:16px;padding:12px;}
+    .translation-card strong{display:block;color:var(--navy);margin-bottom:4px;}
+    .translation-mini{font-size:.92rem;color:var(--muted);margin:0;}
+    .close{border:1px solid var(--line);background:#fff;border-radius:999px;width:40px;height:40px;font-weight:900;cursor:pointer;font-size:1.25rem;line-height:1;flex:0 0 40px;}
+    .modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+    @media(max-width:620px){.translation-bilingual{grid-template-columns:1fr}.modal-actions .btn{width:100%}}
+    @media(max-width:420px){.guide-top-inner{padding-left:14px;padding-right:14px}.guide-brand{font-size:.88rem}.guide-brand small{font-size:.72rem}.guide-translate{min-height:36px;padding:7px 10px}}
+
   </style>
 <script id="jlj-analytics-qa-exclusion">
 (function(){
@@ -24,6 +48,8 @@
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();</script>
 </head>
 <body>
+  <header class="guide-topbar"><div class="guide-top-inner"><a class="guide-brand" href="resources.html">Learning &amp; Career Resource Hub<small>by Jason L. Jones</small></a><button class="guide-translate" type="button" data-translate-trigger aria-label="Open translation help">🌐 <span aria-hidden="true">PT</span></button></div></header>
+  <div class="guide-page-wrap">
   <main class="card">
     <div class="kicker">Resource Hub guide update</div>
     <h1>The guide has moved.</h1>
@@ -32,15 +58,23 @@
       <a class="btn primary" href="resources.html">Go to Resource Hub Start</a>
       <a class="btn outline" href="resources-directory.html?view=guide">Open the 30-second guide</a>
       <a class="btn outline" href="resources-directory.html?view=find#finder">Find resources</a>
-      <button class="btn outline" type="button" data-google-translate="pt">🌐 Translate</button>
+      <button class="btn outline" type="button" data-translate-trigger>🌐 Translation help</button>
     </div>
     <p class="note">This compatibility page keeps older guide links from becoming dead ends. It does not redirect automatically, so you can choose the correct destination.</p><p class="note">The Learning &amp; Career Resource Hub is an independent public tool created by Jason L. Jones. Jason’s <a href="index.html">professional profile</a> is separate and explains the broader community-development work behind this project.</p>
   </main>
+  </div>
+  <div class="modal-backdrop" id="translateHelpModal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="translateHelpTitle"><div class="modal-head"><div><h2 id="translateHelpTitle">Translation help / Ajuda de tradução</h2><p class="translation-mini">Google Translate can make the hub easier to read. / O Google Translate pode facilitar a leitura do hub.</p></div><button class="close" id="closeTranslateHelp" type="button" aria-label="Close translation help">×</button></div><div class="translation-bilingual"><div class="translation-card"><strong>English</strong><p>Google Translate helps you read this hub in another language. For applications, registration, payments, or personal information, open the official provider page directly.</p></div><div class="translation-card"><strong>Português</strong><p>O Google Translate ajuda a ler este hub noutra língua. Para candidaturas, inscrições, pagamentos ou dados pessoais, abra diretamente a página oficial do fornecedor.</p></div></div><div class="modal-actions"><button class="btn primary" data-google-translate="pt" type="button">Open Google Translate / Abrir Google Translate</button><button class="btn outline" id="doneTranslateHelp" type="button">Continue here / Continuar aqui</button></div></div></div>
 <script>
 (function(){
   function originalUrl(){return 'https://jasonlamard.com/resources-guide.html';}
   function googleTranslateUrl(){return 'https://translate.google.com/translate?sl=auto&tl=pt&u='+encodeURIComponent(originalUrl());}
-  document.addEventListener('click',function(e){var b=e.target.closest('[data-google-translate]'); if(b){e.preventDefault(); window.location.href=googleTranslateUrl();}});
+  function openTranslateHelp(){var el=document.getElementById('translateHelpModal'); if(el)el.classList.add('open');}
+  function closeTranslateHelp(){var el=document.getElementById('translateHelpModal'); if(el)el.classList.remove('open');}
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-translate-trigger]'); if(t){e.preventDefault(); openTranslateHelp(); return;}
+    var b=e.target.closest('[data-google-translate]'); if(b){e.preventDefault(); window.location.href=googleTranslateUrl(); return;}
+    var c=e.target.closest('#closeTranslateHelp,#doneTranslateHelp'); if(c){e.preventDefault(); closeTranslateHelp();}
+  });
 })();
 </script>
 </body>

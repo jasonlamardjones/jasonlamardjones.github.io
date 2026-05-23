@@ -234,6 +234,58 @@ html{scroll-padding-top:calc(var(--sticky-offset, 96px) + 20px)!important}
   #finder .search-help .translate-help-trigger{font-size:.76rem!important;padding:6px 8px!important;}
 }
 
+
+
+/* RH-JLJ-TRANSLATE-VISIBILITY1: mobile-first sticky top-bar translate access */
+html,body{max-width:100%;overflow-x:hidden;}
+.hub-translate-top{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-height:40px;
+  padding:8px 12px;
+  border:1px solid rgba(184,141,54,.35);
+  border-radius:999px;
+  background:#fffdf8;
+  color:var(--navy,#0e2b52);
+  font:inherit;
+  font-weight:900;
+  line-height:1;
+  white-space:nowrap;
+  box-shadow:0 4px 14px rgba(14,43,82,.05);
+  cursor:pointer;
+}
+.hub-translate-top:hover{background:#fff9e9;text-decoration:none;}
+@media(max-width:980px){
+  .topbar .top-inner{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:center!important;
+    gap:9px 10px!important;
+  }
+  .topbar .vnext-brand{
+    min-width:0!important;
+    width:auto!important;
+    max-width:100%!important;
+  }
+  .topbar .vnext-brand > span{min-width:0!important;}
+  .topbar .brand-mark-inline{width:52px!important;height:52px!important;flex:0 0 52px!important;}
+  .topbar .brand-lockup-title{font-size:clamp(1rem,4.5vw,1.25rem)!important;line-height:1.05!important;}
+  .topbar .brand-lockup-byline{font-size:clamp(.68rem,3vw,.86rem)!important;letter-spacing:.04em!important;}
+  .topbar .hub-translate-top{display:inline-flex!important;grid-column:2!important;grid-row:1!important;justify-self:end!important;align-self:center!important;}
+  .topbar .nav{grid-column:1 / -1!important;width:100%!important;min-width:0!important;}
+  .topbar .nav .translate-nav{display:none!important;}
+}
+@media(max-width:420px){
+  .topbar .top-inner{padding-left:14px!important;padding-right:14px!important;}
+  .topbar .brand-mark-inline{width:46px!important;height:46px!important;flex-basis:46px!important;}
+  .topbar .brand-lockup-title{font-size:.98rem!important;}
+  .topbar .brand-lockup-byline{font-size:.66rem!important;}
+  .hub-translate-top{min-height:36px;padding:7px 10px;font-size:.9rem;}
+}
+@media(min-width:981px){.topbar .hub-translate-top{display:none!important;}}
+
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
@@ -251,7 +303,7 @@ html{scroll-padding-top:calc(var(--sticky-offset, 96px) + 20px)!important}
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-</head><body class="vnext" id="top"><header class="topbar"><div class="top-inner"><a aria-label="Learning &amp; Career Resource Hub home" class="vnext-brand" href="resources.html"><svg aria-hidden="true" class="brand-mark-inline" focusable="false" height="120" viewbox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg"><rect fill="#FFFDF8" height="120" rx="60" width="120"></rect><circle cx="60" cy="60" fill="none" r="51" stroke="#0E2B52" stroke-width="3"></circle><circle cx="60" cy="60" fill="none" opacity=".55" r="44" stroke="#B8933C" stroke-width="1.2"></circle><text fill="#0E2B52" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="3" text-anchor="middle" x="60" y="65">JLJ</text><path d="M36 80 C45 75 52 84 60 79 C68 74 75 84 85 78" fill="none" opacity=".85" stroke="#6DA9C9" stroke-linecap="round" stroke-width="2"></path><path d="M42 87 C51 83 58 90 68 85" fill="none" opacity=".5" stroke="#6DA9C9" stroke-linecap="round" stroke-width="1.5"></path></svg><span><span class="brand-lockup-title">Learning &amp; Career<br/>Resource Hub</span><span class="brand-lockup-byline">by Jason <span class="gold">L.</span> Jones</span></span></a><nav class="nav"><a class="keep" data-nav="start" href="resources.html">Start here</a><a class="keep" data-nav="current" href="resources.html#current">Current opportunities</a><a class="keep" data-nav="guide" href="resources-directory.html?view=guide">30-second guide</a><a class="keep active" data-nav="find" href="resources-directory.html?view=find#finder">Find</a><a data-nav="directory" href="resources-directory.html?view=directory#directory">Directory</a><a data-nav="about" href="resources-about.html">About</a>
+</head><body class="vnext" id="top"><header class="topbar"><div class="top-inner"><a aria-label="Learning &amp; Career Resource Hub home" class="vnext-brand" href="resources.html"><svg aria-hidden="true" class="brand-mark-inline" focusable="false" height="120" viewbox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg"><rect fill="#FFFDF8" height="120" rx="60" width="120"></rect><circle cx="60" cy="60" fill="none" r="51" stroke="#0E2B52" stroke-width="3"></circle><circle cx="60" cy="60" fill="none" opacity=".55" r="44" stroke="#B8933C" stroke-width="1.2"></circle><text fill="#0E2B52" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="3" text-anchor="middle" x="60" y="65">JLJ</text><path d="M36 80 C45 75 52 84 60 79 C68 74 75 84 85 78" fill="none" opacity=".85" stroke="#6DA9C9" stroke-linecap="round" stroke-width="2"></path><path d="M42 87 C51 83 58 90 68 85" fill="none" opacity=".5" stroke="#6DA9C9" stroke-linecap="round" stroke-width="1.5"></path></svg><span><span class="brand-lockup-title">Learning &amp; Career<br/>Resource Hub</span><span class="brand-lockup-byline">by Jason <span class="gold">L.</span> Jones</span></span></a><button class="hub-translate-top js-translate-trigger" data-translate-trigger type="button" aria-label="Open translation help">🌐 <span aria-hidden="true">PT</span></button><nav class="nav"><a class="keep" data-nav="start" href="resources.html">Start here</a><a class="keep" data-nav="current" href="resources.html#current">Current opportunities</a><a class="keep" data-nav="guide" href="resources-directory.html?view=guide">30-second guide</a><a class="keep active" data-nav="find" href="resources-directory.html?view=find#finder">Find</a><a data-nav="directory" href="resources-directory.html?view=directory#directory">Directory</a><a data-nav="about" href="resources-about.html">About</a>
 <a class="keep saved-nav" data-nav="saved" href="resources-directory.html?view=saved#savedPanel">♡ Saved <span class="saved-nav-count" id="savedNavCount">0</span></a><button class="keep translate-nav translate-help-trigger js-translate-trigger" id="translateTop" title="Translation help" type="button" data-translate-trigger>🌐 Translate</button></nav></div></header><section aria-labelledby="vnextHeroTitle" class="vnext-hero"><div class="vnext-hero-copy"><span class="vnext-eyebrow">● Open now · Start here · Find your path</span><h1 id="vnextHeroTitle">Find resources.<br/>Take the <span class="gold">next step.</span></h1><p class="lead">Trusted tools, links, and opportunities to help you learn, grow, and build a better future.</p><div class="row"><button class="btn primary" id="openGuideHero" type="button">Start Your Journey →</button><button class="btn ghost" id="openGuideHeroAlt" type="button">Start the 30-second guide →</button><a class="btn ghost" href="resources.html">How to use this hub</a></div><div class="hub-definition"><span class="hub-def-icon" aria-hidden="true"><svg viewBox="0 0 64 64" width="42" height="42" role="img" focusable="false"><circle cx="32" cy="32" r="30" fill="#f8fbff" stroke="#dbe7ee"/><path d="M16 35h8l18 10V19L24 29h-8v6z" fill="none" stroke="#0e4f95" stroke-width="4" stroke-linejoin="round"/><path d="M25 36l3 12" stroke="#0e4f95" stroke-width="4" stroke-linecap="round"/><path d="M47 27c3 3 3 7 0 10M52 22c6 6 6 16 0 22" fill="none" stroke="#b78d36" stroke-width="3" stroke-linecap="round"/></svg></span><span>A resource hub is a central place to find useful tools, links, and opportunities — then choose your path forward.</span></div><div class="journey-ribbon"><span>🧭 Choose</span><span class="arrow">→</span><span>🔎 Explore</span><span class="arrow">→</span><span>♡ Save</span><span class="arrow">→</span><span>↗ Act on the official page</span></div></div><div class="hero-art hero-art-image journey-art"><img alt="Illustration of an adult learner walking from an opportunity hub toward multiple learning, career, study, digital skills, entrepreneurship, and current opportunity paths" decoding="async" loading="eager" src="opportunity-pathways-landscape.jpg"/></div></section><main class="container"><div class="vnext-prototype-note"><b>Beta preview:</b> This version is being prepared for pre-launch testing. The goal is simple: help a first-time visitor understand what this hub is, choose one path, and take one useful next step. <a href="resources.html"><b>Read the full guide</b></a>.</div><section class="section rh-vnext5k-trust-strip" aria-label="Resource Hub trust note">
   <p><b>Independently curated guide.</b> Not an official government, Embassy, UniCV, or provider site. Always check details on the official provider page.</p>
   <p lang="pt"><b>Guia curado de forma independente.</b> Não é um site oficial do governo, da Embaixada, da UniCV ou dos fornecedores. Verifique sempre os detalhes na página oficial do fornecedor.</p>
