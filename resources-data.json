@@ -461,7 +461,7 @@
       "status": "Open Now",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Anyone seeking jobs, training or internships in Cabo Verde",
+      "bestFor": "Anyone seeking jobs, training or internships in Cabo Verde. Cabo Verde employment, training, internship, and career-readiness gateway.",
       "description": "IEFP portal centralizes employment, e-learning, PEPE, jobs, internships, and professional courses.",
       "startStep": "Browse current job/training/internship offers and verify deadlines.",
       "url": "https://iefp.gov.cv/",
@@ -479,7 +479,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Course listing / provider page"
+      "scheduleSourceType": "Course listing / provider page",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar"
     },
     {
       "id": "CV-014",
@@ -1007,8 +1008,8 @@
       "status": "Ongoing",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "AI/digital productivity upskilling",
-      "description": "Free practical training and Microsoft certification resources across Microsoft products and career stages.",
+      "bestFor": "Useful for technology, AI, cloud, productivity tools, data, cybersecurity foundations, and professional digital-skills pathways.",
+      "description": "Microsoft learning platform for technology and professional digital-skills pathways. Useful for AI, cloud, productivity, data, cybersecurity, and technical career exploration.",
       "startStep": "Start a learning path in Portuguese or English.",
       "url": "https://www.microsoft.com/pt-pt/microsoft-learn",
       "confidence": "High",
@@ -1024,7 +1025,8 @@
       "nextReviewDate": "2026-08-09",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity Microsoft Learn Azure cloud data cybersecurity AI artificial intelligence career skills"
     },
     {
       "id": "UNI-003",
@@ -1043,8 +1045,8 @@
       "status": "Ongoing",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "AI/data/cybersecurity foundations",
-      "description": "Free job-skills platform with digital credentials in AI, data, cybersecurity, Agile, emerging tech, and workplace skills.",
+      "bestFor": "Useful for digital skills, AI, career readiness, workplace skills, technology foundations, and employability.",
+      "description": "Digital-skills and career-readiness platform with pathways in AI, workplace skills, technology foundations, employability, and professional growth.",
       "startStep": "Create IBM SkillsBuild account and start a credential pathway.",
       "url": "https://skillsbuild.org/adult-learners/digital-credentials",
       "confidence": "High",
@@ -1060,7 +1062,8 @@
       "nextReviewDate": "2026-08-09",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations IBM SkillsBuild employability workplace professional skills artificial intelligence"
     },
     {
       "id": "UNI-004",
@@ -1079,7 +1082,7 @@
       "status": "Ongoing",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Tech career starters",
+      "bestFor": "Tech career starters. Technology, networking, cybersecurity, computer basics, electronics, engineering readiness, and technical foundations.",
       "description": "Cisco offers free self-paced courses in networks, apps, cybersecurity and more.",
       "startStep": "Explore free self-paced courses and pick beginner track.",
       "url": "https://www.netacad.com/catalogs/learn",
@@ -1096,7 +1099,8 @@
       "nextReviewDate": "2026-08-09",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness job readiness"
     },
     {
       "id": "UNI-005",
@@ -1773,7 +1777,7 @@
       "status": "Open Now",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Tourism/hospitality outreach",
+      "bestFor": "Tourism/hospitality outreach. English for tourism, hospitality, reception, restaurant, bar, customer service, and workplace communication.",
       "description": "Five-module English MOOC for non-native English speakers in tourism industry.",
       "startStep": "Open official OPEN course page and click Enroll Now.",
       "url": "https://americanenglish.state.gov/OPEN-MOOCs",
@@ -1800,7 +1804,8 @@
       "courseStartDate": "2026-04-06",
       "courseEndDate": "2026-06-29",
       "nextCycleStartDate": "2026-07-06",
-      "nextCycleEnrollmentCloseDate": "2026-09-21"
+      "nextCycleEnrollmentCloseDate": "2026-09-21",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "UNI-024",
@@ -2097,7 +2102,7 @@
       "status": "Upcoming",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Tourism and hospitality outreach for the next OPEN cycle.",
+      "bestFor": "Tourism and hospitality outreach for the next OPEN cycle. Next-cycle bridge for English, tourism, hospitality, reception, restaurant, bar, and customer service.",
       "description": "Upcoming next-cycle card for the OPEN English for Tourism Professionals MOOC.",
       "startStep": "Open the official OPEN MOOCs page and enroll when the next cycle appears in the current course listing.",
       "publicDateText": "Upcoming next OPEN cycle. Course/enrollment begins Jul 6, 2026. Enrollment closes Sep 21. Course ends Sept 28, 2026.",
@@ -2106,7 +2111,8 @@
       "courseStartDate": "2026-07-06",
       "courseEndDate": "2026-09-28",
       "nextCycleStartDate": "2026-07-06",
-      "nextCycleEnrollmentCloseDate": "2026-09-21"
+      "nextCycleEnrollmentCloseDate": "2026-09-21",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "provider": "Online Professional English Network (OPEN)",
@@ -2289,7 +2295,7 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "Medium",
-      "bestFor": "Self-directed learners comfortable studying in English",
+      "bestFor": "Self-directed learners comfortable studying in English. Broad free-course gateway for self-directed learners.",
       "description": "Free Open University courses with statements of participation/digital badges for many courses.",
       "startStep": "Browse free courses by topic and start one short course. Check badge/statement details on the course page.",
       "url": "https://www.open.edu/openlearn/free-courses",
@@ -2306,7 +2312,8 @@
       "nextReviewDate": "2026-06-13",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital"
     },
     {
       "id": "UNI-031",
@@ -2325,7 +2332,7 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "Medium",
-      "bestFor": "Learners who want structured free courses in business, computer science, English, and professional topics",
+      "bestFor": "Learners who want structured free courses in business, computer science, English, and professional topics. Structured free courses in business, computer science, English, and professional topics.",
       "description": "Free and low-cost certificate/credit-style courses across business, computer science, and professional development.",
       "startStep": "Create a free account, choose one course, and review any optional certificate or proctored exam costs first.",
       "url": "https://www.saylor.org/",
@@ -2342,7 +2349,8 @@
       "nextReviewDate": "2026-06-13",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness"
     },
     {
       "id": "UNI-032",
@@ -2361,7 +2369,7 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "High",
-      "bestFor": "Serious coding learners",
+      "bestFor": "Serious coding learners. Coding, web, data, UX/UI, portfolio, and technical project practice.",
       "description": "Free coding curriculum and certifications for web development, JavaScript, Python, data, and more.",
       "startStep": "Start responsive web design or Python pathway.",
       "url": "https://www.freecodecamp.org/",
@@ -2378,7 +2386,8 @@
       "nextReviewDate": "2026-08-09",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness"
     },
     {
       "id": "UNI-033",
@@ -2397,7 +2406,7 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "Medium",
-      "bestFor": "Tourism/business marketing and sales",
+      "bestFor": "Tourism/business marketing and sales. Marketing, customer service, business, sales, CRM, and digital marketing certifications.",
       "description": "Free training and certificates in marketing, sales, service, CRM, SEO, content and social media.",
       "startStep": "Choose a certification or short course.",
       "url": "https://academy.hubspot.com/",
@@ -2414,7 +2423,8 @@
       "nextReviewDate": "2026-08-09",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity"
     },
     {
       "id": "UNI-034",
@@ -2469,7 +2479,7 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "Medium",
-      "bestFor": "Flyers, CVs, social posts, business visuals",
+      "bestFor": "Flyers, CVs, social posts, business visuals. Design, Canva, branding, social media design, visual communication, portfolio, and creative digital skills.",
       "description": "Design learning resources useful for practical visual communication and small-business marketing.",
       "startStep": "Start beginner Canva/design tutorial.",
       "url": "https://www.canva.com/designschool/",
@@ -2486,7 +2496,8 @@
       "nextReviewDate": "2026-08-09",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "Medium",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity"
     },
     {
       "id": "UNI-036",
@@ -2721,8 +2732,8 @@
       "status": "Ongoing",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Students who need free academic foundations in math, science, grammar, computing, or study support",
-      "description": "Free academic learning platform for math, science, computing, grammar and more.",
+      "bestFor": "Useful for math, science, study foundations, finance basics, and school/university readiness.",
+      "description": "Free learning platform for academic foundations and study readiness. Useful when a learner needs math, science, finance basics, grammar, computing, or school/university preparation.",
       "startStep": "Search one school subject and complete one short practice activity before opening another topic.",
       "url": "https://www.khanacademy.org/",
       "confidence": "High",
@@ -2738,7 +2749,8 @@
       "nextReviewDate": "2026-06-13",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations Khan Academy algebra geometry calculus statistics economics personal finance study readiness finance finanças financas personal finance accounting economics"
     },
     {
       "id": "UNI-043",
@@ -3740,7 +3752,7 @@
       "status": "Open Now",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Local training seekers in São Vicente",
+      "bestFor": "Local training seekers in São Vicente. São Vicente professional training bridge for hospitality, technical, customer-service, and employment pathways.",
       "description": "IEFP currently lists São Vicente courses such as food/beverage service, bakery/pastry, kitchen operations, electrical/telecom, water/sanitation, and more.",
       "startStep": "Go to IEFP offers and click Candidatar for current courses.",
       "url": "https://iefp.gov.cv/",
@@ -3758,7 +3770,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Course listing / provider page"
+      "scheduleSourceType": "Course listing / provider page",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity"
     },
     {
       "id": "CV-097",
@@ -3850,8 +3863,8 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "Medium",
-      "bestFor": "French-speaking learners who want MOOCs from French higher-education and partner institutions",
-      "description": "French MOOC platform with a range of courses; costs/certificates vary by course.",
+      "bestFor": "Useful for French-speaking learners exploring MOOCs across many subjects, including business, technology, science, university learning, professional skills, and personal development.",
+      "description": "French-language MOOC gateway where learners can search official courses from French higher-education and partner institutions.",
       "startStep": "Search one topic, then verify whether the course is free, open for enrollment, and whether any certificate costs money.",
       "url": "https://www.fun-mooc.fr/",
       "confidence": "Medium",
@@ -3867,7 +3880,8 @@
       "nextReviewDate": "2026-06-13",
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "Medium",
-      "publicVisibility": "Public"
+      "publicVisibility": "Public",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital FUN MOOC French MOOCs catalog gateway plateforme cours en ligne"
     },
     {
       "id": "UNI-100",
@@ -3959,7 +3973,7 @@
       "status": "Open Now",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Useful for users from any island looking for training, internships, jobs and formal employment support.",
+      "bestFor": "Useful for users from any island looking for training, internships, jobs and formal employment support. Cabo Verde e-learning, PEPE, employment, internship, and job-readiness gateway.",
       "description": "Useful for users from any island looking for training, internships, jobs and formal employment support.",
       "startStep": "Open the official page; confirm current eligibility, dates, costs, and application/contact instructions.",
       "url": "https://iefp.gov.cv/",
@@ -3977,7 +3991,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Course listing / provider page"
+      "scheduleSourceType": "Course listing / provider page",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar"
     },
     {
       "id": "CVI-003",
@@ -3996,7 +4011,7 @@
       "status": "Open Now",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Core Cabo Verde hospitality/tourism workforce resource; strong fit for hotels and service-industry outreach.",
+      "bestFor": "Core Cabo Verde hospitality/tourism workforce resource; strong fit for hotels and service-industry outreach. Cabo Verde hotel, tourism, hospitality, restaurant, bar, reception, and customer-service training pathway.",
       "description": "Core Cabo Verde hospitality/tourism workforce resource; strong fit for hotels and service-industry outreach.",
       "startStep": "Open the official page; confirm current eligibility, dates, costs, and application/contact instructions.",
       "url": "https://ehtcv.gov.cv/",
@@ -4014,7 +4029,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Official/social announcement"
+      "scheduleSourceType": "Official/social announcement",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "CVI-004",
@@ -4908,7 +4924,7 @@
       "status": "Open Now",
       "publishStatus": "Public Directory",
       "priority": "High",
-      "bestFor": "People in Santiago/Santa Catarina seeking current IEFP professional training.",
+      "bestFor": "People in Santiago/Santa Catarina seeking current IEFP professional training. Administrative services and customer service / atendimento ao cliente pathway.",
       "description": "Current IEFP professional training offer in Santa Catarina, Santiago. Level: Nível 4; duration: 15 meses; schedule: Laboral.",
       "startStep": "Open IEFP offers page, filter by island/location/course, then click Candidatar.",
       "url": "https://iefp.gov.cv/",
@@ -4926,7 +4942,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "Medium",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Course listing / provider page"
+      "scheduleSourceType": "Course listing / provider page",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "IEFP-006",
@@ -6129,7 +6146,7 @@
       "status": "Open Now",
       "publishStatus": "Public Directory",
       "priority": "High",
-      "bestFor": "People in Fogo/São Filipe seeking current IEFP professional training.",
+      "bestFor": "People in Fogo/São Filipe seeking current IEFP professional training. Administrative services and customer service / atendimento ao cliente pathway.",
       "description": "Current IEFP professional training offer in São Filipe, Fogo. Level: Nível 4; duration: 14 meses; schedule: Laboral.",
       "startStep": "Open IEFP offers page, filter by island/location/course, then click Candidatar.",
       "url": "https://iefp.gov.cv/",
@@ -6147,7 +6164,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "Medium",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Course listing / provider page"
+      "scheduleSourceType": "Course listing / provider page",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "IEFP-039",
@@ -6277,7 +6295,7 @@
       "status": "Open Now",
       "publishStatus": "Public Directory",
       "priority": "High",
-      "bestFor": "People in Sal/Sal seeking current IEFP professional training.",
+      "bestFor": "People in Sal/Sal seeking current IEFP professional training. Administrative services and customer service / atendimento ao cliente pathway.",
       "description": "Current IEFP professional training offer in Sal, Sal. Level: Nível 4; duration: 12 meses; schedule: Pós-Laboral.",
       "startStep": "Open IEFP offers page, filter by island/location/course, then click Candidatar.",
       "url": "https://iefp.gov.cv/",
@@ -6295,7 +6313,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "Medium",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Course listing / provider page"
+      "scheduleSourceType": "Course listing / provider page",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "IEFP-043",
@@ -6439,10 +6458,11 @@
       "cost": "Free to search; course costs and certificates vary",
       "format": "Online course search engine / aggregator",
       "priority": "High",
-      "bestFor": "Finding free online courses, language courses, and free-certificate opportunities across many providers",
-      "description": "Course search and discovery platform that aggregates courses from many providers. Useful when learners know a topic but need help comparing options, language, level, cost, and certificate details.",
+      "bestFor": "Large gateway platform for finding online courses across many subjects, including business, technology, design, languages, math, science, career skills, and university-level learning.",
+      "description": "Large gateway platform for finding online courses across many subjects. Use it to search official provider courses instead of expecting every course to be listed one by one in this hub.",
       "startStep": "Search one topic, then filter for free courses, beginner level, language, and certificate details. Open the provider page to verify final cost and requirements.",
-      "url": "https://www.classcentral.com/"
+      "url": "https://www.classcentral.com/",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations Class Central gateway platform MOOC catalog courses"
     },
     {
       "availability": "Ongoing",
@@ -6475,10 +6495,11 @@
       "cost": "Free",
       "format": "Online self-paced lessons + training materials",
       "priority": "High",
-      "bestFor": "Absolute beginners who need basic digital literacy: email, websites, apps, search, cybersecurity, and computer skills",
-      "description": "Beginner digital-literacy resource from the Public Library Association, with self-directed courses and training materials useful for learners and facilitators.",
+      "bestFor": "Useful for beginner computer and internet skills, especially for users who are new to digital tools.",
+      "description": "Beginner computer and internet lessons for people who are new to digital tools. Good first stop before more advanced technology platforms.",
       "startStep": "Start with one basic course such as email, website navigation, search, or computer basics. Complete one short lesson before moving on.",
-      "url": "https://www.digitallearn.org/"
+      "url": "https://www.digitallearn.org/",
+      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity DigitalLearn digital literacy beginner computer internet email online safety forms"
     },
     {
       "availability": "Ongoing",
@@ -6547,10 +6568,11 @@
       "cost": "Free",
       "format": "Online self-paced lessons and videos",
       "priority": "High",
-      "bestFor": "Beginner-friendly technology, work, reading, math, everyday skills, and language-support learning in English, Spanish, and Portuguese",
-      "description": "Free learning platform with practical lessons in technology, workplace skills, reading, math, and everyday digital tasks. Strong option for learners who need simple explanations.",
+      "bestFor": "Beginner-friendly lessons for computer basics, workplace skills, email, documents, presentations, internet use, design basics, and everyday digital confidence.",
+      "description": "Beginner-friendly lessons for everyday digital confidence, computer use, workplace basics, reading, math, internet tasks, documents, presentations, and practical life skills.",
       "startStep": "Choose the Portuguese, Spanish, or English site, then complete one beginner technology or work-skill lesson.",
-      "url": "https://edu.gcfglobal.org/"
+      "url": "https://edu.gcfglobal.org/",
+      "keywords": "graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations GCFGlobal gateway beginner tutorials workplace skills"
     },
     {
       "availability": "Ongoing",
@@ -7037,7 +7059,7 @@
       "status": "Ongoing",
       "publishStatus": "Featured",
       "priority": "High",
-      "bestFor": "Students and early-career professionals who want realistic work-sample practice before applying for jobs or internships.",
+      "bestFor": "Students and early-career professionals who want realistic work-sample practice before applying for jobs or internships. Virtual job simulations, internships, career exploration, portfolio examples, and workplace readiness.",
       "description": "Free virtual job simulations designed by employers. Learners complete real-work-style tasks, compare their work with model answers, and can earn a certificate.",
       "startStep": "Create a free account, choose one beginner-friendly job simulation, and complete the first task.",
       "url": "https://www.theforage.com/",
@@ -7055,7 +7077,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Official provider page"
+      "scheduleSourceType": "Official provider page",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital virtual job simulation internship internships estágio estagio career exploration"
     },
     {
       "id": "UNI-102",
@@ -7111,7 +7134,7 @@
       "status": "Ongoing",
       "publishStatus": "Public Directory",
       "priority": "Medium",
-      "bestFor": "Learners who want a large free-course library for workplace, IT, language, business, hospitality, management, health, teaching, and personal-development topics.",
+      "bestFor": "Learners who want a large free-course library for workplace, IT, language, business, hospitality, management, health, teaching, and personal-development topics. Large free-course library for workplace, IT, language, business, hospitality, and management topics.",
       "description": "Large free online learning platform with courses across IT, business, language, hospitality/tourism, teaching, marketing, health, management, personal development, and career tools.",
       "startStep": "Search one topic, start a free course, and check certificate/diploma costs before committing.",
       "url": "https://alison.com/",
@@ -7129,7 +7152,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Official provider page"
+      "scheduleSourceType": "Official provider page",
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital"
     },
     {
       "id": "UNI-104",
@@ -7259,7 +7283,7 @@
       "status": "Watch Next Cycle",
       "publishStatus": "Watchlist",
       "priority": "Medium",
-      "bestFor": "Students and recent graduates interested in finance, markets, accounting, management, marketing, and business-service careers.",
+      "bestFor": "Students and recent graduates interested in finance, markets, accounting, management, marketing, and business-service careers. Finance, investment, accounting, professional learning, and internship pathway.",
       "description": "BVC lists professional internship opportunities intended to provide first professional experience for eligible finalists and recent graduates.",
       "startStep": "Open the BVC internship page and check whether a current internship announcement is active.",
       "url": "https://bvc.cv/estagio",
@@ -7277,7 +7301,8 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "scheduleSourceType": "Official provider page"
+      "scheduleSourceType": "Official provider page",
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity stock exchange finance internship estágio estagio bolsa valores finance finanças financas accounting contabilidade internship estágio estagio business professional development investment bolsa valores"
     },
     {
       "id": "UNI-106",
