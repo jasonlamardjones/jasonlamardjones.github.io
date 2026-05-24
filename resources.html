@@ -143,6 +143,54 @@ html,body{max-width:100%;overflow-x:hidden;}
 }
 @media(min-width:981px){.topbar .hub-translate-top{display:none!important;}}
 
+
+/* RH-JLJ-MOBILE-CALM1: calmer mobile density, compact cards, and safer floating-nav clearance */
+.provider-language-note{
+  display:block;
+  max-width:100%;
+  color:#4f5b6d;
+  background:#f8fbff;
+  border:1px solid #dbe7ee;
+  border-radius:14px;
+  padding:7px 9px;
+  margin:9px 0 0;
+  font-size:.82rem;
+  line-height:1.35;
+  overflow-wrap:break-word;
+}
+.provider-language-note summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  font-weight:850;
+  color:#344054;
+  line-height:1.3;
+}
+.provider-language-note summary::-webkit-details-marker{display:none;}
+.provider-language-note summary::after{
+  content:"More";
+  margin-left:auto;
+  color:#1f6f5b;
+  font-size:.76rem;
+  font-weight:900;
+}
+.provider-language-note[open] summary::after{content:"Less";}
+.provider-language-note p{margin:7px 0 0!important;color:#4f5b6d;font-size:.82rem;line-height:1.4;}
+@media(max-width:700px){
+  body{padding-bottom:calc(116px + env(safe-area-inset-bottom,0px))!important;}
+  .current-grid,.softlaunch-fallback-grid,.rh-vnext5k-fallback-grid{grid-template-columns:1fr!important;}
+  .resource-card,.softlaunch-fallback-card{padding:14px!important;border-radius:16px!important;}
+  .badge-row{display:flex!important;flex-wrap:wrap!important;gap:6px!important;align-items:center!important;margin:8px 0 10px!important;}
+  .badge{font-size:.74rem!important;padding:4px 7px!important;line-height:1.18!important;max-width:100%;}
+  .section-head h2,.panel h2,.section h2{font-size:clamp(1.26rem,6vw,1.72rem)!important;line-height:1.08!important;letter-spacing:-.025em!important;}
+  .section-head p,.panel>p{font-size:.96rem;line-height:1.5;}
+  .provider-language-note{border-color:#e1edf2;background:#fbfdff;padding:6px 8px;font-size:.76rem;line-height:1.32;}
+  .provider-language-note summary{font-size:.76rem;line-height:1.25;align-items:flex-start;}
+  .provider-language-note summary::after{font-size:.72rem;}
+  .provider-language-note p{font-size:.76rem!important;line-height:1.35!important;}
+}
 </style><!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
 (function(){
@@ -186,7 +234,7 @@ html,body{max-width:100%;overflow-x:hidden;}
     </div>
   </div>
 </section>
-<section class="section" id="current"><div class="panel"><h2>Current &amp; upcoming learning opportunities</h2><p>Start here if you want something active, timely, or worth checking now. Always confirm details on the official provider page.</p><div id="currentCards" class="current-grid"><article class="resource-card softlaunch-fallback-card"><h3>IEFP Cabo Verde</h3><p>Professional training, employment, and internship pathways. Check current listings.</p><a class="btn small ghost" href="https://iefp.gov.cv/" target="_blank" rel="noopener">Go to provider site →</a><p class="provider-language-note"><span aria-hidden="true">ⓘ</span> <b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês. Use a opção Traduzir do navegador, se necessário.</p></article><article class="resource-card softlaunch-fallback-card"><h3>Skodji Digital</h3><p>Digital skills and employability pathways for Cabo Verdeans. Verify current cycle.</p><a class="btn small ghost" href="https://www.skodjidigital.cv/" target="_blank" rel="noopener">Go to provider site →</a><p class="provider-language-note"><span aria-hidden="true">ⓘ</span> <b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês. Use a opção Traduzir do navegador, se necessário.</p></article><article class="resource-card softlaunch-fallback-card"><h3>Open full directory</h3><p>If live cards do not appear, open the full directory and search by topic or provider.</p><a class="btn small ghost" href="resources-directory.html?view=find#finder">Open directory →</a></article></div><div class="row"><a class="btn primary" href="resources-directory.html?view=find#finder">Open full directory</a><a class="btn ghost" href="resources-directory.html?view=guide">Start the 30-second guide</a></div></div></section>
+<section class="section" id="current"><div class="panel"><h2>Current &amp; upcoming learning opportunities</h2><p>Start here if you want something active, timely, or worth checking now. Always confirm details on the official provider page.</p><div id="currentCards" class="current-grid"><article class="resource-card softlaunch-fallback-card"><h3>IEFP Cabo Verde</h3><p>Professional training, employment, and internship pathways. Check current listings.</p><a class="btn small ghost" href="https://iefp.gov.cv/" target="_blank" rel="noopener">Go to provider site →</a><details class="provider-language-note"><summary><span aria-hidden="true">ⓘ</span> Site may open in English / Pode abrir em inglês — use browser Translate</summary><p><b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês ou português. Use a opção Traduzir do navegador, se necessário.</p></details></article><article class="resource-card softlaunch-fallback-card"><h3>Skodji Digital</h3><p>Digital skills and employability pathways for Cabo Verdeans. Verify current cycle.</p><a class="btn small ghost" href="https://www.skodjidigital.cv/" target="_blank" rel="noopener">Go to provider site →</a><details class="provider-language-note"><summary><span aria-hidden="true">ⓘ</span> Site may open in English / Pode abrir em inglês — use browser Translate</summary><p><b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês ou português. Use a opção Traduzir do navegador, se necessário.</p></details></article><article class="resource-card softlaunch-fallback-card"><h3>Open full directory</h3><p>If live cards do not appear, open the full directory and search by topic or provider.</p><a class="btn small ghost" href="resources-directory.html?view=find#finder">Open directory →</a></article></div><div class="row"><a class="btn primary" href="resources-directory.html?view=find#finder">Open full directory</a><a class="btn ghost" href="resources-directory.html?view=guide">Start the 30-second guide</a></div></div></section>
 <section class="section" id="steps"><div class="steps"><div class="step"><div class="num">1</div><h3>Choose one path</h3><p>Pick the topic closest to your goal right now: language, digital skills, career, study, entrepreneurship, AI/technology, or current opportunities.</p></div><div class="step"><div class="num">2</div><h3>Explore one resource</h3><p>Use the guide or filters to narrow the directory. They are tools to help you start, not tests you can fail.</p></div><div class="step"><div class="num">3</div><h3>Save your next step</h3><p>Save two or three options so you can come back later, copy the list, email it to yourself, or download it.</p></div><div class="step"><div class="num">4</div><h3>Act on the official page</h3><p>This hub points you toward resources. The official provider page is where you confirm deadlines, cost, eligibility, certificates, and registration.</p></div></div></section>
 <section class="section"><div class="grid"><div class="panel callout"><h2>If nothing appears for your island or topic</h2><p>That does not mean there are no opportunities for you. Some resources are local, but many are online, Cabo Verde-wide, or usable from anywhere.</p><ul class="list"><li>Try <b>All locations</b> instead of one island.</li><li>Remove strict filters like cost, role, or availability.</li><li>Look for <b>Trusted Gateway</b> platforms such as Class Central, GCFGlobal, DigitalLearn, Khan Academy, Microsoft Learn, Cisco, IBM SkillsBuild, and similar platforms.</li></ul></div><div class="panel"><h2>Why gateway platforms matter</h2><p>Some large learning platforms contain many more courses than this hub can list one by one. This hub may list the platform and a few examples, then encourage you to search the official site directly for your exact subject, such as graphic design, engineering, finance, computer basics, tourism, languages, or business.</p><p>Example: a business or entrepreneurship learner in Santiago may not see a local in-person listing, but online platforms may still offer useful courses, tutorials, certificates, or learning paths.</p></div></div></section>
 <section class="section" id="translation-help"><div class="grid"><div class="panel translation-help-panel"><p class="translate-cue">↘ Before translating, read this / Antes de traduzir, leia isto</p><h2>Translation and accessibility / Tradução e acessibilidade</h2><p>Use the Translate link to open a Google-translated copy of the page. Automatic translation may not be perfect, but it can make the hub easier to explore.</p><p><b>Image note / Nota sobre imagens:</b> the words inside the Opportunity Hub illustration may stay in English because they are part of the approved image. Use the live “Pathways shown” legend below the image, plus the live page text, for translated meaning.</p><p>Saved resources may be separate between the original page, translated page, different browsers, or different devices. Before switching, copy, email, or download your saved list.</p><div class="row translation-actions"><button class="btn soft js-translate-trigger" data-translate-trigger type="button">Translation instructions / Instruções de tradução</button><button class="btn ghost" data-google-translate="pt" type="button">Open Google Translate / Abrir Google Translate</button></div></div><div class="panel"><h2>What this hub is not</h2><ul class="list"><li>It is not an official provider or enrollment platform.</li><li>It does not guarantee admission, jobs, scholarships, certificates, funding, or approval.</li><li>Information can change. Always check the official source.</li></ul></div></div></section>
@@ -197,6 +245,7 @@ html,body{max-width:100%;overflow-x:hidden;}
 function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function short(s,n){s=String(s||''); return s.length>n?s.slice(0,n-1)+'…':s}
 function resourceTitle(r){return r.program||r.title||r.provider||'Resource'}
+function providerLanguageNoteHTML(){return `<details class="provider-language-note"><summary><span aria-hidden="true">ⓘ</span> Site may open in English / Pode abrir em inglês — use browser Translate</summary><p><b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês ou português. Use a opção Traduzir do navegador, se necessário.</p></details>`;}
 function renderCurrent(items){const el=document.getElementById('currentCards'); if(!el)return; const priority=items.filter(r=>['Open Now','Upcoming','Watch Next Cycle','Ongoing','Verify Details'].includes(r.status)||['Open Now','Upcoming','Ongoing','Ongoing / watchlist','Verify Details / Ongoing','Upcoming / next OPEN MOOC cycle'].includes(r.availability)).filter(r=>r.publicVisibility!=='Hidden'&&r.publishStatus!=='Archive'); const featured=priority.sort((a,b)=>{const score=x=>(x.publishStatus==='Featured'?5:0)+(x.priority==='High'?3:0)+(x.status==='Open Now'?2:0); return score(b)-score(a)}).slice(0,6); if(!featured.length){el.innerHTML=`<div class="rh-vnext5k-static-fallback" data-static-fallback="true">
   <p><b>Resources are still loading.</b> If this section stays empty, try refreshing. You can still start with these useful providers below.</p>
   <div class="rh-vnext5k-fallback-grid">
@@ -217,7 +266,7 @@ function renderCurrent(items){const el=document.getElementById('currentCards'); 
     <a href="https://www.unicef.org/careers/internships" target="_blank" rel="noopener">UNICEF Internships</a>
   </div>
   <div class="row"><button class="btn small outline" type="button" onclick="location.reload()">Try again / Refresh</button><a class="btn small outline" href="mailto:jasonlmjones@gmail.com?subject=Resource%20Hub%20loading%20issue">Report loading issue</a></div>
-</div>`; return} el.innerHTML=featured.map(r=>`<article class="resource-card"><h3>${esc(resourceTitle(r))}</h3><div class="badge-row"><span class="badge open">${esc(r.status||r.availability||'Check')}</span><span class="badge featured">${esc(r.category||'Resource')}</span></div><p>${esc(short(r.description||r.bestFor||'',140))}</p><p><b>Start step:</b> ${esc(short(r.startStep||'Check the official page for details.',120))}</p><a class="btn small ghost" target="_blank" rel="noopener" href="${esc(r.url||'#')}">Go to provider site →</a><p class="provider-language-note"><span aria-hidden="true">ⓘ</span> <b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês. Use a opção Traduzir do navegador, se necessário.</p></article>`).join('')}
+</div>`; return} el.innerHTML=featured.map(r=>`<article class="resource-card"><h3>${esc(resourceTitle(r))}</h3><div class="badge-row"><span class="badge open">${esc(r.status||r.availability||'Check')}</span><span class="badge featured">${esc(r.category||'Resource')}</span></div><p>${esc(short(r.description||r.bestFor||'',140))}</p><p><b>Start step:</b> ${esc(short(r.startStep||'Check the official page for details.',120))}</p><a class="btn small ghost" target="_blank" rel="noopener" href="${esc(r.url||'#')}">Go to provider site →</a><details class="provider-language-note"><summary><span aria-hidden="true">ⓘ</span> Site may open in English / Pode abrir em inglês — use browser Translate</summary><p><b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês ou português. Use a opção Traduzir do navegador, se necessário.</p></details></article>`).join('')}
 fetch('resources-data.json?v=20260523-pilot-polish1').then(r=>r.json()).then(d=>renderCurrent(d.resources||[])).catch(()=>{const el=document.getElementById('currentCards'); if(el)el.innerHTML=`<div class="rh-vnext5k-static-fallback" data-static-fallback="true">
   <p><b>Resources are still loading.</b> If this section stays empty, try refreshing. You can still start with these useful providers below.</p>
   <div class="rh-vnext5k-fallback-grid">
