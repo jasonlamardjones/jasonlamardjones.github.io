@@ -32,6 +32,13 @@
     @media(max-width:620px){.translation-bilingual{grid-template-columns:1fr}.modal-actions .btn{width:100%}}
     @media(max-width:420px){.guide-top-inner{padding-left:14px;padding-right:14px}.guide-brand{font-size:.88rem}.guide-brand small{font-size:.72rem}.guide-translate{min-height:36px;padding:7px 10px}}
 
+
+    /* RH-JLJ-SOFTLAUNCH-SAFETY1: stronger but compact Portuguese translate control. */
+    .guide-translate{background:#123A33!important;color:#fff!important;border-color:rgba(201,151,59,.78)!important;box-shadow:0 7px 20px rgba(18,58,51,.24)!important;}
+    .guide-translate:hover,.guide-translate:focus-visible{background:#0e4f95!important;color:#fff!important;outline:3px solid rgba(201,151,59,.32);outline-offset:2px;}
+    .guide-translate .translate-word{font-size:.72rem;letter-spacing:.045em;text-transform:uppercase;}
+    @media(max-width:360px){.guide-translate .translate-word{display:none;}}
+
   </style>
 <script id="jlj-analytics-qa-exclusion">
 (function(){
@@ -48,7 +55,7 @@
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();</script>
 </head>
 <body>
-  <header class="guide-topbar"><div class="guide-top-inner"><a class="guide-brand" href="resources.html">Learning &amp; Career Resource Hub<small>by Jason L. Jones</small></a><button class="guide-translate" type="button" data-translate-trigger aria-label="Open translation help">🌐 <span aria-hidden="true">PT</span></button></div></header>
+  <header class="guide-topbar"><div class="guide-top-inner"><a class="guide-brand" href="resources.html">Learning &amp; Career Resource Hub<small>by Jason L. Jones</small></a><button class="guide-translate" type="button" data-translate-trigger aria-label="Translate this page to Portuguese / open translation help" title="Português / Translate">🌐 <span aria-hidden="true">PT</span><span class="translate-word" aria-hidden="true">Translate</span></button></div></header>
   <div class="guide-page-wrap">
   <main class="card">
     <div class="kicker">Resource Hub guide update</div>
@@ -58,7 +65,7 @@
       <a class="btn primary" href="resources.html">Go to Resource Hub Start</a>
       <a class="btn outline" href="resources-directory.html?view=guide">Open the 30-second guide</a>
       <a class="btn outline" href="resources-directory.html?view=find#finder">Find resources</a>
-      <button class="btn outline" type="button" data-translate-trigger>🌐 Translation help</button>
+      <button class="btn outline" type="button" data-translate-trigger>🌐 PT Translation help</button>
     </div>
     <p class="note">This compatibility page keeps older guide links from becoming dead ends. It does not redirect automatically, so you can choose the correct destination.</p><p class="note">The Learning &amp; Career Resource Hub is an independent public tool created by Jason L. Jones. Jason’s <a href="index.html">professional profile</a> is separate and explains the broader community-development work behind this project.</p>
   </main>
