@@ -18,6 +18,35 @@ Newest entries at the top.
 
 ---
 
+## 2026-05-31-004 · V2 Typography Foundation — Hub-only font loading and token wiring
+
+**Status:** Active — On branch v2-visual-foundation-1
+**Date:** 2026-05-31
+**Applies to:** Resource Hub (resources.html, resources-directory.html, resources-about.html)
+
+### Decision
+Load Fraunces (display serif) and Manrope (humanist sans-serif) via Google Fonts `<link>` tags in the `<head>` of the three Hub HTML files only. Declare `--v2-heading` and `--v2-body` CSS custom properties in each file's inline `:root` block, additive alongside existing tokens. Wire those tokens to the active body and heading `font-family` declarations in each file, including the VNEXT4 `!important` overrides in resources-directory.html and resources-about.html.
+
+### Why
+Establishes a visible, controlled typography foundation for the V2 Hub design direction without touching style.css, professional site pages, JS, data, layout, color, or breakpoints. Fraunces brings editorial weight to headings; Manrope provides a cleaner, more legible sans-serif for body and UI text. The `--v2-` prefix keeps these tokens clearly scoped and non-destructive — no existing tokens are renamed or removed.
+
+### What was rejected
+- Loading Fraunces/Manrope through style.css (would affect professional site pages)
+- Declaring tokens without wiring them to active rules (would load fonts invisibly)
+- Changing colors, layout, spacing, or breakpoints in this branch
+- Color/token harmonization across the three Hub files is explicitly deferred to a later branch (the `--navy` divergence between `#0e2b52` in resources.html and `#0C111D` in the directory/about pages is a known pre-existing inconsistency)
+
+### Source of truth
+Branch: v2-visual-foundation-1
+
+### Linked decisions
+- Builds on: 2026-05-31-003, 2026-05-31-001
+
+### Next review trigger
+After visual QA of Fraunces/Manrope rendering across the three Hub pages. Color/token harmonization to follow in a separate branch.
+
+---
+
 ## 2026-05-31-003 · Repo Hygiene Cleanup
 
 **Status:** Proposed in PR
