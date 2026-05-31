@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Node / npm, if ever used locally
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local temp and build artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+dist/
+build/
+
+# Private/local planning material — keep out of the public repo
+/private/
+_private/
+private/
+_private-*
+private-*
+*.private.*
+*.secret.*
+secrets/
+source-packs/
+source-pack/
+*source-pack*
+*Source_Pack*
+*claude-source*
+*Claude_Source*
