@@ -216,6 +216,16 @@ html,body{max-width:100%;overflow-x:hidden;}
 }
 @media(max-width:360px){.hub-translate-top .translate-word{display:none;}}
 
+/* Start page "Choose a starting path" cards */
+.rh-vnext5k-path-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.rh-vnext5k-path-card{display:flex;flex-direction:column;gap:6px;min-height:128px;padding:16px;border:1px solid var(--line);border-radius:18px;background:#fff;color:var(--navy);text-decoration:none;box-shadow:0 10px 24px rgba(12,32,64,.045);transition:transform .15s ease,box-shadow .15s ease}
+.rh-vnext5k-path-card:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 14px 30px rgba(12,32,64,.08)}
+.rh-vnext5k-path-card:focus-visible{outline:3px solid rgba(14,79,149,.28);outline-offset:3px}
+.rh-vnext5k-path-card b{color:var(--navy);font-size:1rem;line-height:1.2}
+.rh-vnext5k-path-card span{color:var(--muted);font-size:.93rem;line-height:1.35}
+@media(max-width:1100px){.rh-vnext5k-path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.rh-vnext5k-path-grid{grid-template-columns:1fr}}
+
 </style><!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
 (function(){
