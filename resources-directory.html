@@ -392,6 +392,20 @@ html,body{max-width:100%;overflow-x:hidden;}
 .resource-list{gap:12px}
 .saved-item{border-radius:14px}
 
+/* v2-desktop-ipad-translate-nav-fix-1: desktop / iPad-landscape header parity with the Start page.
+   At >=981px the Resource Hub top nav was locked into a narrow 1fr grid column behind a wide brand
+   lockup and forced into a single non-wrapping, horizontally-scrolling strip (justify-content:flex-start),
+   which clipped the end items. As a result "Start here" (first) and "PT Translate" (last) could hide or
+   obstruct each other when reaching across the header at iPad-landscape / desktop widths. This frees the
+   brand's reserved width and lets the nav wrap, right-aligned, so every item stays visible without any
+   horizontal scrolling. Scoped to >=981px only; mobile/iPhone (<=980px) header behavior is untouched. */
+@media(min-width:981px){
+  .vnext .top-inner{column-gap:16px!important}
+  .vnext-brand{min-width:0!important}
+  .vnext .nav{flex-wrap:wrap!important;overflow-x:visible!important;overflow-y:visible!important;justify-content:flex-end!important;row-gap:4px!important}
+  .vnext .nav a,.vnext .nav button{min-width:auto!important}
+}
+
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
