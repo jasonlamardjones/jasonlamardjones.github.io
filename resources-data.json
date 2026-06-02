@@ -99,6 +99,7 @@
       "description": "Free digital-skills training under Cabo Verde Digital, with listed tracks such as programming, Python, Linux, and web basics.",
       "startStep": "Browse course list and select a course by language/level/duration.",
       "url": "https://www.digital.cv/kodeverde",
+      "keywords": "software software development coding programming programação programar Python web development computer science informática",
       "confidence": "High",
       "lastChecked": "2026-05-07",
       "island": "Cabo Verde / National",
@@ -284,6 +285,7 @@
       "description": "NOSi lists professional internships, WebLab and training areas such as robotics, networks, programming, multimedia, and HTML/CSS.",
       "startStep": "Use NOSi training page to identify current opportunities.",
       "url": "https://www.nosi.cv/estagios-e-formacoes",
+      "keywords": "software software development coding programming programação programar web development HTML CSS computer science IT support informática",
       "confidence": "Medium",
       "lastChecked": "2026-05-07",
       "island": "Cabo Verde / National",
@@ -480,7 +482,7 @@
       "linkConfidence": "High",
       "publicVisibility": "Public",
       "scheduleSourceType": "Course listing / provider page",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar resume résumé currículo curriculo CV cv writing job application"
     },
     {
       "id": "CV-014",
@@ -1063,7 +1065,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations IBM SkillsBuild employability workplace professional skills artificial intelligence"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations IBM SkillsBuild employability workplace professional skills artificial intelligence"
     },
     {
       "id": "UNI-004",
@@ -1100,7 +1102,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness job readiness"
+      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness job readiness programming programação programar Python computer science IT support"
     },
     {
       "id": "UNI-005",
@@ -1123,6 +1125,7 @@
       "description": "Free video-based curriculum where learners create useful projects such as resumes, budgets, planning sheets, and presentations.",
       "startStep": "Start a lesson directly or use it as a workshop curriculum.",
       "url": "https://support.google.com/googleforeducation/answer/9799929?hl=en",
+      "keywords": "resume résumé currículo curriculo CV cv writing cv template modelo de cv create a resume cover letter carta de apresentação",
       "confidence": "High",
       "lastChecked": "2026-05-07",
       "island": "Universal / Online",
@@ -1231,6 +1234,7 @@
       "description": "Portuguese-language free online courses in personal/professional development, business, innovation, productivity, programming and IT.",
       "startStep": "Create free account and select course area.",
       "url": "https://fundacao.bradesco/como-atuamos/escola-virtual",
+      "keywords": "software software development coding programming programação programar computer science informática Python",
       "confidence": "Medium",
       "lastChecked": "2026-05-07",
       "island": "Universal / Online",
@@ -1805,7 +1809,7 @@
       "courseEndDate": "2026-06-29",
       "nextCycleStartDate": "2026-07-06",
       "nextCycleEnrollmentCloseDate": "2026-09-21",
-      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "UNI-024",
@@ -2112,7 +2116,7 @@
       "courseEndDate": "2026-09-28",
       "nextCycleStartDate": "2026-07-06",
       "nextCycleEnrollmentCloseDate": "2026-09-21",
-      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "provider": "Online Professional English Network (OPEN)",
@@ -2313,7 +2317,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital"
     },
     {
       "id": "UNI-031",
@@ -2350,7 +2354,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness"
     },
     {
       "id": "UNI-032",
@@ -2387,7 +2391,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness"
+      "keywords": "computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness software software development coding programming programação programar Python JavaScript web development computer science IT support"
     },
     {
       "id": "UNI-033",
@@ -2750,7 +2754,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "High",
       "publicVisibility": "Public",
-      "keywords": "math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations Khan Academy algebra geometry calculus statistics economics personal finance study readiness finance finanças financas personal finance accounting economics"
+      "keywords": "math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations Khan Academy algebra geometry calculus statistics economics personal finance study readiness finance finanças financas personal finance accounting economics"
     },
     {
       "id": "UNI-043",
@@ -3881,7 +3885,7 @@
       "officiality": "Official/provider source or public listing; verify details on official link",
       "linkConfidence": "Medium",
       "publicVisibility": "Public",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital FUN MOOC French MOOCs catalog gateway plateforme cours en ligne"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital FUN MOOC French MOOCs catalog gateway plateforme cours en ligne"
     },
     {
       "id": "UNI-100",
@@ -3992,7 +3996,7 @@
       "linkConfidence": "High",
       "publicVisibility": "Public",
       "scheduleSourceType": "Course listing / provider page",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar resume résumé currículo curriculo CV cv writing job application"
     },
     {
       "id": "CVI-003",
@@ -4030,7 +4034,7 @@
       "linkConfidence": "High",
       "publicVisibility": "Public",
       "scheduleSourceType": "Official/social announcement",
-      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability"
     },
     {
       "id": "CVI-004",
@@ -6462,7 +6466,7 @@
       "description": "Large gateway platform for finding online courses across many subjects. Use it to search official provider courses instead of expecting every course to be listed one by one in this hub.",
       "startStep": "Search one topic, then filter for free courses, beginner level, language, and certificate details. Open the provider page to verify final cost and requirements.",
       "url": "https://www.classcentral.com/",
-      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations Class Central gateway platform MOOC catalog courses"
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations Class Central gateway platform MOOC catalog courses"
     },
     {
       "availability": "Ongoing",
@@ -6572,7 +6576,7 @@
       "description": "Beginner-friendly lessons for everyday digital confidence, computer use, workplace basics, reading, math, internet tasks, documents, presentations, and practical life skills.",
       "startStep": "Choose the Portuguese, Spanish, or English site, then complete one beginner technology or work-skill lesson.",
       "url": "https://edu.gcfglobal.org/",
-      "keywords": "graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations GCFGlobal gateway beginner tutorials workplace skills"
+      "keywords": "graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital math mathematics matemática matematica engineering engenharia electronics eletrónica eletronica electricity eletricidade construction construção construcao science study foundations technical readiness business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations GCFGlobal gateway beginner tutorials workplace skills"
     },
     {
       "availability": "Ongoing",
@@ -7078,7 +7082,7 @@
       "linkConfidence": "High",
       "publicVisibility": "Public",
       "scheduleSourceType": "Official provider page",
-      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital virtual job simulation internship internships estágio estagio career exploration"
+      "keywords": "business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital virtual job simulation internship internships estágio estagio career exploration resume résumé currículo curriculo CV job application career readiness"
     },
     {
       "id": "UNI-102",
@@ -7153,7 +7157,7 @@
       "linkConfidence": "High",
       "publicVisibility": "Public",
       "scheduleSourceType": "Official provider page",
-      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes study abroad scholarships bolsas bolsas de estudo university universidade language learning language foundations graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital"
+      "keywords": "tourism turismo hotel hotelaria hospitality reception receção recepcao receptionist recepcionista customer service atendimento atendimento ao cliente serviço ao cliente servico ao cliente restaurant restaurante bar business negócio negocio negócios negocios entrepreneurship empreendedorismo finance finanças financas accounting contabilidade internship estágio estagio job readiness emprego career workplace employability computer computador informática informatica computer basics digital skills competências digitais competencias digitais AI artificial intelligence inteligência artificial inteligencia artificial technology tecnologia internet email documents spreadsheets productivity cybersecurity English inglês ingles French francês frances Dutch neerlandês neerlandes language learning language foundations graphic design design visual design Canva Adobe branding social media design UX UI portfolio digital marketing comunicação visual comunicacao visual creative digital"
     },
     {
       "id": "UNI-104",
@@ -7414,6 +7418,43 @@
       "linkConfidence": "High",
       "publicVisibility": "Public",
       "scheduleSourceType": "Official provider page"
+    },
+    {
+      "id": "RH-EDUSA-001",
+      "provider": "EducationUSA",
+      "program": "EducationUSA Cabo Verde — Study in the U.S. Advising",
+      "family": "EducationUSA",
+      "category": "Scholarships / distance education",
+      "subcategory": "Study in the U.S. advising / university guidance",
+      "languages": "English; Portuguese",
+      "region": "Cabo Verde — Praia",
+      "audience": "Students, youth, prospective university applicants",
+      "cost": "Free advising (official services vary)",
+      "format": "Official advising center + online resources",
+      "availability": "Verify Details",
+      "dateWindow": "Check the official EducationUSA page for current advising services, sessions, and appointment details.",
+      "status": "Verify Details",
+      "publishStatus": "Featured",
+      "priority": "High",
+      "bestFor": "Students exploring how to study at U.S. universities (admissions, advising, testing, and scholarship/financial-aid information)",
+      "description": "Official EducationUSA Cabo Verde information and advising pathway for students interested in studying in the United States. This independently curated Hub only links to the official page — it is not EducationUSA, the U.S. Embassy, American Spaces, UniCV, or a government service, and it does not provide admissions, visa, scholarship, or advising guidance itself. Check the official page for current services, appointment details, and guidance.",
+      "startStep": "Open the official EducationUSA page to find the Cabo Verde / Praia advising center and confirm current services, sessions, locations, and appointment or contact details before acting.",
+      "url": "https://educationusa.state.gov/centers/educationusa-cabo-verde",
+      "confidence": "Medium",
+      "lastChecked": "2026-06-02",
+      "island": "Cabo Verde / National",
+      "location": "Praia, Santiago",
+      "publicStatus": "Verify Details",
+      "needsVerification": true,
+      "verificationNote": "Check official EducationUSA page first",
+      "publicDateText": "Check the official EducationUSA page for current advising services, sessions, and appointment details.",
+      "promotionReadiness": "Featured",
+      "maintenanceTier": "Quarterly",
+      "nextReviewDate": "2026-09-02",
+      "officiality": "Official provider source; verify details and the local Cabo Verde / Praia advising center on the official link",
+      "linkConfidence": "Medium",
+      "publicVisibility": "Public",
+      "keywords": "EducationUSA EducationUSA Cabo Verde EducationUSA Praia study in the U.S. study USA study in the United States estudar nos EUA estudar nos Estados Unidos bolsas EUA U.S. universities university universidade scholarships financial aid TOEFL SAT admissions advising adviser Praia Cabo Verde"
     }
   ],
   "options": {
