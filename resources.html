@@ -231,7 +231,7 @@ html,body{max-width:100%;overflow-x:hidden;}
 .hero.hero-centered .hero-art.hero-art-labeled img{width:100%;height:auto;display:block;border-radius:14px;filter:drop-shadow(0 15px 28px rgba(12,32,64,.06))}
 
 /* Workshop Schedule — date-tile events, visually distinct from Current Opportunities */
-#workshop-schedule .rh-ws-panel{border-top:4px solid var(--teal);background:linear-gradient(180deg,#f3faf7 0%,#ffffff 62%)}
+#workshop-schedule{border-top:4px solid var(--teal);background:linear-gradient(180deg,#f3faf7 0%,#ffffff 62%)}
 .rh-ws-badge{display:inline-block;font-size:.7rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#0f5a48;background:var(--teal2);border:1px solid #bfe3d8;border-radius:999px;padding:5px 11px}
 .rh-ws-head h2{margin:.5rem 0 .35rem}
 .rh-ws-updated{font-size:.85rem;color:var(--muted);font-weight:800;margin:.45rem 0 0}
@@ -244,11 +244,12 @@ html,body{max-width:100%;overflow-x:hidden;}
 .rh-ws-body h3{margin:.1rem 0 .5rem;font-size:1.02rem;color:var(--navy)}
 .rh-ws-meta{list-style:none;margin:0 0 .5rem;padding:0}
 .rh-ws-meta li{margin:3px 0;font-size:.9rem;color:var(--ink)}
-.rh-ws-label{display:inline-block;min-width:62px;font-weight:800;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
+.rh-ws-label{display:inline-block;min-width:62px;font-weight:900;color:var(--navy);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;background:var(--ivory);padding:2px 7px;border-radius:5px;margin-right:2px}
 .rh-ws-body p{margin:.2rem 0 .6rem;font-size:.92rem;color:#31415d}
 .rh-ws-status{display:inline-block;font-size:.72rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
 .rh-ws-status-pending{color:#7a4d00;background:#fff3da;border:1px solid #ead6a0}
 .rh-ws-status-planned{color:#0e4f95;background:var(--sky);border:1px solid #bfe0f1}
+.rh-ws-status-invite{color:#0f5a48;background:var(--teal2);border:1px solid #bfe3d8}
 .rh-ws-note{margin:16px 0 0;font-size:.86rem;color:var(--muted);line-height:1.5;border-top:1px dashed var(--line);padding-top:12px}
 @media(max-width:900px){.rh-ws-grid{grid-template-columns:1fr}}
 
@@ -295,8 +296,8 @@ html,body{max-width:100%;overflow-x:hidden;}
     </div>
   </div>
 </section>
-<section class="section" id="workshop-schedule">
-  <div class="panel rh-ws-panel">
+<section class="section">
+  <div class="panel rh-ws-panel" id="workshop-schedule">
 
     <div class="rh-ws-head">
       <span class="rh-ws-badge">Scheduled events</span>
@@ -310,16 +311,16 @@ html,body{max-width:100%;overflow-x:hidden;}
       <!-- Event 1 -->
       <article class="rh-ws-card">
         <div class="rh-ws-date" aria-hidden="true">
-          <span class="rh-ws-mon">JUL</span>
-          <span class="rh-ws-day">04</span>
+          <span class="rh-ws-mon">JUN</span>
+          <span class="rh-ws-day">11</span>
         </div>
         <div class="rh-ws-body">
-          <h3>American Culture + Opportunity Session</h3>
+          <h3>What Do I Want to Build?</h3>
           <ul class="rh-ws-meta">
             <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
-            <li><span class="rh-ws-label">Location</span> American Spaces Mindelo</li>
+            <li><span class="rh-ws-label">Location</span> American Space Mindelo / UniCV room to be confirmed</li>
           </ul>
-          <p>A practical session connecting U.S. culture, English practice, and learning opportunities.</p>
+          <p>Reflect on independence, opportunity, and your future. Use strategic futuring to imagine your goals and choose one next step.</p>
           <span class="rh-ws-status rh-ws-status-pending">Pending confirmation</span>
         </div>
       </article>
@@ -327,16 +328,16 @@ html,body{max-width:100%;overflow-x:hidden;}
       <!-- Event 2 -->
       <article class="rh-ws-card">
         <div class="rh-ws-date" aria-hidden="true">
-          <span class="rh-ws-mon">JUL</span>
-          <span class="rh-ws-day">05</span>
+          <span class="rh-ws-mon">JUN</span>
+          <span class="rh-ws-day">18</span>
         </div>
         <div class="rh-ws-body">
-          <h3>Resource Hub Orientation</h3>
+          <h3>Find Your Next Step</h3>
           <ul class="rh-ws-meta">
             <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
-            <li><span class="rh-ws-label">Location</span> American Spaces Mindelo</li>
+            <li><span class="rh-ws-label">Location</span> American Space Mindelo / UniCV room to be confirmed</li>
           </ul>
-          <p>Learn how to use the Resource Hub and choose one useful opportunity to start.</p>
+          <p>Explore free courses, digital tools, and online opportunities. Use the Resource Hub to find one practical resource you can start.</p>
           <span class="rh-ws-status rh-ws-status-planned">Planned</span>
         </div>
       </article>
@@ -344,23 +345,91 @@ html,body{max-width:100%;overflow-x:hidden;}
       <!-- Event 3 -->
       <article class="rh-ws-card">
         <div class="rh-ws-date" aria-hidden="true">
-          <span class="rh-ws-mon">JUL</span>
-          <span class="rh-ws-day">06</span>
+          <span class="rh-ws-mon">JUN</span>
+          <span class="rh-ws-day">23</span>
         </div>
         <div class="rh-ws-body">
-          <h3>Free Courses + Digital Skills Clinic</h3>
+          <h3>Three Pathways to Opportunity</h3>
           <ul class="rh-ws-meta">
             <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
-            <li><span class="rh-ws-label">Location</span> American Spaces Mindelo</li>
+            <li><span class="rh-ws-label">Location</span> American Space Mindelo / UniCV room to be confirmed</li>
           </ul>
-          <p>Find one free course or digital-skills resource and learn the next step to begin.</p>
+          <p>Preview the July training tracks: English for Tourism, Career Development, and Business &amp; Entrepreneurship.</p>
           <span class="rh-ws-status rh-ws-status-planned">Planned</span>
+        </div>
+      </article>
+
+      <!-- Event 4 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">01</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>Games / Karaoke / Conversation Night</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
+            <li><span class="rh-ws-label">Location</span> American Space Mindelo / UniCV room to be confirmed</li>
+          </ul>
+          <p>Build confidence, practice English, and connect with others through games, music, karaoke, and relaxed conversation.</p>
+          <span class="rh-ws-status rh-ws-status-planned">Planned</span>
+        </div>
+      </article>
+
+      <!-- Event 5 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">02</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>E-Library Access Workshop</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
+            <li><span class="rh-ws-label">Location</span> American Space Mindelo / UniCV room to be confirmed</li>
+          </ul>
+          <p>Learn how to access and use eLibrary resources for English, study, research, and professional growth.</p>
+          <span class="rh-ws-status rh-ws-status-pending">Pending final confirmation</span>
+        </div>
+      </article>
+
+      <!-- Event 6 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">03</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>Movie + English Discussion Night</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
+            <li><span class="rh-ws-label">Location</span> American Space Mindelo / UniCV room to be confirmed</li>
+          </ul>
+          <p>Watch a U.S.-culture film and join a relaxed English discussion about identity, opportunity, community, and the future.</p>
+          <span class="rh-ws-status rh-ws-status-planned">Planned</span>
+        </div>
+      </article>
+
+      <!-- Event 7 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">04</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>July 4 Community Celebration</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Details shared directly with registered participants</li>
+            <li><span class="rh-ws-label">Location</span> Shared by invitation only</li>
+          </ul>
+          <p>A private community celebration marking 250 years of U.S. Independence and closing the Independence, Opportunity &amp; the Future initiative.</p>
+          <span class="rh-ws-status rh-ws-status-invite">Invite-only</span>
         </div>
       </article>
 
     </div><!-- /.rh-ws-grid -->
 
-    <p class="rh-ws-note">This schedule is maintained as a practical update page for workshop participants. Events connected to American Spaces should be considered confirmed only after coordinator approval.</p>
+    <p class="rh-ws-note">This schedule is maintained as a practical update page for workshop participants. Events connected to American Space Mindelo should be considered confirmed only after coordinator approval.</p>
 
   </div><!-- /.panel -->
 </section>
