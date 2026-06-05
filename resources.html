@@ -230,6 +230,28 @@ html,body{max-width:100%;overflow-x:hidden;}
 .hero.hero-centered .hero-art.hero-art-labeled{background:transparent;border:0;box-shadow:none;border-radius:0;overflow:visible}
 .hero.hero-centered .hero-art.hero-art-labeled img{width:100%;height:auto;display:block;border-radius:14px;filter:drop-shadow(0 15px 28px rgba(12,32,64,.06))}
 
+/* Workshop Schedule — date-tile events, visually distinct from Current Opportunities */
+#workshop-schedule .rh-ws-panel{border-top:4px solid var(--teal);background:linear-gradient(180deg,#f3faf7 0%,#ffffff 62%)}
+.rh-ws-badge{display:inline-block;font-size:.7rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#0f5a48;background:var(--teal2);border:1px solid #bfe3d8;border-radius:999px;padding:5px 11px}
+.rh-ws-head h2{margin:.5rem 0 .35rem}
+.rh-ws-updated{font-size:.85rem;color:var(--muted);font-weight:800;margin:.45rem 0 0}
+.rh-ws-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.rh-ws-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:16px;padding:14px;box-shadow:0 10px 24px rgba(12,32,64,.05)}
+.rh-ws-date{flex:0 0 auto;width:64px;border-radius:12px;overflow:hidden;border:1px solid #d7e8e2;text-align:center;background:#fff}
+.rh-ws-mon{display:block;background:var(--teal);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.08em;padding:4px 0}
+.rh-ws-day{display:block;color:var(--navy);font-size:1.5rem;font-weight:950;line-height:1;padding:8px 0}
+.rh-ws-body{min-width:0}
+.rh-ws-body h3{margin:.1rem 0 .5rem;font-size:1.02rem;color:var(--navy)}
+.rh-ws-meta{list-style:none;margin:0 0 .5rem;padding:0}
+.rh-ws-meta li{margin:3px 0;font-size:.9rem;color:var(--ink)}
+.rh-ws-label{display:inline-block;min-width:62px;font-weight:800;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
+.rh-ws-body p{margin:.2rem 0 .6rem;font-size:.92rem;color:#31415d}
+.rh-ws-status{display:inline-block;font-size:.72rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
+.rh-ws-status-pending{color:#7a4d00;background:#fff3da;border:1px solid #ead6a0}
+.rh-ws-status-planned{color:#0e4f95;background:var(--sky);border:1px solid #bfe0f1}
+.rh-ws-note{margin:16px 0 0;font-size:.86rem;color:var(--muted);line-height:1.5;border-top:1px dashed var(--line);padding-top:12px}
+@media(max-width:900px){.rh-ws-grid{grid-template-columns:1fr}}
+
 </style><!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
 (function(){
@@ -272,6 +294,75 @@ html,body{max-width:100%;overflow-x:hidden;}
       <a class="rh-vnext5k-path-card" href="resources-directory.html?view=find&amp;q=language%20learning#finder"><b>Languages</b><span>Find English, French, Dutch, and other language-learning resources.</span></a>
     </div>
   </div>
+</section>
+<section class="section" id="workshop-schedule">
+  <div class="panel rh-ws-panel">
+
+    <div class="rh-ws-head">
+      <span class="rh-ws-badge">Scheduled events</span>
+      <h2>Workshop Schedule</h2>
+      <p>Upcoming local workshops and training sessions. Check this page before attending because times or locations may change.</p>
+      <p class="rh-ws-updated">Last updated: 5 June 2026</p>
+    </div>
+
+    <div class="rh-ws-grid">
+
+      <!-- Event 1 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">04</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>American Culture + Opportunity Session</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
+            <li><span class="rh-ws-label">Location</span> American Spaces Mindelo</li>
+          </ul>
+          <p>A practical session connecting U.S. culture, English practice, and learning opportunities.</p>
+          <span class="rh-ws-status rh-ws-status-pending">Pending confirmation</span>
+        </div>
+      </article>
+
+      <!-- Event 2 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">05</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>Resource Hub Orientation</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
+            <li><span class="rh-ws-label">Location</span> American Spaces Mindelo</li>
+          </ul>
+          <p>Learn how to use the Resource Hub and choose one useful opportunity to start.</p>
+          <span class="rh-ws-status rh-ws-status-planned">Planned</span>
+        </div>
+      </article>
+
+      <!-- Event 3 -->
+      <article class="rh-ws-card">
+        <div class="rh-ws-date" aria-hidden="true">
+          <span class="rh-ws-mon">JUL</span>
+          <span class="rh-ws-day">06</span>
+        </div>
+        <div class="rh-ws-body">
+          <h3>Free Courses + Digital Skills Clinic</h3>
+          <ul class="rh-ws-meta">
+            <li><span class="rh-ws-label">Time</span> Time to be confirmed</li>
+            <li><span class="rh-ws-label">Location</span> American Spaces Mindelo</li>
+          </ul>
+          <p>Find one free course or digital-skills resource and learn the next step to begin.</p>
+          <span class="rh-ws-status rh-ws-status-planned">Planned</span>
+        </div>
+      </article>
+
+    </div><!-- /.rh-ws-grid -->
+
+    <p class="rh-ws-note">This schedule is maintained as a practical update page for workshop participants. Events connected to American Spaces should be considered confirmed only after coordinator approval.</p>
+
+  </div><!-- /.panel -->
 </section>
 <section class="section" id="current"><div class="panel"><h2>Current &amp; upcoming learning opportunities</h2><p>Start here if you want something active, timely, or worth checking now. Always confirm details on the official provider page.</p><div id="currentCards" class="current-grid"><article class="resource-card softlaunch-fallback-card"><h3>IEFP Cabo Verde</h3><p>Professional training, employment, and internship pathways. Check current listings.</p><a class="btn small ghost" href="https://iefp.gov.cv/" target="_blank" rel="noopener">Go to provider site →</a><details class="provider-language-note"><summary><span aria-hidden="true">ⓘ</span> Site may open in English / Pode abrir em inglês — use browser Translate</summary><p><b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês ou português. Use a opção Traduzir do navegador, se necessário.</p></details></article><article class="resource-card softlaunch-fallback-card"><h3>Skodji Digital</h3><p>Digital skills and employability pathways for Cabo Verdeans. Verify current cycle.</p><a class="btn small ghost" href="https://www.skodjidigital.cv/" target="_blank" rel="noopener">Go to provider site →</a><details class="provider-language-note"><summary><span aria-hidden="true">ⓘ</span> Site may open in English / Pode abrir em inglês — use browser Translate</summary><p><b>Site language:</b> Provider language may vary. Official provider sites may open in English or Portuguese. Use your browser’s Translate option if needed. / Os sites oficiais podem abrir em inglês ou português. Use a opção Traduzir do navegador, se necessário.</p></details></article><article class="resource-card softlaunch-fallback-card"><h3>Open full directory</h3><p>If live cards do not appear, open the full directory and search by topic or provider.</p><a class="btn small ghost" href="resources-directory.html?view=find#finder">Open directory →</a></article></div><div class="row"><a class="btn primary" href="resources-directory.html?view=find#finder">Open full directory</a><a class="btn ghost" href="resources-directory.html?view=guide">Start the 30-second guide</a></div></div></section>
 <section class="section" id="steps"><div class="steps"><div class="step"><div class="num">1</div><h3>Choose one path</h3><p>Pick the topic closest to your goal right now: language, digital skills, career, study, entrepreneurship, AI/technology, or current opportunities.</p></div><div class="step"><div class="num">2</div><h3>Explore one resource</h3><p>Use the guide or filters to narrow the directory. They are tools to help you start, not tests you can fail.</p></div><div class="step"><div class="num">3</div><h3>Save your next step</h3><p>Save two or three options so you can come back later, copy the list, email it to yourself, or download it.</p></div><div class="step"><div class="num">4</div><h3>Act on the official page</h3><p>This hub points you toward resources. The official provider page is where you confirm deadlines, cost, eligibility, certificates, and registration.</p></div></div></section>
