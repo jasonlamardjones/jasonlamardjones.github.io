@@ -1,0 +1,132 @@
+{
+  "package": "American Space Mindelo / UniCV America250 — Corrected Flyer Package",
+  "generated": "2026-06-06",
+  "correction_script": "apply_corrections_v3.py",
+  "qa_status": "PASSED — all six PNGs pixel-verified",
+  "files_in_package": {
+    "corrected_pngs": [
+      "01_main_initiative_independence_opportunity_future.png",
+      "02_workshop_1_what_do_i_want_to_build.png",
+      "03_workshop_2_find_your_next_step.png",
+      "04_workshop_3_three_pathways_to_opportunity.png",
+      "05_final_week_activities_corrected_header.png",
+      "06_elibraryusa_access_workshop.png"
+    ],
+    "corrected_pdfs": [
+      "pdfs/01_main_initiative_independence_opportunity_future.pdf",
+      "pdfs/02_workshop_1_what_do_i_want_to_build.pdf",
+      "pdfs/03_workshop_2_find_your_next_step.pdf",
+      "pdfs/04_workshop_3_three_pathways_to_opportunity.pdf",
+      "pdfs/05_final_week_activities_corrected_header.pdf",
+      "pdfs/06_elibraryusa_access_workshop.pdf"
+    ],
+    "contact_sheet": "00_corrected_contact_sheet.jpg",
+    "logs": [
+      "CORRECTION_LOG.json",
+      "COMPLETION_REPORT.json"
+    ]
+  },
+  "corrections_applied": {
+    "F01": {
+      "flyer": "01_main_initiative_independence_opportunity_future.png",
+      "change": "PT subtitle second line",
+      "before": "atividades de inglês/cultura e eventos da semana final.",
+      "after": "atividades de inglês e cultura e eventos da semana final.",
+      "qa": "Orange-red text pixel confirmed at y=617 ✓"
+    },
+    "F02": {
+      "flyer": "02_workshop_1_what_do_i_want_to_build.png",
+      "change": "Banner PT line",
+      "before": "WORKSHOP 1 • REFLEXÃO, VISÃO E FUTUROS",
+      "after": "WORKSHOP 1 • REFLEXÃO, VISÃO E FUTURO",
+      "qa": "Gold text present y=623+ (fill covered y=617-675; original at y=619 erased) ✓"
+    },
+    "F03": {
+      "flyer": "03_workshop_2_find_your_next_step.png",
+      "change": "Body paragraph EN + PT — Resource Hub references removed",
+      "before_EN": "Learn how to use the Resource Hub to find practical opportunities you can start today.",
+      "after_EN": "Learn how to find practical opportunities, free tools, and courses you can start using today.",
+      "before_PT": "Aprenda a usar o Resource Hub para encontrar oportunidades práticas que pode começar hoje.",
+      "after_PT": "Aprenda a encontrar oportunidades práticas, ferramentas gratuitas e cursos que pode começar a usar hoje.",
+      "qa": "Cream background confirmed in fill zone; no Resource Hub text ✓"
+    },
+    "F04": {
+      "flyer": "04_workshop_3_three_pathways_to_opportunity.png",
+      "change": "None",
+      "note": "No corrections required — copied unchanged.",
+      "qa": "Dimensions match source ✓"
+    },
+    "F05": {
+      "flyer": "05_final_week_activities_corrected_header.png",
+      "change": "PT label for eLibraryUSA schedule row",
+      "before": "Workshop de Acesso eLibraryUSA",
+      "after": "Workshop de Acesso à eLibraryUSA",
+      "note_e_comunidade": "PT 'Cultura, conversa e comunidade' — confirmed already correct in source; no change applied.",
+      "qa": "Red text rows 958-985 confirmed; two-line draw keeps 'eLibraryUSA' intact ✓"
+    },
+    "F06": {
+      "flyer": "06_elibraryusa_access_workshop.png",
+      "changes": {
+        "headline_EN": {
+          "before": "10,000+ books, audiobooks & learning resources",
+          "after": "thousands of books, audiobooks & learning resources"
+        },
+        "headline_PT": {
+          "before": "Aceda a 10.000+ livros, audiolivros e recursos de aprendizagem gratuitos",
+          "after": "Aceda a milhares de livros, audiolivros e recursos de aprendizagem gratuitos"
+        },
+        "banner_PT": {
+          "before": "Workshop de Acesso eLibraryUSA",
+          "after": "Workshop de Acesso à eLibraryUSA"
+        },
+        "icon_label": {
+          "before": "Livros eletrônicos",
+          "after": "Livros eletrónicos"
+        },
+        "step3_EN": {
+          "before": "Activate your account",
+          "after": "Start your account activation"
+        },
+        "step3_PT": {
+          "before": "Ative a sua conta",
+          "after": "Inicie a ativação da sua conta"
+        }
+      },
+      "qa": "Headline: no gold pixels y=183-203 (old text erased), gold at y=204+ (new text) ✓; Step 3: cream bg RGB(253,252,248) + dark-blue text rows 1139-1148 ✓"
+    }
+  },
+  "coordinator_confirmation_items": [
+    {
+      "id": "CC-01",
+      "item": "eLibraryUSA account activation guarantee",
+      "detail": "Step 3 now reads 'Start your account activation / Inicie a ativação da sua conta'. If coordinator confirms activation is immediate and guaranteed on the day, can be updated to 'Activate your account / Ative a sua conta'."
+    },
+    {
+      "id": "CC-02",
+      "item": "QR code destination",
+      "detail": "QR code appears as placeholder on all six flyers. Final URL for registration/schedule/details not yet set."
+    },
+    {
+      "id": "CC-03",
+      "item": "Third-party brand marks (ProQuest / Flipster / Libby logos)",
+      "detail": "If any of these logos appear embedded in a screenshot element on F06, coordinator should confirm licensing/permission before public release."
+    },
+    {
+      "id": "CC-04",
+      "item": "ASM logo / UniCV / FCSHA logo authorisation",
+      "detail": "Confirm logos are authorised versions at correct current lockup."
+    },
+    {
+      "id": "CC-05",
+      "item": "July 4 invite-only eligibility",
+      "detail": "F05 July 4 entry describes invite-only / registered participants only. Confirm this remains the intended public-facing wording."
+    },
+    {
+      "id": "CC-06",
+      "item": "Possible typo: 'se registarr' (double-r) in F06 Portuguese body",
+      "detail": "Spotted possible double-r in 'registarr' in F06 PT step text. Requires visual inspection of the original source file to confirm; could not be definitively pixel-read at correction time."
+    }
+  ],
+  "unresolved_items": [],
+  "public_readiness": "With these corrections applied, the package is ready for coordinator sign-off. The six coordinator-confirmation items above should be reviewed before final public release. No Resource Hub URLs, no Djan Djan / venue / alcohol details, no overpromised eLibraryUSA account guarantee, and no unofficial embassy approval claims are present in the corrected set."
+}
