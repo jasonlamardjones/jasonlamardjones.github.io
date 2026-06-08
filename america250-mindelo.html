@@ -11,17 +11,36 @@
 <style>
 /* Page-scoped styling only. This page reuses a subset of the Learning & Career
    Resource Hub design tokens/class names (resources.html) and layers a
-   page-specific America250 red/white/blue campaign treatment on top. Nothing
-   here touches style.css — all rules are inline and scoped to this page. */
-:root{--navy:#0C2040;--ink:#172033;--muted:#5C667A;--line:#E7E1D6;--paper:#FFFDF8;--ivory:#F7F3EA;--cream:#fbfdff;--gold:#C09440;--teal:#1F6F5B;--teal2:#D9EFE8;--green:#4f7d3d;--blue:#0E4F95;--sky:#eaf4fa;--soft:#f7fbfd;--shadow:0 16px 38px rgba(12,32,64,.07);--radius:22px;
-/* America250 campaign palette (flag-inspired, kept credible — not garish) */
---flag-red:#B22234;--flag-red-deep:#8E1B29;--flag-blue:#0A3161;--flag-blue-soft:#13407e;
+   page-specific America250 red/white/blue special-event campaign treatment on
+   top, inspired by the printed event flyer: deep navy night-sky atmosphere,
+   white/cream cards, gold star accents, a large "250", a tricolor ribbon, and
+   CSS-only star/firework accents. Nothing here touches style.css — all rules
+   are inline and scoped to this page, and no image files are used. */
+:root{--navy:#0A1F44;--navy-2:#0c2a5a;--navy-deep:#06142e;--ink:#172033;--muted:#5C667A;--line:#E7E1D6;--paper:#FFFDF8;--ivory:#F7F3EA;--cream:#fffdf8;--gold:#F4C430;--gold-soft:#FFE08A;--flag-red:#C8102E;--flag-red-deep:#8E1B29;--flag-blue:#0A3161;--flag-blue-soft:#13407e;--sky:#eaf4fa;--soft:#f7fbfd;--shadow:0 18px 44px rgba(3,10,28,.34);--radius:22px;
 --v2-heading:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;--v2-body:'Manrope','Avenir Next',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:108px}
-body{margin:0;font-family:var(--v2-body);background:linear-gradient(180deg,#f4f7fc 0%,var(--paper) 46%,var(--soft) 100%);color:var(--ink);line-height:1.62;overflow-x:hidden}
+body{margin:0;font-family:var(--v2-body);color:var(--ink);line-height:1.62;overflow-x:hidden;
+background:linear-gradient(180deg,#06142e 0%,#0A1F44 46%,#0c2a5a 100%)}
+/* fixed night-sky starfield + subtle firework glows (CSS only) */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+background-image:
+ radial-gradient(170px 170px at 86% 14%, rgba(200,16,46,.16), transparent 70%),
+ radial-gradient(190px 190px at 12% 24%, rgba(13,64,126,.22), transparent 70%),
+ radial-gradient(150px 150px at 70% 78%, rgba(244,196,48,.10), transparent 70%),
+ radial-gradient(2px 2px at 12% 18%, rgba(255,255,255,.75), transparent),
+ radial-gradient(1.6px 1.6px at 82% 12%, rgba(255,255,255,.6), transparent),
+ radial-gradient(2px 2px at 26% 42%, rgba(244,196,48,.6), transparent),
+ radial-gradient(1.6px 1.6px at 68% 30%, rgba(255,255,255,.55), transparent),
+ radial-gradient(1.6px 1.6px at 44% 8%, rgba(255,255,255,.5), transparent),
+ radial-gradient(2px 2px at 92% 58%, rgba(244,196,48,.5), transparent),
+ radial-gradient(1.6px 1.6px at 8% 66%, rgba(255,255,255,.45), transparent),
+ radial-gradient(1.6px 1.6px at 58% 88%, rgba(255,255,255,.4), transparent),
+ radial-gradient(1.6px 1.6px at 34% 72%, rgba(244,196,48,.4), transparent);
+background-repeat:no-repeat}
+.topbar,main,.footer{position:relative;z-index:1}
 a{color:var(--flag-blue-soft);text-decoration:none}a:hover{text-decoration:underline}
 h1,h2,h3,.brand-lockup-title{font-family:var(--v2-heading);color:var(--flag-blue)}
-h1{font-size:clamp(2.1rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 8px}
+h1{font-size:clamp(2.1rem,5.4vw,3.7rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 8px}
 h2{font-size:clamp(1.55rem,3vw,2.35rem);line-height:1.05;margin:0 0 6px}
 h3{font-size:1.16rem;margin:.2rem 0 .3rem;color:var(--flag-blue)}
 p{margin:.6rem 0;color:#31415d}
@@ -30,45 +49,61 @@ p{margin:.6rem 0;color:#31415d}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#fff;background:var(--flag-red);font-weight:900;border-radius:999px;padding:6px 14px;font-size:.82rem;letter-spacing:.04em;margin-bottom:14px}
 .page-sub{font-family:var(--v2-heading);font-style:italic;color:var(--flag-red);font-size:clamp(1.1rem,2.4vw,1.5rem);margin:0 0 14px;line-height:1.2}
 .sub-en{font-family:var(--v2-heading);font-style:italic;color:var(--muted);font-size:1.02rem;font-weight:600;margin:0 0 12px}
-/* topbar — mirrors resources.html, with campaign red top edge */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,251,.975);border-top:4px solid var(--flag-red);border-bottom:1px solid rgba(12,32,64,.10);box-shadow:0 8px 26px rgba(12,32,64,.05);backdrop-filter:blur(14px)}
+/* topbar — light bar with campaign red top edge, legible over the dark page */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.97);border-top:4px solid var(--flag-red);border-bottom:1px solid rgba(3,10,28,.18);box-shadow:0 8px 26px rgba(3,10,28,.28);backdrop-filter:blur(14px)}
 .top-inner{max-width:1100px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
 .vnext-brand{display:flex;align-items:center;gap:12px;color:var(--navy);text-decoration:none;min-width:0}
-.brand-mark-inline{width:52px;height:52px;flex:0 0 52px;display:block;filter:drop-shadow(0 4px 10px rgba(12,32,64,.08))}
+.brand-mark-inline{width:52px;height:52px;flex:0 0 52px;display:block;filter:drop-shadow(0 4px 10px rgba(3,10,28,.18))}
 .brand-lockup-title{display:block;font-weight:700;font-size:1.02rem;line-height:1.05;color:var(--navy)}
 .brand-lockup-byline{display:block;font-size:.74rem;letter-spacing:.05em;color:var(--navy);margin-top:3px}
 .gold{color:var(--gold)}
-/* layout primitives — mirror resources.html */
+/* layout primitives */
 .section{max-width:1100px;margin:26px auto;padding:0 18px;scroll-margin-top:108px}
-.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+.panel{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
 .callout{border-left:5px solid var(--flag-blue);background:#f5f9ff}
 .warning{border-left:5px solid var(--gold);background:#fffaf0}
 .list{margin:.4rem 0;padding-left:1.2rem}.list li{margin:7px 0;color:#31415d}
 .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:999px;padding:11px 16px;font-weight:900;cursor:pointer;background:#fff;color:var(--flag-blue);text-decoration:none;line-height:1.15}
 .btn.primary{background:var(--flag-blue);color:#fff}.btn.red{background:var(--flag-red);color:#fff}.btn.ghost{border-color:#bcd0e6;background:#fff;color:var(--flag-blue)}.btn.soft{background:var(--sky);color:#0c2f5c;border-color:#bfdcf1}.btn.small{padding:8px 13px;font-size:.9rem}
-.btn:hover{text-decoration:none;filter:brightness(1.04)}
-/* hero — campaign card with flag ribbon */
-.hero{max-width:1100px;margin:0 auto;padding:34px 18px 8px}
-.campaign-ribbon{height:7px;border-radius:7px;background:linear-gradient(90deg,var(--flag-red) 0 33.3%,#ffffff 33.3% 66.6%,var(--flag-blue) 66.6% 100%);box-shadow:inset 0 0 0 1px rgba(12,32,64,.06),0 3px 10px rgba(12,32,64,.07);margin-bottom:20px}
-.campaign-hero{background:linear-gradient(180deg,#ffffff 0%,#f6f9ff 100%);border:1px solid var(--line);border-top:5px solid var(--flag-red);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(22px,4vw,38px)}
+.btn:hover{text-decoration:none;filter:brightness(1.05)}
+/* hero — campaign card with tricolor ribbon + large 250 */
+.hero{max-width:1100px;margin:0 auto;padding:30px 18px 8px}
+.campaign-ribbon{height:8px;border-radius:8px;background:linear-gradient(90deg,var(--flag-red) 0 33.3%,#ffffff 33.3% 66.6%,var(--flag-blue) 66.6% 100%);box-shadow:inset 0 0 0 1px rgba(3,10,28,.10),0 4px 14px rgba(3,10,28,.4);margin-bottom:20px}
+.campaign-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#ffffff 0%,#f6f9ff 100%);border:1px solid var(--line);border-top:5px solid var(--flag-red);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(22px,4vw,38px)}
+.campaign-hero::before{content:"";position:absolute;top:-40px;right:-30px;width:180px;height:180px;pointer-events:none;background:
+ radial-gradient(closest-side, rgba(244,196,48,.18), transparent 70%),
+ conic-gradient(from 0deg, transparent 0 8deg, rgba(244,196,48,.16) 8deg 10deg, transparent 10deg 30deg, rgba(200,16,46,.12) 30deg 32deg, transparent 32deg 60deg, rgba(13,64,126,.12) 60deg 62deg, transparent 62deg);border-radius:50%}
+.celebrate{display:flex;align-items:center;gap:16px;margin:4px 0 14px;flex-wrap:wrap}
+.celebrate-250{font-family:var(--v2-heading);font-weight:800;font-size:clamp(3.1rem,11vw,5.4rem);line-height:.86;color:var(--flag-red);text-shadow:0 2px 0 var(--gold),0 0 20px rgba(244,196,48,.45);letter-spacing:-.02em}
+.celebrate-text b{display:block;color:var(--flag-blue);font-family:var(--v2-heading);font-size:1.06rem;line-height:1.16}
+.celebrate-text span{display:block;color:var(--muted);font-style:italic;font-size:.92rem;margin-top:2px}
 .hero-anchors{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .hero-anchors a{font-size:.86rem;font-weight:800;color:var(--flag-blue);background:#eef4fc;border:1px solid #d8e6f5;border-radius:999px;padding:6px 12px}
 .hero-anchors a:hover{text-decoration:none;background:#e3eefb}
 .translate-note{margin-top:16px;background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#3a3322}
 .translate-note .en{color:var(--muted);display:block;margin-top:2px}
-/* workshop date pill + status — page-scoped, campaign colours */
+/* on-dark headings (sit directly on the navy campaign background) */
+.flourish{color:var(--gold);letter-spacing:.5em;font-size:.9rem;margin:0 0 4px}
+.sched-head{max-width:860px;margin-bottom:4px}
+.on-dark h2{color:#fff}
+.on-dark .sub-en{color:var(--gold-soft)}
+.on-dark p{color:#d7e0f2}
+/* workshop date pill + status */
 .rh-ws-date{flex:0 0 auto;min-width:70px;border-radius:12px;overflow:hidden;border:1px solid #cdd9ea;text-align:center;background:#fff}
 .rh-ws-mon{display:block;background:var(--flag-blue);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.07em;padding:5px 6px;text-transform:uppercase}
 .rh-ws-day{display:block;color:var(--flag-red);font-size:1.5rem;font-weight:950;line-height:1.05;padding:8px 6px}
 .rh-ws-day.is-range{font-size:1.05rem;padding:10px 8px}
 .rh-ws-status{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
 .rh-ws-status-pending{color:#7a4d00;background:#fff3da;border:1px solid #ead6a0}
-.rh-ws-status-invite{color:#0f5a48;background:var(--teal2);border:1px solid #bfe3d8}
-/* schedule cards — page-specific, two-up on wide screens, lean content */
-.rh-ws-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
-.rh-ws-detail{background:#fff;border:1px solid var(--line);border-left:5px solid var(--flag-red);border-radius:16px;box-shadow:0 10px 24px rgba(12,32,64,.05);padding:20px;display:flex;flex-direction:column}
-.rh-ws-detail-head{display:flex;gap:14px;align-items:flex-start}
+.rh-ws-status-invite{color:#0f5a48;background:#D9EFE8;border:1px solid #bfe3d8}
+/* schedule cards — white cards on the dark campaign background, numbered like the flyer */
+.rh-ws-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px;counter-reset:wsnum}
+.rh-ws-detail{counter-increment:wsnum;background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--flag-red);border-radius:16px;box-shadow:0 14px 30px rgba(3,10,28,.34);padding:20px;display:flex;flex-direction:column}
+.rh-ws-detail:nth-child(even){border-left-color:var(--flag-blue)}
+.rh-ws-detail-head{display:flex;gap:12px;align-items:flex-start}
+.rh-ws-detail-head::before{content:counter(wsnum);flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:var(--flag-red);color:#fff;font-family:var(--v2-heading);font-weight:800;font-size:1.25rem;border:2px solid var(--gold);box-shadow:0 4px 12px rgba(3,10,28,.3)}
+.rh-ws-detail:nth-child(even) .rh-ws-detail-head::before{background:var(--flag-blue)}
 .rh-ws-detail-titles{min-width:0;flex:1 1 auto}
 .rh-ws-detail-titles h3{margin:.1rem 0 .2rem;font-size:1.12rem}
 .rh-ws-pt{font-family:var(--v2-heading);font-style:italic;color:var(--muted);font-size:.96rem;margin:0}
@@ -81,13 +116,19 @@ p{margin:.6rem 0;color:#31415d}
 .reg-capacity{margin-top:14px;background:#fef5f5;border:1px solid #f0cdcd;border-left:5px solid var(--flag-red);border-radius:12px;padding:12px 15px}
 .reg-capacity p{margin:.2rem 0;color:#5b2a2f}.reg-capacity .en{color:#8a5b5f;font-size:.92rem}
 .reg-updates{margin-top:16px;font-size:.94rem;color:#31415d}.reg-updates .en{display:block;color:var(--muted);margin-top:3px}
-.footer{max-width:1100px;margin:42px auto 0;padding:26px 18px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
-.footer a{font-weight:700}
+/* closing campaign tagline band */
+.tagline-band{position:relative;text-align:center;background:linear-gradient(180deg,#0c2a5a 0%,#0A1F44 100%);border:1px solid rgba(244,196,48,.5);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 22px}
+.tagline-band:before{content:"\2605 \2605 \2605";display:block;color:var(--gold);letter-spacing:.45em;font-size:.85rem;margin-bottom:8px}
+.tagline-band b{display:block;font-family:var(--v2-heading);color:#fff;font-size:clamp(1.3rem,3.4vw,1.9rem);line-height:1.15}
+.tagline-band span{display:block;color:var(--gold-soft);font-style:italic;margin-top:4px;font-size:1rem}
+.footer{max-width:1100px;margin:42px auto 0;padding:26px 18px;border-top:1px solid rgba(231,225,214,.35);color:#aeb9d0;font-size:.92rem}
+.footer p{color:#aeb9d0}
+.footer a{font-weight:700;color:var(--gold-soft)}
 @media(max-width:860px){.rh-ws-detail-grid{grid-template-columns:1fr}}
 @media(max-width:640px){
   .top-inner{align-items:flex-start}
-  .hero{padding-top:24px}
-  .panel,.rh-ws-detail,.campaign-hero{padding:18px}
+  .hero{padding-top:22px}
+  .panel,.rh-ws-detail,.campaign-hero,.tagline-band{padding:18px}
   .row .btn{flex:1 1 auto;justify-content:center}
 }
 </style>
@@ -110,6 +151,13 @@ p{margin:.6rem 0;color:#31415d}
   <div class="campaign-ribbon" aria-hidden="true"></div>
   <div class="campaign-hero">
     <span class="eyebrow">America250 · American Space Mindelo / UniCV</span>
+    <div class="celebrate">
+      <span class="celebrate-250" aria-hidden="true">250</span>
+      <div class="celebrate-text">
+        <b>Celebrando 250 anos da Independência dos EUA</b>
+        <span lang="en">Celebrating 250 Years of U.S. Independence</span>
+      </div>
+    </div>
     <h1>Independência, Oportunidade e Futuro</h1>
     <p class="page-sub">Independence, Opportunity &amp; the Future</p>
     <p class="lead">Uma semana de workshops, recursos e atividades no American Space Mindelo / UniCV.</p>
@@ -143,15 +191,17 @@ p{margin:.6rem 0;color:#31415d}
   </div>
 </section>
 
-<!-- 2. WORKSHOP SCHEDULE (canonical 7-card split) -->
+<!-- 2. WORKSHOP SCHEDULE (canonical 7-card split, on dark campaign background) -->
 <section class="section" id="schedule">
-  <div class="panel">
+  <div class="sched-head on-dark">
+    <p class="flourish" aria-hidden="true">&#9733; &#9733; &#9733;</p>
     <h2>Calendário dos Workshops</h2>
     <p class="sub-en" lang="en">Workshop Schedule</p>
     <p>Sete sessões ao longo de junho e julho. Horários e salas são confirmados através das atualizações da inscrição.</p>
     <p class="sub-en" lang="en">Seven sessions across June and July. Times and rooms are confirmed through registration updates.</p>
+  </div>
 
-    <div class="rh-ws-detail-grid">
+  <div class="rh-ws-detail-grid">
 
       <!-- Jun 11 -->
       <article class="rh-ws-detail">
@@ -246,12 +296,11 @@ p{margin:.6rem 0;color:#31415d}
         <p class="rh-ws-desc en" lang="en">A private community celebration marking 250 years of U.S. Independence and closing the Independence, Opportunity &amp; the Future initiative. Details are shared only with confirmed registered participants.</p>
       </article>
 
-    </div><!-- /.rh-ws-detail-grid -->
+  </div><!-- /.rh-ws-detail-grid -->
 
-    <p class="sched-note">Horários e salas são confirmados através das atualizações da inscrição. Confirme antes de participar, pois horários ou locais podem mudar. As atividades ligadas ao American Space Mindelo são consideradas confirmadas apenas após aprovação do coordenador.
-      <span class="en" lang="en">Times and rooms are confirmed through registration updates. Check before attending, because times or locations may change. Activities connected to American Space Mindelo are considered confirmed only after coordinator approval.</span>
-    </p>
-  </div>
+  <p class="sched-note">Horários e salas são confirmados através das atualizações da inscrição. Confirme antes de participar, pois horários ou locais podem mudar. As atividades ligadas ao American Space Mindelo são consideradas confirmadas apenas após aprovação do coordenador.
+    <span class="en" lang="en">Times and rooms are confirmed through registration updates. Check before attending, because times or locations may change. Activities connected to American Space Mindelo are considered confirmed only after coordinator approval.</span>
+  </p>
 </section>
 
 <!-- 3. WHAT YOU WILL LEARN -->
@@ -300,7 +349,15 @@ p{margin:.6rem 0;color:#31415d}
   </div>
 </section>
 
-<!-- 5. IMPORTANT NOTE -->
+<!-- 5. CLOSING CAMPAIGN TAGLINE -->
+<section class="section">
+  <div class="tagline-band">
+    <b>Celebre o nosso passado, inspire o nosso futuro!</b>
+    <span lang="en">Celebrate our past, inspire our future!</span>
+  </div>
+</section>
+
+<!-- 6. IMPORTANT NOTE -->
 <section class="section" id="note">
   <div class="panel warning">
     <h2>Nota importante</h2>
