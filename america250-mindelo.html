@@ -14,19 +14,16 @@
    page-specific America250 red/white/blue special-event campaign treatment on
    top, inspired by the printed event flyer: deep navy night-sky atmosphere,
    white/cream cards, gold star accents, a large "250", a tricolor ribbon, and
-   CSS-only star/firework accents. Nothing here touches style.css — all rules
-   are inline and scoped to this page, and no image files are used. */
+   CSS-only star accents. Nothing here touches style.css — all rules are inline
+   and scoped to this page, and no image files are used. */
 :root{--navy:#0A1F44;--navy-2:#0c2a5a;--navy-deep:#06142e;--ink:#172033;--muted:#5C667A;--line:#E7E1D6;--paper:#FFFDF8;--ivory:#F7F3EA;--cream:#fffdf8;--gold:#F4C430;--gold-soft:#FFE08A;--flag-red:#C8102E;--flag-red-deep:#8E1B29;--flag-blue:#0A3161;--flag-blue-soft:#13407e;--sky:#eaf4fa;--soft:#f7fbfd;--shadow:0 18px 44px rgba(3,10,28,.34);--radius:22px;
 --v2-heading:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;--v2-body:'Manrope','Avenir Next',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:108px}
 body{margin:0;font-family:var(--v2-body);color:var(--ink);line-height:1.62;overflow-x:hidden;
 background:linear-gradient(180deg,#06142e 0%,#0A1F44 46%,#0c2a5a 100%)}
-/* fixed night-sky starfield + subtle firework glows (CSS only) */
+/* fixed night-sky starfield (CSS only) */
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
 background-image:
- radial-gradient(170px 170px at 86% 14%, rgba(200,16,46,.16), transparent 70%),
- radial-gradient(190px 190px at 12% 24%, rgba(13,64,126,.22), transparent 70%),
- radial-gradient(150px 150px at 70% 78%, rgba(244,196,48,.10), transparent 70%),
  radial-gradient(2px 2px at 12% 18%, rgba(255,255,255,.75), transparent),
  radial-gradient(1.6px 1.6px at 82% 12%, rgba(255,255,255,.6), transparent),
  radial-gradient(2px 2px at 26% 42%, rgba(244,196,48,.6), transparent),
@@ -49,6 +46,10 @@ p{margin:.6rem 0;color:#31415d}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#fff;background:var(--flag-red);font-weight:900;border-radius:999px;padding:6px 14px;font-size:.82rem;letter-spacing:.04em;margin-bottom:14px}
 .page-sub{font-family:var(--v2-heading);font-style:italic;color:var(--flag-red);font-size:clamp(1.1rem,2.4vw,1.5rem);margin:0 0 14px;line-height:1.2}
 .sub-en{font-family:var(--v2-heading);font-style:italic;color:var(--muted);font-size:1.02rem;font-weight:600;margin:0 0 12px}
+/* reusable English-translation styling — kept visually secondary to Portuguese */
+.en-translation{font-style:italic;font-weight:700;color:var(--muted)}
+.en-translation.long{font-weight:600;font-size:.94rem;line-height:1.55}
+.en-translation.on-dark{color:var(--gold-soft)}
 /* topbar — light bar with campaign red top edge, legible over the dark page */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.97);border-top:4px solid var(--flag-red);border-bottom:1px solid rgba(3,10,28,.18);box-shadow:0 8px 26px rgba(3,10,28,.28);backdrop-filter:blur(14px)}
 .top-inner{max-width:1100px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
@@ -67,13 +68,18 @@ p{margin:.6rem 0;color:#31415d}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:999px;padding:11px 16px;font-weight:900;cursor:pointer;background:#fff;color:var(--flag-blue);text-decoration:none;line-height:1.15}
 .btn.primary{background:var(--flag-blue);color:#fff}.btn.red{background:var(--flag-red);color:#fff}.btn.ghost{border-color:#bcd0e6;background:#fff;color:var(--flag-blue)}.btn.soft{background:var(--sky);color:#0c2f5c;border-color:#bfdcf1}.btn.small{padding:8px 13px;font-size:.9rem}
 .btn:hover{text-decoration:none;filter:brightness(1.05)}
-/* hero — campaign card with tricolor ribbon + large 250 */
+/* hero — campaign card with tricolor ribbon + large 250 + coded star cluster */
 .hero{max-width:1100px;margin:0 auto;padding:30px 18px 8px}
 .campaign-ribbon{height:8px;border-radius:8px;background:linear-gradient(90deg,var(--flag-red) 0 33.3%,#ffffff 33.3% 66.6%,var(--flag-blue) 66.6% 100%);box-shadow:inset 0 0 0 1px rgba(3,10,28,.10),0 4px 14px rgba(3,10,28,.4);margin-bottom:20px}
 .campaign-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#ffffff 0%,#f6f9ff 100%);border:1px solid var(--line);border-top:5px solid var(--flag-red);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(22px,4vw,38px)}
-.campaign-hero::before{content:"";position:absolute;top:-40px;right:-30px;width:180px;height:180px;pointer-events:none;background:
- radial-gradient(closest-side, rgba(244,196,48,.18), transparent 70%),
- conic-gradient(from 0deg, transparent 0 8deg, rgba(244,196,48,.16) 8deg 10deg, transparent 10deg 30deg, rgba(200,16,46,.12) 30deg 32deg, transparent 32deg 60deg, rgba(13,64,126,.12) 60deg 62deg, transparent 62deg);border-radius:50%}
+.hero-star-cluster{position:absolute;top:16px;right:18px;width:clamp(92px,24vw,158px);height:auto;pointer-events:none;opacity:.9}
+.star-gold{fill:var(--gold)}
+.star-gold-soft{fill:var(--gold-soft)}
+.star-white{fill:rgba(255,255,255,.92)}
+.dot-red{fill:var(--flag-red)}
+.dot-blue{fill:var(--flag-blue)}
+.dot-gold{fill:var(--gold)}
+.dot-white{fill:rgba(255,255,255,.86)}
 .celebrate{display:flex;align-items:center;gap:16px;margin:4px 0 14px;flex-wrap:wrap}
 .celebrate-250{font-family:var(--v2-heading);font-weight:800;font-size:clamp(3.1rem,11vw,5.4rem);line-height:.86;color:var(--flag-red);text-shadow:0 2px 0 var(--gold),0 0 20px rgba(244,196,48,.45);letter-spacing:-.02em}
 .celebrate-text b{display:block;color:var(--flag-blue);font-family:var(--v2-heading);font-size:1.06rem;line-height:1.16}
@@ -106,15 +112,18 @@ p{margin:.6rem 0;color:#31415d}
 .rh-ws-detail:nth-child(even) .rh-ws-detail-head::before{background:var(--flag-blue)}
 .rh-ws-detail-titles{min-width:0;flex:1 1 auto}
 .rh-ws-detail-titles h3{margin:.1rem 0 .2rem;font-size:1.12rem}
-.rh-ws-pt{font-family:var(--v2-heading);font-style:italic;color:var(--muted);font-size:.96rem;margin:0}
+.rh-ws-pt{font-family:var(--v2-heading);font-size:.96rem;margin:0}
 .rh-ws-desc{margin:12px 0 0;color:#31415d;font-size:.97rem}
-.rh-ws-desc.en{color:var(--muted);font-size:.9rem;margin-top:6px}
+.rh-ws-desc.en{margin-top:6px}
+.rh-ws-detail-more{margin-top:14px;padding:12px 14px;border-radius:12px;background:#f7f3ea;border:1px solid var(--line);font-size:.92rem}
+.rh-ws-detail-more p{margin:.35rem 0;color:#31415d}
+.rh-ws-detail-more b{color:var(--flag-blue)}
 .sched-note{margin:16px 0 0;background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:.92rem;color:#3a3322}
 .sched-note .en{display:block;color:var(--muted);margin-top:3px}
 /* registration block */
 .reg-panel{border-top:5px solid var(--flag-blue)}
 .reg-capacity{margin-top:14px;background:#fef5f5;border:1px solid #f0cdcd;border-left:5px solid var(--flag-red);border-radius:12px;padding:12px 15px}
-.reg-capacity p{margin:.2rem 0;color:#5b2a2f}.reg-capacity .en{color:#8a5b5f;font-size:.92rem}
+.reg-capacity p{margin:.2rem 0;color:#5b2a2f}.reg-capacity .en{color:#8a5b5f}
 .reg-updates{margin-top:16px;font-size:.94rem;color:#31415d}.reg-updates .en{display:block;color:var(--muted);margin-top:3px}
 /* closing campaign tagline band */
 .tagline-band{position:relative;text-align:center;background:linear-gradient(180deg,#0c2a5a 0%,#0A1F44 100%);border:1px solid rgba(244,196,48,.5);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 22px}
@@ -130,6 +139,7 @@ p{margin:.6rem 0;color:#31415d}
   .hero{padding-top:22px}
   .panel,.rh-ws-detail,.campaign-hero,.tagline-band{padding:18px}
   .row .btn{flex:1 1 auto;justify-content:center}
+  .hero-star-cluster{top:12px;right:12px;width:82px;opacity:.48}
 }
 </style>
 </head>
@@ -150,6 +160,17 @@ p{margin:.6rem 0;color:#31415d}
 <section class="hero">
   <div class="campaign-ribbon" aria-hidden="true"></div>
   <div class="campaign-hero">
+    <svg class="hero-star-cluster" aria-hidden="true" focusable="false" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.95">
+        <path class="star-gold" d="M134 12l4.2 12.8h13.4l-10.8 7.8 4.1 12.7L134 37.5l-10.9 7.8 4.1-12.7-10.8-7.8h13.4L134 12z"/>
+        <path class="star-gold-soft" d="M72 28l2.8 8.6h9l-7.3 5.2 2.8 8.5L72 45l-7.3 5.3 2.8-8.5-7.3-5.2h9L72 28z"/>
+        <path class="star-white" d="M154 70l2.4 7.2h7.6l-6.1 4.5 2.3 7.1-6.2-4.4-6.2 4.4 2.3-7.1-6.1-4.5h7.6L154 70z"/>
+        <circle class="dot-red" cx="108" cy="72" r="5"/>
+        <circle class="dot-blue" cx="46" cy="76" r="4"/>
+        <circle class="dot-gold" cx="94" cy="18" r="3"/>
+        <circle class="dot-white" cx="30" cy="34" r="2.5"/>
+      </g>
+    </svg>
     <span class="eyebrow">America250 · American Space Mindelo / UniCV</span>
     <div class="celebrate">
       <span class="celebrate-250" aria-hidden="true">250</span>
@@ -187,7 +208,7 @@ p{margin:.6rem 0;color:#31415d}
     <p>Esta série de atividades decorre em junho e julho no American Space Mindelo / UniCV. Liga o tema America250 — independência, oportunidade e futuro — aos objetivos do dia a dia de quem participa.</p>
     <p>Em sessões curtas e práticas, os participantes refletem sobre onde estão, exploram as oportunidades disponíveis, praticam inglês, conhecem a cultura dos EUA e escolhem um próximo passo realista para depois da série.</p>
     <p>As sessões são acolhedoras e adequadas a iniciantes. Pode participar num workshop ou acompanhar toda a série.</p>
-    <p class="sub-en" lang="en">This activity series runs through June and July at American Space Mindelo / UniCV, connecting the America250 theme to participants&rsquo; everyday goals. Sessions are welcoming and beginner-friendly &mdash; join one workshop or follow the whole series.</p>
+    <p class="en-translation long" lang="en">This activity series runs through June and July at American Space Mindelo / UniCV, connecting the America250 theme to participants&rsquo; everyday goals. Sessions are welcoming and beginner-friendly &mdash; join one workshop or follow the whole series.</p>
   </div>
 </section>
 
@@ -196,9 +217,9 @@ p{margin:.6rem 0;color:#31415d}
   <div class="sched-head on-dark">
     <p class="flourish" aria-hidden="true">&#9733; &#9733; &#9733;</p>
     <h2>Calendário dos Workshops</h2>
-    <p class="sub-en" lang="en">Workshop Schedule</p>
+    <p class="en-translation on-dark" lang="en">Workshop Schedule</p>
     <p>Sete sessões ao longo de junho e julho. Horários e salas são confirmados através das atualizações da inscrição.</p>
-    <p class="sub-en" lang="en">Seven sessions across June and July. Times and rooms are confirmed through registration updates.</p>
+    <p class="en-translation long on-dark" lang="en">Seven sessions across June and July. Times and rooms are confirmed through registration updates.</p>
   </div>
 
   <div class="rh-ws-detail-grid">
@@ -209,11 +230,16 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jun</span><span class="rh-ws-day">11</span></div>
           <div class="rh-ws-detail-titles">
             <h3>O que quero construir?</h3>
-            <p class="rh-ws-pt" lang="en">What Do I Want to Build?</p>
+            <p class="rh-ws-pt en-translation" lang="en">What Do I Want to Build?</p>
           </div>
         </div>
         <p class="rh-ws-desc">Reflita sobre independência, oportunidade e o seu futuro. Use o pensamento estratégico para imaginar os seus objetivos e escolher um próximo passo.</p>
-        <p class="rh-ws-desc en" lang="en">Reflect on independence, opportunity, and your future. Use strategic futuring to imagine your goals and choose one next step.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">Reflect on independence, opportunity, and your future. Use strategic futuring to imagine your goals and choose one next step.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Ligar independência, oportunidade e futuro aos objetivos pessoais. / Connect independence, opportunity, and the future to personal goals.</p>
+          <p><b>Na sessão / During the session:</b> Reflexão guiada, conversa em grupo e escolha de uma ideia de futuro. / Guided reflection, group conversation, and choosing one future idea.</p>
+          <p><b>Vai sair com / You will leave with:</b> Um objetivo ou próximo passo mais claro. / A clearer goal or next step.</p>
+        </div>
       </article>
 
       <!-- Jun 18 -->
@@ -222,11 +248,16 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jun</span><span class="rh-ws-day">18</span></div>
           <div class="rh-ws-detail-titles">
             <h3>Encontre o seu próximo passo</h3>
-            <p class="rh-ws-pt" lang="en">Find Your Next Step</p>
+            <p class="rh-ws-pt en-translation" lang="en">Find Your Next Step</p>
           </div>
         </div>
         <p class="rh-ws-desc">Explore cursos gratuitos, ferramentas digitais e oportunidades online. Use o Resource Hub para encontrar um recurso prático que possa começar.</p>
-        <p class="rh-ws-desc en" lang="en">Explore free courses, digital tools, and online opportunities. Use the Resource Hub to find one practical resource you can start.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">Explore free courses, digital tools, and online opportunities. Use the Resource Hub to find one practical resource you can start.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Aprender a procurar oportunidades práticas sem se sentir perdido. / Learn how to look for practical opportunities without feeling lost.</p>
+          <p><b>Na sessão / During the session:</b> Explorar o Resource Hub, cursos gratuitos, ferramentas digitais e recursos online. / Explore the Resource Hub, free courses, digital tools, and online resources.</p>
+          <p><b>Vai sair com / You will leave with:</b> Um recurso escolhido e um próximo passo para começar. / One chosen resource and a next step to begin.</p>
+        </div>
       </article>
 
       <!-- Jun 23 -->
@@ -235,11 +266,16 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jun</span><span class="rh-ws-day">23</span></div>
           <div class="rh-ws-detail-titles">
             <h3>Três caminhos para a oportunidade</h3>
-            <p class="rh-ws-pt" lang="en">Three Pathways to Opportunity</p>
+            <p class="rh-ws-pt en-translation" lang="en">Three Pathways to Opportunity</p>
           </div>
         </div>
         <p class="rh-ws-desc">Conheça os percursos de julho: Inglês para Turismo, Desenvolvimento de Carreira e Negócios e Empreendedorismo.</p>
-        <p class="rh-ws-desc en" lang="en">Preview the July training tracks: English for Tourism, Career Development, and Business &amp; Entrepreneurship.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">Preview the July training tracks: English for Tourism, Career Development, and Business &amp; Entrepreneurship.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Conhecer três percursos de julho: Inglês para Turismo, Desenvolvimento de Carreira, Negócios e Empreendedorismo. / Preview three July pathways: English for Tourism, Career Development, and Business and Entrepreneurship.</p>
+          <p><b>Na sessão / During the session:</b> Comparar caminhos, interesses e possíveis próximos passos. / Compare pathways, interests, and possible next steps.</p>
+          <p><b>Vai sair com / You will leave with:</b> Uma área de foco para continuar depois da série. / One focus area to continue after the series.</p>
+        </div>
       </article>
 
       <!-- Jul 1 -->
@@ -248,11 +284,16 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">01</span></div>
           <div class="rh-ws-detail-titles">
             <h3>Jogos, Karaoke e Conversa</h3>
-            <p class="rh-ws-pt" lang="en">Games, Karaoke &amp; Conversation</p>
+            <p class="rh-ws-pt en-translation" lang="en">Games, Karaoke &amp; Conversation</p>
           </div>
         </div>
         <p class="rh-ws-desc">Ganhe confiança, pratique inglês e conecte-se com outras pessoas através de jogos, música, karaoke e conversa descontraída.</p>
-        <p class="rh-ws-desc en" lang="en">Build confidence, practice English, and connect with others through games, music, karaoke, and relaxed conversation.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">Build confidence, practice English, and connect with others through games, music, karaoke, and relaxed conversation.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Ganhar confiança a praticar inglês num ambiente leve. / Build confidence practicing English in a relaxed environment.</p>
+          <p><b>Na sessão / During the session:</b> Jogos, música, karaoke e conversa descontraída. / Games, music, karaoke, and relaxed conversation.</p>
+          <p><b>Vai sair com / You will leave with:</b> Mais confiança para participar e comunicar. / More confidence to participate and communicate.</p>
+        </div>
       </article>
 
       <!-- Jul 2 — eLibraryUSA -->
@@ -261,12 +302,17 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">02</span></div>
           <div class="rh-ws-detail-titles">
             <h3>Workshop de Acesso à eLibraryUSA</h3>
-            <p class="rh-ws-pt" lang="en">eLibraryUSA Access Workshop</p>
+            <p class="rh-ws-pt en-translation" lang="en">eLibraryUSA Access Workshop</p>
             <span class="rh-ws-status rh-ws-status-pending">Sujeito a confirmação / Pending confirmation</span>
           </div>
         </div>
         <p class="rh-ws-desc"><strong>2 de julho / July 2.</strong> Aprenda a aceder e a usar os recursos eletrónicos da eLibraryUSA para inglês, estudo, pesquisa e desenvolvimento profissional. Horário e detalhes serão partilhados na página de inscrição.</p>
-        <p class="rh-ws-desc en" lang="en">Learn how to access and use eLibraryUSA electronic resources for English, study, research, and professional growth. Time and details will be shared on the registration page.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">Learn how to access and use eLibraryUSA electronic resources for English, study, research, and professional growth. Time and details will be shared on the registration page.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Aprender a aceder e usar recursos eletrónicos da eLibraryUSA. / Learn how to access and use eLibraryUSA electronic resources.</p>
+          <p><b>Na sessão / During the session:</b> Introdução à ativação/acesso, tipos de recursos e formas práticas de uso. / Introduction to activation/access, resource types, and practical ways to use them.</p>
+          <p><b>Vai sair com / You will leave with:</b> Entendimento de como começar a usar a eLibraryUSA para inglês, estudo, pesquisa e desenvolvimento profissional. / An understanding of how to start using eLibraryUSA for English, study, research, and professional growth.</p>
+        </div>
       </article>
 
       <!-- Jul 3 -->
@@ -275,11 +321,16 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">03</span></div>
           <div class="rh-ws-detail-titles">
             <h3>Cinema e Conversa em Inglês</h3>
-            <p class="rh-ws-pt" lang="en">Movie + English Discussion</p>
+            <p class="rh-ws-pt en-translation" lang="en">Movie + English Discussion</p>
           </div>
         </div>
         <p class="rh-ws-desc">Veja um filme da cultura dos EUA e participe numa conversa descontraída em inglês sobre identidade, oportunidade, comunidade e o futuro.</p>
-        <p class="rh-ws-desc en" lang="en">Watch a U.S.-culture film and join a relaxed English discussion about identity, opportunity, community, and the future.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">Watch a U.S.-culture film and join a relaxed English discussion about identity, opportunity, community, and the future.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Praticar escuta, vocabulário e conversa através de um filme/cultura dos EUA. / Practice listening, vocabulary, and conversation through a U.S.-culture film.</p>
+          <p><b>Na sessão / During the session:</b> Assistir, refletir e conversar sobre identidade, oportunidade, comunidade e futuro. / Watch, reflect, and discuss identity, opportunity, community, and the future.</p>
+          <p><b>Vai sair com / You will leave with:</b> Novas palavras, ideias de conversa e mais confiança em inglês. / New words, conversation ideas, and more confidence in English.</p>
+        </div>
       </article>
 
       <!-- Jul 4 -->
@@ -288,12 +339,17 @@ p{margin:.6rem 0;color:#31415d}
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">04</span></div>
           <div class="rh-ws-detail-titles">
             <h3>Celebração Comunitária &mdash; 4 de Julho</h3>
-            <p class="rh-ws-pt" lang="en">July 4 Community Celebration</p>
+            <p class="rh-ws-pt en-translation" lang="en">July 4 Community Celebration</p>
             <span class="rh-ws-status rh-ws-status-invite">Apenas por convite / Invite-only</span>
           </div>
         </div>
         <p class="rh-ws-desc">Uma celebração comunitária privada que marca 250 anos da Independência dos EUA e encerra a iniciativa Independência, Oportunidade e Futuro. Os detalhes são partilhados apenas com participantes inscritos e confirmados.</p>
-        <p class="rh-ws-desc en" lang="en">A private community celebration marking 250 years of U.S. Independence and closing the Independence, Opportunity &amp; the Future initiative. Details are shared only with confirmed registered participants.</p>
+        <p class="rh-ws-desc en en-translation long" lang="en">A private community celebration marking 250 years of U.S. Independence and closing the Independence, Opportunity &amp; the Future initiative. Details are shared only with confirmed registered participants.</p>
+        <div class="rh-ws-detail-more">
+          <p><b>Objetivo / Objective:</b> Encerrar a iniciativa com ligação comunitária e reflexão sobre o tema America250. / Close the initiative with community connection and reflection on the America250 theme.</p>
+          <p><b>Na atividade / During the activity:</b> Celebração privada por convite, partilha e encerramento. / Private invite-only celebration, sharing, and closing.</p>
+          <p><b>Vai sair com / You will leave with:</b> Ligação com a comunidade e continuidade para próximos passos. / Community connection and continuity for next steps.</p>
+        </div>
       </article>
 
   </div><!-- /.rh-ws-detail-grid -->
@@ -308,15 +364,16 @@ p{margin:.6rem 0;color:#31415d}
   <div class="panel callout">
     <h2>O que vai aprender</h2>
     <p class="sub-en" lang="en">What You Will Learn</p>
-    <p>Ao longo da série, os participantes constroem aprendizagens práticas que podem usar para além da sala do workshop: refletir sobre objetivos pessoais, perceber o que &ldquo;oportunidade&rdquo; significa na sua vida, escolher um próximo passo realista e ganhar confiança a praticar inglês e a conhecer a cultura dos EUA.</p>
-    <ul class="list" lang="en">
-      <li>How to reflect on personal goals, strengths, and direction.</li>
-      <li>What &ldquo;opportunity&rdquo; can mean in your own life, study, and career.</li>
-      <li>How to choose one realistic next step without feeling overwhelmed.</li>
-      <li>Three practical pathways to opportunity: learning, skills, and community connection.</li>
-      <li>Where to find free or low-cost learning and development resources.</li>
-      <li>More confidence practicing English and engaging with U.S. culture.</li>
+    <p>Ao longo da série, os participantes constroem aprendizagens práticas que podem usar para além da sala do workshop.</p>
+    <ul class="list">
+      <li>Refletir sobre objetivos pessoais, pontos fortes e direção.</li>
+      <li>Perceber o que &ldquo;oportunidade&rdquo; pode significar na sua vida, estudos e carreira.</li>
+      <li>Escolher um próximo passo realista sem se sentir sobrecarregado.</li>
+      <li>Conhecer três caminhos práticos para a oportunidade: aprendizagem, competências e ligação comunitária.</li>
+      <li>Encontrar recursos gratuitos ou de baixo custo para aprendizagem e desenvolvimento.</li>
+      <li>Ganhar mais confiança ao praticar inglês e conhecer a cultura dos EUA.</li>
     </ul>
+    <p class="en-translation long" lang="en">Participants will reflect on personal goals, understand what &ldquo;opportunity&rdquo; can mean in their own life, choose one realistic next step, explore practical learning pathways, find free or low-cost resources, and build confidence using English and engaging with U.S. culture.</p>
   </div>
 </section>
 
@@ -326,11 +383,11 @@ p{margin:.6rem 0;color:#31415d}
     <h2>Inscrição</h2>
     <p class="sub-en" lang="en">Registration</p>
     <p>A inscrição ajuda-nos a planear salas, confirmar horários e enviar atualizações. Pode inscrever-se uma vez para a série e participar nas sessões que correspondem aos seus objetivos.</p>
-    <p class="sub-en" lang="en">Registration helps us plan rooms, confirm times, and send updates. You can register once for the series and join the sessions that fit your goals.</p>
+    <p class="en-translation long" lang="en">Registration helps us plan rooms, confirm times, and send updates. You can register once for the series and join the sessions that fit your goals.</p>
 
     <div class="reg-capacity">
       <p>As vagas são limitadas. A inscrição é recomendada. Se a sessão ficar cheia, poderão ser anunciadas novas opções de workshop.</p>
-      <p class="en" lang="en">Space is limited. Registration is requested. If the session fills, additional workshop options may be announced.</p>
+      <p class="en en-translation long" lang="en">Space is limited. Registration is requested. If the session fills, additional workshop options may be announced.</p>
     </div>
 
     <div class="row">
@@ -339,7 +396,7 @@ p{margin:.6rem 0;color:#31415d}
     </div>
 
     <p class="reg-updates">Os horários, salas e detalhes finais das atividades são partilhados através das atualizações da inscrição. Confirme antes de participar, pois horários ou locais podem mudar.
-      <span class="en" lang="en">Exact times, rooms, and final activity details are shared through registration updates. Check before attending, because times or locations may change.</span>
+      <span class="en en-translation long" lang="en">Exact times, rooms, and final activity details are shared through registration updates. Check before attending, because times or locations may change.</span>
     </p>
 
     <div class="translate-note">
@@ -363,7 +420,7 @@ p{margin:.6rem 0;color:#31415d}
     <h2>Nota importante</h2>
     <p class="sub-en" lang="en">Important note</p>
     <p>Esta página ajuda a organizar informações de inscrição e calendário para a série de atividades Independência, Oportunidade e Futuro no American Space Mindelo / UniCV. Os horários, salas e detalhes finais das atividades podem mudar e serão partilhados através das atualizações da inscrição. O JLJ Learning &amp; Career Resource Hub é mantido de forma independente e não é um site oficial da Embaixada dos EUA, American Spaces, UniCV ou governo, exceto quando uma atividade ou recurso específico for claramente identificado como oficial e aprovado.</p>
-    <p class="sub-en" lang="en">This page helps organize registration and schedule information for the Independence, Opportunity &amp; the Future activity series at American Space Mindelo / UniCV. Exact times, rooms, and final activity details may change and will be shared through registration updates. The JLJ Learning &amp; Career Resource Hub is independently maintained and is not an official U.S. Embassy, American Spaces, UniCV, or government website unless a specific activity or resource is clearly identified as official and approved.</p>
+    <p class="en-translation long" lang="en">This page helps organize registration and schedule information for the Independence, Opportunity &amp; the Future activity series at American Space Mindelo / UniCV. Exact times, rooms, and final activity details may change and will be shared through registration updates. The JLJ Learning &amp; Career Resource Hub is independently maintained and is not an official U.S. Embassy, American Spaces, UniCV, or government website unless a specific activity or resource is clearly identified as official and approved.</p>
   </div>
 </section>
 
