@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Workshop 1 Slides · What Do I Want to Build? / O Que Quero Construir?</title>
+<meta name="description" content="Minimalist 10-slide presentation for Workshop 1 of the Independence, Opportunity &amp; the Future series at American Space Mindelo / UniCV (America250). Visual anchors only — not a script."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Manrope:wght@300..700&display=swap"/>
+<style>
+/* Self-contained presentation deck. Reuses the America250 red/white/blue +
+   navy night-sky design language from america250-mindelo.html, but as a
+   full-screen slide runner. No external image files. Keyboard / click / swipe
+   navigation. A print stylesheet renders one slide per page for PDF export. */
+:root{
+  --navy:#0A1F44;--navy-2:#0c2a5a;--navy-deep:#06142e;--ink:#172033;
+  --paper:#FFFDF8;--cream:#fffdf8;--ivory:#F7F3EA;
+  --gold:#F4C430;--gold-soft:#FFE08A;
+  --flag-red:#C8102E;--flag-blue:#0A3161;--flag-blue-soft:#13407e;
+  --heading:'Fraunces','Iowan Old Style',Georgia,serif;
+  --body:'Manrope','Avenir Next',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family:var(--body);color:var(--cream);overflow:hidden;
+  background:linear-gradient(180deg,#06142e 0%,#0A1F44 48%,#0c2a5a 100%);
+}
+/* night-sky starfield */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+   radial-gradient(2px 2px at 12% 18%, rgba(255,255,255,.7), transparent),
+   radial-gradient(1.6px 1.6px at 82% 12%, rgba(255,255,255,.55), transparent),
+   radial-gradient(2px 2px at 26% 42%, rgba(244,196,48,.55), transparent),
+   radial-gradient(1.6px 1.6px at 68% 30%, rgba(255,255,255,.5), transparent),
+   radial-gradient(1.6px 1.6px at 44% 8%, rgba(255,255,255,.45), transparent),
+   radial-gradient(2px 2px at 92% 58%, rgba(244,196,48,.45), transparent),
+   radial-gradient(1.6px 1.6px at 8% 66%, rgba(255,255,255,.4), transparent),
+   radial-gradient(1.6px 1.6px at 58% 88%, rgba(255,255,255,.38), transparent),
+   radial-gradient(1.6px 1.6px at 34% 74%, rgba(244,196,48,.38), transparent);
+  background-repeat:no-repeat}
+
+/* tricolor top edge */
+.flagbar{position:fixed;top:0;left:0;right:0;height:6px;z-index:5;
+  background:linear-gradient(90deg,var(--flag-red) 0 33.3%,#fff 33.3% 66.6%,var(--flag-blue) 66.6% 100%)}
+
+.deck{position:relative;z-index:2;height:100%}
+.slide{
+  position:absolute;inset:0;display:none;
+  flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:6vh 7vw;gap:.6rem;
+  opacity:0;transition:opacity .35s ease;
+}
+.slide.active{display:flex;opacity:1}
+
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#fff;background:var(--flag-red);
+  font-weight:800;border-radius:999px;padding:6px 16px;font-size:clamp(.7rem,1.5vw,.9rem);
+  letter-spacing:.05em;text-transform:uppercase}
+.star{color:var(--gold)}
+h1{font-family:var(--heading);font-weight:600;color:#fff;line-height:1.02;
+  letter-spacing:-.02em;font-size:clamp(2.2rem,7vw,5rem);margin:.2rem 0}
+.pt{font-family:var(--heading);font-style:italic;color:var(--gold-soft);
+  font-weight:500;font-size:clamp(1.2rem,3.6vw,2.1rem);line-height:1.12;margin:.1rem 0}
+.kicker{font-family:var(--heading);color:var(--gold);font-weight:600;
+  font-size:clamp(1.5rem,4.5vw,2.8rem);line-height:1.05;margin:.1rem 0}
+.lead{font-size:clamp(1.05rem,2.6vw,1.6rem);color:#eaf1ff;max-width:24ch;line-height:1.35}
+.sub-en{font-size:clamp(.9rem,2vw,1.15rem);color:#b9c6e0;font-style:italic}
+
+/* word rows / step chains */
+.row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:clamp(.5rem,2vw,1.4rem);margin:.4rem 0}
+.chip{font-family:var(--heading);font-weight:600;color:#fff;
+  font-size:clamp(1.1rem,3vw,2rem);line-height:1.1}
+.arrow{color:var(--gold);font-size:clamp(1.3rem,3.4vw,2.2rem);font-weight:700}
+.dot{color:var(--gold);font-weight:900}
+
+/* giant 250 motif */
+.mark250{font-family:var(--heading);font-weight:600;color:var(--gold);
+  font-size:clamp(4rem,20vw,16rem);line-height:.8;letter-spacing:-.04em;
+  text-shadow:0 0 40px rgba(244,196,48,.25)}
+
+/* fill-in lines */
+.frame{max-width:30ch;font-size:clamp(1.1rem,2.8vw,1.7rem);line-height:1.9;color:#fff;
+  font-family:var(--heading);font-weight:500}
+.blank{display:inline-block;min-width:6ch;border-bottom:3px solid var(--gold);margin:0 .3rem}
+
+/* footer chrome */
+.chrome{position:fixed;left:0;right:0;bottom:0;z-index:6;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 18px;font-size:.78rem;color:#9fb0d0}
+.chrome .timing{color:var(--gold-soft);font-weight:700;letter-spacing:.03em}
+.chrome .nav{display:flex;gap:14px;align-items:center}
+.chrome button{background:rgba(255,255,255,.08);color:#dce6fb;border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;width:34px;height:34px;font-size:1rem;cursor:pointer;line-height:1}
+.chrome button:hover{background:rgba(255,255,255,.16)}
+.count{min-width:54px;text-align:center;font-weight:700;color:#dce6fb}
+.progress{position:fixed;top:6px;left:0;height:3px;background:var(--gold);z-index:6;
+  width:0;transition:width .35s ease}
+
+.hint{position:fixed;top:14px;right:16px;z-index:6;font-size:.72rem;color:#7e8fb3}
+
+/* PRINT: one slide per page for PDF export (File > Print > Save as PDF) */
+@media print{
+  @page{size:landscape;margin:0}
+  body{background:var(--navy-deep) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body::before{position:absolute}
+  .chrome,.progress,.hint{display:none !important}
+  .slide{display:flex !important;opacity:1 !important;position:relative;
+    page-break-after:always;height:100vh;width:100vw}
+}
+</style>
+</head>
+<body>
+<div class="flagbar"></div>
+<div class="progress" id="progress"></div>
+<div class="hint">← → to move · F fullscreen · P print/PDF</div>
+
+<div class="deck" id="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide" data-timing="0–4 min">
+    <span class="eyebrow"><span class="star">★</span> America250 · Mindelo</span>
+    <div class="mark250">250</div>
+    <h1>What Do I Want to Build?</h1>
+    <div class="pt">O Que Quero Construir?</div>
+    <div class="sub-en">Independence, Opportunity &amp; the Future</div>
+  </section>
+
+  <!-- 2 · WHY WE ARE HERE -->
+  <section class="slide" data-timing="0–4 min">
+    <span class="eyebrow">Why we are here</span>
+    <div class="row">
+      <span class="chip">America250</span><span class="dot">·</span>
+      <span class="chip">Independence</span><span class="dot">·</span>
+      <span class="chip">Opportunity</span><span class="dot">·</span>
+      <span class="chip">Future</span>
+    </div>
+    <div class="pt">Independência · Oportunidade · Futuro</div>
+    <div class="sub-en">A guided reflection — not a lecture, not a test.</div>
+  </section>
+
+  <!-- 3 · 250-YEAR STORY -->
+  <section class="slide" data-timing="4–10 min">
+    <span class="eyebrow">America’s 250-year story</span>
+    <div class="row">
+      <span class="chip">Ideals</span><span class="arrow">·</span>
+      <span class="chip">Contradictions</span><span class="arrow">·</span>
+      <span class="chip">Ongoing work</span>
+    </div>
+    <div class="kicker">What do we build from here?</div>
+    <div class="pt">O que construímos a partir daqui?</div>
+  </section>
+
+  <!-- 4 · DOUGLASS -->
+  <section class="slide" data-timing="10–16 min">
+    <span class="eyebrow">Frederick Douglass</span>
+    <div class="row">
+      <span class="chip">Literacy</span><span class="arrow">→</span>
+      <span class="chip">Voice</span><span class="arrow">→</span>
+      <span class="chip">Contribution</span>
+    </div>
+    <div class="lead">He built with what he had.</div>
+  </section>
+
+  <!-- 5 · KATHERINE JOHNSON -->
+  <section class="slide" data-timing="10–16 min">
+    <span class="eyebrow">Katherine Johnson</span>
+    <div class="row">
+      <span class="chip">Skill</span><span class="arrow">→</span>
+      <span class="chip">Discipline</span><span class="arrow">→</span>
+      <span class="chip">Contribution</span>
+    </div>
+    <div class="lead">Skill can open doors.</div>
+  </section>
+
+  <!-- 6 · THE QUESTION TURNS TO YOU -->
+  <section class="slide" data-timing="18–21 min">
+    <span class="eyebrow">Now you</span>
+    <div class="arrow" style="font-size:clamp(2rem,7vw,4rem)">↓</div>
+    <h1>What do you want to build?</h1>
+    <div class="pt">O que queres construir?</div>
+  </section>
+
+  <!-- 7 · FUTURE VISIONING -->
+  <section class="slide" data-timing="21–35 min">
+    <span class="eyebrow">Future Visioning</span>
+    <div class="kicker">Imagine 3–5 years from now</div>
+    <div class="pt">Imagina daqui a 3–5 anos</div>
+    <div class="sub-en">Quiet writing — any language. Underline one key word.</div>
+  </section>
+
+  <!-- 8 · BACKCASTING -->
+  <section class="slide" data-timing="35–47 min">
+    <span class="eyebrow">Backcasting</span>
+    <div class="kicker">What had to happen first?</div>
+    <div class="pt">O que teve de acontecer primeiro?</div>
+    <div class="row" style="margin-top:.6rem">
+      <span class="chip" style="font-size:clamp(.95rem,2.4vw,1.5rem)">Step</span><span class="arrow">←</span>
+      <span class="chip" style="font-size:clamp(.95rem,2.4vw,1.5rem)">Skill</span><span class="arrow">←</span>
+      <span class="chip" style="font-size:clamp(.95rem,2.4vw,1.5rem)">Resource</span><span class="arrow">←</span>
+      <span class="chip" style="font-size:clamp(.95rem,2.4vw,1.5rem)">Future</span>
+    </div>
+  </section>
+
+  <!-- 9 · ONE-SENTENCE OUTPUT -->
+  <section class="slide" data-timing="47–55 min">
+    <span class="eyebrow">My one sentence</span>
+    <div class="frame">
+      I want to build / explore <span class="blank"></span>
+      because <span class="blank"></span>,
+      and my next step is <span class="blank"></span>.
+    </div>
+    <div class="pt">Eu quero construir ou explorar ___ porque ___, e o meu próximo passo é ___.</div>
+  </section>
+
+  <!-- 10 · NEXT THURSDAY -->
+  <section class="slide" data-timing="55–60 min">
+    <span class="eyebrow"><span class="star">★</span> Next Thursday</span>
+    <div class="kicker">Workshop 2: Tools &amp; Resources</div>
+    <div class="row" style="margin-top:.3rem">
+      <span class="chip" style="font-size:clamp(.95rem,2.3vw,1.4rem)">Reflection form</span><span class="dot">·</span>
+      <span class="chip" style="font-size:clamp(.95rem,2.3vw,1.4rem)">Interest assessment</span><span class="dot">·</span>
+      <span class="chip" style="font-size:clamp(.95rem,2.3vw,1.4rem)">Resource Hub</span>
+    </div>
+    <div class="sub-en">Optional reflection form by Tuesday noon. One step is enough.</div>
+  </section>
+
+</div>
+
+<div class="chrome">
+  <span class="timing" id="timing">0–4 min</span>
+  <div class="nav">
+    <button id="prev" aria-label="Previous slide">‹</button>
+    <span class="count" id="count">1 / 10</span>
+    <button id="next" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var i = 0;
+  var countEl = document.getElementById('count');
+  var timingEl = document.getElementById('timing');
+  var progress = document.getElementById('progress');
+  function show(n){
+    i = Math.max(0, Math.min(slides.length-1, n));
+    slides.forEach(function(s,idx){ s.classList.toggle('active', idx===i); });
+    countEl.textContent = (i+1)+' / '+slides.length;
+    timingEl.textContent = slides[i].getAttribute('data-timing') || '';
+    progress.style.width = ((i)/(slides.length-1)*100)+'%';
+  }
+  function go(d){ show(i+d); }
+  document.getElementById('next').onclick = function(){ go(1); };
+  document.getElementById('prev').onclick = function(){ go(-1); };
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); go(1); }
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp'){ e.preventDefault(); go(-1); }
+    else if(e.key==='Home'){ show(0); }
+    else if(e.key==='End'){ show(slides.length-1); }
+    else if(e.key==='f'||e.key==='F'){ if(!document.fullscreenElement){document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();}else{document.exitFullscreen&&document.exitFullscreen();} }
+    else if(e.key==='p'||e.key==='P'){ window.print(); }
+  });
+  // tap left/right thirds + swipe
+  var sx=null;
+  document.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; },{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(sx===null)return; var dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>40){ go(dx<0?1:-1); } sx=null;
+  },{passive:true});
+  show(0);
+})();
+</script>
+</body>
+</html>
