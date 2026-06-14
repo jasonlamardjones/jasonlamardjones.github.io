@@ -1,0 +1,51 @@
+name: Resource Hub maintenance audit
+
+# Phase 1, report-only. This workflow inspects resources-data.json and
+# publishes an internal maintenance audit report. It never edits, hides,
+# removes, or publishes public listings.
+
+on:
+  schedule:
+    # Weekly, Monday 07:00 UTC.
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+    inputs:
+      check_links:
+        description: 'Run the opt-in lightweight link check (slower, needs network)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run resource audit
+        run: |
+          ARGS="--out resource-audit-report.md"
+          if [ "${{ github.event.inputs.check_links }}" = "true" ]; then
+            ARGS="$ARGS --check-links"
+          fi
+          node scripts/audit-resources.mjs $ARGS
+
+      - name: Publish report to job summary
+        if: always()
+        run: cat resource-audit-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-audit-report
+          path: resource-audit-report.md
+          if-no-files-found: warn
