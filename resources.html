@@ -654,6 +654,14 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.tr
           chip.classList.remove('rh-ws-status-invite','rh-ws-status-planned','rh-ws-status-pending');
           chip.classList.add('rh-ws-status-past');
           chip.textContent='Realizado / Completed';
+        }else{
+          var target=card.querySelector('.rh-ws-detail-titles')||card.querySelector('.rh-ws-body');
+          if(target){
+            var newChip=document.createElement('span');
+            newChip.className='rh-ws-status rh-ws-status-past';
+            newChip.textContent='Realizado / Completed';
+            target.appendChild(newChip);
+          }
         }
       }
     }
