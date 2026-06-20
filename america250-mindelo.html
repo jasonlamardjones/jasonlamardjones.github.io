@@ -141,6 +141,11 @@ p{margin:.6rem 0;color:#31415d}
   .row .btn{flex:1 1 auto;justify-content:center}
   .hero-star-cluster{top:12px;right:12px;width:82px;opacity:.48}
 }
+/* Auto-completed past events (progressive enhancement; JS adds .is-past-event after the event end time) */
+.rh-ws-detail.is-past-event{filter:saturate(.55);background:#edeff2;border-color:#d2d8e0;border-left-color:#9aa6b4;box-shadow:0 8px 18px rgba(3,10,28,.16)}
+.rh-ws-detail.is-past-event .rh-ws-detail-head::before{background:#8a94a3;border-color:#cfd6df;box-shadow:none}
+.rh-ws-detail.is-past-event .rh-ws-detail-more{background:#eef0f3}
+.rh-ws-status-past{color:#374559;background:#e3e8ef;border:1px solid #c4cedb}
 </style>
 </head>
 <body id="top">
@@ -225,7 +230,7 @@ p{margin:.6rem 0;color:#31415d}
   <div class="rh-ws-detail-grid">
 
       <!-- Jun 11 -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-06-11T20:00:00-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jun</span><span class="rh-ws-day">11</span></div>
           <div class="rh-ws-detail-titles">
@@ -246,7 +251,7 @@ p{margin:.6rem 0;color:#31415d}
       </article>
 
       <!-- Jun 18 -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-06-18T20:00:00-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jun</span><span class="rh-ws-day">18</span></div>
           <div class="rh-ws-detail-titles">
@@ -267,7 +272,7 @@ p{margin:.6rem 0;color:#31415d}
       </article>
 
       <!-- Jun 23 -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-06-23T20:00:00-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jun</span><span class="rh-ws-day">23</span></div>
           <div class="rh-ws-detail-titles">
@@ -293,7 +298,7 @@ p{margin:.6rem 0;color:#31415d}
       </article>
 
       <!-- Jul 1 -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-07-01T23:59:59-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">01</span></div>
           <div class="rh-ws-detail-titles">
@@ -311,7 +316,7 @@ p{margin:.6rem 0;color:#31415d}
       </article>
 
       <!-- Jul 2 — eLibraryUSA -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-07-02T20:00:00-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">02</span></div>
           <div class="rh-ws-detail-titles">
@@ -332,7 +337,7 @@ p{margin:.6rem 0;color:#31415d}
       </article>
 
       <!-- Jul 3 -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-07-03T23:59:59-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">03</span></div>
           <div class="rh-ws-detail-titles">
@@ -350,7 +355,7 @@ p{margin:.6rem 0;color:#31415d}
       </article>
 
       <!-- Jul 4 -->
-      <article class="rh-ws-detail">
+      <article class="rh-ws-detail" data-event-card="america250" data-event-end="2026-07-04T23:59:59-01:00">
         <div class="rh-ws-detail-head">
           <div class="rh-ws-date" aria-hidden="true"><span class="rh-ws-mon">Jul</span><span class="rh-ws-day">04</span></div>
           <div class="rh-ws-detail-titles">
@@ -474,6 +479,43 @@ p{margin:.6rem 0;color:#31415d}
   <p>Esta página é alojada através do JLJ Learning &amp; Career Resource Hub, mantido de forma independente, para apoiar o acesso à inscrição e ao calendário. Não substitui a comunicação oficial do American Space Mindelo / UniCV, e os detalhes dos eventos podem mudar.</p>
   <p lang="en">This page is hosted through the independently maintained JLJ Learning &amp; Career Resource Hub to support registration and schedule access. It does not replace official American Space Mindelo / UniCV communication, and event details may change.</p>
 </footer>
+
+<script>
+/* America250 events — auto-mark past events as completed (progressive enhancement).
+   Reads data-event-end (ISO 8601, Cabo Verde -01:00 offset) on
+   [data-event-card="america250"]. Once the end time has passed, the card is
+   muted (.is-past-event) and its status chip becomes "Realizado / Completed".
+   Future/current cards are left untouched. Missing/invalid dates are skipped
+   without breaking the page. QA override: set window.__A250_NOW__ (ms) before load. */
+(function(){
+  function markPastEvents(){
+    var now=(typeof window.__A250_NOW__==='number')?window.__A250_NOW__:Date.now();
+    var cards=document.querySelectorAll('[data-event-card="america250"]');
+    for(var i=0;i<cards.length;i++){
+      var card=cards[i];
+      var raw=card.getAttribute('data-event-end');
+      if(!raw)continue;
+      var end=new Date(raw);
+      if(isNaN(end.getTime())){
+        if(window.console&&console.warn)console.warn('[america250] Invalid data-event-end:',raw);
+        continue;
+      }
+      if(now>end.getTime()){
+        card.classList.add('is-past-event');
+        card.setAttribute('data-event-state','past');
+        var chip=card.querySelector('.rh-ws-status');
+        if(chip){
+          chip.classList.remove('rh-ws-status-invite','rh-ws-status-planned','rh-ws-status-pending');
+          chip.classList.add('rh-ws-status-past');
+          chip.textContent='Realizado / Completed';
+        }
+      }
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',markPastEvents);
+  else markPastEvents();
+})();
+</script>
 
 </body>
 </html>

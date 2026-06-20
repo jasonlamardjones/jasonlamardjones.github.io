@@ -260,6 +260,9 @@ html,body{max-width:100%;overflow-x:hidden;}
 .online-lang-note .en{display:block;color:#5C667A;margin-top:2px}
 .en-translation{font-style:italic;font-weight:700;color:var(--muted)}
 .en-translation.long{font-weight:600;font-size:.94rem;line-height:1.55}
+/* Auto-completed past events (progressive enhancement; JS adds .is-past-event after the event end time) */
+.rh-ws-card.is-past-event{filter:saturate(.55);background:#edeff2;border-color:#d2d8e0;border-left-color:#9aa6b4;box-shadow:0 8px 18px rgba(12,32,64,.06)}
+.rh-ws-status-past{color:#374559;background:#e3e8ef;border:1px solid #c4cedb}
 
 </style><!-- Privacy-friendly analytics by Plausible -->
 <script id="jlj-analytics-qa-exclusion">
@@ -331,7 +334,7 @@ html,body{max-width:100%;overflow-x:hidden;}
     <div class="rh-ws-grid">
 
       <!-- Event 1 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-06-11T20:00:00-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUN</span>
           <span class="rh-ws-day">11</span>
@@ -349,7 +352,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       </article>
 
       <!-- Event 2 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-06-18T20:00:00-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUN</span>
           <span class="rh-ws-day">18</span>
@@ -367,7 +370,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       </article>
 
       <!-- Event 3 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-06-23T20:00:00-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUN</span>
           <span class="rh-ws-day">23</span>
@@ -385,7 +388,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       </article>
 
       <!-- Event 4 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-07-01T23:59:59-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUL</span>
           <span class="rh-ws-day">01</span>
@@ -403,7 +406,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       </article>
 
       <!-- Event 5 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-07-02T20:00:00-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUL</span>
           <span class="rh-ws-day">02</span>
@@ -422,7 +425,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       </article>
 
       <!-- Event 6 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-07-03T23:59:59-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUL</span>
           <span class="rh-ws-day">03</span>
@@ -440,7 +443,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       </article>
 
       <!-- Event 7 -->
-      <article class="rh-ws-card">
+      <article class="rh-ws-card" data-event-card="america250" data-event-end="2026-07-04T23:59:59-01:00">
         <div class="rh-ws-date" aria-hidden="true">
           <span class="rh-ws-mon">JUL</span>
           <span class="rh-ws-day">04</span>
@@ -621,6 +624,42 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.tr
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
   window.jljOpenTranslateHelp=openModal;
   window.jljOpenGoogleTranslate=function(lang){window.location.href=googleTranslateUrl(lang||'pt');};
+})();
+</script>
+<script>
+/* America250 events — auto-mark past events as completed (progressive enhancement).
+   Reads data-event-end (ISO 8601, Cabo Verde -01:00 offset) on
+   [data-event-card="america250"]. Once the end time has passed, the card is
+   muted (.is-past-event) and its status chip becomes "Realizado / Completed".
+   Future/current cards are left untouched. Missing/invalid dates are skipped
+   without breaking the page. QA override: set window.__A250_NOW__ (ms) before load. */
+(function(){
+  function markPastEvents(){
+    var now=(typeof window.__A250_NOW__==='number')?window.__A250_NOW__:Date.now();
+    var cards=document.querySelectorAll('[data-event-card="america250"]');
+    for(var i=0;i<cards.length;i++){
+      var card=cards[i];
+      var raw=card.getAttribute('data-event-end');
+      if(!raw)continue;
+      var end=new Date(raw);
+      if(isNaN(end.getTime())){
+        if(window.console&&console.warn)console.warn('[america250] Invalid data-event-end:',raw);
+        continue;
+      }
+      if(now>end.getTime()){
+        card.classList.add('is-past-event');
+        card.setAttribute('data-event-state','past');
+        var chip=card.querySelector('.rh-ws-status');
+        if(chip){
+          chip.classList.remove('rh-ws-status-invite','rh-ws-status-planned','rh-ws-status-pending');
+          chip.classList.add('rh-ws-status-past');
+          chip.textContent='Realizado / Completed';
+        }
+      }
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',markPastEvents);
+  else markPastEvents();
 })();
 </script>
 </body></html>
