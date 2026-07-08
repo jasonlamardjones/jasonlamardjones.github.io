@@ -1,0 +1,201 @@
+{
+  "_note": "Static Phase 1 decision tree — a shell, not the full guidance engine. Tap-only: root question, one clarifier level maximum, leaf = { station, first_step_text }. Station keys map to labels in the config file; no brand strings appear here. Leaves marked coming_soon are parked branches that redirect to an available station. All 'pt' strings are provisional machine-drafted placeholders pending native-speaker review.",
+  "root": "start",
+  "nodes": {
+
+    "start": {
+      "question": {
+        "en": "What do you want to do today?",
+        "pt": "O que quer fazer hoje?"
+      },
+      "options": [
+        { "label": { "en": "Learn English", "pt": "Aprender inglês" }, "next": "learn_english" },
+        { "label": { "en": "Find a course", "pt": "Encontrar um curso" }, "next": "find_course" },
+        { "label": { "en": "Work & career help", "pt": "Ajuda com trabalho e carreira" }, "next": "work_career" },
+        { "label": { "en": "Start or improve a business", "pt": "Criar ou melhorar um negócio" }, "next": "business" },
+        { "label": { "en": "Find local services", "pt": "Encontrar serviços locais" }, "next": "leaf_local_services" },
+        { "label": { "en": "Visit Mindelo", "pt": "Visitar o Mindelo" }, "next": "leaf_visit_mindelo" },
+        { "label": { "en": "Attend a session", "pt": "Participar numa sessão" }, "next": "leaf_attend_session" },
+        { "label": { "en": "Not sure where to start", "pt": "Não sei por onde começar" }, "next": "leaf_not_sure" }
+      ]
+    },
+
+    "learn_english": {
+      "question": {
+        "en": "How is your English right now?",
+        "pt": "Como está o seu inglês neste momento?"
+      },
+      "options": [
+        { "label": { "en": "I'm starting from the beginning", "pt": "Estou a começar do zero" }, "next": "leaf_english_beginner" },
+        { "label": { "en": "I can communicate, but want to improve", "pt": "Consigo comunicar, mas quero melhorar" }, "next": "leaf_english_improve" }
+      ]
+    },
+
+    "find_course": {
+      "question": {
+        "en": "What kind of course are you looking for?",
+        "pt": "Que tipo de curso procura?"
+      },
+      "options": [
+        { "label": { "en": "A free online course", "pt": "Um curso online gratuito" }, "next": "leaf_course_free" },
+        { "label": { "en": "A course with a certificate", "pt": "Um curso com certificado" }, "next": "leaf_course_certificate" },
+        { "label": { "en": "Something happening near me", "pt": "Algo a acontecer perto de mim" }, "next": "leaf_course_local" }
+      ]
+    },
+
+    "work_career": {
+      "question": {
+        "en": "What kind of work help do you need first?",
+        "pt": "De que tipo de ajuda com trabalho precisa primeiro?"
+      },
+      "options": [
+        { "label": { "en": "See what is open right now", "pt": "Ver o que está aberto agora" }, "next": "leaf_work_open_now" },
+        { "label": { "en": "Prepare my CV and skills", "pt": "Preparar o meu CV e competências" }, "next": "leaf_work_prepare" }
+      ]
+    },
+
+    "business": {
+      "question": {
+        "en": "Where are you with your business?",
+        "pt": "Em que fase está o seu negócio?"
+      },
+      "options": [
+        { "label": { "en": "I have an idea and want to start", "pt": "Tenho uma ideia e quero começar" }, "next": "leaf_business_start" },
+        { "label": { "en": "I already run one and want to improve", "pt": "Já tenho um e quero melhorar" }, "next": "leaf_business_improve" }
+      ]
+    },
+
+    "leaf_english_beginner": {
+      "leaf": {
+        "station": "learn",
+        "first_step_text": {
+          "en": "Start small: one short beginner lesson today, then repeat a little every day. This station will point you to a friendly first course when it opens.",
+          "pt": "Comece pequeno: uma lição curta de iniciante hoje, e depois repita um pouco todos os dias. Esta estação vai indicar-lhe um primeiro curso acessível quando abrir."
+        }
+      }
+    },
+
+    "leaf_english_improve": {
+      "leaf": {
+        "station": "learn",
+        "first_step_text": {
+          "en": "Pick one skill to improve first — speaking, listening, or writing — and practice it a few minutes daily. This station will list next-level options when it opens.",
+          "pt": "Escolha uma competência para melhorar primeiro — falar, ouvir ou escrever — e pratique alguns minutos por dia. Esta estação vai listar opções de nível seguinte quando abrir."
+        }
+      }
+    },
+
+    "leaf_course_free": {
+      "leaf": {
+        "station": "learn",
+        "first_step_text": {
+          "en": "Decide the one topic you want most, in one sentence. This station will point you to trusted free course platforms when it opens.",
+          "pt": "Decida o tema que mais quer, numa frase. Esta estação vai indicar plataformas fiáveis de cursos gratuitos quando abrir."
+        }
+      }
+    },
+
+    "leaf_course_certificate": {
+      "leaf": {
+        "station": "learn",
+        "first_step_text": {
+          "en": "Write down what the certificate is for — a job, a school, or yourself. That choice changes which course fits; this station will help match it when it opens.",
+          "pt": "Anote para que serve o certificado — um emprego, uma escola ou para si. Essa escolha muda o curso adequado; esta estação vai ajudar a encontrá-lo quando abrir."
+        }
+      }
+    },
+
+    "leaf_course_local": {
+      "leaf": {
+        "station": "board",
+        "first_step_text": {
+          "en": "Open the board and look for posted courses and sessions with dates — each one links to its official page.",
+          "pt": "Abra o quadro e procure cursos e sessões publicados com datas — cada um tem ligação à sua página oficial."
+        }
+      }
+    },
+
+    "leaf_work_open_now": {
+      "leaf": {
+        "station": "board",
+        "first_step_text": {
+          "en": "Open the board to see current opportunities with dates and official links. Always confirm details on the provider's own page.",
+          "pt": "Abra o quadro para ver oportunidades atuais com datas e ligações oficiais. Confirme sempre os detalhes na página do próprio fornecedor."
+        }
+      }
+    },
+
+    "leaf_work_prepare": {
+      "leaf": {
+        "station": "works",
+        "first_step_text": {
+          "en": "Write your skills and experience on one page — that is the seed of your CV. This station will help you shape it when it opens.",
+          "pt": "Escreva as suas competências e experiência numa página — essa é a semente do seu CV. Esta estação vai ajudar a dar-lhe forma quando abrir."
+        }
+      }
+    },
+
+    "leaf_business_start": {
+      "leaf": {
+        "station": "business",
+        "first_step_text": {
+          "en": "Write your idea in one sentence: what you sell, and who buys it. This station will build on that when it opens.",
+          "pt": "Escreva a sua ideia numa frase: o que vende e quem compra. Esta estação vai desenvolver isso quando abrir."
+        }
+      }
+    },
+
+    "leaf_business_improve": {
+      "leaf": {
+        "station": "business",
+        "first_step_text": {
+          "en": "Pick the one thing that would help most right now — more customers, better prices, or simpler records — and focus there first. This station will add tools when it opens.",
+          "pt": "Escolha o que mais ajudaria agora — mais clientes, melhores preços ou registos mais simples — e concentre-se aí primeiro. Esta estação vai acrescentar ferramentas quando abrir."
+        }
+      }
+    },
+
+    "leaf_local_services": {
+      "leaf": {
+        "station": "board",
+        "coming_soon": true,
+        "first_step_text": {
+          "en": "Local services are not listed here yet — that part is coming soon. For now, check the board for current postings, or start over to explore learning, work, or business paths.",
+          "pt": "Os serviços locais ainda não estão listados aqui — essa parte chega em breve. Por agora, consulte o quadro para ver publicações atuais, ou recomece para explorar caminhos de aprendizagem, trabalho ou negócios."
+        }
+      }
+    },
+
+    "leaf_visit_mindelo": {
+      "leaf": {
+        "station": "guide",
+        "coming_soon": true,
+        "first_step_text": {
+          "en": "Visitor information is not ready yet — it is coming soon to this station. For now, start over to explore learning, work, or business paths, or check the board for current postings.",
+          "pt": "A informação para visitantes ainda não está pronta — chega em breve a esta estação. Por agora, recomece para explorar caminhos de aprendizagem, trabalho ou negócios, ou consulte o quadro."
+        }
+      }
+    },
+
+    "leaf_attend_session": {
+      "leaf": {
+        "station": "board",
+        "coming_soon": true,
+        "first_step_text": {
+          "en": "Sessions and events are not listed separately yet — that part is coming soon. When sessions are posted, they appear on the board — open it to check current postings.",
+          "pt": "As sessões e eventos ainda não têm lista própria — essa parte chega em breve. Quando houver sessões publicadas, aparecem no quadro — abra-o para ver as publicações atuais."
+        }
+      }
+    },
+
+    "leaf_not_sure": {
+      "leaf": {
+        "station": "guide",
+        "first_step_text": {
+          "en": "No problem — take one small step. Think about whether your goal is learning, work, or business, then start over and tap the option closest to it. This station will offer fuller orientation when it opens.",
+          "pt": "Sem problema — dê um pequeno passo. Pense se o seu objetivo é aprendizagem, trabalho ou negócios, depois recomece e toque na opção mais próxima. Esta estação vai oferecer orientação mais completa quando abrir."
+        }
+      }
+    }
+  }
+}

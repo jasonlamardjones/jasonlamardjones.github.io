@@ -1,0 +1,86 @@
+{
+  "_note": "SAMPLE DATA ONLY for Phase 1 layout testing. Every item is fictional and prefixed 'Sample:'. Dates are placeholders, not real deadlines. All 'pt' strings are provisional machine-drafted placeholders pending native-speaker review. An empty 'items' array triggers the empty state.",
+  "items": [
+    {
+      "title": {
+        "en": "Sample: Beginner English Study Circle",
+        "pt": "Exemplo: Círculo de Estudo de Inglês para Iniciantes"
+      },
+      "what": {
+        "en": "A free weekly study circle for adults starting English from the beginning.",
+        "pt": "Um círculo de estudo semanal gratuito para adultos que estão a começar o inglês do zero."
+      },
+      "deadline": {
+        "en": "Sample date — August 15 (placeholder, not a real deadline)",
+        "pt": "Data de exemplo — 15 de agosto (fictícia, não é um prazo real)"
+      },
+      "who": {
+        "en": "Adults beginning English",
+        "pt": "Adultos a iniciar o inglês"
+      },
+      "link": "https://example.org/sample-english-circle",
+      "status": {
+        "en": "Sample — open",
+        "pt": "Exemplo — aberto"
+      },
+      "posted": {
+        "en": "Sample date — July 1",
+        "pt": "Data de exemplo — 1 de julho"
+      }
+    },
+    {
+      "title": {
+        "en": "Sample: Small Business Basics Workshop",
+        "pt": "Exemplo: Oficina de Noções Básicas de Pequenos Negócios"
+      },
+      "what": {
+        "en": "A one-day introduction to planning, pricing, and simple record-keeping.",
+        "pt": "Uma introdução de um dia a planeamento, preços e registos simples."
+      },
+      "deadline": {
+        "en": "Sample date — August 30 (placeholder, not a real deadline)",
+        "pt": "Data de exemplo — 30 de agosto (fictícia, não é um prazo real)"
+      },
+      "who": {
+        "en": "People starting or improving a small business",
+        "pt": "Pessoas a criar ou melhorar um pequeno negócio"
+      },
+      "link": "https://example.org/sample-business-workshop",
+      "status": {
+        "en": "Sample — check dates",
+        "pt": "Exemplo — verificar datas"
+      },
+      "posted": {
+        "en": "Sample date — July 3",
+        "pt": "Data de exemplo — 3 de julho"
+      }
+    },
+    {
+      "title": {
+        "en": "Sample: Youth Career Information Session",
+        "pt": "Exemplo: Sessão de Informação sobre Carreiras para Jovens"
+      },
+      "what": {
+        "en": "An information session about career paths, CVs, and first job steps.",
+        "pt": "Uma sessão de informação sobre percursos profissionais, CV e primeiros passos no emprego."
+      },
+      "deadline": {
+        "en": "Sample date — September 5 (placeholder, not a real deadline)",
+        "pt": "Data de exemplo — 5 de setembro (fictícia, não é um prazo real)"
+      },
+      "who": {
+        "en": "Young adults exploring work options",
+        "pt": "Jovens adultos a explorar opções de trabalho"
+      },
+      "link": "https://example.org/sample-career-session",
+      "status": {
+        "en": "Sample — upcoming",
+        "pt": "Exemplo — em breve"
+      },
+      "posted": {
+        "en": "Sample date — July 5",
+        "pt": "Data de exemplo — 5 de julho"
+      }
+    }
+  ]
+}
