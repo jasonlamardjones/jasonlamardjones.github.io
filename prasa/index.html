@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Home</title>
+<link rel="stylesheet" href="prasa.css">
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html" data-t="BRAND_NAME"></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page" data-t="NAV.home"></a>
+      <a href="board.html" data-t="STATION_LABELS.board"></a>
+      <a href="about.html" data-t="NAV.about"></a>
+      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start"></a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h1 data-t="BRAND_NAME"></h1>
+    <p class="tagline" data-t="TAGLINE"></p>
+    <p class="descriptor" data-t="DESCRIPTOR"></p>
+    <a class="btn" href="start.html" data-t="HOME.cta"></a>
+  </section>
+
+  <section class="section orientation" aria-label="Orientation">
+    <p data-t="HOME.orientation"></p>
+  </section>
+
+  <section class="section" aria-labelledby="stationsTitle">
+    <h2 id="stationsTitle" data-t="HOME.stations_title"></h2>
+    <ul class="station-grid" id="stationGrid"></ul>
+  </section>
+
+  <section class="section" aria-labelledby="boardPreviewTitle">
+    <h2 id="boardPreviewTitle" data-t="HOME.board_preview_title"></h2>
+    <ul class="board-list preview" id="boardPreview"></ul>
+    <p><a href="board.html" data-t="HOME.board_full_link"></a></p>
+  </section>
+
+  <section class="section" aria-label="Independence note">
+    <p class="boundary-note" data-boundary-short></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-actions">
+      <a class="btn" href="start.html" data-t="FOOTER.start_cta"></a>
+      <a href="about.html" data-t="NAV.about"></a>
+    </div>
+    <p class="boundary-note" data-boundary-short></p>
+  </div>
+</footer>
+
+<script src="prasa-config.js"></script>
+<script src="prasa.js"></script>
+</body>
+</html>
