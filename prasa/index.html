@@ -4,49 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Home</title>
+<title>Home · A Prasa</title>
 <link rel="stylesheet" href="prasa.css">
 </head>
 <body data-page="home">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="index.html" data-t="BRAND_NAME"></a>
+    <a class="brand" href="index.html" data-t="BRAND_NAME">A Prasa</a>
     <nav class="site-nav" aria-label="Main">
-      <a href="index.html" aria-current="page" data-t="NAV.home"></a>
-      <a href="board.html" data-t="STATION_LABELS.board"></a>
-      <a href="about.html" data-t="NAV.about"></a>
-      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start"></a>
+      <a href="index.html" aria-current="page" data-t="NAV.home">Home</a>
+      <a href="board.html" data-t="STATION_LABELS.board">Prasa Board</a>
+      <a href="about.html" data-t="NAV.about">About &amp; boundaries</a>
+      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start">Start Here</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
+<main id="main" class="container" tabindex="-1">
 
   <section class="hero">
-    <h1 data-t="BRAND_NAME"></h1>
-    <p class="tagline" data-t="TAGLINE"></p>
-    <p class="descriptor" data-t="DESCRIPTOR"></p>
-    <a class="btn" href="start.html" data-t="HOME.cta"></a>
+    <h1 data-t="BRAND_NAME">A Prasa</h1>
+    <p class="tagline" data-t="TAGLINE">You are here. Find your next step.</p>
+    <p class="descriptor" data-t="DESCRIPTOR">A modern resource square for opportunity.</p>
+    <a class="btn" href="start.html" data-t="HOME.cta">Start here</a>
   </section>
 
   <section class="section orientation" aria-label="Orientation">
-    <p data-t="HOME.orientation"></p>
+    <p data-t="HOME.orientation">This is one square with clear paths: learn something, find work help, grow a business, or see what is open right now. Tap the option closest to your goal and take one small step.</p>
   </section>
 
   <section class="section" aria-labelledby="stationsTitle">
-    <h2 id="stationsTitle" data-t="HOME.stations_title"></h2>
+    <h2 id="stationsTitle" data-t="HOME.stations_title">Stations</h2>
     <ul class="station-grid" id="stationGrid"></ul>
+    <noscript><p class="noscript-note">The station list needs JavaScript to display. The main stations are the Prasa Board (current opportunities) and Start Here (a simple tap-only finder) — both are linked above.</p></noscript>
   </section>
 
   <section class="section" aria-labelledby="boardPreviewTitle">
-    <h2 id="boardPreviewTitle" data-t="HOME.board_preview_title"></h2>
+    <h2 id="boardPreviewTitle" data-t="HOME.board_preview_title">On the board right now</h2>
     <ul class="board-list preview" id="boardPreview"></ul>
-    <p><a href="board.html" data-t="HOME.board_full_link"></a></p>
+    <noscript><p class="noscript-note">Current postings need JavaScript to load.</p></noscript>
+    <p><a href="board.html" data-t="HOME.board_full_link">See the full board</a></p>
   </section>
 
   <section class="section" aria-label="Independence note">
-    <p class="boundary-note" data-boundary-short></p>
+    <p class="boundary-note" data-boundary-short>A Prasa is an independent project. It is not an official page of the U.S. Embassy, American Spaces, UniCV, or any government or listed provider. We link to official sources — always check details on the provider's own page.</p>
   </section>
 
 </main>
@@ -54,10 +58,10 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-actions">
-      <a class="btn" href="start.html" data-t="FOOTER.start_cta"></a>
-      <a href="about.html" data-t="NAV.about"></a>
+      <a class="btn" href="start.html" data-t="FOOTER.start_cta">Start here</a>
+      <a href="about.html" data-t="NAV.about">About &amp; boundaries</a>
     </div>
-    <p class="boundary-note" data-boundary-short></p>
+    <p class="boundary-note" data-boundary-short>A Prasa is an independent project. It is not an official page of the U.S. Embassy, American Spaces, UniCV, or any government or listed provider. We link to official sources — always check details on the provider's own page.</p>
   </div>
 </footer>
 

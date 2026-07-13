@@ -1,21 +1,70 @@
 /*
- * Phase 1 stylesheet for this prototype section only.
+ * Phase 4 / Patch 1 stylesheet — approved Phase 2 foundation tokens applied.
  * Self-contained: no external fonts, no frameworks, no imports from the
- * existing site. Placeholder palette (Phase 1 only): near-black text on
- * off-white, one muted accent. Final palette/typography come later.
+ * existing site. System-first typography only — the final wordmark typeface
+ * is NOT selected here; serif headings are an interim system-stack treatment.
  * Mobile-first: designed at 360px, scaled at 768px and 1280px.
  */
 
 :root {
-  --ink: #1d1d1b;          /* near-black text */
-  --paper: #faf8f4;        /* off-white background */
-  --panel: #ffffff;
-  --line: #d8d4cc;
-  --muted: #52504b;        /* secondary text, AA on paper */
-  --accent: #2f6b5e;       /* single muted accent */
-  --accent-ink: #ffffff;   /* text on accent */
-  --accent-soft: #e7efec;  /* soft accent wash */
-  --radius: 12px;
+  /* Brand foundation */
+  --brand: #1F4A38;        /* primary */
+  --brand-deep: #16352A;   /* deep */
+  --ochre: #C08A2D;        /* accent — decorative only; fails AA as text on light grounds */
+
+  /* Grounds */
+  --paper: #FAF7EE;        /* page ground */
+  --panel: #FFFFFF;        /* card ground */
+  --panel-quiet: #F3EDDD;  /* quiet panel */
+
+  /* Text */
+  --ink: #26231C;          /* primary text */
+  --muted: #5C574A;        /* secondary text */
+
+  /* Lines / borders */
+  --line: #E3DCC8;
+
+  /* Focus */
+  --focus: #1D5FA0;
+
+  /* Semantic status */
+  --status-open-text: #14603A;
+  --status-open-bg: #E8F3EA;
+  --status-closing-text: #8A5B00;
+  --status-closing-bg: #FFF8E6;
+  --status-closed-text: #6B675C;
+  --status-closed-bg: #EFEBE0;
+
+  /* Sponsored marker — tokens reserved only; no sponsored component exists
+     in this patch and none is introduced. Neutral by design. */
+  --sponsored-text: #4F4B40;
+  --sponsored-line: #8A8474;
+
+  /* Feedback */
+  --error-text: #9E2B25;
+  --error-bg: #FDF0EF;
+  --success-text: #14603A;
+  --success-bg: #E8F3EA;
+
+  /* Typography — system-first stacks only */
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Spacing scale: 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Radius */
+  --radius-card: 8px;
+  --radius-input: 4px;
+  --radius-panel: 12px;
+  --radius-pill: 999px;
 }
 
 * { box-sizing: border-box; }
@@ -26,9 +75,9 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;          /* >= 16px base */
-  line-height: 1.55;
+  font-family: var(--font-sans);
+  font-size: 1rem;           /* body 16px */
+  line-height: 1.625;        /* body 16/26 */
   overflow-wrap: anywhere;
 }
 
@@ -38,28 +87,55 @@ img { max-width: 100%; }
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--space-4); /* mobile gutter 16px */
 }
+
+/* ---------- Skip link (visible on focus) ---------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  position: fixed;
+  left: var(--space-4);
+  top: var(--space-4);
+  z-index: 100;
+  background: var(--brand-deep);
+  color: #ffffff;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-card);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main:focus { outline: none; }
 
 /* ---------- Header / nav ---------- */
 
 .site-header {
   background: var(--panel);
-  border-bottom: 2px solid var(--line);
-  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  padding: var(--space-2) 0;
 }
 
 .site-header .container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px 16px;
+  gap: var(--space-2) var(--space-4);
 }
 
+/* Text brand fallback — interim wordmark treatment; final logo/wordmark
+   assets are blocked pending vector reconstruction and reviews. */
 .brand {
-  font-weight: 800;
-  font-size: 1.15rem;
-  color: var(--ink);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--brand-deep);
   text-decoration: none;
   min-height: 44px;
   display: inline-flex;
@@ -69,7 +145,7 @@ img { max-width: 100%; }
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 6px;
+  gap: var(--space-1) var(--space-2);
   margin-left: auto;
 }
 
@@ -77,8 +153,8 @@ img { max-width: 100%; }
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 4px 10px;
-  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-card);
   color: var(--ink);
   text-decoration: none;
   font-weight: 600;
@@ -86,29 +162,37 @@ img { max-width: 100%; }
 }
 
 .site-nav a[aria-current="page"] {
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--panel-quiet);
+  color: var(--brand-deep);
+  box-shadow: inset 0 -2px 0 var(--ochre); /* decorative accent, not color-only: aria-current + weight carry meaning */
 }
 
 .site-nav a.nav-cta {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--brand);
+  color: #ffffff;
 }
 
 /* ---------- Links, buttons, focus ---------- */
 
-a { color: var(--accent); }
+a { color: var(--brand); }
+
+/* Inline links in content sections meet 44px touch height */
+main .section p > a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 10px 20px;
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--accent);
-  color: var(--accent-ink);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--brand);
+  border-radius: var(--radius-card);
+  background: var(--brand);
+  color: #ffffff;
   font: inherit;
   font-weight: 700;
   text-decoration: none;
@@ -117,54 +201,81 @@ a { color: var(--accent); }
 
 .btn.ghost {
   background: transparent;
-  color: var(--accent);
+  color: var(--brand);
 }
 
 a:focus-visible,
 button:focus-visible,
 .btn:focus-visible {
-  outline: 3px solid var(--ink);
+  outline: 3px solid var(--focus);
   outline-offset: 2px;
 }
 
-/* ---------- Sections ---------- */
+/* ---------- Sections / type scale ---------- */
 
-main { padding: 8px 0 32px; }
+main { padding: var(--space-2) 0 var(--space-6); }
 
-.section { margin: 28px 0; }
+.section { margin: var(--space-7) 0; } /* section spacing 48px mobile */
 
-h1 { font-size: 1.8rem; line-height: 1.2; margin: 0.4em 0; }
-h2 { font-size: 1.3rem; line-height: 1.25; margin: 0 0 0.5em; }
-h3 { font-size: 1.05rem; margin: 0 0 0.3em; }
+h1, h2 {
+  font-family: var(--font-serif);
+  color: var(--brand-deep);
+}
 
-.hero { padding: 28px 0 4px; }
+/* display: 40/44 desktop, reduced on mobile */
+h1 { font-size: 2rem; line-height: 1.15; margin: 0.4em 0; }
+
+/* heading: 28/34 */
+h2 { font-size: 1.75rem; line-height: 1.214; margin: 0 0 0.5em; }
+
+/* UI heading: 19/26 — sans */
+h3 {
+  font-family: var(--font-sans);
+  font-size: 1.1875rem;
+  line-height: 1.37;
+  margin: 0 0 0.3em;
+}
+
+.hero { padding: var(--space-6) 0 var(--space-1); }
 
 .hero .tagline {
   font-size: 1.15rem;
   font-weight: 700;
-  margin: 0 0 4px;
+  margin: 0 0 var(--space-1);
 }
 
 .hero .descriptor {
   color: var(--muted);
-  margin: 0 0 18px;
+  margin: 0 0 var(--space-4);
 }
 
 .orientation {
-  background: var(--accent-soft);
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 12px 14px;
+  background: var(--panel-quiet);
+  border-left: 4px solid var(--ochre);
+  border-radius: var(--radius-panel);
+  padding: var(--space-3) var(--space-4);
 }
 
 .orientation p { margin: 0; }
+
+/* Shared label style: 13/16 uppercase */
+.label,
+.board-card dt,
+.finder-result .step-label {
+  font-size: 0.8125rem;
+  line-height: 1.23;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
 
 /* ---------- Station grid ---------- */
 
 .station-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: var(--space-4); /* card gap 16px */
   padding: 0;
   margin: 0;
   list-style: none;
@@ -173,35 +284,35 @@ h3 { font-size: 1.05rem; margin: 0 0 0.3em; }
 .station-card {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px;
+  border-radius: var(--radius-card);
+  padding: var(--space-4); /* card padding 16px mobile */
 }
 
 .station-card p {
-  margin: 4px 0 0;
+  margin: var(--space-1) 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
 .station-card .tag {
   display: inline-block;
-  margin-top: 8px;
-  padding: 2px 10px;
-  border-radius: 999px;
+  margin-top: var(--space-2);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
 .station-card .tag.soon {
-  background: var(--paper);
+  background: var(--status-closed-bg);
   border: 1px solid var(--line);
-  color: var(--muted);
+  color: var(--status-closed-text);
 }
 
 .station-card .tag.open {
-  background: var(--accent-soft);
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  background: var(--status-open-bg);
+  border: 1px solid var(--status-open-text);
+  color: var(--status-open-text);
 }
 
 a.station-link {
@@ -213,14 +324,14 @@ a.station-link {
 a.station-link:hover h3,
 a.station-link:focus-visible h3 { text-decoration: underline; }
 
-a.station-link h3 { color: var(--accent); }
+a.station-link h3 { color: var(--brand); }
 
 /* ---------- Board cards ---------- */
 
 .board-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: var(--space-4);
   padding: 0;
   margin: 0;
   list-style: none;
@@ -229,68 +340,78 @@ a.station-link h3 { color: var(--accent); }
 .board-card {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 16px;
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
 }
 
-.board-card h3 { margin: 0 0 8px; }
+.board-card h3 { margin: 0 0 var(--space-2); }
 
+/* Status text is data-driven prose (not semantic yet), so the pill stays
+   neutral; semantic open/closing/closed tokens are reserved for the Phase 4
+   Board patch when status becomes structured. */
 .board-card .status {
   display: inline-block;
-  margin: 0 0 10px;
-  padding: 2px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
+  margin: 0 0 var(--space-3);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: var(--status-closed-bg);
+  color: var(--status-closed-text);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.board-card dl { margin: 0 0 12px; }
-
-.board-card dt {
-  font-weight: 700;
-  font-size: 0.85rem;
-}
+.board-card dl { margin: 0 0 var(--space-3); }
 
 .board-card dd {
-  margin: 0 0 8px;
-  color: var(--muted);
+  margin: 0 0 var(--space-2);
+  color: var(--ink);
 }
 
+/* metadata: 13.5/20 */
 .board-card .link-note {
   display: block;
-  margin-top: 6px;
-  font-size: 0.85rem;
+  margin-top: var(--space-2);
+  font-size: 0.84375rem;
+  line-height: 1.48;
   color: var(--muted);
 }
 
 .board-empty,
-.notice {
+.noscript-note {
+  display: block;
   background: var(--panel);
   border: 1px dashed var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  margin: 0;
   color: var(--muted);
+}
+
+.notice {
+  background: var(--error-bg);
+  border: 1px solid var(--error-text);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  color: var(--error-text);
 }
 
 /* ---------- Finder ---------- */
 
-.finder-question h2 { margin: 0 0 14px; }
+.finder-question h2 { margin: 0 0 var(--space-4); }
 
 .finder-options {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
-  margin: 0 0 18px;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-4);
 }
 
 .finder-options button {
   min-height: 52px;
-  padding: 12px 16px;
-  border: 2px solid var(--line);
-  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
   background: var(--panel);
   color: var(--ink);
   font: inherit;
@@ -299,24 +420,25 @@ a.station-link h3 { color: var(--accent); }
   cursor: pointer;
 }
 
-.finder-options button:hover { border-color: var(--accent); }
+.finder-options button:hover { border-color: var(--brand); }
 
 .finder-result:not(:empty) {
   background: var(--panel);
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 16px;
-  margin: 0 0 18px;
+  border: 1px solid var(--brand);
+  border-left: 4px solid var(--brand);
+  border-radius: var(--radius-panel);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-4);
 }
 
 .finder-result .tag-soon {
   display: inline-block;
-  margin: 0 0 8px;
-  padding: 2px 10px;
-  border-radius: 999px;
+  margin: 0 0 var(--space-2);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
   border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--muted);
+  background: var(--status-closed-bg);
+  color: var(--status-closed-text);
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -324,32 +446,28 @@ a.station-link h3 { color: var(--accent); }
 .finder-result .station-name {
   font-size: 1.2rem;
   font-weight: 800;
-  margin: 0 0 10px;
+  margin: 0 0 var(--space-3);
 }
 
-.finder-result .step-label {
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin: 0;
-}
+.finder-result .step-label { margin: 0; }
 
-.finder-result .step-text { margin: 4px 0 0; }
+.finder-result .step-text { margin: var(--space-1) 0 0; }
 
-.finder-result .btn { margin-top: 14px; }
+.finder-result .btn { margin-top: var(--space-4); }
 
 .finder-controls {
   display: flex;
-  gap: 10px;
+  gap: var(--space-3);
   flex-wrap: wrap;
 }
 
 .finder-controls button {
   min-height: 44px;
-  padding: 8px 18px;
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--brand);
+  border-radius: var(--radius-card);
   background: transparent;
-  color: var(--accent);
+  color: var(--brand);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
@@ -360,32 +478,32 @@ a.station-link h3 { color: var(--accent); }
 .boundary-full section {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  margin: 0 0 12px;
+  border-radius: var(--radius-panel);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-3);
 }
 
-.boundary-full h2 { margin: 0 0 6px; font-size: 1.1rem; }
+.boundary-full h2 { margin: 0 0 var(--space-2); font-size: 1.1875rem; line-height: 1.37; }
 .boundary-full p { margin: 0; }
 
 .about-list { margin: 0; padding-left: 20px; }
-.about-list li { margin: 0 0 6px; }
+.about-list li { margin: 0 0 var(--space-2); }
 
 /* ---------- Footer ---------- */
 
 .site-footer {
   background: var(--panel);
-  border-top: 2px solid var(--line);
-  padding: 24px 0 32px;
-  margin-top: 8px;
+  border-top: 1px solid var(--line);
+  padding: var(--space-5) 0 var(--space-6);
+  margin-top: var(--space-2);
 }
 
 .footer-actions {
   display: flex;
   align-items: center;
-  gap: 10px 18px;
+  gap: var(--space-3) var(--space-4);
   flex-wrap: wrap;
-  margin: 0 0 14px;
+  margin: 0 0 var(--space-4);
 }
 
 .footer-actions a:not(.btn) {
@@ -395,8 +513,10 @@ a.station-link h3 { color: var(--accent); }
   font-weight: 600;
 }
 
+/* metadata: 13.5/20 */
 .boundary-note {
-  font-size: 0.9rem;
+  font-size: 0.84375rem;
+  line-height: 1.48;
   color: var(--muted);
   margin: 0;
 }
@@ -404,8 +524,11 @@ a.station-link h3 { color: var(--accent); }
 /* ---------- Wider viewports ---------- */
 
 @media (min-width: 768px) {
-  .container { max-width: 46rem; }
-  h1 { font-size: 2.2rem; }
+  .container { max-width: 46rem; padding: 0 var(--space-6); } /* desktop gutter 32px */
+  h1 { font-size: 2.5rem; line-height: 1.1; } /* display 40/44 */
+  .section { margin: 80px 0; } /* section spacing 80px desktop */
+  .station-card,
+  .board-card { padding: var(--space-5); } /* card padding 24px desktop */
   .station-grid { grid-template-columns: 1fr 1fr; }
   .finder-options { grid-template-columns: 1fr 1fr; }
   .board-list.preview { grid-template-columns: 1fr 1fr; }
