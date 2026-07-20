@@ -13,7 +13,7 @@
 | --- | --- |
 | Default branch | `main` |
 | `main` HEAD at audit time | `4b8ebb4` — "Merge pull request #39 from jasonlamardjones/feature/prasa-prototype-phase1" |
-| Audit/continuation branch | `claude/fable5-audit-continuation-f388ee` (created from `main` @ `4b8ebb4`) |
+| Audit/continuation branch | `claude/fable5-audit-continuation-f388ee` (created from `main` @ `4b8ebb4`; open as PR #41) |
 | Other remote branches | none (feature branches are deleted after merge) |
 | History | 97 commits, 36 merge commits; active 2026-05 (42 commits), 2026-06 (53), 2026-07 (2) |
 | `main` protection | Light GitHub ruleset: deletions restricted, force-push blocked, no PR requirement (decision `2026-05-31-002`) |

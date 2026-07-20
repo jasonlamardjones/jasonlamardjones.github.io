@@ -13,7 +13,7 @@
 - **Session branch `claude/fable5-audit-continuation-f388ee`** (from `4b8ebb4`), contains:
   - `eb80ef9` — "Reduce Resource Hub mobile page weight" (the session's implementation, details in §2)
   - a docs commit adding `docs/continuation/` (this package)
-- **Not yet merged.** Merging to `main` requires the owner's explicit approval (open a PR from the session branch, or the owner merges locally).
+- **Open as PR #41** (https://github.com/jasonlamardjones/jasonlamardjones.github.io/pull/41). Not merged; merging requires the owner's explicit approval. Further pushes to the session branch update that PR.
 
 **Three systems, one repo** (full map in `TECHNICAL_ARCHITECTURE_MAP.md`): professional site (`index.html` + `style.css` + `main.js`), Resource Hub (`resources*.html`, each page self-contained, data from `resources-data.json` — 201 listings), and the unlinked `noindex` A Prasa prototype under `/prasa/` (token-driven, all strings in `prasa-config.js`, fictional sample data). The hub's product promise that governs prioritization: **one useful next step in under 60 seconds on mobile.**
 
