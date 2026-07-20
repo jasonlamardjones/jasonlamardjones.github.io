@@ -37,11 +37,11 @@ After these, the next technical priorities are N3 (move runtime data patches int
 
 ## 4. Task ownership by project
 
-*Assumption (correct me if the numbering differs): Project 03 = A Prasa (business/brand) · Project 04 = Resource Hub (product/curation) · Project 05 = Website & GitHub Technical Operations.*
+**Confirmed Project ownership:** Project 03 = A Prasa Business, Brand & Administration · Project 04 = Website & GitHub Technical Operations · Project 05 = Resource Hub & Opportunity Access System.
 
-- **Project 03 — A Prasa:** no code tasks now. Owns decisions Q13–Q16 (brand name / Rename Day, publish-and-link timing, commissioning native Portuguese review, station roadmap). Prototype stays frozen, unlinked, sample-data-only until these land.
-- **Project 04 — Resource Hub:** C1 and C2 (data corrections and curation sweep), plus decisions Q1–Q2 (MOOC facts, curation cadence), Q5 (events source of truth), Q7 (pathway definitions), Q8 (zero-result behavior), and sign-off on the Q3 data-split schema. Later: content for Pathways (L2) and Organizations (L3).
-- **Project 05 — Technical Operations:** merge/deploy PR #41, N1 (images), N5 (404/favicon), N3, N4, N2 (refactors), maintaining the audit CI, and executing the Q3 split once Project 04 signs off the schema.
+- **Project 03 — A Prasa Business, Brand & Administration:** no code tasks now. Owns decisions Q13–Q16 (brand name / Rename Day, publish-and-link timing, commissioning native Portuguese review, and the A Prasa feature/content roadmap). The prototype stays frozen, unlinked, sample-data-only until these decisions are made.
+- **Project 04 — Website & GitHub Technical Operations:** review, merge, deploy, and rollback PR #41; N1 (images and dead technical assets); N5 (404/favicon); N3, N4, and N2 (technical refactors); maintaining audit tooling and CI; and implementing the approved Q3 data split after Project 05 signs off the product schema.
+- **Project 05 — Resource Hub & Opportunity Access System:** C1 and C2 (listing corrections and curation); decisions Q1–Q2 (MOOC facts and curation cadence), Q5 (events source of truth), Q7 (pathway definitions), Q8 (zero-result behavior), and product approval of the Q3 data-split schema. Later: Pathways (L2), Organizations (L3), and related product/content requirements.
 
 ## 5. The 17 open questions — what actually blocks work now
 
@@ -72,4 +72,4 @@ All steps happen on the GitHub website, signed in.
 
 ## 7. Restart prompt for the next Claude Code session
 
-> In `jasonlamardjones/jasonlamardjones.github.io`, read `AGENTS.md` and all files in `docs/continuation/` before doing anything — they contain a completed 2026-07-20 audit, architecture map, backlog, and rules; do not re-audit the repository. Check whether PR #41 (branch `claude/fable5-audit-continuation-f388ee`) has been merged: if yes, branch fresh from `main`; if no, ask me whether to continue on that branch or wait. Then execute Task 1 from `NEXT_MODEL_HANDOFF.md` §5 (fix expired MOOC listings UNI-023/024/025 and CV-097 in `resources-data.json`, with the three-place version bump), following the verification steps in `TEST_AND_DEPLOYMENT_CHECKLIST.md`, and open a PR without merging. If I've answered any questions from `OWNER_BRIEFING.md` §5 in my message, apply those answers; otherwise make no product or business decisions on your own.
+> In `jasonlamardjones/jasonlamardjones.github.io`, read `AGENTS.md` and all files in `docs/continuation/` before doing anything — they contain a completed 2026-07-20 audit, architecture map, backlog, and rules; do not re-audit the repository. Check whether PR #41 (branch `claude/fable5-audit-continuation-f388ee`) has been merged: if yes, branch fresh from `main`; if no, ask me whether to continue on that branch or wait. Then execute Task 1 from `NEXT_MODEL_HANDOFF.md` §5 (fix expired MOOC listings UNI-023/024/025 and CV-097 in `resources-data.json`, with the three-place version bump), following the verification steps in `TEST_AND_DEPLOYMENT_CHECKLIST.md`, and open a PR without merging. Treat Project 04 as Website & GitHub Technical Operations and Project 05 as Resource Hub & Opportunity Access System. If I've answered any questions from `OWNER_BRIEFING.md` §5 in my message, apply those answers; otherwise make no product or business decisions on your own.
