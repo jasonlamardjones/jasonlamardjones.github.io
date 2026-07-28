@@ -4,32 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Board</title>
+<title>Board · A Prasa</title>
 <link rel="stylesheet" href="prasa.css">
 </head>
 <body data-page="board">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="index.html" data-t="BRAND_NAME"></a>
+    <a class="brand" href="index.html" data-t="BRAND_NAME">A Prasa</a>
     <nav class="site-nav" aria-label="Main">
-      <a href="index.html" data-t="NAV.home"></a>
-      <a href="board.html" aria-current="page" data-t="STATION_LABELS.board"></a>
-      <a href="about.html" data-t="NAV.about"></a>
-      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start"></a>
+      <a href="index.html" data-t="NAV.home">Home</a>
+      <a href="board.html" aria-current="page" data-t="STATION_LABELS.board">Prasa Board</a>
+      <a href="about.html" data-t="NAV.about">About &amp; boundaries</a>
+      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start">Start Here</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
+<main id="main" class="container" tabindex="-1">
 
   <section class="hero">
-    <h1 data-t="STATION_LABELS.board"></h1>
-    <p data-t="BOARD.intro"></p>
+    <h1 data-t="STATION_LABELS.board">Prasa Board</h1>
+    <p data-t="BOARD.intro">Current opportunities, each with a date, who it is for, and an official link. Always confirm details on the provider's own page.</p>
   </section>
 
-  <section class="section" aria-label="Posted opportunities">
+  <section class="section" aria-labelledby="boardListTitle">
+    <h2 id="boardListTitle" data-t="BOARD.list_title">Posted opportunities</h2>
     <ul class="board-list" id="boardList"></ul>
+    <noscript><p class="noscript-note">Current postings need JavaScript to load. Please enable JavaScript, or check back from another device or browser.</p></noscript>
   </section>
 
 </main>
@@ -37,10 +41,10 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-actions">
-      <a class="btn" href="start.html" data-t="FOOTER.start_cta"></a>
-      <a href="about.html" data-t="NAV.about"></a>
+      <a class="btn" href="start.html" data-t="FOOTER.start_cta">Start here</a>
+      <a href="about.html" data-t="NAV.about">About &amp; boundaries</a>
     </div>
-    <p class="boundary-note" data-boundary-short></p>
+    <p class="boundary-note" data-boundary-short>A Prasa is an independent project. It is not an official page of the U.S. Embassy, American Spaces, UniCV, or any government or listed provider. We link to official sources — always check details on the provider's own page.</p>
   </div>
 </footer>
 

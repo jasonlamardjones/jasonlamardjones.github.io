@@ -4,37 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Finder</title>
+<title>Finder · A Prasa</title>
 <link rel="stylesheet" href="prasa.css">
 </head>
 <body data-page="start">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="index.html" data-t="BRAND_NAME"></a>
+    <a class="brand" href="index.html" data-t="BRAND_NAME">A Prasa</a>
     <nav class="site-nav" aria-label="Main">
-      <a href="index.html" data-t="NAV.home"></a>
-      <a href="board.html" data-t="STATION_LABELS.board"></a>
-      <a href="about.html" data-t="NAV.about"></a>
-      <a class="nav-cta" href="start.html" aria-current="page" data-t="STATION_LABELS.start"></a>
+      <a href="index.html" data-t="NAV.home">Home</a>
+      <a href="board.html" data-t="STATION_LABELS.board">Prasa Board</a>
+      <a href="about.html" data-t="NAV.about">About &amp; boundaries</a>
+      <a class="nav-cta" href="start.html" aria-current="page" data-t="STATION_LABELS.start">Start Here</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
+<main id="main" class="container" tabindex="-1">
 
   <section class="hero">
-    <h1 data-t="FINDER_NAME"></h1>
-    <p data-t="FINDER.intro"></p>
+    <h1 data-t="FINDER_NAME">Start Here</h1>
+    <p data-t="FINDER.intro">Answer with taps only — no typing, no account, nothing saved. You will get one suggested station and one realistic first step.</p>
   </section>
 
   <section class="section" aria-label="Finder">
+    <noscript><p class="noscript-note">The finder needs JavaScript to run. If it does not load, you can still <a href="board.html">open the board</a> to see current opportunities with dates and official links.</p></noscript>
     <div class="finder-question" id="finderQuestion"></div>
     <div class="finder-options" id="finderOptions"></div>
     <div class="finder-result" id="finderResult" role="status" aria-live="polite"></div>
     <div class="finder-controls">
-      <button type="button" id="finderBack" hidden></button>
-      <button type="button" id="finderRestart" hidden></button>
+      <button type="button" id="finderBack" hidden>Back</button>
+      <button type="button" id="finderRestart" hidden>Start over</button>
     </div>
   </section>
 
@@ -43,10 +46,10 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-actions">
-      <a href="index.html" data-t="NAV.home"></a>
-      <a href="about.html" data-t="NAV.about"></a>
+      <a href="index.html" data-t="NAV.home">Home</a>
+      <a href="about.html" data-t="NAV.about">About &amp; boundaries</a>
     </div>
-    <p class="boundary-note" data-boundary-short></p>
+    <p class="boundary-note" data-boundary-short>A Prasa is an independent project. It is not an official page of the U.S. Embassy, American Spaces, UniCV, or any government or listed provider. We link to official sources — always check details on the provider's own page.</p>
   </div>
 </footer>
 

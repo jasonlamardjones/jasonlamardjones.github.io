@@ -2,9 +2,13 @@
  * Phase 1 configuration — SINGLE SOURCE for every brand string and every
  * user-facing string used by the pages in this folder.
  *
- * RENAME DAY RULE: changing the project name (or any station label) must be
- * a one-file edit — edit this file only. No literal brand string may appear
- * in any other HTML/CSS/JS/JSON file in this folder.
+ * RENAME DAY RULE (relaxed in Phase 4 / Patch 1, approved): this file remains
+ * the runtime source of truth — JavaScript still overrides all [data-t] text
+ * from here. However, default English text (including the working brand name)
+ * is now ALSO baked into the four HTML pages so they stay readable without
+ * JavaScript (progressive enhancement). Renaming the project is therefore a
+ * five-file edit: this file plus index.html, start.html, board.html, and
+ * about.html (titles, brand link, baked strings, and About noscript blocks).
  *
  * TRANSLATION STATUS: every user-facing string carries { en, pt } fields.
  * ALL "pt" STRINGS ARE PROVISIONAL MACHINE-DRAFTED PLACEHOLDERS. They have
@@ -96,6 +100,7 @@ window.PRASA_CONFIG = {
   },
 
   BOARD: {
+    list_title: { en: "Posted opportunities", pt: "Oportunidades publicadas" },
     intro: {
       en: "Current opportunities, each with a date, who it is for, and an official link. Always confirm details on the provider's own page.",
       pt: "Oportunidades atuais, cada uma com data, público-alvo e uma ligação oficial. Confirme sempre os detalhes na página do próprio fornecedor."

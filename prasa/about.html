@@ -4,52 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>About</title>
+<title>About &amp; boundaries · A Prasa</title>
 <link rel="stylesheet" href="prasa.css">
 </head>
 <body data-page="about">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="index.html" data-t="BRAND_NAME"></a>
+    <a class="brand" href="index.html" data-t="BRAND_NAME">A Prasa</a>
     <nav class="site-nav" aria-label="Main">
-      <a href="index.html" data-t="NAV.home"></a>
-      <a href="board.html" data-t="STATION_LABELS.board"></a>
-      <a href="about.html" aria-current="page" data-t="NAV.about"></a>
-      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start"></a>
+      <a href="index.html" data-t="NAV.home">Home</a>
+      <a href="board.html" data-t="STATION_LABELS.board">Prasa Board</a>
+      <a href="about.html" aria-current="page" data-t="NAV.about">About &amp; boundaries</a>
+      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start">Start Here</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
+<main id="main" class="container" tabindex="-1">
 
   <section class="hero">
-    <h1 data-t="NAV.about"></h1>
+    <h1 data-t="NAV.about">About &amp; boundaries</h1>
   </section>
 
   <section class="section boundary-full" aria-label="Boundary statement">
     <div id="boundaryFull"></div>
+    <noscript>
+      <section>
+        <h2>Who runs this?</h2>
+        <p>A Prasa is independently built and maintained by Jason L. Jones. It is not an official platform of the U.S. Embassy, American Spaces, UniCV, the Government of Cabo Verde, or any organization listed here.</p>
+      </section>
+      <section>
+        <h2>What about the resources?</h2>
+        <p>We curate links to real programs and providers. Being listed here does not mean a provider endorses this site — and it does not mean we can promise you a place, a job, a certificate, a scholarship, or a visa. Always confirm dates, costs, and requirements on the official page.</p>
+      </section>
+      <section>
+        <h2>Volunteer work is separate.</h2>
+        <p>Jason sometimes supports approved community programming as a volunteer. That work is separate from this platform and is only presented as official when it actually is — clearly labeled, case by case.</p>
+      </section>
+      <section>
+        <h2>The square is an idea, for now.</h2>
+        <p>A Prasa is inspired by the public-square idea. Any future physical presence — a table, a kiosk, an event in a real square — would only happen with the proper permissions, and we would say so clearly.</p>
+      </section>
+    </noscript>
   </section>
 
   <section class="section" aria-labelledby="whatIsTitle">
-    <h2 id="whatIsTitle" data-t="ABOUT.what_is_title"></h2>
+    <h2 id="whatIsTitle" data-t="ABOUT.what_is_title">What this is</h2>
     <ul class="about-list" id="aboutWhatIs"></ul>
+    <noscript>
+      <ul class="about-list">
+        <li>An independent, curated square of starting points for learning, work, and business.</li>
+        <li>A noticeboard of current opportunities, each linking to its official source.</li>
+        <li>A simple tap-only finder that suggests a realistic first step.</li>
+      </ul>
+    </noscript>
   </section>
 
   <section class="section" aria-labelledby="whatNotTitle">
-    <h2 id="whatNotTitle" data-t="ABOUT.what_not_title"></h2>
+    <h2 id="whatNotTitle" data-t="ABOUT.what_not_title">What this is not</h2>
     <ul class="about-list" id="aboutWhatNot"></ul>
+    <noscript>
+      <ul class="about-list">
+        <li>Not an official page of any embassy, university, government office, or listed provider.</li>
+        <li>Not an application portal — applying always happens on the official provider's page.</li>
+        <li>Not a promise of a place, a job, a certificate, a scholarship, or a visa.</li>
+      </ul>
+    </noscript>
   </section>
 
   <section class="section" aria-labelledby="maintainerTitle">
-    <h2 id="maintainerTitle" data-t="ABOUT.maintainer_title"></h2>
-    <p data-t="ABOUT.maintainer_body"></p>
-    <p data-t="ABOUT.no_logos_note"></p>
+    <h2 id="maintainerTitle" data-t="ABOUT.maintainer_title">Who maintains it</h2>
+    <p data-t="ABOUT.maintainer_body">A Prasa is built and maintained by Jason L. Jones as an independent project.</p>
+    <p data-t="ABOUT.no_logos_note">No institutional logos are used here, and no affiliation is implied.</p>
   </section>
 
   <section class="section" aria-labelledby="checksTitle">
-    <h2 id="checksTitle" data-t="ABOUT.checks_title"></h2>
-    <p data-t="ABOUT.checks_body"></p>
+    <h2 id="checksTitle" data-t="ABOUT.checks_title">How resources are checked</h2>
+    <p data-t="ABOUT.checks_body">Every posted item links to an official source page. Items are reviewed before posting and updated or removed when details change. Dates, costs, and requirements can still change at any time — always confirm final details on the official page.</p>
   </section>
 
 </main>
@@ -57,10 +91,10 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-actions">
-      <a class="btn" href="start.html" data-t="FOOTER.start_cta"></a>
-      <a href="index.html" data-t="NAV.home"></a>
+      <a class="btn" href="start.html" data-t="FOOTER.start_cta">Start here</a>
+      <a href="index.html" data-t="NAV.home">Home</a>
     </div>
-    <p class="boundary-note" data-boundary-short></p>
+    <p class="boundary-note" data-boundary-short>A Prasa is an independent project. It is not an official page of the U.S. Embassy, American Spaces, UniCV, or any government or listed provider. We link to official sources — always check details on the provider's own page.</p>
   </div>
 </footer>
 
