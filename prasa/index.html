@@ -3,67 +3,105 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Home</title>
-<link rel="stylesheet" href="prasa.css">
+<meta name="description" content="A PRASA founding preview: a small, independent digital praça for useful opportunities and practical local information.">
+<title>A PRASA — Founding Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans&display=swap">
+<link rel="stylesheet" href="prasa-launch.css">
 </head>
-<body data-page="home">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="container">
+<header class="site-header" aria-label="A PRASA">
+  <div class="container header-inner">
     <a class="brand" href="index.html" aria-label="A PRASA — Home">
       <img src="assets/brand/A_PRASA_Wordmark_Primary_Green.svg" alt="" width="215" height="70">
     </a>
-    <nav class="site-nav" aria-label="Main">
-      <a href="index.html" aria-current="page" data-t="NAV.home"></a>
-      <a href="board.html" data-t="STATION_LABELS.board"></a>
-      <a href="about.html" data-t="NAV.about"></a>
-      <a class="nav-cta" href="start.html" data-t="STATION_LABELS.start"></a>
-    </nav>
   </div>
 </header>
 
-<main class="container">
-
-  <section class="hero">
-    <h1 data-t="BRAND_NAME"></h1>
-    <p class="tagline" data-t="TAGLINE"></p>
-    <p class="descriptor" data-t="DESCRIPTOR"></p>
-    <a class="btn" href="start.html" data-t="HOME.cta"></a>
+<main id="main">
+  <section class="opening container" aria-labelledby="page-title">
+    <p class="preview-label">Founding Preview</p>
+    <h1 id="page-title">A PRASA is a shared place where paths, people, and possibilities meet.</h1>
+    <div class="intro-copy">
+      <p>A PRASA is an independent platform being built to make useful opportunities and practical local information easier to find and reach.</p>
+      <p>Think of it as a small digital praça: a place to discover useful starting points and go directly to the people and organizations behind them.</p>
+      <p>This early edition begins with a carefully limited selection rather than trying to cover everything at once.</p>
+      <p>A PRASA will grow gradually as information is reviewed, improved and shown to be genuinely useful.</p>
+    </div>
+    <nav class="page-nav" aria-label="On this page">
+      <span>On this page</span>
+      <a href="#learn-work">Learn &amp; Work</a>
+      <a href="#about">About A PRASA</a>
+    </nav>
   </section>
 
-  <section class="section orientation" aria-label="Orientation">
-    <p data-t="HOME.orientation"></p>
+  <section class="shelf" id="learn-work" aria-labelledby="learn-work-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-kicker">Useful starting points</p>
+        <h2 id="learn-work-title">Learn &amp; Work</h2>
+        <p>Explore a small selection of learning and work pathways. Check the provider’s page for current details, requirements and deadlines.</p>
+      </div>
+
+      <div class="resource-grid">
+        <article class="resource-card">
+          <p class="provider">HP Foundation / HP LIFE</p>
+          <h3>HP LIFE: free business and digital-skills courses</h3>
+          <p>HP LIFE offers 32 free online courses in business, digital skills, entrepreneurship, communication, finance, marketing, and professional development. All 32 courses are currently available in eight languages, including Portuguese. Learners who complete a course can receive a free Certificate of Completion.</p>
+          <p class="caveat">You must create an account and sign in to enroll. HP LIFE Certificates of Completion are not accredited or endorsed by educational bodies.</p>
+          <p class="checked">Checked 8 August 2026 against information published by the provider.</p>
+          <a class="resource-link" href="https://www.life-global.org/" target="_blank" rel="noopener noreferrer" aria-label="Explore HP LIFE courses — external link">Explore HP LIFE courses <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="resource-card">
+          <p class="provider">The Open University / OpenLearn</p>
+          <h3>OpenLearn: free courses from The Open University</h3>
+          <p>OpenLearn provides hundreds of free courses across nine subject areas, including digital and computing, languages, money and business, science, and society. All OpenLearn courses are free to study and are available to start now.</p>
+          <p class="caveat">The material checked for this record was in English; Portuguese availability has not been confirmed. Successful completion can provide a free Statement of Participation, but OpenLearn free courses do not carry formal credit toward a qualification, and digital badges are available only on some courses.</p>
+          <p class="checked">Checked 8 August 2026 against information published by the provider.</p>
+          <a class="resource-link" href="https://www.open.edu/openlearn/free-courses" target="_blank" rel="noopener noreferrer" aria-label="Browse OpenLearn courses — external link">Browse OpenLearn courses <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="resource-card">
+          <p class="provider">Instituto do Emprego e Formação Profissional (IEFP)</p>
+          <h3>IEFP PEPE: employment and professional-internship portal</h3>
+          <p>PEPE is IEFP's platform for employment and professional-internship opportunities in Cabo Verde. Visitors can review listings, create a candidate account, and sign in to apply directly through the provider.</p>
+          <p class="caveat">An account and sign-in are required to apply. Each listing has its own deadline and conditions. A listing shown on PEPE should not be treated as current without checking its individual details.</p>
+          <p class="checked">Checked 8 August 2026 against information published by the provider.</p>
+          <a class="resource-link" href="https://pepe.iefp.cv/frontend/web/index.php/pt/site" target="_blank" rel="noopener noreferrer" aria-label="View IEFP opportunities — external link">View IEFP opportunities <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section class="section" aria-labelledby="stationsTitle">
-    <h2 id="stationsTitle" data-t="HOME.stations_title"></h2>
-    <ul class="station-grid" id="stationGrid"></ul>
+  <section class="about-section" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div>
+        <p class="section-kicker">About this preview</p>
+        <h2 id="about-title">Independent, source-led and intentionally small.</h2>
+      </div>
+      <div class="about-copy">
+        <p>A PRASA is independent. It is not part of, and does not act on behalf of, the organizations, institutions or public bodies linked on this page.</p>
+        <p>Listings are provided for information and direct access to the original source. A PRASA does not guarantee eligibility, availability, acceptance or outcomes.</p>
+        <p>Details can change. Confirm current information with the provider before acting.</p>
+        <p>Found something outdated or incorrect? <a href="mailto:jasonlmjones@gmail.com?subject=A%20PRASA%20correction">Report a correction</a> so it can be reviewed.</p>
+      </div>
+    </div>
   </section>
-
-  <section class="section" aria-labelledby="boardPreviewTitle">
-    <h2 id="boardPreviewTitle" data-t="HOME.board_preview_title"></h2>
-    <ul class="board-list preview" id="boardPreview"></ul>
-    <p><a href="board.html" data-t="HOME.board_full_link"></a></p>
-  </section>
-
-  <section class="section" aria-label="Independence note">
-    <p class="boundary-note" data-boundary-short></p>
-  </section>
-
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-actions">
-      <a class="btn" href="start.html" data-t="FOOTER.start_cta"></a>
-      <a href="about.html" data-t="NAV.about"></a>
-    </div>
-    <p class="boundary-note" data-boundary-short></p>
+  <div class="container footer-inner">
+    <a class="footer-brand" href="index.html" aria-label="A PRASA — Home">
+      <img src="assets/brand/A_PRASA_Wordmark_Reversed_Cream.svg" alt="" width="215" height="70">
+    </a>
+    <p>A small digital praça, starting carefully.</p>
+    <p class="footer-note">A PRASA is independent and does not act on behalf of the providers linked here.</p>
+    <a class="back-top" href="#main">Back to top</a>
   </div>
 </footer>
-
-<script src="prasa-config.js"></script>
-<script src="prasa.js"></script>
 </body>
 </html>
