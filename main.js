@@ -113,13 +113,35 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay.setAttribute('hidden', '');
   overlay.setAttribute('aria-hidden', 'true');
 
-  const openLightbox = (src, alt) => {
+  let lastTrigger = null;
+  let inertState = null;
+
+  const dialogFocusables = () => Array.from(overlay.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter(el => el.getClientRects().length);
+
+  const setBackgroundInert = (on) => {
+    if (on) {
+      if (inertState) return;
+      inertState = Array.from(document.body.children)
+        .filter(el => !el.contains(overlay) && el.tagName !== 'SCRIPT')
+        .map(el => [el, el.hasAttribute('inert')]);
+      inertState.forEach(([el]) => el.setAttribute('inert', ''));
+    } else if (inertState) {
+      inertState.forEach(([el, wasInert]) => { if (!wasInert) el.removeAttribute('inert'); });
+      inertState = null;
+    }
+  };
+
+  const openLightbox = (src, alt, trigger) => {
     if (!src || !img) return;
+    if (overlay.hasAttribute('hidden')) lastTrigger = trigger || null;
     img.src = src;
     img.alt = alt || 'Image preview';
     overlay.removeAttribute('hidden');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.classList.add('lightbox-open');
+    setBackgroundInert(true);
+    const first = dialogFocusables()[0];
+    if (first) first.focus({ preventScroll: true });
   };
 
   const closeLightbox = () => {
@@ -130,6 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
       img.removeAttribute('src');
       img.removeAttribute('alt');
     }
+    setBackgroundInert(false);
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus({ preventScroll: true });
+    lastTrigger = null;
   };
 
   document.addEventListener('click', (event) => {
@@ -144,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     event.preventDefault();
     event.stopPropagation();
-    openLightbox(src, alt);
+    openLightbox(src, alt, trigger);
   });
 
   const closeTriggers = overlay.querySelectorAll('[data-lightbox-close]');
@@ -172,8 +197,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !overlay.hasAttribute('hidden')) {
+    if (overlay.hasAttribute('hidden')) return;
+    if (event.key === 'Escape') {
       closeLightbox();
+    } else if (event.key === 'Tab') {
+      const items = dialogFocusables();
+      if (!items.length) {
+        event.preventDefault();
+        return;
+      }
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+      if (!overlay.contains(active) || (event.shiftKey && active === first) || (!event.shiftKey && active === last)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus({ preventScroll: true });
+      }
     }
+  });
+
+  document.addEventListener('focusin', (event) => {
+    if (overlay.hasAttribute('hidden') || overlay.contains(event.target)) return;
+    const first = dialogFocusables()[0];
+    if (first) first.focus({ preventScroll: true });
   });
 });
