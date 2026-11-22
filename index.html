@@ -6,115 +6,7 @@
   <title>Jason L. Jones — Founder of A PRASA | Community Development &amp; Digital Systems</title>
   <meta name="description" content="Jason L. Jones is Founder &amp; Principal Consultant of A PRASA, with experience across education, community development, communication, resource access, and AI-directed digital systems.">
   <link rel="stylesheet" href="style.css?v=3.0a7">
-
-  <style id="index-hero-translation-hotfix">
-    /* Emergency translation/layout safeguard for the homepage hero.
-       Prevents translated headings from running into the portrait card. */
-    .home-hero-grid {
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr) !important;
-      column-gap: clamp(2rem, 5vw, 5rem) !important;
-      row-gap: 2rem !important;
-      align-items: center !important;
-    }
-    .home-hero-copy {
-      min-width: 0 !important;
-      max-width: 100% !important;
-      position: relative !important;
-      z-index: 2 !important;
-    }
-    .home-hero-copy h1 {
-      max-width: 12.5ch !important;
-      overflow-wrap: break-word !important;
-      word-break: normal !important;
-      hyphens: auto !important;
-      text-wrap: balance;
-    }
-    .home-hero-copy .keep-phrase {
-      white-space: normal !important;
-    }
-    .home-hero-media {
-      min-width: 0 !important;
-      width: min(100%, 430px) !important;
-      justify-self: end !important;
-      position: relative !important;
-      z-index: 1 !important;
-    }
-    .portrait-card,
-    .portrait-card img {
-      max-width: 100% !important;
-    }
-    @media (max-width: 1180px) {
-      .home-hero-grid {
-        grid-template-columns: 1fr !important;
-      }
-      .home-hero-copy h1 {
-        max-width: 15ch !important;
-      }
-      .home-hero-media {
-        justify-self: center !important;
-        width: min(100%, 460px) !important;
-      }
-    }
-    @media (max-width: 680px) {
-      .home-hero-copy h1 {
-        max-width: 100% !important;
-        overflow-wrap: anywhere !important;
-      }
-    }
-  </style>
-
-
-<style id="jlj-fqa1-home-hero-regression-fix">
-/* JLJ-RH-FQA1: stabilize homepage hero at real iPhone landscape, iPad, desktop, and TV widths. */
-.home-hero, .home-hero * { -webkit-hyphens: none !important; hyphens: none !important; }
-.home-hero { overflow: hidden !important; }
-.home-hero .home-hero-grid {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) minmax(330px, 460px) !important;
-  gap: clamp(34px, 5.5vw, 84px) !important;
-  align-items: center !important;
-}
-.home-hero-copy { min-width: 0 !important; max-width: 760px !important; }
-.home-hero h1 {
-  max-width: 760px !important;
-  min-width: 0 !important;
-  word-break: normal !important;
-  overflow-wrap: normal !important;
-  text-wrap: balance;
-  line-height: 1.04 !important;
-  letter-spacing: -0.045em !important;
-}
-.home-hero h1 .keep-phrase { display: inline !important; white-space: normal !important; }
-.home-hero-media {
-  position: relative !important;
-  justify-self: center !important;
-  align-self: center !important;
-  width: min(430px, 100%) !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-}
-.portrait-card, .portrait-card img { max-width: 100% !important; }
-.home-actions { max-width: 960px !important; }
-@media (max-width: 1180px) {
-  .home-hero .home-hero-grid {
-    grid-template-columns: 1fr !important;
-    max-width: 940px !important;
-    gap: clamp(24px, 4vw, 44px) !important;
-  }
-  .home-hero-copy { max-width: 860px !important; }
-  .home-hero h1 { max-width: 860px !important; }
-  .home-hero-media { width: min(430px, 72vw) !important; margin: 12px auto 0 !important; justify-self: center !important; }
-}
-@media (min-width: 1181px) {
-  .home-hero-copy { max-width: 720px !important; }
-  .home-hero-media { justify-self: end !important; }
-}
-@media (max-width: 760px) {
-  .home-hero h1 { line-height: 1.05 !important; letter-spacing: -0.035em !important; }
-  .home-actions { display: flex !important; flex-direction: column !important; align-items: stretch !important; }
-  .home-actions .btn { width: 100% !important; justify-content: center !important; }
-}
-</style>
+  <link rel="stylesheet" href="home-v1.css?v=1.0">
 
 <style id="jlj-rh-vnext5j-home-translate-modal-css">
 /* JLJ-RH-VNEXT5J: homepage translate modal only; does not alter hero structure. */
@@ -149,7 +41,7 @@
 <script async src="https://plausible.io/js/pa-18CkiXkgdyMGVYCAeXkp7.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();</script>
 </head>
-<body>
+<body class="jlj-home-v1">
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Jason <span>L.</span> Jones</a>
@@ -170,246 +62,289 @@
 </nav>
 
 <div class="page home-v2">
-  <header class="home-hero" id="top">
-    <div class="home-bg-orb home-bg-orb-a"></div>
-    <div class="home-bg-orb home-bg-orb-b"></div>
-    <div class="container home-hero-grid">
-      <div class="home-hero-copy reveal">
-        <div class="home-kicker">Community Development · Education · Digital Systems</div>
+  <header class="v1-hero" id="top">
+    <div class="container v1-hero-grid">
+      <div class="v1-hero-copy">
+        <p class="v1-eyebrow"><span class="v1-nb">Community Development&nbsp;·</span> <span class="v1-nb">Education&nbsp;·</span> <span class="v1-nb">Digital Systems</span></p>
         <h1>Building Practical Pathways to Opportunity</h1>
-        <p class="home-lede">I design and direct community-centered learning experiences, resource platforms, and digital systems that help people find useful information, develop skills, and take practical next steps.</p>
-        <p class="home-support">I’m Jason L. Jones, a U.S. Navy veteran based in Mindelo, Cabo Verde, and Founder &amp; Principal Consultant of A PRASA. My work connects education, communication, community development, and independent digital products.</p>
-        <div class="home-actions">
-          <a href="https://aprasa.org" class="btn btn-primary">Explore A PRASA</a>
-          <a href="portfolio.html" class="btn btn-outline">View Portfolio</a>
-          <a href="resources.html" class="btn btn-ghost">Learning &amp; Career Resource Hub</a>
+        <p class="v1-lede">I design and direct community-centered learning experiences, resource platforms, and digital systems that help people find useful information, develop skills, and take practical next steps.</p>
+        <p class="v1-support">I’m Jason L. Jones, a U.S. Navy veteran based in Mindelo, Cabo Verde, and Founder &amp; Principal Consultant of A PRASA. My work connects education, communication, community development, and independent digital products.</p>
+        <div class="v1-actions">
+          <a href="https://aprasa.org" class="v1-btn v1-btn-primary">Explore A PRASA</a>
+          <a href="portfolio.html" class="v1-btn v1-btn-outline">View Portfolio</a>
+          <a href="resources.html" class="v1-btn v1-btn-resource">Learning &amp; Career Resource Hub</a>
         </div>
       </div>
-      <div class="home-hero-media reveal" aria-label="Portrait of Jason L. Jones">
-        <div class="portrait-card">
-          <img src="hero-headshot-v2.jpg?v=2.2" alt="Jason L. Jones smiling in a professional portrait">
+      <figure class="v1-portrait">
+        <div class="v1-portrait-frame">
+          <img src="jason-l-jones-portrait-2026-11-20-880w.jpg" width="880" height="1100" alt="Jason L. Jones smiling in a blue shirt against a beige background." decoding="async" fetchpriority="high">
         </div>
-        <div class="portrait-note">
+        <figcaption class="v1-portrait-note">
           <span>Mindelo, Cabo Verde</span>
           <strong>Field-based opportunity-building</strong>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     </div>
   </header>
 
-  <section class="cred-strip-section" aria-label="Credibility highlights">
+  <section class="v1-cred" aria-label="Credibility highlights">
     <div class="container">
-      <div class="cred-strip">
-        <span>U.S. Navy Veteran</span>
-        <span>Community Development Strategist</span>
-        <span>Resource Connector</span>
-        <span>Program Designer</span>
-        <span>Mindelo, Cabo Verde</span>
-        <span>International Experience</span>
-      </div>
+      <ul class="v1-cred-list">
+        <li>U.S. Navy Veteran</li>
+        <li>Community Development Strategist</li>
+        <li>Resource Connector</li>
+        <li>Program Designer</li>
+        <li>Mindelo, Cabo Verde</li>
+        <li>International Experience</li>
+      </ul>
     </div>
   </section>
 
-  <section class="home-section" id="about">
-    <div class="container home-split">
-      <div class="home-section-copy reveal">
-        <span class="section-label">Who I Am</span>
-        <h2 class="who-title">Service-minded, field-based, and focused on practical next steps.</h2>
-        <div class="section-divider"></div>
+  <section class="v1-section v1-about" id="about" aria-labelledby="about-title">
+    <div class="container v1-split">
+      <div class="v1-copy reveal">
+        <span class="v1-label">Who I Am</span>
+        <h2 id="about-title">Service-minded, field-based, and focused on practical next steps.</h2>
+        <div class="v1-rule" aria-hidden="true"></div>
         <p>My professional background spans military service, veteran support, international communication, education, and community development. I bring those experiences into the design of practical learning programs and digital resources.</p>
         <p>I began developing the independent Learning &amp; Career Resource Hub in 2026 to make educational and career-development resources easier to discover and use. Facilitating community workshops in Mindelo gave me another way to connect people directly with those resources. These experiences helped inform the development of A PRASA, the broader Cabo Verde initiative I founded in July 2026.</p>
-        <a href="experience.html" class="btn btn-outline">Read More About My Background</a>
+        <a href="experience.html" class="v1-btn v1-btn-outline">Read More About My Background</a>
       </div>
-      <aside class="profile-summary-card reveal">
-        <div class="profile-summary-topline">Current positioning</div>
-        <div class="position-role-list" aria-label="Current positioning titles">
-          <span>Community Development Strategist</span>
-          <span>Resource Connector</span>
-          <span>Program Designer</span>
-        </div>
+      <aside class="v1-surface v1-position reveal" aria-label="Current positioning">
+        <p class="v1-mono-label">Current positioning</p>
+        <ul class="v1-role-list" aria-label="Current positioning titles">
+          <li>Community Development Strategist</li>
+          <li>Resource Connector</li>
+          <li>Program Designer</li>
+        </ul>
         <p>Developing practical systems that connect people to learning, tools, support, digital readiness, and opportunity.</p>
-        <div class="profile-mini-list">
-          <span>Education & training</span>
-          <span>Resource access</span>
-          <span>Youth engagement</span>
-          <span>Digital skills</span>
-        </div>
+        <ul class="v1-chip-list">
+          <li>Education &amp; training</li>
+          <li>Resource access</li>
+          <li>Youth engagement</li>
+          <li>Digital skills</li>
+        </ul>
       </aside>
     </div>
   </section>
 
-  <section class="home-section bg-warm" id="vision">
+  <section class="v1-section v1-current" id="initiatives" aria-labelledby="initiatives-title">
     <div class="container">
-      <div class="home-centered-heading reveal">
-        <span class="section-label">Vision</span>
-        <h2>How I Build Opportunity</h2>
-        <div class="section-divider centered"></div>
-        <p class="section-intro">My work follows a practical opportunity access model. The goal is not only to inspire people, but to help them discover useful resources, build confidence, access tools, and take realistic next steps.</p>
+      <div class="v1-heading reveal">
+        <span class="v1-label">Initiatives</span>
+        <h2 id="initiatives-title">Featured Initiatives</h2>
+        <div class="v1-rule" aria-hidden="true"></div>
+        <p class="v1-intro">These initiatives are connected by one purpose: helping people move from awareness to action through practical resources, local engagement, digital readiness, and opportunity access systems.</p>
       </div>
-      <div class="framework-grid">
-        <article class="framework-card reveal"><span>01</span><h3>Listen</h3><p>Understand real needs, goals, barriers, and local context before proposing solutions.</p></article>
-        <article class="framework-card reveal"><span>02</span><h3>Map</h3><p>Identify existing resources, organizations, relationships, gaps, and opportunities.</p></article>
-        <article class="framework-card reveal"><span>03</span><h3>Expose</h3><p>Make useful opportunities visible through resource pages, workshops, conversations, and guided introductions.</p></article>
-        <article class="framework-card reveal"><span>04</span><h3>Cultivate</h3><p>Encourage confidence, consistency, motivation, and follow-through through mentoring and repeated engagement.</p></article>
-        <article class="framework-card reveal"><span>05</span><h3>Equip</h3><p>Connect people to tools, training, digital skills, templates, spaces, and support systems.</p></article>
-        <article class="framework-card reveal"><span>06</span><h3>Guide</h3><p>Help people choose practical next steps and move from awareness into action.</p></article>
-        <article class="framework-card reveal"><span>07</span><h3>Adapt</h3><p>Use feedback, evidence, and lived experience to improve the next cycle.</p></article>
+
+      <div class="v1-project-grid">
+        <article class="v1-project v1-project-aprasa reveal" aria-labelledby="aprasa-title">
+          <div class="v1-project-visual">
+            <img src="prasa/assets/brand/A_PRASA_Wordmark_Primary_Green.svg" width="1409" height="462" alt="A PRASA wordmark" loading="lazy" decoding="async">
+          </div>
+          <div class="v1-project-body">
+            <span class="v1-tag">Cabo Verde Initiative</span>
+            <h3 id="aprasa-title">A PRASA — Independent Digital Public Square</h3>
+            <p>Founded in July 2026, A PRASA brings together selected information on opportunities, community organizations, local knowledge, culture, and practical ways to participate in Cabo Verde. <a href="https://aprasa.org">Visit aprasa.org</a>.</p>
+            <div class="v1-actions v1-actions-card">
+              <a href="https://aprasa.org" class="v1-btn v1-btn-primary">Explore A PRASA</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="v1-project v1-project-hub reveal" id="resources-preview" aria-labelledby="hub-title">
+          <div class="v1-project-visual v1-hub-preview" aria-label="Learning &amp; Career Resource Hub preview">
+            <div class="v1-mock-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="v1-mock">
+              <div class="v1-mock-badge">Beta Learning &amp; Career Resource Hub</div>
+              <h4>Free Learning &amp; Career Resources</h4>
+              <p>Search by category, language, level, location, and opportunity type.</p>
+              <div class="v1-mock-search">Search resources…</div>
+              <div class="v1-mock-card"><strong>English Learning</strong><span>Universal · Free · Beginner-friendly</span></div>
+              <div class="v1-mock-card"><strong>Digital Skills</strong><span>Cabo Verde + online · Free courses</span></div>
+              <div class="v1-mock-card"><strong>Career Readiness</strong><span>Tools, templates, and next steps</span></div>
+            </div>
+          </div>
+          <div class="v1-project-body">
+            <span class="v1-tag">Public Resource Tool</span>
+            <h3 id="hub-title">Learning &amp; Career Resource Hub</h3>
+            <p class="v1-subtitle">A growing public-access tool for learning, career, English, <span class="no-break">digital skills,</span> study, and community resources.</p>
+            <p>The Learning &amp; Career Resource Hub is designed to help students, workers, teachers, job seekers, and community members find practical opportunities without getting lost in scattered links, temporary announcements, or hard-to-follow information.</p>
+            <p>The first version focuses on Cabo Verde and universal online resources, with room to expand carefully by country, topic, and community need over time.</p>
+            <ul class="v1-feature-list">
+              <li>Current and upcoming learning opportunities</li>
+              <li>English, career, digital skills, and study resources</li>
+              <li>Saved-resource list for users</li>
+              <li>Multilingual search support and Google Translate workflow</li>
+              <li>Suggest/report resource options</li>
+            </ul>
+            <div class="v1-actions v1-actions-card">
+              <a href="resources.html" class="v1-btn v1-btn-primary">Visit the Learning &amp; Career Resource Hub</a>
+              <a href="resources.html" class="v1-btn v1-btn-outline">Suggest a Resource</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <ul class="v1-mini-grid" aria-label="Additional initiatives">
+        <li class="v1-mini reveal">
+          <h3>Mindelo Opportunity Pathway</h3>
+          <p>A developing pathway focused on English practice, resource navigation, digital skills, and practical career-development support for students and young adults in Mindelo.</p>
+        </li>
+        <li class="v1-mini reveal">
+          <h3>Local Resource Mapping</h3>
+          <p>A careful effort to identify useful local organizations, programs, and support systems without duplicating or claiming ownership of existing work.</p>
+        </li>
+        <li class="v1-mini reveal">
+          <h3>Diaspora &amp; Partner Engagement</h3>
+          <p>Exploring ways to connect local needs with mentors, professionals, businesses, and supporters who want to contribute meaningfully.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="v1-section v1-method" id="vision" aria-labelledby="vision-title">
+    <div class="container">
+      <div class="v1-heading reveal">
+        <span class="v1-label">Vision</span>
+        <h2 id="vision-title">How I Build Opportunity</h2>
+        <div class="v1-rule" aria-hidden="true"></div>
+        <p class="v1-intro">My work follows a practical opportunity access model. The goal is not only to inspire people, but to help them discover useful resources, build confidence, access tools, and take realistic next steps.</p>
+      </div>
+      <div class="v1-method-grid">
+        <article class="v1-group reveal" aria-labelledby="group-discover">
+          <h3 id="group-discover">Discover</h3>
+          <ul class="v1-concepts">
+            <li><span class="v1-num" aria-hidden="true">01</span><h4>Listen</h4><p>Understand real needs, goals, barriers, and local context before proposing solutions.</p></li>
+            <li><span class="v1-num" aria-hidden="true">02</span><h4>Map</h4><p>Identify existing resources, organizations, relationships, gaps, and opportunities.</p></li>
+          </ul>
+        </article>
+        <article class="v1-group reveal" aria-labelledby="group-activate">
+          <h3 id="group-activate">Activate</h3>
+          <ul class="v1-concepts">
+            <li><span class="v1-num" aria-hidden="true">03</span><h4>Expose</h4><p>Make useful opportunities visible through resource pages, workshops, conversations, and guided introductions.</p></li>
+            <li><span class="v1-num" aria-hidden="true">04</span><h4>Cultivate</h4><p>Encourage confidence, consistency, motivation, and follow-through through mentoring and repeated engagement.</p></li>
+          </ul>
+        </article>
+        <article class="v1-group reveal" aria-labelledby="group-enable">
+          <h3 id="group-enable">Enable</h3>
+          <ul class="v1-concepts">
+            <li><span class="v1-num" aria-hidden="true">05</span><h4>Equip</h4><p>Connect people to tools, training, digital skills, templates, spaces, and support systems.</p></li>
+            <li><span class="v1-num" aria-hidden="true">06</span><h4>Guide</h4><p>Help people choose practical next steps and move from awareness into action.</p></li>
+          </ul>
+        </article>
+        <article class="v1-group reveal" aria-labelledby="group-improve">
+          <h3 id="group-improve">Improve</h3>
+          <ul class="v1-concepts">
+            <li><span class="v1-num" aria-hidden="true">07</span><h4>Adapt</h4><p>Use feedback, evidence, and lived experience to improve the next cycle.</p></li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="home-section pilot-section">
-    <div class="container home-split pilot-split">
-      <figure class="pilot-image-card reveal">
-        <img src="mindelo-composite.jpg?v=2.2" alt="A blended view of Mindelo, São Vicente, showing hillside communities and the coastal city at golden hour">
-        <figcaption><span class="caption-line-one">Mindelo, São Vicente — local realities, visible potential,</span><span class="caption-line-two">practical pathways.</span></figcaption>
+  <section class="v1-section v1-field" aria-labelledby="field-title">
+    <div class="container v1-split v1-field-split">
+      <figure class="v1-field-figure reveal">
+        <img src="mindelo-composite.jpg?v=2.2" width="1600" height="900" alt="A blended view of Mindelo, São Vicente, showing hillside communities and the coastal city at golden hour" loading="lazy" decoding="async">
+        <figcaption>Mindelo, São Vicente — local realities, visible potential, practical pathways.</figcaption>
       </figure>
-      <div class="home-section-copy reveal">
-        <span class="section-label">Current Field Context</span>
-        <h2 class="pilot-title">Testing practical ways to connect people with opportunity.</h2>
-        <div class="section-divider"></div>
+      <div class="v1-copy reveal">
+        <span class="v1-label">Current Field Context</span>
+        <h2 id="field-title">Testing practical ways to connect people with opportunity.</h2>
+        <div class="v1-rule" aria-hidden="true"></div>
         <p>My current independent work in Mindelo focuses on resource access, community information, education, and digital systems.</p>
         <p>The Resource Hub and A PRASA are distinct platforms that share a practical emphasis on connecting people with useful information and next steps.</p>
       </div>
     </div>
   </section>
 
-  <section class="home-section resource-feature" id="resources-preview">
-    <div class="container home-split">
-      <div class="home-section-copy reveal">
-        <span class="section-label">Public Resource Tool</span>
-        <h2>Learning &amp; Career Resource Hub</h2>
-        <p class="resource-subtitle">A growing public-access tool for learning, career, English, <span class="no-break">digital skills,</span> study, and community resources.</p>
-        <p>The Learning &amp; Career Resource Hub is designed to help students, workers, teachers, job seekers, and community members find practical opportunities without getting lost in scattered links, temporary announcements, or hard-to-follow information.</p>
-        <p>The first version focuses on Cabo Verde and universal online resources, with room to expand carefully by country, topic, and community need over time.</p>
-        <ul class="feature-list">
-          <li>Current and upcoming learning opportunities</li>
-          <li>English, career, digital skills, and study resources</li>
-          <li>Saved-resource list for users</li>
-          <li>Multilingual search support and Google Translate workflow</li>
-          <li>Suggest/report resource options</li>
-        </ul>
-        <div class="home-actions compact-actions">
-          <a href="resources.html" class="btn btn-primary resource-cta-button"><span class="resource-cta-stack"><span>Visit the Learning &amp; Career</span><span>Resource Hub</span></span></a>
-          <a href="resources.html" class="btn btn-resource-secondary">Suggest a Resource</a>
-        </div>
-      </div>
-      <div class="resource-mockup reveal" aria-label="Learning &amp; Career Resource Hub preview">
-        <div class="mock-browser-bar"><span></span><span></span><span></span></div>
-        <div class="mock-content">
-          <div class="mock-badge">Beta Learning &amp; Career Resource Hub</div>
-          <h3>Free Learning &amp; Career Resources</h3>
-          <p>Search by category, language, level, location, and opportunity type.</p>
-          <div class="mock-search">Search resources…</div>
-          <div class="mock-resource-card"><strong>English Learning</strong><span>Universal · Free · Beginner-friendly</span></div>
-          <div class="mock-resource-card"><strong>Digital Skills</strong><span>Cabo Verde + online · Free courses</span></div>
-          <div class="mock-resource-card"><strong>Career Readiness</strong><span>Tools, templates, and next steps</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section bg-warm" id="initiatives">
+  <section class="v1-section v1-history" aria-labelledby="history-title">
     <div class="container">
-      <div class="home-centered-heading reveal">
-        <span class="section-label">Initiatives</span>
-        <h2>Featured Initiatives</h2>
-        <div class="section-divider centered"></div>
-        <p class="section-intro">These initiatives are connected by one purpose: helping people move from awareness to action through practical resources, local engagement, digital readiness, and opportunity access systems.</p>
+      <div class="v1-heading v1-heading-left reveal">
+        <span class="v1-label">Selected Historical Work</span>
+        <h2 id="history-title">Experience that informs the platform.</h2>
+        <div class="v1-rule" aria-hidden="true"></div>
+        <p class="v1-intro">My work has developed across veteran support, education, media, communication, outreach, and international community engagement. These experiences now inform the systems I’m building in Cabo Verde&nbsp;and&nbsp;beyond.</p>
       </div>
-      <div class="initiative-grid">
-        <article class="initiative-card reveal"><span>01</span><h3>Mindelo Opportunity Pathway</h3><p>A developing pathway focused on English practice, resource navigation, digital skills, and practical career-development support for students and young adults in Mindelo.</p></article>
-        <article class="initiative-card reveal"><span>02</span><h3>A PRASA — Independent Digital Public Square</h3><p>Founded in July 2026, A PRASA brings together selected information on opportunities, community organizations, local knowledge, culture, and practical ways to participate in Cabo Verde. <a href="https://aprasa.org">Visit aprasa.org</a>.</p></article>
-        <article class="initiative-card reveal"><span>03</span><h3>Local Resource Mapping</h3><p>A careful effort to identify useful local organizations, programs, and support systems without duplicating or claiming ownership of existing work.</p></article>
-        <article class="initiative-card reveal"><span>04</span><h3>Diaspora & Partner Engagement</h3><p>Exploring ways to connect local needs with mentors, professionals, businesses, and supporters who want to contribute meaningfully.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section proof-section">
-    <div class="container">
-      <div class="proof-heading reveal">
-        <span class="section-label">Proof of Work</span>
-        <h2>Experience that informs the platform.</h2>
-        <div class="section-divider"></div>
-        <p class="section-intro">My work has developed across veteran support, education, media, communication, outreach, and international community engagement. These experiences now inform the systems I’m building in Cabo Verde&nbsp;and&nbsp;beyond.</p>
-      </div>
-      <div class="proof-grid proof-grid-enhanced">
-        <article class="proof-card proof-card-image reveal">
-          <button class="image-preview-button" type="button" data-lightbox="apu-veteran-awareness-week.jpg" data-lightbox-alt="Veteran outreach and awareness event display">
-            <img src="apu-veteran-awareness-week.jpg" alt="Veteran outreach and awareness event display">
+      <div class="v1-history-grid">
+        <article class="v1-proof v1-proof-featured reveal">
+          <button class="image-preview-button v1-proof-media" type="button" data-lightbox="america250-workshop-mindelo-2026.jpg" data-lightbox-alt="Participants seated during a 2026 educational workshop in Mindelo, with the facilitator at the front of the room.">
+            <img src="america250-workshop-mindelo-2026.jpg" width="1800" height="1013" loading="lazy" decoding="async" alt="Participants seated during a 2026 educational workshop in Mindelo, with the facilitator at the front of the room.">
           </button>
-          <div>
-            <h3>Veteran Outreach &amp; <span class="no-break">Career Transition</span></h3>
-            <p>Supported military-connected students and veterans through career guidance, outreach, benefits navigation, and transition support.</p>
-          </div>
-        </article>
-        <article class="proof-card proof-card-image reveal">
-          <button class="image-preview-button" type="button" data-lightbox="resource-fair.jpg" data-lightbox-alt="APU Veteran Resource Fair event table and participants">
-            <img src="resource-fair.jpg" alt="APU Veteran Resource Fair event table and participants">
-          </button>
-          <div>
-            <h3>APU Veteran <span class="no-break">Resource Fair</span></h3>
-            <p>Helped organize a veteran-focused resource fair connecting students and community members to services, organizations, and support networks.</p>
-          </div>
-        </article>
-        <article class="proof-card proof-card-image proof-card-poster reveal">
-          <button class="image-preview-button" type="button" data-lightbox="heroes-stand-down.jpg" data-lightbox-alt="Heroes in the Shadows Stand Down flyer">
-            <img src="heroes-stand-down.jpg" alt="Heroes in the Shadows Stand Down flyer">
-          </button>
-          <div>
-            <h3><span class="title-line">Heroes in the Shadows</span><span class="title-line">Stand Down</span></h3>
-            <p>Supported outreach efforts focused on connecting veterans and vulnerable community members to practical resources and support.</p>
-          </div>
-        </article>
-        <article class="proof-card proof-card-image reveal">
-          <button class="image-preview-button" type="button" data-lightbox="uatv-still.jpg" data-lightbox-alt="UA TV English broadcast still">
-            <img src="uatv-still.jpg" alt="UA TV English broadcast still">
-          </button>
-          <div>
-            <h3>UA|TV English <span class="no-break">Broadcast Work</span></h3>
-            <p>Contributed to international English language media and communication work in Ukraine, strengthening public communication across cultural contexts.</p>
-          </div>
-        </article>
-        <article class="proof-card proof-card-image reveal">
-          <button class="image-preview-button" type="button" data-lightbox="america250-workshop-mindelo-2026.jpg" data-lightbox-alt="Participants seated during a 2026 educational workshop in Mindelo, with the facilitator at the front of the room.">
-            <img src="america250-workshop-mindelo-2026.jpg" alt="Participants seated during a 2026 educational workshop in Mindelo, with the facilitator at the front of the room.">
-          </button>
-          <div>
+          <div class="v1-proof-body">
             <h3>America250 Mindelo — Educational Workshops</h3>
             <p>Developed, organized and personally facilitated a connected three-workshop learning sequence in June 2026: What Do I Want to Build? (June 11), Find Your Next Step (June 18), and Three Pathways to Opportunity (June 23). Participants were guided from future visioning and goal setting toward practical next steps, free digital learning tools, and examples of accessible online training.</p>
           </div>
         </article>
+        <article class="v1-proof reveal">
+          <button class="image-preview-button v1-proof-media" type="button" data-lightbox="apu-veteran-awareness-week.jpg" data-lightbox-alt="Veteran outreach and awareness event display">
+            <img src="apu-veteran-awareness-week.jpg" width="447" height="447" loading="lazy" decoding="async" alt="Veteran outreach and awareness event display">
+          </button>
+          <div class="v1-proof-body">
+            <h3>Veteran Outreach &amp; <span class="no-break">Career Transition</span></h3>
+            <p>Supported military-connected students and veterans through career guidance, outreach, benefits navigation, and transition support.</p>
+          </div>
+        </article>
+        <article class="v1-proof reveal">
+          <button class="image-preview-button v1-proof-media" type="button" data-lightbox="resource-fair.jpg" data-lightbox-alt="APU Veteran Resource Fair event table and participants">
+            <img src="resource-fair.jpg" width="554" height="554" loading="lazy" decoding="async" alt="APU Veteran Resource Fair event table and participants">
+          </button>
+          <div class="v1-proof-body">
+            <h3>APU Veteran <span class="no-break">Resource Fair</span></h3>
+            <p>Helped organize a veteran-focused resource fair connecting students and community members to services, organizations, and support networks.</p>
+          </div>
+        </article>
+        <article class="v1-proof v1-proof-poster reveal">
+          <button class="image-preview-button v1-proof-media" type="button" data-lightbox="heroes-stand-down.jpg" data-lightbox-alt="Heroes in the Shadows Stand Down flyer">
+            <img src="heroes-stand-down.jpg" width="1536" height="2048" loading="lazy" decoding="async" alt="Heroes in the Shadows Stand Down flyer">
+          </button>
+          <div class="v1-proof-body">
+            <h3><span class="title-line">Heroes in the Shadows</span><span class="title-line">Stand Down</span></h3>
+            <p>Supported outreach efforts focused on connecting veterans and vulnerable community members to practical resources and support.</p>
+          </div>
+        </article>
+        <article class="v1-proof reveal">
+          <button class="image-preview-button v1-proof-media" type="button" data-lightbox="uatv-still.jpg" data-lightbox-alt="UA TV English broadcast still">
+            <img src="uatv-still.jpg" width="2079" height="1179" loading="lazy" decoding="async" alt="UA TV English broadcast still">
+          </button>
+          <div class="v1-proof-body">
+            <h3>UA|TV English <span class="no-break">Broadcast Work</span></h3>
+            <p>Contributed to international English language media and communication work in Ukraine, strengthening public communication across cultural contexts.</p>
+          </div>
+        </article>
       </div>
-      <div class="section-button-row reveal"><a href="portfolio.html" class="btn btn-outline">View Portfolio</a></div>
+      <div class="v1-button-row reveal"><a href="portfolio.html" class="v1-btn v1-btn-outline">View Portfolio</a></div>
     </div>
   </section>
 
-  <section class="home-section bg-warm ideas-preview">
-    <div class="container home-split">
-      <div class="home-section-copy reveal">
-        <span class="section-label">Field Notes</span>
-        <h2>Ideas Worth Exploring</h2>
-        <div class="section-divider"></div>
+  <section class="v1-section v1-ideas" aria-labelledby="ideas-title">
+    <div class="container v1-split">
+      <div class="v1-copy reveal">
+        <span class="v1-label">Field Notes</span>
+        <h2 id="ideas-title">Ideas Worth Exploring</h2>
+        <div class="v1-rule" aria-hidden="true"></div>
         <p>I study models from different communities and countries — digital learning hubs, makerspaces, public libraries, youth-development systems, diaspora mentorship, and workforce pathways — to consider what could be adapted responsibly with local leadership and context.</p>
-        <a href="index.html#vision" class="btn btn-outline">Explore the Vision</a>
+        <a href="index.html#vision" class="v1-btn v1-btn-outline">Explore the Vision</a>
       </div>
-      <div class="ideas-card reveal">
+      <div class="v1-surface v1-ideas-card reveal">
         <h3>Studying what could translate.</h3>
         <p>Not copying models blindly. Looking for principles, patterns, and practical ideas that could be discussed, adapted, or locally led.</p>
       </div>
     </div>
   </section>
 
-  <section class="home-section collaboration-section" id="collaborate">
-    <div class="container collaboration-card reveal">
-      <span class="section-label">Collaborate</span>
-      <h2>Let’s build practical pathways.</h2>
-      <p>I’m open to thoughtful collaboration related to education, youth engagement, workforce readiness, resource access, digital skills, English learning, diaspora connection, and community-based opportunity access.</p>
-      <div class="home-actions compact-actions centered-actions">
-        <a href="contact.html" class="btn btn-primary">Contact Me</a>
-        <a href="https://linkedin.com/in/jasonlamardjones" class="btn btn-outline" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        <a href="resources.html" class="btn btn-ghost">Recommend a Resource</a>
+  <section class="v1-section v1-contact" id="collaborate" aria-labelledby="collaborate-title">
+    <div class="container">
+      <div class="v1-contact-card reveal">
+        <span class="v1-label">Collaborate</span>
+        <h2 id="collaborate-title">Let’s build practical pathways.</h2>
+        <p>I’m open to thoughtful collaboration related to education, youth engagement, workforce readiness, resource access, digital skills, English learning, diaspora connection, and community-based opportunity access.</p>
+        <div class="v1-actions v1-actions-center">
+          <a href="contact.html" class="v1-btn v1-btn-primary">Contact Me</a>
+          <a href="https://linkedin.com/in/jasonlamardjones" class="v1-btn v1-btn-outline" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a href="resources.html" class="v1-btn v1-btn-resource">Recommend a Resource</a>
+        </div>
       </div>
     </div>
   </section>
@@ -506,18 +441,45 @@
     return 'https://translate.google.com/translate?sl=auto'+target+'&u='+encodeURIComponent(originalUrl());
   }
   function modal(){return document.getElementById('translateHelpModal')||document.getElementById('homeTranslateModal');}
-  function openModal(){
+  /* Keyboard/focus handling for the dialog: move focus in, contain Tab, make the page behind it inert, restore focus on close. */
+  var lastOpener=null, inertSaved=null;
+  function focusables(m){
+    return Array.prototype.filter.call(m.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'),function(el){return el.getClientRects().length;});
+  }
+  function setBackgroundInert(m,on){
+    if(on){
+      if(inertSaved)return;
+      inertSaved=[];
+      Array.prototype.forEach.call(document.body.children,function(el){
+        if(el===m||el.contains(m)||el.tagName==='SCRIPT')return;
+        inertSaved.push([el,el.hasAttribute('inert')]);
+        el.setAttribute('inert','');
+      });
+    }else if(inertSaved){
+      inertSaved.forEach(function(p){if(!p[1])p[0].removeAttribute('inert');});
+      inertSaved=null;
+    }
+  }
+  function openModal(opener){
     var m=modal();
     if(!m){window.location.href=googleTranslateUrl('pt');return;}
+    lastOpener=(opener&&opener.nodeType===1)?opener:document.activeElement;
     m.hidden=false;
     m.classList.add('open');
     m.setAttribute('aria-hidden','false');
+    setBackgroundInert(m,true);
+    var first=m.querySelector('#homeTranslateClose,[data-translate-close]')||focusables(m)[0];
+    if(first)first.focus();
   }
   function closeModal(){
     var m=modal(); if(!m)return;
+    var wasOpen=m.classList.contains('open');
     m.classList.remove('open');
     m.setAttribute('aria-hidden','true');
     if(m.id==='homeTranslateModal') m.hidden=true;
+    setBackgroundInert(m,false);
+    if(wasOpen&&lastOpener&&document.contains(lastOpener)&&lastOpener.getClientRects().length&&typeof lastOpener.focus==='function')lastOpener.focus();
+    lastOpener=null;
   }
   function openGoogle(btn){
     var lang=(btn&&btn.getAttribute('data-google-translate'))||'pt';
@@ -528,14 +490,75 @@
     var openBtn=e.target.closest('[data-google-translate],#homeOpenTranslate');
     if(openBtn){e.preventDefault();e.stopImmediatePropagation();openGoogle(openBtn);return;}
     var trigger=e.target.closest('[data-translate-trigger],.js-translate-trigger,.translate-help-trigger,#homeTranslateBtn');
-    if(trigger){e.preventDefault();e.stopImmediatePropagation();openModal();return;}
+    if(trigger){e.preventDefault();e.stopImmediatePropagation();openModal(trigger);return;}
     var closer=e.target.closest('[data-translate-close],#homeTranslateClose,#homeTranslateCancel,#closeTranslateHelp,#doneTranslateHelp');
     if(closer){e.preventDefault();e.stopImmediatePropagation();closeModal();return;}
     var m=modal(); if(m && e.target===m){e.preventDefault();closeModal();}
   },true);
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  document.addEventListener('keydown',function(e){
+    var m=modal();
+    if(e.key==='Escape'){closeModal();return;}
+    if(e.key!=='Tab'||!m||!m.classList.contains('open'))return;
+    var items=focusables(m);
+    if(!items.length){e.preventDefault();return;}
+    var first=items[0],last=items[items.length-1],active=document.activeElement;
+    if(!m.contains(active)){e.preventDefault();first.focus();}
+    else if(e.shiftKey&&active===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&active===last){e.preventDefault();first.focus();}
+  });
   window.jljOpenTranslateHelp=openModal;
   window.jljOpenGoogleTranslate=function(lang){window.location.href=googleTranslateUrl(lang||'pt');};
+})();
+</script>
+
+<script id="jlj-home-v1-nav-keyboard">
+/* Keyboard behaviour for the compact (menu) navigation. main.js still owns the toggle click and the link-click close;
+   this only adds: focus into the menu when it opens, Escape to close, and focus safety across the compact/desktop breakpoint. */
+(function(){
+  var toggle=document.querySelector('.nav-toggle'), links=document.querySelector('.nav-links');
+  if(!toggle||!links)return;
+  var lastFocus=null;
+  function isOpen(){return links.classList.contains('open');}
+  function setOpen(open){links.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));}
+  function visible(el){return !!(el&&el.getClientRects().length);}
+  document.addEventListener('focusin',function(e){lastFocus=e.target;});
+  document.addEventListener('pointerdown',function(){lastFocus=null;},true);
+
+  /* Menu opened (by main.js): move focus to the first link so Tab continues through the links in order. */
+  var wasOpen=isOpen();
+  if(window.MutationObserver){
+    new MutationObserver(function(){
+      var nowOpen=isOpen();
+      if(nowOpen&&!wasOpen){var first=links.querySelector('a');if(visible(first))first.focus();}
+      wasOpen=nowOpen;
+    }).observe(links,{attributes:true,attributeFilter:['class']});
+  }
+
+  /* Escape closes the menu and returns focus to the toggle. Capture phase so the decision is made before the
+     translation dialog or image preview handle (and clear) their own Escape. */
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Escape'||!isOpen())return;
+    var tm=document.getElementById('homeTranslateModal');
+    if((tm&&tm.classList.contains('open'))||document.body.classList.contains('lightbox-open'))return;
+    var ae=document.activeElement;
+    setOpen(false);
+    if((links.contains(ae)||ae===document.body)&&visible(toggle))toggle.focus();
+  },true);
+
+  /* Compact/desktop breakpoint (menu mode is <=1023px: shared <=820px plus the homepage 821-1023px band). */
+  if(window.matchMedia){
+    var mq=window.matchMedia('(max-width: 1023px)');
+    var onChange=function(){
+      var ae=document.activeElement, ref=(ae&&ae!==document.body)?ae:lastFocus;
+      if(!mq.matches){
+        if(isOpen())setOpen(false);
+        if(ref===toggle&&(ae===document.body||ae===toggle)){var first=links.querySelector('a');if(visible(first))first.focus();}
+      }else if(!isOpen()&&links.contains(ref)&&(ae===document.body||links.contains(ae))){
+        if(visible(toggle))toggle.focus();
+      }
+    };
+    if(mq.addEventListener)mq.addEventListener('change',onChange);else if(mq.addListener)mq.addListener(onChange);
+  }
 })();
 </script>
 </body>
