@@ -275,6 +275,26 @@
 .jlj-home-v1 .page .footer-links a:hover { color: var(--v1-teal-deep); text-decoration-thickness: 2px; }
 @media (max-width: 719px) { .jlj-home-v1 .footer-links { flex-direction: column; gap: 0; } }
 
+/* ---------- Header: compact (menu) mode for intermediate widths ----------
+   The shared nav only switches to the hamburger menu at <=820px (and the compact
+   sizing is also <=820px), so 821-1023px kept the full link row and crowded the
+   brand, links and Resource Hub CTA. This reuses the existing markup, the existing
+   .nav-toggle script and the same menu pattern the shared stylesheet uses at <=820px.
+   >=1024px (desktop) and <=820px (existing mobile) are intentionally untouched. */
+@media (min-width: 821px) and (max-width: 1023px) {
+  body.jlj-home-v1 .nav-links {
+    display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+    background: var(--cream); border-bottom: 1px solid var(--rule);
+    padding: 10px 0; flex-direction: column; gap: 0;
+  }
+  body.jlj-home-v1 .nav-links.open { display: flex; }
+  body.jlj-home-v1 .nav-links li { width: 100%; }
+  body.jlj-home-v1 .nav-links a { display: block; padding: 14px 28px; border: none; }
+  body.jlj-home-v1 .nav-toggle { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+  body.jlj-home-v1 .nav-actions { margin-left: auto; }
+  body.jlj-home-v1 .nav-resource { max-width: none; white-space: nowrap; }
+}
+
 /* ---------- Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
