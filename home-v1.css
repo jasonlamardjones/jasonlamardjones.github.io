@@ -208,6 +208,28 @@
   .jlj-home-v1 .v1-project-aprasa .v1-project-visual { min-height: 240px; }
 }
 
+/* Tranche A — visual distinction between the two initiative cards.
+   A PRASA (Cabo Verde initiative): crisp light plate for the approved green wordmark,
+   A PRASA green (#1E3D2E, taken from the approved wordmark) accent, warm paper body.
+   Learning & Career Resource Hub (independent tool): cool teal-tinted body, teal accent,
+   navy product-preview chrome. Colour is reinforced by the existing tags/headings, not relied on alone. */
+.jlj-home-v1 .v1-project { border-width: 1px; border-top-width: 6px; box-shadow: 0 10px 26px rgba(19, 44, 62, .10); }
+
+.jlj-home-v1 .v1-project-aprasa { --v1-card-accent: #1E3D2E; border-color: #C9BDAE; border-top-color: var(--v1-card-accent); }
+.jlj-home-v1 .v1-project-aprasa .v1-project-visual { background: #FFFDF9; border-bottom: 1px solid #C9BDAE; box-shadow: inset 0 0 0 10px var(--v1-paper), inset 0 0 0 11px #D9CFC2; }
+.jlj-home-v1 .v1-project-aprasa .v1-project-visual img { width: min(100%, 360px); }
+.jlj-home-v1 .v1-project-aprasa .v1-tag { color: var(--v1-card-accent); }
+.jlj-home-v1 .v1-project-aprasa .v1-btn-primary { background: var(--v1-card-accent); border-color: var(--v1-card-accent); color: #fff; }
+.jlj-home-v1 .v1-project-aprasa .v1-btn-primary:hover { background: #12271D; border-color: #12271D; color: #fff; }
+
+.jlj-home-v1 .v1-project-hub { --v1-card-accent: var(--v1-teal); background: #F1F6F5; border-color: #A9C3C2; border-top-color: var(--v1-card-accent); }
+.jlj-home-v1 .v1-project-hub .v1-project-visual { background: #E3EDEC; border-bottom: 1px solid #A9C3C2; }
+.jlj-home-v1 .v1-project-hub .v1-mock-bar { background: var(--v1-navy); }
+.jlj-home-v1 .v1-project-hub .v1-mock-bar span { background: rgba(242, 236, 227, .55); }
+.jlj-home-v1 .v1-project-hub .v1-mock-search,
+.jlj-home-v1 .v1-project-hub .v1-mock-card { border-color: #A9C3C2; }
+.jlj-home-v1 .v1-project-hub .v1-tag { color: var(--v1-teal-deep); }
+
 /* Remaining existing initiatives, visually subordinate */
 .jlj-home-v1 .v1-mini-grid { list-style: none; margin: clamp(32px, 5vw, 48px) 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
 .jlj-home-v1 .v1-mini { border-top: 2px solid var(--v1-stone); padding-top: 18px; }
